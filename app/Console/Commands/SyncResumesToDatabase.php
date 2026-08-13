@@ -12,7 +12,7 @@ class SyncResumesToDatabase extends Command
      *
      * @var string
      */
-    protected $signature = 'resumes:sync-to-db {--file= : Specific S3 URLs text file path}';
+    protected $signature = 'resumes:sync-to-db {--file= : Specific S3 URLs text file path} {--continuous : Run continuously in background, syncing new URLs in real-time}';
 
     /**
      * The description of the console command.
@@ -27,10 +27,8 @@ class SyncResumesToDatabase extends Command
     public function handle()
     {
         try {
-            $this->info('Starting S3 URLs sync to database...');
-
-            // Get the S3 URLs tracker file
             $file = $this->option('file') ?? storage_path('resumes/resume_s3_urls.txt');
+            $isContinuous = $this->option('continuous');
 
             if (!file_exists($file)) {
                 $this->error("File not found: $file");
@@ -38,6 +36,14 @@ class SyncResumesToDatabase extends Command
                 return 1;
             }
 
+            // If continuous mode, run monitoring loop
+            if ($isContinuous) {
+                $this->runContinuousSync($file);
+                return 0;
+            }
+
+            // ===== ORIGINAL SYNC LOGIC (UNCHANGED) =====
+            $this->info('Starting S3 URLs sync to database...');
             $this->info("Reading from: $file");
 
             $synced = 0;
@@ -115,6 +121,122 @@ class SyncResumesToDatabase extends Command
             $this->error('Sync failed: ' . $e->getMessage());
             return 1;
         }
+    }
+
+    /**
+     * Run continuous sync monitoring (NEW - doesn't modify existing logic)
+     */
+    private function runContinuousSync($file)
+    {
+        $statusFile = storage_path('resumes/.sync_status');
+
+        $this->info('🔄 Starting continuous S3 URL sync service...');
+        $this->info("Monitoring: $file");
+        $this->info("Status file: $statusFile");
+        $this->line('');
+        $this->info('Press CTRL+C to stop');
+        $this->line('');
+
+        // Get last synced line
+        $lastSyncedLine = $this->getLastSyncedLine($statusFile);
+        $this->line("Starting from line: $lastSyncedLine");
+
+        // Continuous loop - sync every 60 seconds
+        while (true) {
+            try {
+                $lastSyncedLine = $this->syncNewLines($file, $lastSyncedLine, $statusFile);
+                sleep(60);
+            } catch (\Exception $e) {
+                $this->error("Error: " . $e->getMessage());
+                sleep(60);
+            }
+        }
+    }
+
+    /**
+     * Get last synced line number (NEW - doesn't modify existing logic)
+     */
+    private function getLastSyncedLine($statusFile)
+    {
+        if (!file_exists($statusFile)) {
+            file_put_contents($statusFile, "5\n");
+            return 5;
+        }
+        return (int)trim(file_get_contents($statusFile)) ?: 5;
+    }
+
+    /**
+     * Sync only new lines since last sync (NEW - doesn't modify existing logic)
+     */
+    private function syncNewLines($file, $lastSyncedLine, $statusFile)
+    {
+        $handle = fopen($file, 'r');
+        if (!$handle) {
+            throw new \Exception("Could not open file: $file");
+        }
+
+        $lineNumber = 0;
+        $synced = 0;
+
+        while (($line = fgets($handle)) !== false) {
+            $lineNumber++;
+
+            // Skip lines already synced
+            if ($lineNumber <= $lastSyncedLine) {
+                continue;
+            }
+
+            $line = trim($line);
+
+            // Skip comments and empty lines
+            if (empty($line) || strpos($line, '#') === 0) {
+                continue;
+            }
+
+            // Parse line format: resume_id|filename|s3_url
+            $parts = explode('|', $line);
+            if (count($parts) < 3) {
+                continue;
+            }
+
+            try {
+                $resume_id = trim($parts[0]);
+                $filename = trim($parts[1]);
+                $s3_url = trim($parts[2]);
+
+                if (empty($resume_id) || empty($filename) || empty($s3_url)) {
+                    continue;
+                }
+
+                // Store or update in database
+                ResumeS3Url::storeOrUpdate($resume_id, $filename, $s3_url);
+                $synced++;
+
+                // Show progress
+                if ($synced % 10 == 0) {
+                    $timestamp = date('Y-m-d H:i:s');
+                    $total = ResumeS3Url::getTotalDownloaded();
+                    $this->line("[$timestamp] ✅ Synced $synced new | Total in DB: $total");
+                }
+
+            } catch (\Exception $e) {
+                $this->warn("Error on line $lineNumber: " . $e->getMessage());
+            }
+        }
+
+        fclose($handle);
+
+        // Update tracking file
+        file_put_contents($statusFile, (string)$lineNumber);
+
+        // Show summary if any synced
+        if ($synced > 0) {
+            $timestamp = date('Y-m-d H:i:s');
+            $total = ResumeS3Url::getTotalDownloaded();
+            $this->line("[$timestamp] 🎉 Batch complete: $synced new synced | Total: $total");
+        }
+
+        return $lineNumber;
     }
 
     /**
