@@ -10,13 +10,23 @@ Modified to support Laravel storage folder on shared hosting
 import sys
 import io
 import os
-import requests
 import logging
 import time
 import math
 from datetime import datetime
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, urlencode
+from urllib.request import Request, urlopen
+from urllib.error import URLError, HTTPError
+import http.cookiejar
 import re
+
+# Try to use requests if available, otherwise use urllib
+try:
+    import requests
+    HAS_REQUESTS = True
+except ImportError:
+    HAS_REQUESTS = False
+    # We'll use urllib instead
 
 # Fix Unicode/Emoji encoding for Windows
 if sys.platform == 'win32':
