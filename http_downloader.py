@@ -15,7 +15,7 @@ import time
 import math
 from datetime import datetime
 from urllib.parse import urljoin, urlparse, urlencode
-from urllib.request import Request, urlopen
+from urllib.request import Request, build_opener, HTTPCookieProcessor
 from urllib.error import URLError, HTTPError
 import http.cookiejar
 import re
@@ -26,7 +26,7 @@ try:
     HAS_REQUESTS = True
 except ImportError:
     HAS_REQUESTS = False
-    # We'll use urllib instead
+    requests = None  # Will use urllib wrapper instead
 
 # Fix Unicode/Emoji encoding for Windows
 if sys.platform == 'win32':
@@ -93,6 +93,65 @@ except Exception as logging_error:
     print(f"[WARNING] Logging setup issue: {logging_error}")
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.INFO)
+
+
+# urllib wrapper for compatibility when requests is not available
+if not HAS_REQUESTS:
+    class _UrllibResponse:
+        """Wrapper to make urllib response compatible with requests"""
+        def __init__(self, response, status_code):
+            self._response = response
+            self.status_code = status_code
+            self.headers = dict(response.headers) if hasattr(response, 'headers') else {}
+            self.text = response.read().decode('utf-8', errors='ignore') if hasattr(response, 'read') else ''
+            self._content = None
+
+        def raise_for_status(self):
+            if self.status_code >= 400:
+                raise HTTPError(None, self.status_code, f"HTTP {self.status_code}", self.headers, None)
+
+        def iter_content(self, chunk_size=8192):
+            """Iterate over response content in chunks"""
+            if not self._content:
+                self._content = self.text.encode('utf-8')
+            for i in range(0, len(self._content), chunk_size):
+                chunk = self._content[i:i + chunk_size]
+                if chunk:
+                    yield chunk
+
+    class _UrllibSession:
+        """urllib-based session wrapper to be compatible with requests.Session"""
+        def __init__(self):
+            self.cookie_jar = http.cookiejar.CookieJar()
+            self.opener = build_opener(HTTPCookieProcessor(self.cookie_jar))
+            self.headers = {}
+
+        def update(self, headers):
+            """Update headers"""
+            self.headers.update(headers)
+
+        def get(self, url, timeout=15, stream=False, allow_redirects=True):
+            """GET request compatible with requests.Session.get()"""
+            try:
+                req = Request(url, headers=self.headers)
+                response = self.opener.open(req, timeout=timeout)
+                return _UrllibResponse(response, 200)
+            except HTTPError as e:
+                return _UrllibResponse(e, e.code)
+            except URLError as e:
+                raise Exception(f"URLError: {e}")
+
+        def post(self, url, data=None, timeout=15, allow_redirects=True):
+            """POST request compatible with requests.Session.post()"""
+            try:
+                post_data = urlencode(data).encode('utf-8') if data else None
+                req = Request(url, data=post_data, headers=self.headers)
+                response = self.opener.open(req, timeout=timeout)
+                return _UrllibResponse(response, 200)
+            except HTTPError as e:
+                return _UrllibResponse(e, e.code)
+            except URLError as e:
+                raise Exception(f"URLError: {e}")
 
 
 # Initialize tracking files
@@ -323,8 +382,11 @@ def get_credentials():
 
 
 def create_session():
-    """Create a requests session with proper headers"""
-    session = requests.Session()
+    """Create a session with proper headers - uses requests or urllib"""
+    if HAS_REQUESTS:
+        session = requests.Session()
+    else:
+        session = _UrllibSession()
 
     # Set user agent to mimic browser
     session.headers.update({
@@ -703,6 +765,10 @@ def main():
     """Main execution function"""
     logger.info("\n" + "=" * 70)
     logger.info("[STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)")
+    if HAS_REQUESTS:
+        logger.info("[STARTUP] HTTP Library: requests")
+    else:
+        logger.info("[STARTUP] HTTP Library: urllib (built-in - no dependencies)")
     if USE_LARAVEL_STORAGE:
         logger.info("[STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)")
     else:
@@ -711,6 +777,10 @@ def main():
 
     print("\n" + "=" * 70)
     print("TekJobs Resume Downloader - HTTP Direct Download")
+    if HAS_REQUESTS:
+        print("HTTP Library: requests")
+    else:
+        print("HTTP Library: urllib (built-in - no dependencies needed!)")
     if USE_LARAVEL_STORAGE:
         print("Environment: Hostinger Shared Hosting (Using Laravel storage)")
     else:
