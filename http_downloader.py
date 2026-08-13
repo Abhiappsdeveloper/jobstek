@@ -3,6 +3,8 @@
 TekJobs Resume Downloader - Requests-based (No Selenium)
 Downloads resumes directly via HTTP without browser automation
 Uses the same download API that the web interface uses
+
+Modified to support Laravel storage folder on shared hosting
 """
 
 import sys
@@ -21,12 +23,29 @@ if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
+# Auto-detect if running on shared hosting (Laravel storage exists)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+LARAVEL_STORAGE_PATH = os.path.join(SCRIPT_DIR, 'storage', 'resumes')
+USE_LARAVEL_STORAGE = os.path.exists(os.path.join(SCRIPT_DIR, 'storage'))
+
+# Setup paths based on environment
+if USE_LARAVEL_STORAGE:
+    # Running on server with Laravel (Hostinger)
+    LOGS_PATH = os.path.join(SCRIPT_DIR, 'storage', 'logs', 'resume_downloader')
+    DEFAULT_DOWNLOAD_DIR = LARAVEL_STORAGE_PATH
+    os.makedirs(LOGS_PATH, exist_ok=True)
+    os.makedirs(LARAVEL_STORAGE_PATH, exist_ok=True)
+else:
+    # Running locally (Windows/Development)
+    LOGS_PATH = os.path.dirname(__file__)
+    DEFAULT_DOWNLOAD_DIR = os.path.join(SCRIPT_DIR, 'downloads')
+
 # Logging Setup
-LOG_FILE = os.path.join(os.path.dirname(__file__), f"http_downloader_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
-RESUME_LINKS_FILE = os.path.join(os.path.dirname(__file__), f"resume_links_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
-ERROR_TRACKING_FILE = os.path.join(os.path.dirname(__file__), f"error_tracking_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
-DOWNLOADED_TRACKER_FILE = os.path.join(os.path.dirname(__file__), "downloaded_resumes.txt")  # Persistent tracking file
-S3_URLS_TRACKER_FILE = os.path.join(os.path.dirname(__file__), "resume_s3_urls.txt")  # Store S3 URLs for quick recovery
+LOG_FILE = os.path.join(LOGS_PATH, f"http_downloader_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+RESUME_LINKS_FILE = os.path.join(LOGS_PATH, f"resume_links_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
+ERROR_TRACKING_FILE = os.path.join(LOGS_PATH, f"error_tracking_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
+DOWNLOADED_TRACKER_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "downloaded_resumes.txt")  # Persistent tracking file
+S3_URLS_TRACKER_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "resume_s3_urls.txt")  # Store S3 URLs for quick recovery
 
 try:
     logging.getLogger().handlers = []
@@ -644,10 +663,18 @@ def main():
     """Main execution function"""
     logger.info("\n" + "=" * 70)
     logger.info("[STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)")
+    if USE_LARAVEL_STORAGE:
+        logger.info("[STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)")
+    else:
+        logger.info("[STARTUP] Environment: Local Development")
     logger.info("=" * 70)
 
     print("\n" + "=" * 70)
     print("TekJobs Resume Downloader - HTTP Direct Download")
+    if USE_LARAVEL_STORAGE:
+        print("Environment: Hostinger Shared Hosting (Using Laravel storage)")
+    else:
+        print("Environment: Local Development")
     print("=" * 70)
 
     # Initialize tracking files
@@ -688,9 +715,13 @@ def main():
     if resume_ids:
         print(f"\n[STEP 3] Downloading {len(resume_ids)} resume(s)...")
 
-        # Create downloads directory
-        download_dir = 'downloads'
+        # Use Laravel storage or local downloads folder
+        download_dir = DEFAULT_DOWNLOAD_DIR
         os.makedirs(download_dir, exist_ok=True)
+
+        if USE_LARAVEL_STORAGE:
+            print(f"[STORAGE] Using Laravel storage: {download_dir}")
+            logger.info(f"[STORAGE] Using Laravel storage folder")
 
         successful = 0
         failed = 0
@@ -764,7 +795,9 @@ def main():
         print(f"\n[S3-RECOVERY] Recovery Stats:")
         print(f"  Recovered (from S3): {recovered_count}")
         print(f"  Failed Recovery: {recovery_failed}")
-        print(f"Download Directory: {os.path.abspath(download_dir)}")
+        print(f"\n[STORAGE] Environment:")
+        print(f"  Using Laravel Storage: {USE_LARAVEL_STORAGE}")
+        print(f"  Download Directory: {os.path.abspath(download_dir)}")
         print("\n[TRACKING] Output Files:")
         print(f"  Downloaded Resumes Tracker: {os.path.abspath(DOWNLOADED_TRACKER_FILE)}")
         print(f"  S3 URLs Tracker:           {os.path.abspath(S3_URLS_TRACKER_FILE)}")
