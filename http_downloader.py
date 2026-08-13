@@ -33,12 +33,31 @@ if USE_LARAVEL_STORAGE:
     # Running on server with Laravel (Hostinger)
     LOGS_PATH = os.path.join(SCRIPT_DIR, 'storage', 'logs', 'resume_downloader')
     DEFAULT_DOWNLOAD_DIR = LARAVEL_STORAGE_PATH
-    os.makedirs(LOGS_PATH, exist_ok=True)
-    os.makedirs(LARAVEL_STORAGE_PATH, exist_ok=True)
+
+    # Auto-create all necessary directories with error handling
+    try:
+        os.makedirs(LOGS_PATH, exist_ok=True)
+        os.makedirs(LARAVEL_STORAGE_PATH, exist_ok=True)
+
+        # Try to set permissions (won't fail if permission denied)
+        try:
+            os.chmod(os.path.join(SCRIPT_DIR, 'storage'), 0o775)
+            os.chmod(LARAVEL_STORAGE_PATH, 0o775)
+            os.chmod(LOGS_PATH, 0o775)
+        except:
+            pass  # Permission changes are optional, script will work without them
+    except Exception as e:
+        print(f"[WARNING] Could not auto-create directories: {e}")
 else:
     # Running locally (Windows/Development)
     LOGS_PATH = os.path.dirname(__file__)
     DEFAULT_DOWNLOAD_DIR = os.path.join(SCRIPT_DIR, 'downloads')
+
+    # Auto-create downloads folder locally
+    try:
+        os.makedirs(DEFAULT_DOWNLOAD_DIR, exist_ok=True)
+    except Exception as e:
+        print(f"[WARNING] Could not create downloads directory: {e}")
 
 # Logging Setup
 LOG_FILE = os.path.join(LOGS_PATH, f"http_downloader_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
@@ -70,6 +89,9 @@ except Exception as logging_error:
 def initialize_tracking_files():
     """Create tracking files for resume links and errors"""
     try:
+        # Ensure logs directory exists
+        os.makedirs(LOGS_PATH, exist_ok=True)
+
         # Create resume links file
         with open(RESUME_LINKS_FILE, 'w', encoding='utf-8') as f:
             f.write("Resume Links Log\n")
@@ -149,6 +171,10 @@ def mark_resume_as_downloaded(resume_id):
 def initialize_downloaded_tracker():
     """Initialize the downloaded resumes tracker file"""
     try:
+        # Ensure directory exists
+        tracker_dir = os.path.dirname(DOWNLOADED_TRACKER_FILE)
+        os.makedirs(tracker_dir, exist_ok=True)
+
         if not os.path.exists(DOWNLOADED_TRACKER_FILE):
             with open(DOWNLOADED_TRACKER_FILE, 'w', encoding='utf-8') as f:
                 f.write("# Downloaded Resumes Tracker\n")
@@ -164,6 +190,10 @@ def initialize_downloaded_tracker():
 def initialize_s3_urls_tracker():
     """Initialize the S3 URLs tracker file for instant recovery"""
     try:
+        # Ensure directory exists
+        tracker_dir = os.path.dirname(S3_URLS_TRACKER_FILE)
+        os.makedirs(tracker_dir, exist_ok=True)
+
         if not os.path.exists(S3_URLS_TRACKER_FILE):
             with open(S3_URLS_TRACKER_FILE, 'w', encoding='utf-8') as f:
                 f.write("# Resume S3 URLs Tracker\n")
