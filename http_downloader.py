@@ -125,6 +125,8 @@ if not HAS_REQUESTS:
             self.cookie_jar = http.cookiejar.CookieJar()
             self.opener = build_opener(HTTPCookieProcessor(self.cookie_jar))
             self.headers = {}
+            # Make cookies accessible like requests.Session
+            self.cookies = self.cookie_jar
 
         def update(self, headers):
             """Update headers"""
