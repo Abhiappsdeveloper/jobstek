@@ -749,7 +749,7 @@ def download_resume_by_id(session, resume_id, download_dir='downloads', base_url
         logger.info(f"[RESUME-SKIP] Marked {resume_id} as downloaded")
 
         # Store S3 URL for instant recovery if downloads folder deleted
-        store_s3_url(resume_id, filename, download_url)
+        store_s3_url(resume_id, filename, s3_url)
         logger.info(f"[S3-RECOVERY] Stored S3 URL for {resume_id}")
 
         return True
