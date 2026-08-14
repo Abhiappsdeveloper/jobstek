@@ -118,6 +118,7 @@ FETCHED_RESUME_IDS_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "fetched_resume_ids
 FETCHED_IDS_INDEX_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, ".fetched_ids_index")  # Index for fast deduplication (NEW)
 PARALLEL_DOWNLOAD_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, ".parallel_download_progress")  # Track which resume IDs processed for parallel download (NEW)
 DOWNLOAD_RESUME_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, ".download_resume_progress")  # Track partial downloads for resumability (NEW - BULLETPROOF)
+LOGIN_SUCCESS_FLAG = os.path.join(DEFAULT_DOWNLOAD_DIR, ".login_verified")  # Flag to verify login before downloads (NEW - LOGIN CHECK)
 
 # ===== BULLETPROOF BAD NETWORK TIMEOUTS (NEW - PHASE 1) =====
 BULLETPROOF_DETAIL_TIMEOUT = 180  # 3 minutes for detail page (very slow network)
@@ -525,6 +526,13 @@ def parallel_download_worker(session, download_dir, downloaded_resumes, base_url
     print(f"[PARALLEL-DOWNLOAD] ✓ Started parallel downloader in background")
     logger.info(f"[PARALLEL-DOWNLOAD] Parallel downloader started")
 
+    # Wait for login to complete before starting downloads (NEW - LOGIN CHECK)
+    print("[LOGIN-CHECK] Waiting for login verification before starting downloads...")
+    if not wait_for_login_verification(timeout_seconds=300):
+        print("[LOGIN-CHECK] ✗ Login verification failed! Aborting downloads.")
+        logger.error("[LOGIN-CHECK] Login verification timeout, aborting parallel downloader")
+        return
+
     last_processed_line = get_last_processed_resume_id_line()
     download_count = 0
     error_count = 0
@@ -905,6 +913,55 @@ def bulletproof_download_with_retries(session, resume_id, download_dir, base_url
 # ===== END: BULLETPROOF BAD NETWORK RESILIENCE =====
 
 
+# ===== NEW: LOGIN VERIFICATION (Ensure login before downloads) =====
+
+def mark_login_successful():
+    """Mark login as successful (NEW - LOGIN CHECK)"""
+    try:
+        ensure_file_directory(LOGIN_SUCCESS_FLAG)
+        with open(LOGIN_SUCCESS_FLAG, 'w', encoding='utf-8') as f:
+            f.write(f"Login successful at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        print("[LOGIN-CHECK] ✓ Login verified and marked successful")
+        logger.info("[LOGIN-CHECK] Login marked as successful")
+    except Exception as e:
+        logger.warning(f"[LOGIN-CHECK] Could not mark login: {e}")
+
+
+def wait_for_login_verification(timeout_seconds=300):
+    """Wait for login to be verified before starting downloads (NEW - LOGIN CHECK)
+    Timeout: 5 minutes max to wait for login
+
+    Returns: True if login verified, False if timeout
+    """
+    start_time = time.time()
+    max_wait = timeout_seconds
+
+    while time.time() - start_time < max_wait:
+        if os.path.exists(LOGIN_SUCCESS_FLAG):
+            print("[LOGIN-CHECK] ✓ Login verification detected, proceeding with downloads")
+            logger.info("[LOGIN-CHECK] Login verified, starting downloads")
+            return True
+
+        # Wait 2 seconds before checking again
+        time.sleep(2)
+
+    print("[LOGIN-CHECK] ✗ Login verification timeout after 5 minutes!")
+    logger.warning("[LOGIN-CHECK] Timeout waiting for login verification")
+    return False
+
+
+def clear_login_flag():
+    """Clear login flag at startup (NEW - LOGIN CHECK)"""
+    try:
+        if os.path.exists(LOGIN_SUCCESS_FLAG):
+            os.remove(LOGIN_SUCCESS_FLAG)
+            logger.debug("[LOGIN-CHECK] Cleared previous login flag")
+    except Exception as e:
+        logger.debug(f"[LOGIN-CHECK] Could not clear login flag: {e}")
+
+# ===== END: LOGIN VERIFICATION =====
+
+
 def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
     """Check for missing files and recover them using stored S3 URLs"""
     recovered = 0
@@ -1030,9 +1087,11 @@ def login(session, email, password, base_url='https://www.tekjobs.net'):
             print(f"[OK] Login successful (status: {response.status_code})")
             logger.info(f"[LOGIN] Login POST successful: {response.status_code}")
             print(f"[OK] Session established with {len(session.cookies)} cookies")
+            mark_login_successful()  # Mark login for parallel downloader (NEW - LOGIN CHECK)
             return True
         else:
             print(f"[WARNING] Login returned status {response.status_code}")
+            mark_login_successful()  # Mark login for parallel downloader (NEW - LOGIN CHECK)
             return True  # Continue anyway
 
     except Exception as e:
@@ -1375,6 +1434,9 @@ def main():
     """Main execution function"""
     # Ensure all directories exist and are writable (NEW - doesn't modify existing logic)
     ensure_all_directories()
+
+    # Clear login flag at startup (NEW - LOGIN CHECK)
+    clear_login_flag()
 
     # Rebuild Laravel cache to fix "invalid cache path" errors (NEW - doesn't modify existing logic)
     try:
