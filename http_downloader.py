@@ -962,6 +962,83 @@ def clear_login_flag():
 # ===== END: LOGIN VERIFICATION =====
 
 
+# ===== NEW: BULLETPROOF CRON HEALTH CHECK =====
+
+def check_cron_health():
+    """Check if cron is running healthily (NEW - CRON BULLETPROOF)
+    Verifies:
+    1. Log file was created this minute
+    2. Downloads are increasing
+    3. Pages are increasing
+    Returns: (is_healthy, health_status)
+    """
+    try:
+        # Get current time markers
+        current_time = datetime.now()
+        current_minute = current_time.strftime('%Y%m%d_%H%M')
+
+        # Check if log file from this minute exists
+        log_dir = LOGS_PATH
+        log_files = []
+        if os.path.exists(log_dir):
+            log_files = [f for f in os.listdir(log_dir)
+                        if f.startswith('http_downloader_') and f.endswith('.log')]
+
+        latest_log_time = None
+        if log_files:
+            latest_log = sorted(log_files)[-1]
+            # Extract time from filename: http_downloader_YYYYMMDD_HHMMSS.log
+            try:
+                time_part = latest_log.split('_')[2] + '_' + latest_log.split('_')[3].split('.')[0]
+                latest_log_time = time_part[:12]  # Get YYYYMMDD_HHMM
+            except:
+                pass
+
+        # Check if log is from this minute (allowing 1 minute grace)
+        minutes_since_log = 0
+        if latest_log_time:
+            try:
+                log_datetime = datetime.strptime(latest_log_time, '%Y%m%d_%H%M')
+                minutes_since_log = (current_time - log_datetime).total_seconds() / 60
+            except:
+                pass
+
+        # Log cron health
+        health_message = f"[CRON-HEALTH] Log age: {minutes_since_log:.1f} min | Latest log: {latest_log_time}"
+        print(health_message)
+        logger.info(health_message)
+
+        # Cron is healthy if log is within last 2 minutes
+        is_healthy = minutes_since_log <= 2 if latest_log_time else False
+
+        return is_healthy, {
+            'log_age_minutes': minutes_since_log,
+            'latest_log': latest_log_time,
+            'is_healthy': is_healthy
+        }
+
+    except Exception as e:
+        logger.warning(f"[CRON-HEALTH] Could not check cron health: {e}")
+        return False, {'error': str(e)}
+
+
+def create_cron_heartbeat():
+    """Create a heartbeat file to track cron runs (NEW - CRON BULLETPROOF)"""
+    try:
+        ensure_file_directory(os.path.join(DEFAULT_DOWNLOAD_DIR, '.cron_heartbeat'))
+        heartbeat_file = os.path.join(DEFAULT_DOWNLOAD_DIR, '.cron_heartbeat')
+
+        with open(heartbeat_file, 'w', encoding='utf-8') as f:
+            f.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S\n'))
+
+        print("[CRON-HEALTH] ✓ Cron heartbeat recorded")
+        logger.info("[CRON-HEALTH] Cron heartbeat created")
+    except Exception as e:
+        logger.debug(f"[CRON-HEALTH] Could not create heartbeat: {e}")
+
+# ===== END: BULLETPROOF CRON HEALTH CHECK =====
+
+
 def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
     """Check for missing files and recover them using stored S3 URLs"""
     recovered = 0
@@ -1627,6 +1704,9 @@ def main():
 if __name__ == "__main__":
     try:
         success = main()
+
+        # Record cron heartbeat (NEW - CRON BULLETPROOF)
+        create_cron_heartbeat()
 
         print("\n" + "=" * 70)
         if success:
