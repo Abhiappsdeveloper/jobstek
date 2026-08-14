@@ -803,6 +803,16 @@ def main():
     # Ensure all directories exist and are writable (NEW - doesn't modify existing logic)
     ensure_all_directories()
 
+    # Rebuild Laravel cache to fix "invalid cache path" errors (NEW - doesn't modify existing logic)
+    try:
+        import subprocess
+        print("[CACHE] Rebuilding Laravel cache...")
+        subprocess.run(['/usr/bin/php', os.path.join(SCRIPT_DIR, 'artisan'), 'optimize:clear'],
+                       cwd=SCRIPT_DIR, capture_output=True, timeout=30)
+        print("[CACHE] ✓ Laravel cache cleared")
+    except Exception as e:
+        print(f"[CACHE] ⚠ Cache clear not critical: {e}")
+
     logger.info("\n" + "=" * 70)
     logger.info("[STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)")
     if HAS_REQUESTS:
