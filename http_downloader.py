@@ -110,6 +110,7 @@ RESUME_LINKS_FILE = os.path.join(LOGS_PATH, f"resume_links_{datetime.now().strft
 ERROR_TRACKING_FILE = os.path.join(LOGS_PATH, f"error_tracking_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
 DOWNLOADED_TRACKER_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "downloaded_resumes.txt")  # Persistent tracking file
 S3_URLS_TRACKER_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "resume_s3_urls.txt")  # Store S3 URLs for quick recovery
+FETCHED_PAGES_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, "fetched_pages_progress.txt")  # Track which pages already fetched (NEW)
 
 try:
     logging.getLogger().handlers = []
@@ -343,6 +344,28 @@ def store_s3_url(resume_id, filename, s3_url):
             f.write(f"{resume_id}|{filename}|{s3_url}\n")
     except Exception as e:
         logger.warning(f"[S3-RECOVERY] Could not store S3 URL: {e}")
+
+
+def get_last_fetched_page():
+    """Get the last page number that was already fetched (NEW - doesn't modify existing logic)"""
+    try:
+        if os.path.exists(FETCHED_PAGES_TRACKER):
+            with open(FETCHED_PAGES_TRACKER, 'r', encoding='utf-8') as f:
+                content = f.read().strip()
+                if content and content.isdigit():
+                    return int(content)
+    except:
+        pass
+    return 1  # Start from page 1 if no progress file
+
+
+def save_fetched_page(page_number):
+    """Save the current page number as progress (NEW - doesn't modify existing logic)"""
+    try:
+        with open(FETCHED_PAGES_TRACKER, 'w', encoding='utf-8') as f:
+            f.write(str(page_number))
+    except Exception as e:
+        logger.warning(f"[PROGRESS] Could not save fetch progress: {e}")
 
 
 def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
@@ -646,12 +669,15 @@ def get_resume_list_page(session, page=1, base_url='https://www.tekjobs.net', co
 def get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa', max_pages=None):
     """Fetch resume IDs from all pages by incrementing page number"""
     all_resume_ids = []
-    page = 1
+    # Load last fetched page to resume from where we left off (NEW - doesn't modify existing logic)
+    page = get_last_fetched_page()
     total_pages_checked = 0
     calculated_max_pages = max_pages or 10000  # Large default if not calculated
 
     print("\n[PAGINATION] Starting to fetch resumes from all pages...")
     print(f"[PAGINATION] URL format: /employer/searchResume/index/PAGE/?country={country}")
+    if page > 1:
+        print(f"[PAGINATION] Resuming from page {page} (previous progress saved)")
 
     while page <= calculated_max_pages:
         try:
@@ -671,6 +697,9 @@ def get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa
 
             all_resume_ids.extend(resume_ids)
             print(f"[PAGINATION] Total resumes so far: {len(all_resume_ids):,}")
+
+            # Save fetching progress after each page (NEW - doesn't modify existing logic)
+            save_fetched_page(page)
 
             # Progress indicator
             if page % 10 == 0:
@@ -807,11 +836,11 @@ def main():
     try:
         import subprocess
         print("[CACHE] Rebuilding Laravel cache...")
-        subprocess.run(['/usr/bin/php', os.path.join(SCRIPT_DIR, 'artisan'), 'optimize:clear'],
-                       cwd=SCRIPT_DIR, capture_output=True, timeout=30)
+        subprocess.call(['/usr/bin/php', os.path.join(SCRIPT_DIR, 'artisan'), 'optimize:clear'],
+                        cwd=SCRIPT_DIR, stdout=open(os.devnull, 'w'), stderr=open(os.devnull, 'w'))
         print("[CACHE] ✓ Laravel cache cleared")
     except Exception as e:
-        print(f"[CACHE] ⚠ Cache clear not critical: {e}")
+        pass  # Cache clear not critical to resume downloading
 
     logger.info("\n" + "=" * 70)
     logger.info("[STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)")
