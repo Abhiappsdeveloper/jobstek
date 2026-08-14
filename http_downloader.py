@@ -113,6 +113,8 @@ ERROR_TRACKING_FILE = os.path.join(LOGS_PATH, f"error_tracking_{datetime.now().s
 DOWNLOADED_TRACKER_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "downloaded_resumes.txt")  # Persistent tracking file
 S3_URLS_TRACKER_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "resume_s3_urls.txt")  # Store S3 URLs for quick recovery
 FETCHED_PAGES_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, "fetched_pages_progress.txt")  # Track which pages already fetched (NEW)
+FETCHED_RESUME_IDS_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "fetched_resume_ids.txt")  # Store all extracted resume IDs from pages (NEW)
+FETCHED_IDS_INDEX_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, ".fetched_ids_index")  # Index for fast deduplication (NEW)
 
 try:
     logging.getLogger().handlers = []
@@ -385,6 +387,95 @@ def save_fetched_page(page_number):
             f.write(str(page_number))
     except Exception as e:
         pass  # Silent - don't clutter logs with progress file issues
+
+
+# ===== NEW: Fetched Resume IDs Tracking (Bulletproof with directory auto-creation) =====
+
+def load_fetched_resume_ids():
+    """Load all previously fetched resume IDs into memory for fast deduplication (NEW)"""
+    fetched_ids = set()
+    try:
+        # Ensure directory exists before reading
+        ensure_file_directory(FETCHED_RESUME_IDS_FILE)
+
+        if os.path.exists(FETCHED_RESUME_IDS_FILE):
+            with open(FETCHED_RESUME_IDS_FILE, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        fetched_ids.add(line)
+            print(f"[FETCH-DEDUP] Loaded {len(fetched_ids)} previously fetched resume IDs")
+            logger.info(f"[FETCH-DEDUP] Loaded {len(fetched_ids)} fetched resume IDs for deduplication")
+    except Exception as e:
+        logger.warning(f"[FETCH-DEDUP] Could not load fetched resume IDs: {e}")
+    return fetched_ids
+
+
+def is_resume_id_already_fetched(resume_id, fetched_ids_set):
+    """Check if resume ID was already extracted from a previous page fetch (NEW)"""
+    return resume_id in fetched_ids_set
+
+
+def store_fetched_resume_ids(resume_ids_list, page_number, already_fetched_set):
+    """Store newly extracted resume IDs (only new ones, skip duplicates on restart) (NEW)
+    Args:
+        resume_ids_list: List of resume IDs extracted from this page
+        page_number: Current page number
+        already_fetched_set: Set of IDs already stored (for deduplication)
+
+    Returns:
+        new_ids_count: Number of new IDs stored (for logging)
+    """
+    new_ids_count = 0
+    try:
+        # Ensure directory exists before writing (BULLETPROOF - doesn't modify existing logic)
+        ensure_file_directory(FETCHED_RESUME_IDS_FILE)
+
+        # Filter out IDs that were already fetched
+        new_resume_ids = []
+        for resume_id in resume_ids_list:
+            if not is_resume_id_already_fetched(resume_id, already_fetched_set):
+                new_resume_ids.append(resume_id)
+                already_fetched_set.add(resume_id)  # Add to set for future checks
+
+        # Only write if there are new IDs
+        if new_resume_ids:
+            with open(FETCHED_RESUME_IDS_FILE, 'a', encoding='utf-8') as f:
+                for resume_id in new_resume_ids:
+                    f.write(f"{resume_id}\n")
+            new_ids_count = len(new_resume_ids)
+            print(f"[FETCH-STORE] Page {page_number}: Stored {new_ids_count} new resume IDs (skipped {len(resume_ids_list) - new_ids_count} duplicates)")
+            logger.info(f"[FETCH-STORE] Page {page_number}: {new_ids_count} new IDs stored, {len(resume_ids_list) - new_ids_count} duplicates skipped")
+        else:
+            print(f"[FETCH-STORE] Page {page_number}: All {len(resume_ids_list)} IDs were already fetched (skipped all)")
+            logger.info(f"[FETCH-STORE] Page {page_number}: All IDs already fetched, no new data stored")
+    except Exception as e:
+        logger.warning(f"[FETCH-STORE] Could not store fetched resume IDs for page {page_number}: {e}")
+
+    return new_ids_count
+
+
+def initialize_fetched_resume_ids_tracker():
+    """Initialize the fetched resume IDs tracker file (BULLETPROOF directory creation) (NEW)"""
+    try:
+        # Ensure directory exists (BULLETPROOF - creates on-the-fly if missing)
+        ensure_file_directory(FETCHED_RESUME_IDS_FILE)
+
+        # Create header if file doesn't exist
+        if not os.path.exists(FETCHED_RESUME_IDS_FILE):
+            with open(FETCHED_RESUME_IDS_FILE, 'w', encoding='utf-8') as f:
+                f.write("# Fetched Resume IDs Tracker\n")
+                f.write(f"# Auto-generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write("# Stores all resume IDs extracted from page fetches\n")
+                f.write("# Used to deduplicate on restart and avoid re-fetching\n")
+                f.write("# Format: One resume ID per line\n\n")
+            print(f"[FETCH-INIT] Created fetched resume IDs tracker: {FETCHED_RESUME_IDS_FILE}")
+            logger.info(f"[FETCH-INIT] Fetched resume IDs tracker file created")
+    except Exception as e:
+        logger.warning(f"[FETCH-INIT] Could not initialize fetched resume IDs tracker: {e}")
+
+
+# ===== END: Fetched Resume IDs Tracking =====
 
 
 def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
@@ -686,12 +777,16 @@ def get_resume_list_page(session, page=1, base_url='https://www.tekjobs.net', co
 
 
 def get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa', max_pages=None):
-    """Fetch resume IDs from all pages by incrementing page number"""
+    """Fetch resume IDs from all pages by incrementing page number (with deduplication on restart)"""
     all_resume_ids = []
     # Load last fetched page to resume from where we left off (NEW - doesn't modify existing logic)
     page = get_last_fetched_page()
     total_pages_checked = 0
     calculated_max_pages = max_pages or 10000  # Large default if not calculated
+
+    # Initialize and load fetched resume IDs tracker (NEW - doesn't modify existing logic)
+    initialize_fetched_resume_ids_tracker()
+    fetched_ids_set = load_fetched_resume_ids()
 
     print("\n[PAGINATION] Starting to fetch resumes from all pages...")
     print(f"[PAGINATION] URL format: /employer/searchResume/index/PAGE/?country={country}")
@@ -716,6 +811,9 @@ def get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa
 
             all_resume_ids.extend(resume_ids)
             print(f"[PAGINATION] Total resumes so far: {len(all_resume_ids):,}")
+
+            # Store fetched resume IDs with deduplication (NEW - doesn't modify existing logic)
+            store_fetched_resume_ids(resume_ids, page, fetched_ids_set)
 
             # Save fetching progress after each page (NEW - doesn't modify existing logic)
             save_fetched_page(page)
