@@ -107,7 +107,8 @@ class CheckAndRunDownloader extends Command
                 }
 
                 $this->line("Running: {$command}");
-                exec($command);
+                // Use shell_exec for background execution
+                shell_exec($command);
 
                 $this->info('✅ Script started in background (check logs for output)');
                 Log::info('[DOWNLOADER-FALLBACK] Manually triggered download script');

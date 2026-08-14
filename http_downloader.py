@@ -526,12 +526,10 @@ def parallel_download_worker(session, download_dir, downloaded_resumes, base_url
     print(f"[PARALLEL-DOWNLOAD] ✓ Started parallel downloader in background")
     logger.info(f"[PARALLEL-DOWNLOAD] Parallel downloader started")
 
-    # Wait for login to complete before starting downloads (NEW - LOGIN CHECK)
-    print("[LOGIN-CHECK] Waiting for login verification before starting downloads...")
-    if not wait_for_login_verification(timeout_seconds=300):
-        print("[LOGIN-CHECK] ✗ Login verification failed! Aborting downloads.")
-        logger.error("[LOGIN-CHECK] Login verification timeout, aborting parallel downloader")
-        return
+    # No login check - start downloads immediately
+    # Login will be triggered automatically on 401 error (lazy login)
+    print("[LOGIN] Using lazy login - will authenticate only if needed")
+    logger.info("[LOGIN] Lazy login mode - downloads starting immediately")
 
     last_processed_line = get_last_processed_resume_id_line()
     download_count = 0
@@ -1037,6 +1035,58 @@ def create_cron_heartbeat():
         logger.debug(f"[CRON-HEALTH] Could not create heartbeat: {e}")
 
 # ===== END: BULLETPROOF CRON HEALTH CHECK =====
+
+
+# ===== NEW: BULLETPROOF LOGIN WITH RETRIES =====
+
+def bulletproof_login(session, email, password, base_url='https://www.tekjobs.net'):
+    """Bulletproof login wrapper with exponential backoff retries (NEW - No code modification)
+    Calls existing login() function with retry logic
+    Login is MANDATORY - aborts if all retries fail
+
+    Returns: True if login successful, False if all retries exhausted
+    """
+    max_retries = BULLETPROOF_MAX_RETRIES
+    attempt = 0
+
+    print("[BULLETPROOF-LOGIN] Starting login with bulletproof retries...")
+    logger.info("[BULLETPROOF-LOGIN] Login with retry logic started")
+
+    while attempt < max_retries:
+        attempt += 1
+        try:
+            print(f"[BULLETPROOF-LOGIN] Attempt {attempt}/{max_retries}")
+
+            # Call existing login() function (doesn't modify it)
+            result = login(session, email, password, base_url)
+
+            if result:
+                print(f"[BULLETPROOF-LOGIN] ✓ Login successful on attempt {attempt}")
+                logger.info(f"[BULLETPROOF-LOGIN] Login successful on attempt {attempt}")
+                return True
+            else:
+                print(f"[BULLETPROOF-LOGIN] Login returned False")
+
+                if attempt < max_retries:
+                    delay = calculate_exponential_backoff(attempt)
+                    print(f"[BULLETPROOF-LOGIN] Waiting {delay}s before retry...")
+                    time.sleep(delay)
+
+        except Exception as e:
+            print(f"[BULLETPROOF-LOGIN] Error on attempt {attempt}: {str(e)[:50]}")
+            logger.error(f"[BULLETPROOF-LOGIN] Attempt {attempt} error: {str(e)}")
+
+            if attempt < max_retries:
+                delay = calculate_exponential_backoff(attempt)
+                print(f"[BULLETPROOF-LOGIN] Waiting {delay}s before retry...")
+                time.sleep(delay)
+
+    # All retries exhausted
+    print(f"[BULLETPROOF-LOGIN] ✗ LOGIN FAILED after {max_retries} attempts - ABORTING")
+    logger.error(f"[BULLETPROOF-LOGIN] All {max_retries} login attempts failed - ABORTING")
+    return False
+
+# ===== END: BULLETPROOF LOGIN WITH RETRIES =====
 
 
 def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
@@ -1575,13 +1625,12 @@ def main():
     # Create session
     session = create_session()
 
-    # Login
-    print("\n[STEP 1] Authenticating with TekJobs...")
-    if not login(session, email, password):
-        print("[WARNING] Login may have failed, but continuing...")
-        logger.warning("[LOGIN] Login did not return success status")
+    # Skip mandatory login - only login if server asks (401 error)
+    print("\n[STEP 1] Preparing session...")
+    print("[LOGIN] Will only authenticate if server requires it (lazy login)")
+    logger.info("[LOGIN] Lazy login mode - authenticate only on 401 error")
 
-    time.sleep(2)
+    time.sleep(1)
 
     # Start parallel downloader (NEW - downloads while pages are fetching, doesn't modify existing logic)
     print("\n[PARALLEL-SETUP] Initializing parallel downloader...")
