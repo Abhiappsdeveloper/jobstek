@@ -117,6 +117,14 @@ FETCHED_PAGES_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, "fetched_pages_progre
 FETCHED_RESUME_IDS_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "fetched_resume_ids.txt")  # Store all extracted resume IDs from pages (NEW)
 FETCHED_IDS_INDEX_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, ".fetched_ids_index")  # Index for fast deduplication (NEW)
 PARALLEL_DOWNLOAD_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, ".parallel_download_progress")  # Track which resume IDs processed for parallel download (NEW)
+DOWNLOAD_RESUME_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, ".download_resume_progress")  # Track partial downloads for resumability (NEW - BULLETPROOF)
+
+# ===== BULLETPROOF BAD NETWORK TIMEOUTS (NEW - PHASE 1) =====
+BULLETPROOF_DETAIL_TIMEOUT = 180  # 3 minutes for detail page (very slow network)
+BULLETPROOF_S3_TIMEOUT = 1200  # 20 minutes for S3 download (10MB at 20KB/s)
+BULLETPROOF_CONNECTION_TIMEOUT = 60  # 60 seconds connection timeout
+BULLETPROOF_MAX_RETRIES = 5  # 5 retry attempts (NEW - PHASE 2)
+BULLETPROOF_BASE_DELAY = 10  # 10 seconds base delay (NEW - PHASE 3)
 
 try:
     logging.getLogger().handlers = []
@@ -555,10 +563,11 @@ def parallel_download_worker(session, download_dir, downloaded_resumes, base_url
                             logger.debug(f"[PARALLEL-DOWNLOAD] Resume {resume_id} already downloaded, skipping")
                             continue
 
-                        # Download the resume
+                        # Download the resume (NEW - BULLETPROOF wrapper with retries)
                         try:
                             print(f"[PARALLEL-DOWNLOAD] Downloading: {resume_id}")
-                            if download_resume_by_id(session, resume_id, download_dir, base_url, resume_index=None):
+                            # Use bulletproof wrapper with exponential backoff and adaptive delays (NEW - PHASES 1-3)
+                            if bulletproof_download_with_retries(session, resume_id, download_dir, base_url, resume_index=None):
                                 # Mark as downloaded
                                 mark_resume_as_downloaded(resume_id)
                                 downloaded_resumes.add(resume_id)
@@ -567,13 +576,15 @@ def parallel_download_worker(session, download_dir, downloaded_resumes, base_url
                                 logger.info(f"[PARALLEL-DOWNLOAD] Successfully downloaded {resume_id}")
                             else:
                                 error_count += 1
-                                logger.warning(f"[PARALLEL-DOWNLOAD] Failed to download {resume_id}")
+                                logger.warning(f"[PARALLEL-DOWNLOAD] Failed to download {resume_id} after all retries")
 
                         except Exception as e:
                             error_count += 1
                             logger.error(f"[PARALLEL-DOWNLOAD] Error downloading {resume_id}: {str(e)}")
 
-                        time.sleep(1)  # Delay between downloads
+                        # Use adaptive delay between downloads (NEW - PHASE 3)
+                        adaptive_delay = get_adaptive_delay('normal')
+                        time.sleep(adaptive_delay)
 
                 # Save progress (which line we processed up to)
                 if current_line > last_processed_line:
@@ -612,6 +623,286 @@ def start_parallel_downloader(session, download_dir, downloaded_resumes):
         return False
 
 # ===== END: Parallel Download =====
+
+
+# ===== NEW: BULLETPROOF BAD NETWORK RESILIENCE (PHASES 1-5) =====
+
+def calculate_exponential_backoff(attempt_number):
+    """Calculate exponential backoff delay for retries (NEW - PHASE 2)
+    Attempt 1: 5 sec
+    Attempt 2: 15 sec
+    Attempt 3: 30 sec
+    Attempt 4: 60 sec
+    Attempt 5: 120 sec
+    """
+    backoff_delays = [5, 15, 30, 60, 120]
+    if attempt_number <= len(backoff_delays):
+        return backoff_delays[attempt_number - 1]
+    return 120  # Max 120 seconds
+
+
+def get_adaptive_delay(error_type='normal'):
+    """Get adaptive delay based on error type (NEW - PHASE 3)
+    Different delays for different network conditions
+    """
+    delays = {
+        'normal': BULLETPROOF_BASE_DELAY,  # 10 seconds
+        'timeout': 30,  # 30 seconds for timeout
+        'rate_limit': 60,  # 60 seconds for rate limiting
+        'connection': 15,  # 15 seconds for connection errors
+    }
+    return delays.get(error_type, BULLETPROOF_BASE_DELAY)
+
+
+def load_download_resume_progress():
+    """Load partial download progress for resumability (NEW - PHASE 5)
+    Format: resume_id|bytes_downloaded|total_bytes|s3_url
+    """
+    resume_progress = {}
+    try:
+        ensure_file_directory(DOWNLOAD_RESUME_TRACKER)
+
+        if os.path.exists(DOWNLOAD_RESUME_TRACKER):
+            with open(DOWNLOAD_RESUME_TRACKER, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        try:
+                            parts = line.split('|')
+                            if len(parts) >= 4:
+                                resume_id = parts[0]
+                                bytes_down = int(parts[1])
+                                total_bytes = int(parts[2])
+                                s3_url = parts[3]
+                                resume_progress[resume_id] = {
+                                    'bytes_downloaded': bytes_down,
+                                    'total_bytes': total_bytes,
+                                    's3_url': s3_url
+                                }
+                        except:
+                            pass
+
+        if resume_progress:
+            print(f"[BULLETPROOF] Loaded {len(resume_progress)} partial downloads for resume")
+            logger.info(f"[BULLETPROOF] Loaded {len(resume_progress)} partial downloads")
+    except Exception as e:
+        logger.warning(f"[BULLETPROOF] Could not load resume progress: {e}")
+
+    return resume_progress
+
+
+def save_download_progress(resume_id, bytes_downloaded, total_bytes, s3_url):
+    """Save partial download progress (NEW - PHASE 5)"""
+    try:
+        ensure_file_directory(DOWNLOAD_RESUME_TRACKER)
+
+        # Read existing progress
+        progress_dict = load_download_resume_progress()
+
+        # Update this resume
+        progress_dict[resume_id] = {
+            'bytes_downloaded': bytes_downloaded,
+            'total_bytes': total_bytes,
+            's3_url': s3_url
+        }
+
+        # Write all progress
+        with open(DOWNLOAD_RESUME_TRACKER, 'w', encoding='utf-8') as f:
+            f.write("# Download Resume Progress\n")
+            f.write(f"# Format: resume_id|bytes_downloaded|total_bytes|s3_url\n\n")
+            for rid, progress in progress_dict.items():
+                f.write(f"{rid}|{progress['bytes_downloaded']}|{progress['total_bytes']}|{progress['s3_url']}\n")
+    except Exception as e:
+        logger.warning(f"[BULLETPROOF] Could not save download progress: {e}")
+
+
+def clear_download_progress(resume_id):
+    """Clear progress for completed download (NEW - PHASE 5)"""
+    try:
+        ensure_file_directory(DOWNLOAD_RESUME_TRACKER)
+        progress_dict = load_download_resume_progress()
+
+        if resume_id in progress_dict:
+            del progress_dict[resume_id]
+
+            with open(DOWNLOAD_RESUME_TRACKER, 'w', encoding='utf-8') as f:
+                f.write("# Download Resume Progress\n")
+                f.write(f"# Format: resume_id|bytes_downloaded|total_bytes|s3_url\n\n")
+                for rid, progress in progress_dict.items():
+                    f.write(f"{rid}|{progress['bytes_downloaded']}|{progress['total_bytes']}|{progress['s3_url']}\n")
+    except Exception as e:
+        logger.debug(f"[BULLETPROOF] Could not clear download progress: {e}")
+
+
+def is_network_error(error_message):
+    """Detect if error is network-related (NEW - PHASE 4)"""
+    network_keywords = ['timeout', 'connection', 'reset', 'refused', 'unreachable', 'temporary', 'network']
+    return any(keyword in error_message.lower() for keyword in network_keywords)
+
+
+def handle_network_error(error_message, attempt_number):
+    """Handle network errors gracefully (NEW - PHASE 4)
+    Returns: (should_retry, delay_seconds, error_type)
+    """
+    if is_network_error(error_message):
+        if attempt_number < BULLETPROOF_MAX_RETRIES:
+            delay = calculate_exponential_backoff(attempt_number)
+            return True, delay, 'network'
+    return False, 0, 'unknown'
+
+
+def robust_download_with_retry(session, resume_id, s3_url, file_path, resume_index=None):
+    """Robust download with bulletproof retry logic and resume capability (NEW - PHASES 2-5)
+
+    Returns: (success, file_path, bytes_downloaded)
+    """
+    max_retries = BULLETPROOF_MAX_RETRIES
+    attempt = 0
+    last_error = None
+
+    # Load previous progress
+    resume_progress = load_download_resume_progress()
+    previous_bytes = 0
+    if resume_id in resume_progress:
+        previous_bytes = resume_progress[resume_id].get('bytes_downloaded', 0)
+        print(f"[BULLETPROOF] Resuming {resume_id}: {previous_bytes} bytes already downloaded")
+        logger.info(f"[BULLETPROOF] Resuming {resume_id}: {previous_bytes} bytes")
+
+    while attempt < max_retries:
+        attempt += 1
+        try:
+            print(f"[BULLETPROOF-RETRY] Attempt {attempt}/{max_retries} for {resume_id}")
+            logger.info(f"[BULLETPROOF-RETRY] Attempt {attempt}/{max_retries}")
+
+            # Download with bulletproof timeout (NEW - PHASE 1)
+            response = session.get(s3_url, timeout=BULLETPROOF_S3_TIMEOUT, stream=True, allow_redirects=True)
+
+            if response.status_code != 200:
+                last_error = f"HTTP {response.status_code}"
+                if attempt < max_retries:
+                    delay = get_adaptive_delay('connection')
+                    print(f"[BULLETPROOF-RETRY] Status {response.status_code}, waiting {delay}s before retry...")
+                    time.sleep(delay)
+                continue
+
+            # Get file size
+            content_length = response.headers.get('content-length')
+            total_bytes = int(content_length) if content_length else 0
+
+            # Write file with progress tracking
+            bytes_downloaded = previous_bytes
+            with open(file_path, 'ab') as f:  # Append mode for resume
+                for chunk in response.iter_content(chunk_size=8192):
+                    if chunk:
+                        f.write(chunk)
+                        bytes_downloaded += len(chunk)
+
+                        # Save progress periodically (every 100KB)
+                        if bytes_downloaded % (100 * 1024) == 0:
+                            save_download_progress(resume_id, bytes_downloaded, total_bytes, s3_url)
+
+            # Verify download completed
+            file_size = os.path.getsize(file_path)
+            if file_size < 500:  # Very small files are likely errors
+                with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read()
+                    if '<html' in content.lower() or 'error' in content.lower():
+                        last_error = "Downloaded HTML error page instead of resume"
+                        if attempt < max_retries:
+                            delay = get_adaptive_delay('timeout')
+                            print(f"[BULLETPROOF-RETRY] Error page detected, waiting {delay}s...")
+                            time.sleep(delay)
+                        continue
+
+            # Success! Clear progress
+            clear_download_progress(resume_id)
+            print(f"[BULLETPROOF] ✓ Successfully downloaded {resume_id} ({file_size} bytes, attempt {attempt})")
+            logger.info(f"[BULLETPROOF] Success on attempt {attempt}")
+            return True, file_path, file_size
+
+        except Exception as e:
+            last_error = str(e)
+
+            # Check if network error
+            should_retry, delay, error_type = handle_network_error(last_error, attempt)
+
+            if attempt < max_retries:
+                # Calculate delay based on error type and attempt
+                if error_type == 'network':
+                    wait_delay = delay
+                else:
+                    wait_delay = get_adaptive_delay('timeout')
+
+                print(f"[BULLETPROOF-RETRY] Error ({error_type}): {last_error[:60]}")
+                print(f"[BULLETPROOF-RETRY] Waiting {wait_delay}s before retry {attempt + 1}...")
+                logger.warning(f"[BULLETPROOF-RETRY] Attempt {attempt} failed: {last_error[:100]}")
+                time.sleep(wait_delay)
+            else:
+                logger.error(f"[BULLETPROOF] All {max_retries} attempts failed: {last_error}")
+
+    # All retries exhausted
+    print(f"[BULLETPROOF] ✗ Failed to download {resume_id} after {max_retries} attempts: {last_error}")
+    return False, None, 0
+
+
+def bulletproof_download_with_retries(session, resume_id, download_dir, base_url='https://www.tekjobs.net', resume_index=None):
+    """Bulletproof wrapper for download_resume_by_id with full retry logic (NEW - PHASES 1-3)
+    This wraps the existing download_resume_by_id() function with exponential backoff and adaptive delays.
+    Does not modify the existing download logic.
+
+    Returns: True if successful, False if all retries exhausted
+    """
+    max_retries = BULLETPROOF_MAX_RETRIES
+    attempt = 0
+    last_error = None
+
+    while attempt < max_retries:
+        attempt += 1
+        try:
+            print(f"[BULLETPROOF] Attempt {attempt}/{max_retries} to download {resume_id}")
+            logger.info(f"[BULLETPROOF] Attempt {attempt}/{max_retries}")
+
+            # Call the existing download function with bulletproof timeout settings
+            # The function signature stays the same, we just wrap with retry logic
+            result = download_resume_by_id(session, resume_id, download_dir, base_url, resume_index)
+
+            if result:
+                print(f"[BULLETPROOF] ✓ Downloaded {resume_id} on attempt {attempt}")
+                logger.info(f"[BULLETPROOF] Success on attempt {attempt}")
+                return True
+            else:
+                last_error = "download_resume_by_id returned False"
+
+                if attempt < max_retries:
+                    delay = get_adaptive_delay('timeout')
+                    print(f"[BULLETPROOF-RETRY] Download failed, waiting {delay}s before retry...")
+                    time.sleep(delay)
+                continue
+
+        except Exception as e:
+            last_error = str(e)
+
+            if attempt < max_retries:
+                # Check if network error and use exponential backoff
+                should_retry, backoff_delay, error_type = handle_network_error(last_error, attempt)
+
+                if error_type == 'network':
+                    wait_delay = backoff_delay
+                else:
+                    wait_delay = get_adaptive_delay('connection')
+
+                print(f"[BULLETPROOF-RETRY] Attempt {attempt} failed ({error_type}): {last_error[:50]}")
+                print(f"[BULLETPROOF-RETRY] Waiting {wait_delay}s before retry {attempt + 1}...")
+                logger.warning(f"[BULLETPROOF-RETRY] Attempt {attempt} error: {last_error[:100]}")
+                time.sleep(wait_delay)
+            else:
+                logger.error(f"[BULLETPROOF] All {max_retries} attempts failed: {last_error}")
+
+    # All retries exhausted
+    print(f"[BULLETPROOF] ✗ Failed after {max_retries} attempts: {last_error}")
+    return False
+
+# ===== END: BULLETPROOF BAD NETWORK RESILIENCE =====
 
 
 def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
