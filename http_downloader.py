@@ -120,10 +120,10 @@ PARALLEL_DOWNLOAD_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, ".parallel_downlo
 DOWNLOAD_RESUME_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, ".download_resume_progress")  # Track partial downloads for resumability (NEW - BULLETPROOF)
 LOGIN_SUCCESS_FLAG = os.path.join(DEFAULT_DOWNLOAD_DIR, ".login_verified")  # Flag to verify login before downloads (NEW - LOGIN CHECK)
 
-# ===== BULLETPROOF BAD NETWORK TIMEOUTS (NEW - PHASE 1) =====
-BULLETPROOF_DETAIL_TIMEOUT = 180  # 3 minutes for detail page (very slow network)
-BULLETPROOF_S3_TIMEOUT = 1200  # 20 minutes for S3 download (10MB at 20KB/s)
-BULLETPROOF_CONNECTION_TIMEOUT = 60  # 60 seconds connection timeout
+# ===== EXTREME BULLETPROOF BAD NETWORK TIMEOUTS (NEW - PHASE 1) =====
+BULLETPROOF_DETAIL_TIMEOUT = 600  # 10 minutes for detail page (EXTREME network: 500KB at 5KB/s = 100s + safety)
+BULLETPROOF_S3_TIMEOUT = 3600  # 60 minutes for S3 download (EXTREME: 10MB at 5KB/s = 2048s + safety)
+BULLETPROOF_CONNECTION_TIMEOUT = 300  # 5 minutes for login (EXTREME: 100KB at 5KB/s = 20s + retry overhead + safety)
 BULLETPROOF_MAX_RETRIES = 5  # 5 retry attempts (NEW - PHASE 2)
 BULLETPROOF_BASE_DELAY = 10  # 10 seconds base delay (NEW - PHASE 3)
 
@@ -1063,7 +1063,8 @@ def login(session, email, password, base_url='https://www.tekjobs.net'):
         print("[LOGIN] Fetching login page...")
         login_url = urljoin(base_url, '/login')
 
-        response = session.get(login_url, timeout=10)
+        # Use bulletproof timeout for login page (NEW - PHASE 1 timeout)
+        response = session.get(login_url, timeout=BULLETPROOF_CONNECTION_TIMEOUT)
         response.raise_for_status()
 
         logger.info(f"[LOGIN] Login page status: {response.status_code}")
@@ -1081,7 +1082,8 @@ def login(session, email, password, base_url='https://www.tekjobs.net'):
         print("[LOGIN] Submitting login credentials...")
         login_post_url = urljoin(base_url, '/api/login')
 
-        response = session.post(login_post_url, data=login_data, timeout=10, allow_redirects=True)
+        # Use bulletproof timeout for login POST (NEW - PHASE 1 timeout)
+        response = session.post(login_post_url, data=login_data, timeout=BULLETPROOF_CONNECTION_TIMEOUT, allow_redirects=True)
 
         if response.status_code in [200, 302]:
             print(f"[OK] Login successful (status: {response.status_code})")
@@ -1134,7 +1136,8 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
         detail_url = urljoin(base_url, f'/employer/searchResume/resume/{resume_id}/')
         print(f"[DETAIL] Fetching detail page for {resume_id}...")
 
-        response = session.get(detail_url, timeout=15)
+        # Use bulletproof timeout for detail page (NEW - PHASE 1 timeout)
+        response = session.get(detail_url, timeout=BULLETPROOF_DETAIL_TIMEOUT)
         response.raise_for_status()
 
         html_content = response.text
