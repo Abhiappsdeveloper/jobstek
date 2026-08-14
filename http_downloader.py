@@ -69,6 +69,31 @@ else:
     except Exception as e:
         print(f"[WARNING] Could not create downloads directory: {e}")
 
+# Comprehensive directory validation and creation (NEW - doesn't modify previous logic)
+def ensure_all_directories():
+    """Ensure all required directories exist and are writable - runs once at startup"""
+    required_dirs = [
+        LOGS_PATH,
+        DEFAULT_DOWNLOAD_DIR,
+        os.path.join(SCRIPT_DIR, 'storage'),
+        os.path.join(SCRIPT_DIR, 'storage', 'framework'),
+        os.path.join(SCRIPT_DIR, 'storage', 'framework', 'cache'),
+        os.path.join(SCRIPT_DIR, 'bootstrap'),
+        os.path.join(SCRIPT_DIR, 'bootstrap', 'cache'),
+    ]
+
+    for directory in required_dirs:
+        try:
+            if directory and not os.path.exists(directory):
+                os.makedirs(directory, mode=0o775, exist_ok=True)
+            # Test write permission
+            test_file = os.path.join(directory, '.write_test')
+            with open(test_file, 'w') as f:
+                f.write('')
+            os.remove(test_file)
+        except Exception as e:
+            print(f"[ERROR] Directory issue with {directory}: {e}")
+
 # Logging Setup
 LOG_FILE = os.path.join(LOGS_PATH, f"http_downloader_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
 RESUME_LINKS_FILE = os.path.join(LOGS_PATH, f"resume_links_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
@@ -765,6 +790,9 @@ def download_resume_by_id(session, resume_id, download_dir='downloads', base_url
 
 def main():
     """Main execution function"""
+    # Ensure all directories exist and are writable (NEW - doesn't modify existing logic)
+    ensure_all_directories()
+
     logger.info("\n" + "=" * 70)
     logger.info("[STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)")
     if HAS_REQUESTS:
@@ -953,7 +981,13 @@ if __name__ == "__main__":
 
     except Exception as e:
         print(f"\n[FATAL] Fatal error: {e}")
-        logger.error(f"[FATAL] {e}", exc_info=True)
+        print(f"[FATAL] Error type: {type(e).__name__}")
+        print(f"[FATAL] Download directory: {os.path.abspath(DEFAULT_DOWNLOAD_DIR)}")
+        print(f"[FATAL] Logs directory: {os.path.abspath(LOGS_PATH)}")
+        try:
+            logger.error(f"[FATAL] {e}", exc_info=True)
+        except:
+            pass  # If logging fails, continue
 
         print("\nPress Enter to close this terminal...")
         try:
