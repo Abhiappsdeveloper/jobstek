@@ -1089,6 +1089,56 @@ def bulletproof_login(session, email, password, base_url='https://www.tekjobs.ne
 # ===== END: BULLETPROOF LOGIN WITH RETRIES =====
 
 
+# ===== NEW: 504 ERROR RETRY HANDLER =====
+
+def retry_on_504(func, *args, max_retries=3, **kwargs):
+    """Retry function if it returns 504 error (NEW - Handle server overload)
+
+    Usage: Instead of calling get_resume_list_page(...), call:
+           retry_on_504(get_resume_list_page, session, page, ...)
+    """
+    attempt = 0
+    last_error = None
+
+    while attempt < max_retries:
+        attempt += 1
+        try:
+            result = func(*args, **kwargs)
+
+            # Check if result contains 504 error
+            if isinstance(result, tuple):
+                # If it's a tuple, first element might be resume_ids
+                # We can't detect 504 in result, only in exception
+                return result
+
+            return result
+
+        except Exception as e:
+            error_msg = str(e)
+            last_error = error_msg
+
+            # Check if it's a 504 error
+            if '504' in error_msg or 'Gateway' in error_msg:
+                print(f"[504-RETRY] Server overloaded (504), attempt {attempt}/{max_retries}")
+                logger.warning(f"[504-RETRY] Got 504 error, retrying...")
+
+                if attempt < max_retries:
+                    delay = get_adaptive_delay('timeout')
+                    print(f"[504-RETRY] Waiting {delay}s before retry...")
+                    time.sleep(delay)
+                    continue
+
+            # For non-504 errors, fail immediately
+            raise
+
+    # All retries exhausted
+    print(f"[504-RETRY] Failed after {max_retries} attempts: {last_error}")
+    logger.error(f"[504-RETRY] All retries failed: {last_error}")
+    raise Exception(f"Failed after {max_retries} attempts: {last_error}")
+
+# ===== END: 504 ERROR RETRY HANDLER =====
+
+
 def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
     """Check for missing files and recover them using stored S3 URLs"""
     recovered = 0
