@@ -13,6 +13,7 @@ import os
 import logging
 import time
 import math
+import threading
 from datetime import datetime
 from urllib.parse import urljoin, urlparse, urlencode
 from urllib.request import Request, build_opener, HTTPCookieProcessor
@@ -115,6 +116,7 @@ S3_URLS_TRACKER_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "resume_s3_urls.txt") 
 FETCHED_PAGES_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, "fetched_pages_progress.txt")  # Track which pages already fetched (NEW)
 FETCHED_RESUME_IDS_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "fetched_resume_ids.txt")  # Store all extracted resume IDs from pages (NEW)
 FETCHED_IDS_INDEX_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, ".fetched_ids_index")  # Index for fast deduplication (NEW)
+PARALLEL_DOWNLOAD_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, ".parallel_download_progress")  # Track which resume IDs processed for parallel download (NEW)
 
 try:
     logging.getLogger().handlers = []
@@ -476,6 +478,140 @@ def initialize_fetched_resume_ids_tracker():
 
 
 # ===== END: Fetched Resume IDs Tracking =====
+
+
+# ===== NEW: Parallel Download (starts downloading while pages are fetching) =====
+
+def get_last_processed_resume_id_line():
+    """Get the last line number processed for parallel download (NEW)"""
+    try:
+        # Ensure directory exists before reading
+        ensure_file_directory(PARALLEL_DOWNLOAD_TRACKER)
+
+        if os.path.exists(PARALLEL_DOWNLOAD_TRACKER):
+            with open(PARALLEL_DOWNLOAD_TRACKER, 'r', encoding='utf-8') as f:
+                content = f.read().strip()
+                if content and content.isdigit():
+                    return int(content)
+    except:
+        pass
+    return 0  # Start from line 0 if no progress file
+
+
+def save_processed_resume_id_line(line_number):
+    """Save the last processed line number for parallel download (NEW)"""
+    try:
+        # Ensure directory exists before writing (BULLETPROOF)
+        ensure_file_directory(PARALLEL_DOWNLOAD_TRACKER)
+
+        with open(PARALLEL_DOWNLOAD_TRACKER, 'w', encoding='utf-8') as f:
+            f.write(str(line_number))
+    except Exception as e:
+        logger.warning(f"[PARALLEL-DOWNLOAD] Could not save processed line: {e}")
+
+
+def parallel_download_worker(session, download_dir, downloaded_resumes, base_url='https://www.tekjobs.net'):
+    """Worker function that continuously downloads resumes from fetched_resume_ids.txt (NEW - doesn't modify existing logic)
+    Runs in background thread while pages are being fetched
+    """
+    print(f"[PARALLEL-DOWNLOAD] ✓ Started parallel downloader in background")
+    logger.info(f"[PARALLEL-DOWNLOAD] Parallel downloader started")
+
+    last_processed_line = get_last_processed_resume_id_line()
+    download_count = 0
+    error_count = 0
+
+    while True:
+        try:
+            # Check if fetched_resume_ids.txt exists
+            if not os.path.exists(FETCHED_RESUME_IDS_FILE):
+                time.sleep(5)
+                continue
+
+            # Read fetched resume IDs file
+            current_line = 0
+            new_ids_processed = 0
+
+            try:
+                with open(FETCHED_RESUME_IDS_FILE, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        current_line += 1
+
+                        # Skip lines already processed
+                        if current_line <= last_processed_line:
+                            continue
+
+                        line = line.strip()
+
+                        # Skip comments and empty lines
+                        if not line or line.startswith('#'):
+                            continue
+
+                        resume_id = line
+                        new_ids_processed += 1
+
+                        # Check if already downloaded
+                        if is_resume_downloaded(resume_id, downloaded_resumes):
+                            logger.debug(f"[PARALLEL-DOWNLOAD] Resume {resume_id} already downloaded, skipping")
+                            continue
+
+                        # Download the resume
+                        try:
+                            print(f"[PARALLEL-DOWNLOAD] Downloading: {resume_id}")
+                            if download_resume_by_id(session, resume_id, download_dir, base_url, resume_index=None):
+                                # Mark as downloaded
+                                mark_resume_as_downloaded(resume_id)
+                                downloaded_resumes.add(resume_id)
+                                download_count += 1
+                                print(f"[PARALLEL-DOWNLOAD] ✓ Downloaded: {resume_id} (Total: {download_count})")
+                                logger.info(f"[PARALLEL-DOWNLOAD] Successfully downloaded {resume_id}")
+                            else:
+                                error_count += 1
+                                logger.warning(f"[PARALLEL-DOWNLOAD] Failed to download {resume_id}")
+
+                        except Exception as e:
+                            error_count += 1
+                            logger.error(f"[PARALLEL-DOWNLOAD] Error downloading {resume_id}: {str(e)}")
+
+                        time.sleep(1)  # Delay between downloads
+
+                # Save progress (which line we processed up to)
+                if current_line > last_processed_line:
+                    last_processed_line = current_line
+                    save_processed_resume_id_line(last_processed_line)
+
+                # If no new IDs processed, wait before checking again
+                if new_ids_processed == 0:
+                    time.sleep(10)
+
+            except Exception as e:
+                logger.warning(f"[PARALLEL-DOWNLOAD] Error reading fetched IDs: {e}")
+                time.sleep(10)
+
+        except Exception as e:
+            logger.error(f"[PARALLEL-DOWNLOAD] Worker error: {str(e)}")
+            time.sleep(10)
+
+
+def start_parallel_downloader(session, download_dir, downloaded_resumes):
+    """Start parallel downloader in background thread (NEW - doesn't modify existing logic)"""
+    try:
+        print(f"[PARALLEL-DOWNLOAD] Starting parallel download thread...")
+        downloader_thread = threading.Thread(
+            target=parallel_download_worker,
+            args=(session, download_dir, downloaded_resumes),
+            daemon=True  # Run as daemon so it doesn't block script exit
+        )
+        downloader_thread.start()
+        print(f"[PARALLEL-DOWNLOAD] ✓ Parallel downloader thread started (runs in background)")
+        logger.info(f"[PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon")
+        return True
+    except Exception as e:
+        print(f"[WARNING] Could not start parallel downloader: {e}")
+        logger.warning(f"[PARALLEL-DOWNLOAD] Could not start thread: {e}")
+        return False
+
+# ===== END: Parallel Download =====
 
 
 def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
@@ -1014,8 +1150,13 @@ def main():
 
     time.sleep(2)
 
+    # Start parallel downloader (NEW - downloads while pages are fetching, doesn't modify existing logic)
+    print("\n[PARALLEL-SETUP] Initializing parallel downloader...")
+    start_parallel_downloader(session, DEFAULT_DOWNLOAD_DIR, downloaded_resumes)
+    print("[PARALLEL-SETUP] Parallel downloader will start downloading stored resume IDs automatically\n")
+
     # Get resume list from ALL pages with pagination
-    print("\n[STEP 2] Fetching resume list from all pages...")
+    print("[STEP 2] Fetching resume list from all pages...")
     resume_ids = get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa')
 
     # Download resumes
