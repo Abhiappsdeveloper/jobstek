@@ -362,10 +362,16 @@ def get_last_fetched_page():
 def save_fetched_page(page_number):
     """Save the current page number as progress (NEW - doesn't modify existing logic)"""
     try:
+        # Ensure directory exists with proper permissions
+        tracker_dir = os.path.dirname(FETCHED_PAGES_TRACKER)
+        if tracker_dir and not os.path.exists(tracker_dir):
+            os.makedirs(tracker_dir, mode=0o775, exist_ok=True)
+
+        # Write page number to file
         with open(FETCHED_PAGES_TRACKER, 'w', encoding='utf-8') as f:
             f.write(str(page_number))
     except Exception as e:
-        logger.warning(f"[PROGRESS] Could not save fetch progress: {e}")
+        pass  # Silent - don't clutter logs with progress file issues
 
 
 def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
