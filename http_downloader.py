@@ -71,7 +71,7 @@ else:
 
 # Comprehensive directory validation and creation (NEW - doesn't modify previous logic)
 def ensure_all_directories():
-    """Check if directories exist, create only if not there"""
+    """Check if directories exist, create only if not there - WITH LOGGING"""
     required_dirs = [
         LOGS_PATH,
         DEFAULT_DOWNLOAD_DIR,
@@ -85,12 +85,16 @@ def ensure_all_directories():
         os.path.join(SCRIPT_DIR, 'bootstrap', 'cache'),
     ]
 
+    print("[DIRS] Checking and creating required directories...")
     for directory in required_dirs:
         try:
             # Check if directory exists first
             if not os.path.exists(directory):
                 # Only create if it doesn't exist
                 os.makedirs(directory, mode=0o775, exist_ok=True)
+                print(f"[DIRS] ✓ Created: {directory}")
+            else:
+                print(f"[DIRS] ✓ Exists: {directory}")
 
             # Verify write permission by testing
             test_file = os.path.join(directory, '.write_test')
@@ -98,7 +102,7 @@ def ensure_all_directories():
                 f.write('')
             os.remove(test_file)
         except Exception as e:
-            pass  # Silent - don't clutter logs
+            print(f"[DIRS] ✗ Error with {directory}: {e}")
 
 # Logging Setup
 LOG_FILE = os.path.join(LOGS_PATH, f"http_downloader_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
