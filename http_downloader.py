@@ -988,6 +988,7 @@ def main():
     initialize_tracking_files()
     initialize_downloaded_tracker()
     initialize_s3_urls_tracker()
+    initialize_fetched_resume_ids_tracker()
 
     # Load previously downloaded resumes
     print("\n[RESUME-SKIP] Loading previously downloaded resumes...")
