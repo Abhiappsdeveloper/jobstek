@@ -66,6 +66,8 @@ else:
     # Auto-create downloads folder locally
     try:
         os.makedirs(DEFAULT_DOWNLOAD_DIR, exist_ok=True)
+        # Also ensure progress tracking file directory exists (NEW - doesn't modify existing logic)
+        os.makedirs(os.path.dirname(FETCHED_PAGES_TRACKER), exist_ok=True)
     except Exception as e:
         print(f"[WARNING] Could not create downloads directory: {e}")
 
@@ -196,8 +198,8 @@ if not HAS_REQUESTS:
 def initialize_tracking_files():
     """Create tracking files for resume links and errors"""
     try:
-        # Ensure logs directory exists
-        os.makedirs(LOGS_PATH, exist_ok=True)
+        # Ensure logs directory exists (NEW - auto-creates at runtime if missing)
+        ensure_file_directory(RESUME_LINKS_FILE)
 
         # Create resume links file
         with open(RESUME_LINKS_FILE, 'w', encoding='utf-8') as f:
@@ -269,6 +271,8 @@ def is_resume_downloaded(resume_id, downloaded_set):
 def mark_resume_as_downloaded(resume_id):
     """Mark resume as successfully downloaded in persistent file"""
     try:
+        # Ensure directory exists before writing (NEW - doesn't modify existing logic)
+        ensure_file_directory(DOWNLOADED_TRACKER_FILE)
         with open(DOWNLOADED_TRACKER_FILE, 'a', encoding='utf-8') as f:
             f.write(f"{resume_id}\n")
     except Exception as e:
@@ -340,10 +344,22 @@ def load_s3_urls():
 def store_s3_url(resume_id, filename, s3_url):
     """Store S3 URL for instant recovery if downloads folder deleted"""
     try:
+        # Ensure directory exists before writing (NEW - doesn't modify existing logic)
+        ensure_file_directory(S3_URLS_TRACKER_FILE)
         with open(S3_URLS_TRACKER_FILE, 'a', encoding='utf-8') as f:
             f.write(f"{resume_id}|{filename}|{s3_url}\n")
     except Exception as e:
         logger.warning(f"[S3-RECOVERY] Could not store S3 URL: {e}")
+
+
+def ensure_file_directory(file_path):
+    """Ensure directory exists for a file path - create if missing (NEW - doesn't modify existing logic)"""
+    try:
+        directory = os.path.dirname(file_path)
+        if directory and not os.path.exists(directory):
+            os.makedirs(directory, mode=0o775, exist_ok=True)
+    except:
+        pass  # Silent - directory creation is not critical
 
 
 def get_last_fetched_page():
@@ -362,11 +378,8 @@ def get_last_fetched_page():
 def save_fetched_page(page_number):
     """Save the current page number as progress (NEW - doesn't modify existing logic)"""
     try:
-        # Ensure directory exists with proper permissions
-        tracker_dir = os.path.dirname(FETCHED_PAGES_TRACKER)
-        if tracker_dir and not os.path.exists(tracker_dir):
-            os.makedirs(tracker_dir, mode=0o775, exist_ok=True)
-
+        # Ensure directory exists before writing (NEW - doesn't modify existing logic)
+        ensure_file_directory(FETCHED_PAGES_TRACKER)
         # Write page number to file
         with open(FETCHED_PAGES_TRACKER, 'w', encoding='utf-8') as f:
             f.write(str(page_number))
