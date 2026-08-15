@@ -15,7 +15,7 @@ import time
 import math
 import threading
 from datetime import datetime
-from urllib.parse import urljoin, urlparse, urlencode
+from urllib.parse import urljoin, urlparse, urlencode, quote
 from urllib.request import Request, build_opener, HTTPCookieProcessor
 from urllib.error import URLError, HTTPError
 import http.cookiejar
@@ -781,7 +781,9 @@ def robust_download_with_retry(session, resume_id, s3_url, file_path, resume_ind
             logger.info(f"[BULLETPROOF-RETRY] Attempt {attempt}/{max_retries}")
 
             # Download with bulletproof timeout (NEW - PHASE 1)
-            response = session.get(s3_url, timeout=BULLETPROOF_S3_TIMEOUT, stream=True, allow_redirects=True)
+            # URL-encode to handle spaces and special characters in filenames
+            safe_s3_url = quote(s3_url, safe=':/?#[]@!$&\'()*+,;=')
+            response = session.get(safe_s3_url, timeout=BULLETPROOF_S3_TIMEOUT, stream=True, allow_redirects=True)
 
             if response.status_code != 200:
                 last_error = f"HTTP {response.status_code}"
@@ -1165,7 +1167,9 @@ def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
                     print(f"[S3-RECOVERY] Recovering: {filename}...")
 
                     # Download from S3 URL directly
-                    response = session.get(s3_url, timeout=20, stream=True, allow_redirects=True)
+                    # URL-encode to handle spaces and special characters in filenames
+                    safe_s3_url = quote(s3_url, safe=':/?#[]@!$&\'()*+,;=')
+                    response = session.get(safe_s3_url, timeout=20, stream=True, allow_redirects=True)
                     if response.status_code == 200:
                         file_path = os.path.join(download_dir, filename)
                         with open(file_path, 'wb') as f:
