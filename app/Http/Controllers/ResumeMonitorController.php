@@ -146,7 +146,7 @@ class ResumeMonitorController extends Controller
             $estimatedHours = (int)($remainingMinutes / 60);
             $estimatedMins = $remainingMinutes % 60;
 
-            return view('resume-monitor.dashboard-with-graphs', [
+            return view('resume-monitor.dashboard-unified', [
                 'cronHealthy' => $cronHealthy,
                 'heartbeatAge' => $heartbeatAge,
                 'lastHeartbeat' => $lastHeartbeat,
