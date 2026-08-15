@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResumeMonitorController;
 use App\Http\Controllers\HistoricalDataController;
+use App\Http\Controllers\StatusCheckerController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,3 +25,4 @@ Route::get('/api/live-data', [ResumeMonitorController::class, 'getLiveData'])->n
 Route::get('/api/downtime-list', [ResumeMonitorController::class, 'getDowntimeList'])->name('api.downtime-list');
 Route::get('/api/get-error-count', [ResumeMonitorController::class, 'getErrorCount'])->name('api.get-error-count');
 Route::get('/api/historical-data', [HistoricalDataController::class, 'getAllHistoricalData'])->name('api.historical-data');
+Route::get('/api/heartbeat-data', [HistoricalDataController::class, 'getHeartbeatData'])->name('api.heartbeat-data');

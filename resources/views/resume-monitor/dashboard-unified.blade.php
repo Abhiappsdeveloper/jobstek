@@ -254,6 +254,23 @@
             </div>
         </header>
 
+        <!-- CRITICAL STATUS ALERT -->
+        <div id="status-alert" style="display:none; background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid red; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3 style="color: #dc3545; margin-bottom: 10px;">🚨 SCRIPT STATUS ALERT</h3>
+                    <div id="status-message" style="color: #666; font-size: 14px;"></div>
+                    <div id="status-details" style="color: #999; font-size: 12px; margin-top: 10px;"></div>
+                </div>
+                <div style="text-align: right;">
+                    <div id="status-badge" style="font-size: 24px; font-weight: bold; margin-bottom: 10px;"></div>
+                    <button class="copy-btn" onclick="runDiagnostics()" style="background: #dc3545; margin-bottom: 10px;">🔧 Run Diagnostics</button>
+                    <button class="copy-btn" onclick="forceRestart()" style="background: #28a745;">▶️ Force Restart</button>
+                </div>
+            </div>
+            <div id="recommendations" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee;"></div>
+        </div>
+
         <!-- TABS -->
         <div class="tabs">
             <button class="tab-btn active" onclick="switchTab('live')">🔴 LIVE DATA</button>
@@ -299,6 +316,35 @@
                 <div class="card wide-card">
                     <h3>📋 Current Timestamp</h3>
                     <div class="card-stat" id="current-time" style="font-size: 16px; font-weight: bold; color: #333;"></div>
+                </div>
+
+                <div class="card">
+                    <h3>❤️ Heartbeat Runs</h3>
+                    <div class="card-value" id="heartbeat-count">-</div>
+                    <div class="card-stat">last 60 minutes</div>
+                </div>
+
+                <div class="card">
+                    <h3>📊 Avg Runs/Min</h3>
+                    <div class="card-value" id="heartbeat-avg">-</div>
+                    <div class="card-stat">per minute</div>
+                </div>
+
+                <div class="card">
+                    <h3>⏱️ Last Heartbeat</h3>
+                    <div class="card-stat" id="heartbeat-last" style="font-size: 14px; font-weight: bold;"></div>
+                </div>
+
+                <div class="card wide-card">
+                    <h3>❤️ Heartbeat Over Time (Last 60 Minutes)</h3>
+                    <div class="chart-container">
+                        <canvas id="heartbeatChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card wide-card">
+                    <h3>📋 All Heartbeats (Last 60 min)</h3>
+                    <div class="data-list" id="heartbeat-list"></div>
                 </div>
             </div>
         </div>
@@ -467,14 +513,17 @@
         let allData = {};
         let liveData = {};
         let historyData = {};
+        let heartbeatData = {};
         let charts = {};
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             updateClock();
             loadAllData();
+            loadHeartbeatData();
             setInterval(updateClock, 1000);
             setInterval(loadAllData, 30000);
+            setInterval(loadHeartbeatData, 30000);
         });
 
         function updateClock() {
@@ -581,6 +630,60 @@
                     data: { labels: [], datasets: [{ label: 'Errors', data: [], backgroundColor: 'rgba(220, 53, 69, 0.7)', borderColor: '#dc3545' }] },
                     options: commonOptions
                 });
+            }
+
+            // Heartbeat Chart
+            const heartbeatCtx = document.getElementById('heartbeatChart')?.getContext('2d');
+            if (heartbeatCtx) {
+                charts.heartbeatChart = new Chart(heartbeatCtx, {
+                    type: 'bar',
+                    data: { labels: [], datasets: [{ label: 'Cron Executions', data: [], backgroundColor: 'rgba(220, 20, 60, 0.7)', borderColor: '#dc143c', borderWidth: 2 }] },
+                    options: commonOptions
+                });
+            }
+        }
+
+        // Load heartbeat data
+        function loadHeartbeatData() {
+            fetch('{{ route("api.heartbeat-data") }}')
+                .then(r => r.json())
+                .then(data => {
+                    heartbeatData = data;
+                    updateHeartbeatUI();
+                    updateHeartbeatChart();
+                })
+                .catch(e => console.error('Error loading heartbeat:', e));
+        }
+
+        // Update heartbeat UI
+        function updateHeartbeatUI() {
+            document.getElementById('heartbeat-count').textContent = heartbeatData.total_heartbeats || 0;
+            document.getElementById('heartbeat-avg').textContent = heartbeatData.avg_per_minute || '0.00';
+
+            if (heartbeatData.timestamps?.last) {
+                document.getElementById('heartbeat-last').textContent = heartbeatData.timestamps.last;
+            }
+
+            // Heartbeat list
+            const list = document.getElementById('heartbeat-list');
+            list.innerHTML = '';
+            (heartbeatData.heartbeats_last_60min || []).forEach((hb, idx) => {
+                const div = document.createElement('div');
+                div.className = 'data-item';
+                div.textContent = (idx + 1) + '. ✓ ' + hb;
+                list.appendChild(div);
+            });
+        }
+
+        // Update heartbeat chart
+        function updateHeartbeatChart() {
+            if (charts.heartbeatChart && heartbeatData.heartbeats_by_minute) {
+                const times = Object.keys(heartbeatData.heartbeats_by_minute);
+                const counts = Object.values(heartbeatData.heartbeats_by_minute);
+
+                charts.heartbeatChart.data.labels = times;
+                charts.heartbeatChart.data.datasets[0].data = counts;
+                charts.heartbeatChart.update();
             }
         }
 

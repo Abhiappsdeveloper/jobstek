@@ -217,6 +217,83 @@ class HistoricalDataController extends Controller
     }
 
     /**
+     * Get heartbeat data from logs (last 60 minutes)
+     */
+    public function getHeartbeatData()
+    {
+        if (!session('monitor_authenticated')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $basePath = storage_path('resumes');
+        $logsPath = storage_path('logs/resume_downloader');
+
+        $heartbeats = [];
+        $heartbeatsByMinute = [];
+        $currentTime = time();
+
+        // Extract heartbeats from log files
+        if (is_dir($logsPath)) {
+            $logFiles = glob($logsPath . '/http_downloader_*.log');
+
+            foreach ($logFiles as $file) {
+                $content = file_get_contents($file);
+
+                // Look for heartbeat creation lines
+                preg_match_all('/(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}).*\[CRON-HEALTH\].*heartbeat/i', $content, $matches);
+
+                foreach ($matches[1] as $timestamp) {
+                    $heartbeats[] = $timestamp;
+                }
+            }
+        }
+
+        // Also check the heartbeat file
+        $heartbeatFile = $basePath . '/.cron_heartbeat';
+        if (file_exists($heartbeatFile)) {
+            $fileHeartbeat = trim(file_get_contents($heartbeatFile));
+            if (!in_array($fileHeartbeat, $heartbeats)) {
+                $heartbeats[] = $fileHeartbeat;
+            }
+        }
+
+        // Sort and remove duplicates
+        $heartbeats = array_unique($heartbeats);
+        sort($heartbeats);
+
+        // Group by minute and count
+        foreach ($heartbeats as $hb) {
+            $hbTime = strtotime($hb);
+            $ageSeconds = $currentTime - $hbTime;
+            $ageMinutes = round($ageSeconds / 60, 1);
+
+            // Only include last 60 minutes
+            if ($ageMinutes <= 60) {
+                $minute = date('H:i', $hbTime);
+                if (!isset($heartbeatsByMinute[$minute])) {
+                    $heartbeatsByMinute[$minute] = 0;
+                }
+                $heartbeatsByMinute[$minute]++;
+            }
+        }
+
+        ksort($heartbeatsByMinute);
+
+        return response()->json([
+            'total_heartbeats' => count($heartbeats),
+            'heartbeats_last_60min' => array_slice($heartbeats, -60), // Last 60
+            'heartbeats_by_minute' => $heartbeatsByMinute,
+            'minute_count' => count($heartbeatsByMinute),
+            'avg_per_minute' => count($heartbeatsByMinute) > 0 ? round(array_sum($heartbeatsByMinute) / count($heartbeatsByMinute), 2) : 0,
+            'timestamps' => [
+                'first' => $heartbeats[0] ?? null,
+                'last' => end($heartbeats) ?: null,
+                'current' => now()->format('Y-m-d H:i:s'),
+            ]
+        ]);
+    }
+
+    /**
      * Extract all timestamps from logs to create timeline
      */
     private function extractTimestamps($logsPath)
