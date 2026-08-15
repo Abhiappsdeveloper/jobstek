@@ -487,7 +487,7 @@
                 <h3>⚡ Quick Actions</h3>
                 <div class="button-group">
                     <button class="btn btn-primary" onclick="forceRun()">Force Run Script</button>
-                    <a href="{{ route('home') }}" class="btn btn-secondary">View API Stats</a>
+                    <a href="/" class="btn btn-secondary">Back to Home</a>
                     <button class="btn btn-secondary" onclick="location.reload()">Refresh</button>
                 </div>
             </div>
