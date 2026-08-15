@@ -631,7 +631,7 @@
                 .catch(e => console.log('Sync error:', e));
         }, 30000);
 
-        // Copy all data function
+        // Copy all data function (Modern Clipboard API)
         function copyAllData() {
             const timestamp = new Date().toLocaleString();
             const data = `
@@ -680,18 +680,55 @@ Total Errors: {{ $errorCount }}
 - Report generated at: {{ now()->format('Y-m-d H:i:s') }}
             `;
 
-            document.getElementById('data-export').value = data.trim();
-            document.getElementById('data-export').select();
-            document.execCommand('copy');
+            // Use modern Clipboard API
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(data.trim()).then(() => {
+                    // Success!
+                    const btn = document.getElementById('copy-btn');
+                    btn.textContent = '✓ Copied to Clipboard!';
+                    btn.classList.add('copied');
+                    console.log('✓ Data copied to clipboard successfully');
 
-            // Show feedback
-            const btn = document.getElementById('copy-btn');
-            btn.textContent = '✓ Copied!';
-            btn.classList.add('copied');
-            setTimeout(() => {
-                btn.textContent = '📋 Copy All Data';
-                btn.classList.remove('copied');
-            }, 2000);
+                    setTimeout(() => {
+                        btn.textContent = '📋 Copy All Data';
+                        btn.classList.remove('copied');
+                    }, 3000);
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                    fallbackCopy(data.trim());
+                });
+            } else {
+                // Fallback for older browsers
+                fallbackCopy(data.trim());
+            }
+        }
+
+        // Fallback copy method
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copy-btn');
+                btn.textContent = '✓ Copied to Clipboard!';
+                btn.classList.add('copied');
+                console.log('✓ Data copied (fallback method)');
+
+                setTimeout(() => {
+                    btn.textContent = '📋 Copy All Data';
+                    btn.classList.remove('copied');
+                }, 3000);
+            } catch (err) {
+                console.error('Fallback copy failed:', err);
+                alert('Please copy manually:\n\n' + text.substring(0, 200) + '...');
+            }
+
+            document.body.removeChild(textarea);
         }
 
         function forceRun() {
