@@ -15,3 +15,4 @@ Route::post('/monitor/logout', [ResumeMonitorController::class, 'logout'])->name
 Route::post('/api/force-run', [ResumeMonitorController::class, 'forceRun'])->name('api.force-run');
 Route::get('/api/live-data', [ResumeMonitorController::class, 'getLiveData'])->name('api.live-data');
 Route::get('/api/downtime-list', [ResumeMonitorController::class, 'getDowntimeList'])->name('api.downtime-list');
+Route::get('/api/get-error-count', [ResumeMonitorController::class, 'getErrorCount'])->name('api.get-error-count');

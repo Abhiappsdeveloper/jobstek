@@ -146,7 +146,7 @@ class ResumeMonitorController extends Controller
             $estimatedHours = (int)($remainingMinutes / 60);
             $estimatedMins = $remainingMinutes % 60;
 
-            return view('resume-monitor.dashboard-enhanced', [
+            return view('resume-monitor.dashboard-with-graphs', [
                 'cronHealthy' => $cronHealthy,
                 'heartbeatAge' => $heartbeatAge,
                 'lastHeartbeat' => $lastHeartbeat,
@@ -202,6 +202,36 @@ class ResumeMonitorController extends Controller
             'load' => sys_getloadavg(),
             'processes' => (int)trim(shell_exec("ps aux | grep '[p]ython3.*http_downloader.py' | wc -l")),
             'healthy' => $this->isCronHealthy($basePath),
+        ]);
+    }
+
+    /**
+     * Get current error count
+     */
+    public function getErrorCount()
+    {
+        // Check if authenticated
+        if (!session('monitor_authenticated')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $logsPath = storage_path('logs/resume_downloader');
+        $errorCount = 0;
+
+        // Get all log files from today
+        $todayDate = date('Ymd');
+        $logFiles = glob($logsPath . '/http_downloader_' . $todayDate . '*.log');
+
+        if (!empty($logFiles)) {
+            foreach ($logFiles as $file) {
+                $content = file_get_contents($file);
+                $errorCount += substr_count($content, 'ERROR') + substr_count($content, 'FAIL');
+            }
+        }
+
+        return response()->json([
+            'error_count' => $errorCount,
+            'timestamp' => now(),
         ]);
     }
 
