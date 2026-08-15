@@ -34,7 +34,7 @@ class HistoricalDataController extends Controller
     }
 
     /**
-     * Get downloaded resumes from file
+     * Get downloaded resumes from file (showing LAST items)
      */
     private function getDownloadedResumes($basePath)
     {
@@ -50,13 +50,13 @@ class HistoricalDataController extends Controller
 
         return [
             'count' => count($data),
-            'items' => $data,
+            'items' => array_slice($data, -50), // Show LAST 50 instead of first
             'file' => $file
         ];
     }
 
     /**
-     * Get fetched resume IDs
+     * Get fetched resume IDs (showing LAST items)
      */
     private function getFetchedResumeIds($basePath)
     {
@@ -72,14 +72,14 @@ class HistoricalDataController extends Controller
 
         return [
             'count' => count($data),
-            'items' => array_slice($data, 0, 100), // Show first 100
+            'items' => array_slice($data, -100), // Show LAST 100 instead of first
             'total_items' => count($data),
             'file' => $file
         ];
     }
 
     /**
-     * Get S3 URLs
+     * Get S3 URLs (showing LAST items)
      */
     private function getS3Urls($basePath)
     {
@@ -102,7 +102,7 @@ class HistoricalDataController extends Controller
 
         return [
             'count' => count($data),
-            'items' => array_slice($data, 0, 50),
+            'items' => array_slice($data, -50), // Show LAST 50 instead of first
             'total_items' => count($data),
             'file' => $file
         ];
