@@ -110,8 +110,9 @@
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 20px;
+            margin-bottom: 30px;
+            row-gap: 25px;
         }
 
         .card {
@@ -119,14 +120,18 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: visible;
         }
 
         .card h3 {
             color: #667eea;
             font-size: 13px;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             letter-spacing: 1px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
         }
 
         .card-value {
@@ -144,12 +149,14 @@
 
         .wide-card {
             grid-column: 1 / -1;
+            margin-top: 10px;
         }
 
         .chart-container {
             position: relative;
-            height: 250px;
-            margin: 15px 0;
+            height: 280px;
+            margin: 20px 0;
+            padding: 10px 0;
         }
 
         .data-list {
