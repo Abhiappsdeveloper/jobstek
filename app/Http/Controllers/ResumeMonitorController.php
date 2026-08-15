@@ -195,7 +195,7 @@ class ResumeMonitorController extends Controller
         $basePath = storage_path('resumes');
         $logsPath = storage_path('logs/resume_downloader');
 
-        // Get error count for today
+        // Get error count for today using EXACT same method as getErrorsTimeline (for consistency)
         $errorCount = 0;
         $todayDate = date('Ymd');
         $logFiles = glob($logsPath . '/http_downloader_' . $todayDate . '*.log');
@@ -203,7 +203,15 @@ class ResumeMonitorController extends Controller
         if (!empty($logFiles)) {
             foreach ($logFiles as $file) {
                 $content = file_get_contents($file);
-                $errorCount += substr_count($content, 'ERROR') + substr_count($content, 'FAIL');
+                $lines = explode("\n", $content);
+
+                foreach ($lines as $line) {
+                    // EXACT same logic as getErrorsTimeline() to ensure consistency
+                    // Count lines with [ERROR] or ERROR (same as total errors calculation)
+                    if (strpos($line, '[ERROR]') !== false || strpos($line, 'ERROR') !== false) {
+                        $errorCount++;
+                    }
+                }
             }
         }
 

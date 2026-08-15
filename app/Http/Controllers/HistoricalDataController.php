@@ -279,12 +279,16 @@ class HistoricalDataController extends Controller
 
         ksort($heartbeatsByMinute);
 
+        // Calculate correct average: total heartbeats / 60 minutes
+        $totalHeartbeatsInWindow = array_sum($heartbeatsByMinute);
+        $avgPerMinute = $totalHeartbeatsInWindow > 0 ? round($totalHeartbeatsInWindow / 60, 2) : 0;
+
         return response()->json([
             'total_heartbeats' => count($heartbeats),
             'heartbeats_last_60min' => array_slice($heartbeats, -60), // Last 60
             'heartbeats_by_minute' => $heartbeatsByMinute,
             'minute_count' => count($heartbeatsByMinute),
-            'avg_per_minute' => count($heartbeatsByMinute) > 0 ? round(array_sum($heartbeatsByMinute) / count($heartbeatsByMinute), 2) : 0,
+            'avg_per_minute' => $avgPerMinute,
             'timestamps' => [
                 'first' => $heartbeats[0] ?? null,
                 'last' => end($heartbeats) ?: null,
@@ -387,32 +391,55 @@ class HistoricalDataController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
+        $basePath = storage_path('resumes');
+        $downloadedFile = $basePath . '/downloaded_resumes.txt';
         $logsPath = storage_path('logs/resume_downloader');
+
         $downloadsByMinute = [];
         $currentTime = time();
         $oneHourAgo = $currentTime - 3600;
 
-        if (is_dir($logsPath)) {
-            $logFiles = glob($logsPath . '/http_downloader_*.log');
+        // READ FROM SAME SOURCE AS TOTAL: downloaded_resumes.txt
+        // This guarantees: per-minute count ≤ total count
+        if (file_exists($downloadedFile)) {
+            // Get all downloaded resume IDs (same source as total count)
+            $downloadedIds = file($downloadedFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
-            foreach ($logFiles as $file) {
-                $content = file_get_contents($file);
-                $lines = explode("\n", $content);
+            // For each downloaded resume, find its timestamp in logs
+            if (is_dir($logsPath)) {
+                $logFiles = glob($logsPath . '/http_downloader_*.log');
 
-                foreach ($lines as $line) {
-                    // Look for successful download indicators
-                    if ((stripos($line, 'downloaded') !== false || stripos($line, 'saved') !== false) &&
-                        stripos($line, 'error') === false && stripos($line, 'fail') === false) {
+                foreach ($downloadedIds as $resumeId) {
+                    $found = false;
 
-                        preg_match('/(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})/', $line, $matches);
+                    // Search logs for this specific download
+                    foreach ($logFiles as $file) {
+                        if ($found) break;
 
-                        if (!empty($matches[1])) {
-                            $timestamp = $matches[1];
-                            $timeInt = strtotime($timestamp);
+                        $content = file_get_contents($file);
+                        $lines = explode("\n", $content);
 
-                            if ($timeInt >= $oneHourAgo && $timeInt <= $currentTime) {
-                                $minute = date('H:i', $timeInt);
-                                $downloadsByMinute[$minute] = ($downloadsByMinute[$minute] ?? 0) + 1;
+                        foreach ($lines as $line) {
+                            // Look for this specific resume ID being downloaded
+                            if (stripos($line, $resumeId) !== false &&
+                                (stripos($line, 'download') !== false || stripos($line, 'saved') !== false) &&
+                                stripos($line, 'error') === false) {
+
+                                // Extract timestamp
+                                preg_match('/(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})/', $line, $matches);
+
+                                if (!empty($matches[1])) {
+                                    $timestamp = $matches[1];
+                                    $timeInt = strtotime($timestamp);
+
+                                    // Only count if within last 60 minutes
+                                    if ($timeInt >= $oneHourAgo && $timeInt <= $currentTime) {
+                                        $minute = date('H:i', $timeInt);
+                                        $downloadsByMinute[$minute] = ($downloadsByMinute[$minute] ?? 0) + 1;
+                                        $found = true;
+                                        break;
+                                    }
+                                }
                             }
                         }
                     }

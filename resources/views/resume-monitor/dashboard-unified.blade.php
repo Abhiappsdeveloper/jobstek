@@ -696,6 +696,28 @@
 
             if (heartbeatData.timestamps?.last) {
                 document.getElementById('heartbeat-last').textContent = heartbeatData.timestamps.last;
+
+                // Check if heartbeat is healthy (within 2 minutes)
+                const lastHeartbeatTime = new Date(heartbeatData.timestamps.last);
+                const currentTime = new Date(heartbeatData.timestamps.current);
+                const ageMs = currentTime - lastHeartbeatTime;
+                const ageSeconds = ageMs / 1000;
+                const isHealthy = ageSeconds < 120; // 2 minutes threshold
+
+                // Update heartbeat status badge
+                const cronStatus = document.getElementById('cron-status');
+                const cronAge = document.getElementById('cron-age');
+
+                if (isHealthy) {
+                    cronStatus.textContent = '✓';
+                    cronStatus.className = 'badge badge-success';
+                    cronAge.textContent = '✓ Healthy (' + Math.round(ageSeconds) + 's)';
+                } else {
+                    cronStatus.textContent = '✗';
+                    cronStatus.className = 'badge badge-danger';
+                    const minutes = Math.round(ageSeconds / 60);
+                    cronAge.textContent = '✗ NOT RUNNING (' + minutes + 'm old)';
+                }
             }
 
             // Heartbeat list
