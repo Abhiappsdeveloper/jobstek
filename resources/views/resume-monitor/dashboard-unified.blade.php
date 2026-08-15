@@ -430,12 +430,12 @@
             </div>
 
             <div class="card wide-card">
-                <h3>📥 Downloaded Resumes (First 50)</h3>
+                <h3>📥 Downloaded Resumes (Last 50)</h3>
                 <div class="data-list" id="downloaded-list"></div>
             </div>
 
             <div class="card wide-card">
-                <h3>☁️ S3 URLs (First 30)</h3>
+                <h3>☁️ S3 URLs (Last 50)</h3>
                 <table>
                     <thead>
                         <tr>
