@@ -26,3 +26,8 @@ Route::get('/api/downtime-list', [ResumeMonitorController::class, 'getDowntimeLi
 Route::get('/api/get-error-count', [ResumeMonitorController::class, 'getErrorCount'])->name('api.get-error-count');
 Route::get('/api/historical-data', [HistoricalDataController::class, 'getAllHistoricalData'])->name('api.historical-data');
 Route::get('/api/heartbeat-data', [HistoricalDataController::class, 'getHeartbeatData'])->name('api.heartbeat-data');
+Route::get('/api/errors-60min', [HistoricalDataController::class, 'getErrorsLastHourMinuteByMinute'])->name('api.errors-60min');
+Route::get('/api/downloads-60min', [HistoricalDataController::class, 'getDownloadsLastHourMinuteByMinute'])->name('api.downloads-60min');
+Route::get('/api/pages-60min', [HistoricalDataController::class, 'getPagesLastHourMinuteByMinute'])->name('api.pages-60min');
+Route::get('/api/s3-60min', [HistoricalDataController::class, 'getS3UploadsLastHourMinuteByMinute'])->name('api.s3-60min');
+Route::get('/api/load-60min', [HistoricalDataController::class, 'getLoadLastHourMinuteByMinute'])->name('api.load-60min');

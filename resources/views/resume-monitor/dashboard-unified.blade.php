@@ -521,6 +521,11 @@
         let liveData = {};
         let historyData = {};
         let heartbeatData = {};
+        let errorData = {};
+        let downloadData = {};
+        let pageData = {};
+        let s3Data = {};
+        let loadData = {};
         let charts = {};
 
         // Initialize
@@ -528,9 +533,11 @@
             updateClock();
             loadAllData();
             loadHeartbeatData();
+            loadPerMinuteData();
             setInterval(updateClock, 1000);
             setInterval(loadAllData, 30000);
             setInterval(loadHeartbeatData, 30000);
+            setInterval(loadPerMinuteData, 30000);
         });
 
         function updateClock() {
@@ -662,6 +669,26 @@
                 .catch(e => console.error('Error loading heartbeat:', e));
         }
 
+        // Load per-minute data for last 60 minutes
+        function loadPerMinuteData() {
+            Promise.all([
+                fetch('{{ route("api.errors-60min") }}').then(r => r.json()),
+                fetch('{{ route("api.downloads-60min") }}').then(r => r.json()),
+                fetch('{{ route("api.pages-60min") }}').then(r => r.json()),
+                fetch('{{ route("api.s3-60min") }}').then(r => r.json()),
+                fetch('{{ route("api.load-60min") }}').then(r => r.json())
+            ])
+            .then(([errors, downloads, pages, s3, load]) => {
+                errorData = errors;
+                downloadData = downloads;
+                pageData = pages;
+                s3Data = s3;
+                loadData = load;
+                updateCharts();
+            })
+            .catch(e => console.error('Error loading per-minute data:', e));
+        }
+
         // Update heartbeat UI
         function updateHeartbeatUI() {
             document.getElementById('heartbeat-count').textContent = heartbeatData.total_heartbeats || 0;
@@ -694,49 +721,63 @@
             }
         }
 
-        // Update Charts
+        // Update Charts with real per-minute data
         function updateCharts() {
-            // Dummy data - in production this would come from stored history
-            const times = ['20:30', '20:35', '20:40', '20:45'];
-            const downloads = [553, 555, 558, 560];
-            const pages = [650, 658, 666, 666];
-            const rates = [0, 0.4, 0.6, 0.4];
-            const loads = [22, 24, 25, 26];
-            const errors = [428, 430, 435, 450];
+            // Get real data from API responses
+            const downloadTimes = Object.keys(downloadData.downloads_by_minute || {});
+            const downloadValues = Object.values(downloadData.downloads_by_minute || {});
+
+            const pageTimes = Object.keys(pageData.pages_by_minute || {});
+            const pageValues = Object.values(pageData.pages_by_minute || {});
+
+            const errorTimes = Object.keys(errorData.errors_by_minute || {});
+            const errorValues = errorTimes.map(t => errorData.errors_by_minute[t]?.total || 0);
+
+            const loadTimes = Object.keys(loadData.load_by_minute || {});
+            const loadValues = Object.values(loadData.load_by_minute || {});
+
+            const rateTimes = downloadTimes;
+            const rateValues = downloadValues.map(v => Math.round(v / 1 * 100) / 100); // Per minute rate
 
             if (charts.downloadChart) {
-                charts.downloadChart.data.labels = times;
-                charts.downloadChart.data.datasets[0].data = downloads;
+                charts.downloadChart.data.labels = downloadTimes;
+                charts.downloadChart.data.datasets[0].data = downloadValues;
                 charts.downloadChart.update();
             }
 
             if (charts.pagesChart) {
-                charts.pagesChart.data.labels = times;
-                charts.pagesChart.data.datasets[0].data = pages;
+                charts.pagesChart.data.labels = pageTimes;
+                charts.pagesChart.data.datasets[0].data = pageValues;
                 charts.pagesChart.update();
             }
 
             if (charts.rateChart) {
-                charts.rateChart.data.labels = times;
-                charts.rateChart.data.datasets[0].data = rates;
+                charts.rateChart.data.labels = rateTimes;
+                charts.rateChart.data.datasets[0].data = rateValues;
                 charts.rateChart.update();
             }
 
             if (charts.loadChart) {
-                charts.loadChart.data.labels = times;
-                charts.loadChart.data.datasets[0].data = loads;
+                charts.loadChart.data.labels = loadTimes;
+                charts.loadChart.data.datasets[0].data = loadValues;
                 charts.loadChart.update();
             }
 
             if (charts.errorsChart) {
-                charts.errorsChart.data.labels = times;
-                charts.errorsChart.data.datasets[0].data = errors;
+                charts.errorsChart.data.labels = errorTimes;
+                charts.errorsChart.data.datasets[0].data = errorValues;
                 charts.errorsChart.update();
             }
 
-            document.getElementById('avg-rate').textContent = '2.6';
-            document.getElementById('current-rate').textContent = '2';
-            document.getElementById('rate-gap').textContent = '1.2';
+            // Update rate statistics
+            const avgRate = downloadData.avg_per_minute || 0;
+            const maxRate = downloadValues.length > 0 ? Math.max(...downloadValues) : 0;
+            const currentRate = downloadValues.length > 0 ? downloadValues[downloadValues.length - 1] : 0;
+            const rateGap = Math.abs(avgRate - currentRate).toFixed(2);
+
+            document.getElementById('avg-rate').textContent = avgRate.toFixed(2);
+            document.getElementById('current-rate').textContent = currentRate.toFixed(2);
+            document.getElementById('rate-gap').textContent = rateGap;
         }
 
         // Update Historical Tab
@@ -783,10 +824,18 @@
             document.getElementById('stat-timestamps').textContent = ts.unique_timestamps || '-';
             document.getElementById('stat-duration').textContent = 'Calculating...';
 
-            document.getElementById('stat-avg-rate').textContent = '2.6';
-            document.getElementById('stat-max-rate').textContent = '3.2';
-            document.getElementById('stat-avg-pages').textContent = '5.5';
-            document.getElementById('stat-size').textContent = '19.48';
+            // Calculate from real data
+            const avgDownloadRate = downloadData.avg_per_minute || 0;
+            const maxDownloadRate = downloadData.downloads_by_minute ? Math.max(...Object.values(downloadData.downloads_by_minute)) : 0;
+            const avgPageRate = pageData.avg_per_minute || 0;
+
+            // Get total size from HTML or default
+            const totalSize = historyData.current?.total_size || '19.48';
+
+            document.getElementById('stat-avg-rate').textContent = avgDownloadRate.toFixed(2);
+            document.getElementById('stat-max-rate').textContent = maxDownloadRate.toFixed(2);
+            document.getElementById('stat-avg-pages').textContent = avgPageRate.toFixed(2);
+            document.getElementById('stat-size').textContent = totalSize;
         }
 
         // Tab Switching
@@ -797,31 +846,61 @@
             event.target.classList.add('active');
         }
 
-        // Copy All Data
+        // Copy All Data - COMPLETE with all metrics
         function copyAllData() {
+            const errorTypes = errorData.errors_by_type || {};
+            const s3By60 = s3Data.s3_by_minute || {};
+
             const report = `COMPLETE RESUME MONITOR REPORT
 Generated: ${new Date().toLocaleString()}
 
-=== LIVE METRICS ===
-Downloaded: ${document.getElementById('live-downloaded').textContent}
-Pages: ${document.getElementById('live-pages').textContent}
-Pending: ${document.getElementById('live-pending').textContent}
-Errors: ${document.getElementById('live-errors').textContent}
+=== LIVE METRICS (Current) ===
+Downloaded: ${document.getElementById('live-downloaded').textContent} resumes
+Pages Fetched: ${document.getElementById('live-pages').textContent} pages
+Pending: ${document.getElementById('live-pending').textContent} resumes
+Errors Today: ${document.getElementById('live-errors').textContent}
+Server Load: ${document.getElementById('live-load').textContent}
+Current Time: ${document.getElementById('current-time').textContent}
 
-=== HISTORICAL DATA ===
+=== CRON/HEARTBEAT STATUS ===
+Heartbeat Status: ${document.getElementById('cron-status').textContent}
+Last Heartbeat: ${document.getElementById('heartbeat-last').textContent}
+Heartbeat Runs (60 min): ${document.getElementById('heartbeat-count').textContent}
+Avg Runs/Min: ${document.getElementById('heartbeat-avg').textContent}
+
+=== HISTORICAL DATA (All Time) ===
 Total Downloaded: ${document.getElementById('hist-downloaded').textContent}
 Total Fetched: ${document.getElementById('hist-fetched').textContent}
-S3 URLs: ${document.getElementById('hist-s3').textContent}
+S3 URLs Generated: ${document.getElementById('hist-s3').textContent}
 Total Errors: ${document.getElementById('hist-errors').textContent}
 
-=== TIMELINE ===
-Start: ${document.getElementById('stat-start').textContent}
-End: ${document.getElementById('stat-end').textContent}
+=== LAST 60 MINUTES BREAKDOWN ===
+Downloads (60 min): ${downloadData.total_downloads_60min || 0}
+Pages Fetched (60 min): ${pageData.total_pages_60min || 0}
+S3 Uploads (60 min): ${s3Data.total_s3_60min || 0}
+Errors (60 min): ${errorData.total_errors_60min || 0}
 
-=== PERFORMANCE ===
+=== ERROR BREAKDOWN (Last 60 Min) ===
+Page Fetch Errors: ${errorTypes.page_fetch || 0}
+S3 Upload Errors: ${errorTypes.s3_upload || 0}
+Download Errors: ${errorTypes.download || 0}
+Other Errors: ${errorTypes.other || 0}
+
+=== TIMELINE ===
+Process Start: ${document.getElementById('stat-start').textContent}
+Last Activity: ${document.getElementById('stat-end').textContent}
+
+=== PERFORMANCE METRICS ===
 Avg Download Rate: ${document.getElementById('stat-avg-rate').textContent}/min
+Max Download Rate: ${document.getElementById('stat-max-rate').textContent}/min
 Avg Page Rate: ${document.getElementById('stat-avg-pages').textContent}/min
 Total Size: ${document.getElementById('stat-size').textContent} MB
+
+=== MINUTE-BY-MINUTE SUMMARY (Last 60 Min) ===
+Minutes with Downloads: ${Object.keys(downloadData.downloads_by_minute || {}).length}
+Minutes with Pages: ${Object.keys(pageData.pages_by_minute || {}).length}
+Minutes with S3: ${Object.keys(s3By60).length}
+Minutes with Errors: ${errorData.minutes_with_errors || 0}
 
 Report generated: ${new Date().toLocaleString()}`;
 
@@ -833,6 +912,8 @@ Report generated: ${new Date().toLocaleString()}`;
                     btn.textContent = '📋 Export All';
                     btn.classList.remove('copied');
                 }, 2000);
+            }).catch(err => {
+                alert('Failed to copy: ' + err);
             });
         }
     </script>

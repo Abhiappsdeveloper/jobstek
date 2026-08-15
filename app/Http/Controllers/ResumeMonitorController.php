@@ -193,12 +193,26 @@ class ResumeMonitorController extends Controller
         }
 
         $basePath = storage_path('resumes');
+        $logsPath = storage_path('logs/resume_downloader');
+
+        // Get error count for today
+        $errorCount = 0;
+        $todayDate = date('Ymd');
+        $logFiles = glob($logsPath . '/http_downloader_' . $todayDate . '*.log');
+
+        if (!empty($logFiles)) {
+            foreach ($logFiles as $file) {
+                $content = file_get_contents($file);
+                $errorCount += substr_count($content, 'ERROR') + substr_count($content, 'FAIL');
+            }
+        }
 
         return response()->json([
             'timestamp' => now(),
             'downloaded' => $this->getDownloadCount($basePath),
             'fetched' => $this->getFetchedCount($basePath),
             'pages' => $this->getPagesCount($basePath),
+            'errors' => $errorCount,
             'load' => sys_getloadavg(),
             'processes' => (int)trim(shell_exec("ps aux | grep '[p]ython3.*http_downloader.py' | wc -l")),
             'healthy' => $this->isCronHealthy($basePath),

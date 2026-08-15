@@ -294,6 +294,307 @@ class HistoricalDataController extends Controller
     }
 
     /**
+     * Get per-minute error breakdown for last 60 minutes with categorization
+     */
+    public function getErrorsLastHourMinuteByMinute()
+    {
+        if (!session('monitor_authenticated')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $logsPath = storage_path('logs/resume_downloader');
+        $errorsByMinute = [];
+        $errorsByType = [];
+        $currentTime = time();
+        $oneHourAgo = $currentTime - 3600;
+
+        if (is_dir($logsPath)) {
+            $logFiles = glob($logsPath . '/http_downloader_*.log');
+
+            foreach ($logFiles as $file) {
+                $content = file_get_contents($file);
+                $lines = explode("\n", $content);
+
+                foreach ($lines as $line) {
+                    if (strpos($line, '[ERROR]') !== false || strpos($line, 'ERROR') !== false || strpos($line, 'FAIL') !== false) {
+                        preg_match('/(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})/', $line, $matches);
+
+                        if (!empty($matches[1])) {
+                            $timestamp = $matches[1];
+                            $timeInt = strtotime($timestamp);
+
+                            // Only include last 60 minutes
+                            if ($timeInt >= $oneHourAgo && $timeInt <= $currentTime) {
+                                $minute = date('H:i', $timeInt);
+
+                                // Initialize if not exists
+                                if (!isset($errorsByMinute[$minute])) {
+                                    $errorsByMinute[$minute] = [
+                                        'total' => 0,
+                                        'page_fetch' => 0,
+                                        's3_upload' => 0,
+                                        'download' => 0,
+                                        'other' => 0
+                                    ];
+                                }
+
+                                // Categorize error
+                                $errorsByMinute[$minute]['total']++;
+
+                                if (stripos($line, 'page') !== false || stripos($line, 'fetch') !== false || stripos($line, 'scrape') !== false) {
+                                    $errorsByMinute[$minute]['page_fetch']++;
+                                } elseif (stripos($line, 's3') !== false || stripos($line, 'aws') !== false || stripos($line, 'upload') !== false) {
+                                    $errorsByMinute[$minute]['s3_upload']++;
+                                } elseif (stripos($line, 'download') !== false || stripos($line, 'save') !== false || stripos($line, 'file') !== false) {
+                                    $errorsByMinute[$minute]['download']++;
+                                } else {
+                                    $errorsByMinute[$minute]['other']++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ksort($errorsByMinute);
+
+        // Calculate totals by type
+        foreach ($errorsByMinute as $minute => $data) {
+            $errorsByType['page_fetch'] = ($errorsByType['page_fetch'] ?? 0) + $data['page_fetch'];
+            $errorsByType['s3_upload'] = ($errorsByType['s3_upload'] ?? 0) + $data['s3_upload'];
+            $errorsByType['download'] = ($errorsByType['download'] ?? 0) + $data['download'];
+            $errorsByType['other'] = ($errorsByType['other'] ?? 0) + $data['other'];
+        }
+
+        $totalErrors = array_sum(array_column($errorsByMinute, 'total'));
+
+        return response()->json([
+            'total_errors_60min' => $totalErrors,
+            'errors_by_minute' => $errorsByMinute,
+            'errors_by_type' => $errorsByType,
+            'minute_count' => count($errorsByMinute),
+            'minutes_with_errors' => count(array_filter($errorsByMinute, fn($m) => $m['total'] > 0))
+        ]);
+    }
+
+    /**
+     * Get per-minute downloads for last 60 minutes
+     */
+    public function getDownloadsLastHourMinuteByMinute()
+    {
+        if (!session('monitor_authenticated')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $logsPath = storage_path('logs/resume_downloader');
+        $downloadsByMinute = [];
+        $currentTime = time();
+        $oneHourAgo = $currentTime - 3600;
+
+        if (is_dir($logsPath)) {
+            $logFiles = glob($logsPath . '/http_downloader_*.log');
+
+            foreach ($logFiles as $file) {
+                $content = file_get_contents($file);
+                $lines = explode("\n", $content);
+
+                foreach ($lines as $line) {
+                    // Look for successful download indicators
+                    if ((stripos($line, 'downloaded') !== false || stripos($line, 'saved') !== false) &&
+                        stripos($line, 'error') === false && stripos($line, 'fail') === false) {
+
+                        preg_match('/(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})/', $line, $matches);
+
+                        if (!empty($matches[1])) {
+                            $timestamp = $matches[1];
+                            $timeInt = strtotime($timestamp);
+
+                            if ($timeInt >= $oneHourAgo && $timeInt <= $currentTime) {
+                                $minute = date('H:i', $timeInt);
+                                $downloadsByMinute[$minute] = ($downloadsByMinute[$minute] ?? 0) + 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ksort($downloadsByMinute);
+
+        return response()->json([
+            'total_downloads_60min' => array_sum($downloadsByMinute),
+            'downloads_by_minute' => $downloadsByMinute,
+            'minute_count' => count($downloadsByMinute),
+            'avg_per_minute' => count($downloadsByMinute) > 0 ? round(array_sum($downloadsByMinute) / 60, 2) : 0
+        ]);
+    }
+
+    /**
+     * Get per-minute pages fetched for last 60 minutes
+     */
+    public function getPagesLastHourMinuteByMinute()
+    {
+        if (!session('monitor_authenticated')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $logsPath = storage_path('logs/resume_downloader');
+        $pagesByMinute = [];
+        $currentTime = time();
+        $oneHourAgo = $currentTime - 3600;
+
+        if (is_dir($logsPath)) {
+            $logFiles = glob($logsPath . '/http_downloader_*.log');
+
+            foreach ($logFiles as $file) {
+                $content = file_get_contents($file);
+                $lines = explode("\n", $content);
+
+                foreach ($lines as $line) {
+                    // Look for page fetch indicators
+                    if ((stripos($line, 'page') !== false || stripos($line, 'fetch') !== false || stripos($line, 'scrape') !== false) &&
+                        stripos($line, 'error') === false && stripos($line, 'fail') === false) {
+
+                        preg_match('/(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})/', $line, $matches);
+
+                        if (!empty($matches[1])) {
+                            $timestamp = $matches[1];
+                            $timeInt = strtotime($timestamp);
+
+                            if ($timeInt >= $oneHourAgo && $timeInt <= $currentTime) {
+                                $minute = date('H:i', $timeInt);
+                                $pagesByMinute[$minute] = ($pagesByMinute[$minute] ?? 0) + 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ksort($pagesByMinute);
+
+        return response()->json([
+            'total_pages_60min' => array_sum($pagesByMinute),
+            'pages_by_minute' => $pagesByMinute,
+            'minute_count' => count($pagesByMinute),
+            'avg_per_minute' => count($pagesByMinute) > 0 ? round(array_sum($pagesByMinute) / 60, 2) : 0
+        ]);
+    }
+
+    /**
+     * Get per-minute S3 uploads for last 60 minutes
+     */
+    public function getS3UploadsLastHourMinuteByMinute()
+    {
+        if (!session('monitor_authenticated')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $logsPath = storage_path('logs/resume_downloader');
+        $s3ByMinute = [];
+        $currentTime = time();
+        $oneHourAgo = $currentTime - 3600;
+
+        if (is_dir($logsPath)) {
+            $logFiles = glob($logsPath . '/http_downloader_*.log');
+
+            foreach ($logFiles as $file) {
+                $content = file_get_contents($file);
+                $lines = explode("\n", $content);
+
+                foreach ($lines as $line) {
+                    // Look for S3 upload indicators
+                    if ((stripos($line, 's3') !== false || stripos($line, 'upload') !== false || stripos($line, 'aws') !== false) &&
+                        stripos($line, 'error') === false && stripos($line, 'fail') === false) {
+
+                        preg_match('/(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})/', $line, $matches);
+
+                        if (!empty($matches[1])) {
+                            $timestamp = $matches[1];
+                            $timeInt = strtotime($timestamp);
+
+                            if ($timeInt >= $oneHourAgo && $timeInt <= $currentTime) {
+                                $minute = date('H:i', $timeInt);
+                                $s3ByMinute[$minute] = ($s3ByMinute[$minute] ?? 0) + 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ksort($s3ByMinute);
+
+        return response()->json([
+            'total_s3_60min' => array_sum($s3ByMinute),
+            's3_by_minute' => $s3ByMinute,
+            'minute_count' => count($s3ByMinute),
+            'avg_per_minute' => count($s3ByMinute) > 0 ? round(array_sum($s3ByMinute) / 60, 2) : 0
+        ]);
+    }
+
+    /**
+     * Get per-minute load data for last 60 minutes from logs
+     */
+    public function getLoadLastHourMinuteByMinute()
+    {
+        if (!session('monitor_authenticated')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $logsPath = storage_path('logs/resume_downloader');
+        $loadByMinute = [];
+        $currentTime = time();
+        $oneHourAgo = $currentTime - 3600;
+
+        if (is_dir($logsPath)) {
+            $logFiles = glob($logsPath . '/http_downloader_*.log');
+
+            foreach ($logFiles as $file) {
+                $content = file_get_contents($file);
+                $lines = explode("\n", $content);
+
+                foreach ($lines as $line) {
+                    // Look for load indicators
+                    if ((stripos($line, 'load') !== false || stripos($line, 'cpu') !== false)) {
+                        preg_match('/(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})/', $line, $matches);
+                        preg_match('/load[\s:]*(\d+\.?\d*)/', $line, $loadMatch);
+
+                        if (!empty($matches[1])) {
+                            $timestamp = $matches[1];
+                            $timeInt = strtotime($timestamp);
+
+                            if ($timeInt >= $oneHourAgo && $timeInt <= $currentTime) {
+                                $minute = date('H:i', $timeInt);
+                                $loadValue = !empty($loadMatch[1]) ? (float)$loadMatch[1] : 0;
+
+                                if (!isset($loadByMinute[$minute])) {
+                                    $loadByMinute[$minute] = [];
+                                }
+                                $loadByMinute[$minute][] = $loadValue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Calculate average per minute
+        foreach ($loadByMinute as $minute => $values) {
+            $loadByMinute[$minute] = count($values) > 0 ? round(array_sum($values) / count($values), 2) : 0;
+        }
+
+        ksort($loadByMinute);
+
+        return response()->json([
+            'load_by_minute' => $loadByMinute,
+            'minute_count' => count($loadByMinute),
+            'avg_load' => count($loadByMinute) > 0 ? round(array_sum($loadByMinute) / count($loadByMinute), 2) : sys_getloadavg()[0]
+        ]);
+    }
+
+    /**
      * Extract all timestamps from logs to create timeline
      */
     private function extractTimestamps($logsPath)
