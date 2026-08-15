@@ -146,7 +146,7 @@ class ResumeMonitorController extends Controller
             $estimatedHours = (int)($remainingMinutes / 60);
             $estimatedMins = $remainingMinutes % 60;
 
-            return view('resume-monitor.dashboard', [
+            return view('resume-monitor.dashboard-enhanced', [
                 'cronHealthy' => $cronHealthy,
                 'heartbeatAge' => $heartbeatAge,
                 'lastHeartbeat' => $lastHeartbeat,
@@ -202,6 +202,58 @@ class ResumeMonitorController extends Controller
             'load' => sys_getloadavg(),
             'processes' => (int)trim(shell_exec("ps aux | grep '[p]ython3.*http_downloader.py' | wc -l")),
             'healthy' => $this->isCronHealthy($basePath),
+        ]);
+    }
+
+    /**
+     * Get downtime data (minutes when script didn't run)
+     */
+    public function getDowntimeList()
+    {
+        // Check if authenticated
+        if (!session('monitor_authenticated')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $basePath = storage_path('resumes');
+        $logsPath = storage_path('logs/resume_downloader');
+        $downtime = [];
+
+        // Get all log files from today
+        $todayDate = date('Ymd');
+        $logFiles = glob($logsPath . '/http_downloader_' . $todayDate . '*.log');
+
+        if (empty($logFiles)) {
+            return response()->json(['downtime_minutes' => []]);
+        }
+
+        // Extract timestamps from log files
+        $executedMinutes = [];
+        foreach ($logFiles as $file) {
+            preg_match('/' . $todayDate . '_(\d{6})/', $file, $matches);
+            if (!empty($matches[1])) {
+                // Format: HHMMSS → extract HH:MM
+                $time = substr($matches[1], 0, 2) . ':' . substr($matches[1], 2, 2);
+                $executedMinutes[$time] = true;
+            }
+        }
+
+        // Check last 60 minutes for gaps
+        $now = now();
+        $downtime = [];
+        for ($i = 59; $i >= 0; $i--) {
+            $checkTime = $now->copy()->subMinutes($i);
+            $timeKey = $checkTime->format('H:i');
+
+            if (!isset($executedMinutes[$timeKey])) {
+                $downtime[] = $timeKey;
+            }
+        }
+
+        return response()->json([
+            'downtime_minutes' => array_slice($downtime, 0, 20), // Return last 20 downtime minutes
+            'total_downtime' => count($downtime),
+            'total_runs' => count($executedMinutes),
         ]);
     }
 
