@@ -1373,9 +1373,62 @@ def extract_resume_ids_from_html(html_content):
 
 
 def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net'):
-    """Extract S3 URL from resume detail page HTML (proven working method)"""
+    """Extract S3 URL - Try endpoint FIRST, then fall back to detail page"""
     try:
-        # Fetch the detail page that contains the S3 URL
+        # STEP 0: TRY ENDPOINT FIRST (generates fresh S3 URLs)
+        print(f"[ENDPOINT] Trying to get fresh S3 URL from downloadResume endpoint...")
+        endpoint_url = urljoin(base_url, '/employer/searchResume/downloadResume/')
+
+        try:
+            # Try endpoint with allow_redirects=False to capture redirect
+            endpoint_response = session.post(endpoint_url, data={'mongo_ids': resume_id}, timeout=20, allow_redirects=False)
+
+            # Check 1: Look for redirect Location header (301, 302, etc.)
+            if endpoint_response.status_code in [301, 302, 303, 307, 308]:
+                s3_url = endpoint_response.headers.get('Location')
+                if s3_url and 'tekjobs-resumes' in s3_url:
+                    print(f"[OK] Got fresh S3 URL from endpoint redirect (LIVE URL)")
+                    logger.info(f"[ENDPOINT] Fresh S3 URL from redirect for {resume_id}")
+                    return s3_url
+
+            # Check 2: Try to parse response as JSON
+            try:
+                import json
+                json_data = json.loads(endpoint_response.text)
+                if isinstance(json_data, dict):
+                    # Look for URL in common JSON keys
+                    for key in ['s3_url', 'url', 'download_url', 'file_url', 'presigned_url']:
+                        if key in json_data and 'tekjobs-resumes' in str(json_data[key]):
+                            s3_url = json_data[key]
+                            print(f"[OK] Got fresh S3 URL from endpoint JSON (LIVE URL)")
+                            logger.info(f"[ENDPOINT] Fresh S3 URL from JSON for {resume_id}")
+                            return s3_url
+                elif isinstance(json_data, list) and len(json_data) > 0:
+                    # Check first element or look for URL string
+                    if isinstance(json_data[0], dict):
+                        for key in ['s3_url', 'url', 'download_url']:
+                            if key in json_data[0] and 'tekjobs-resumes' in str(json_data[0][key]):
+                                s3_url = json_data[0][key]
+                                print(f"[OK] Got fresh S3 URL from endpoint JSON array (LIVE URL)")
+                                logger.info(f"[ENDPOINT] Fresh S3 URL from JSON array for {resume_id}")
+                                return s3_url
+            except (json.JSONDecodeError, ValueError):
+                pass  # Not JSON, continue to check body
+
+            # Check 3: Look for S3 URL in response body (plain text or HTML)
+            if 'tekjobs-resumes' in endpoint_response.text:
+                pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
+                matches = re.findall(pattern, endpoint_response.text)
+                if matches:
+                    s3_url = matches[0]
+                    print(f"[OK] Got fresh S3 URL from endpoint body (LIVE URL)")
+                    logger.info(f"[ENDPOINT] Fresh S3 URL from response body for {resume_id}")
+                    return s3_url
+        except Exception as endpoint_err:
+            print(f"[ENDPOINT] Endpoint call failed, falling back to detail page: {str(endpoint_err)[:50]}")
+            logger.warning(f"[ENDPOINT] Fallback: {str(endpoint_err)[:100]}")
+
+        # FALLBACK: Fetch the detail page that contains the S3 URL
         detail_url = urljoin(base_url, f'/employer/searchResume/resume/{resume_id}/')
         print(f"[DETAIL] Fetching detail page for {resume_id}...")
 
