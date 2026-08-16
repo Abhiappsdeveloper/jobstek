@@ -1744,29 +1744,48 @@ def main():
         skipped = 0  # Count skipped resumes
         retry_queue = []  # Queue for failed resumes to retry
 
-        # PRIORITY 1: Download ALL resumes with stored S3 URLs (maximize downloads!)
-        print("\n[PRIORITY] First, downloading ALL resumes with stored S3 URLs...")
+        # PRIORITY 1: Download ALL resumes with FRESH stored S3 URLs (< 1 hour old)
+        print("\n[PRIORITY] First, downloading resumes with FRESH stored S3 URLs (< 1 hour old)...")
         stored_resume_ids = list(s3_urls_dict.keys())
-        print(f"[PRIORITY] Found {len(stored_resume_ids)} resumes with stored S3 URLs")
+        now_ist = datetime.now(IST)
+        fresh_urls = []
+        expired_urls = []
 
-        for idx, resume_id in enumerate(stored_resume_ids, 1):
+        # Filter URLs by age
+        for resume_id, url in s3_urls_dict.items():
             try:
-                # DON'T skip - download ALL stored URLs to maximize downloads!
-                print(f"\n[STORED-{idx}/{len(stored_resume_ids)}] Downloading resume with stored S3 URL...")
+                timestamp_match = re.search(r'X-Amz-Date=(\d{8}T\d{6}Z)', url)
+                if timestamp_match:
+                    timestamp_str = timestamp_match.group(1)
+                    url_age_hours = (now_ist - datetime.strptime(timestamp_str, '%Y%m%dT%H%M%SZ').replace(tzinfo=IST)).total_seconds() / 3600
+                    if url_age_hours < 1:
+                        fresh_urls.append(resume_id)
+                    else:
+                        expired_urls.append((resume_id, url_age_hours))
+            except:
+                expired_urls.append((resume_id, None))
+
+        print(f"[PRIORITY] Fresh URLs (< 1h old): {len(fresh_urls)}")
+        print(f"[PRIORITY] Expired URLs (> 1h old): {len(expired_urls)}")
+
+        # Download ONLY FRESH URLs to maximize success rate
+        for idx, resume_id in enumerate(fresh_urls, 1):
+            try:
+                print(f"\n[FRESH-{idx}/{len(fresh_urls)}] Downloading resume with FRESH S3 URL...")
 
                 if download_resume_by_id(session, resume_id, download_dir, base_url='https://www.tekjobs.net', resume_index=idx):
                     successful += 1
-                    print(f"[STORED] ✓ Downloaded using stored S3 URL")
+                    print(f"[FRESH] ✓ Downloaded using fresh S3 URL")
                 else:
                     failed += 1
-                    print(f"[STORED] ✗ Failed to download stored S3 URL")
+                    print(f"[FRESH] ✗ Failed to download fresh S3 URL")
 
                 time.sleep(1)
             except Exception as e:
-                logger.error(f"[STORED] Error downloading {resume_id}: {str(e)}")
+                logger.error(f"[FRESH] Error downloading {resume_id}: {str(e)}")
                 failed += 1
 
-        print(f"\n[PRIORITY] Stored URLs phase complete: {successful} downloaded")
+        print(f"\n[PRIORITY] Fresh URLs phase complete: {successful} downloaded, {failed} failed")
         print("\n[STEP 3B] Now downloading NEW resumes from fetched list...")
 
         for idx, resume_id in enumerate(resume_ids, 1):
