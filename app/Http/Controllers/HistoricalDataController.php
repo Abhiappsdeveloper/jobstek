@@ -261,8 +261,9 @@ class HistoricalDataController extends Controller
         $heartbeats = array_unique($heartbeats);
         sort($heartbeats);
 
-        // Track most recent heartbeat in 60-minute window
+        // Track most recent heartbeat in 60-minute window AND most recent overall
         $lastHeartbeatIn60Min = null;
+        $mostRecentHeartbeat = end($heartbeats); // Most recent EVER (for fallback)
 
         // Group by minute and count
         foreach ($heartbeats as $hb) {
@@ -272,7 +273,7 @@ class HistoricalDataController extends Controller
 
             // Only include last 60 minutes
             if ($ageMinutes <= 60) {
-                $lastHeartbeatIn60Min = $hb; // Track most recent (array is sorted, so this will be the latest)
+                $lastHeartbeatIn60Min = $hb; // Track most recent IN WINDOW (array is sorted, so this will be the latest)
                 $minute = date('H:i', $hbTime);
                 if (!isset($heartbeatsByMinute[$minute])) {
                     $heartbeatsByMinute[$minute] = 0;
@@ -287,6 +288,10 @@ class HistoricalDataController extends Controller
         $totalHeartbeatsInWindow = array_sum($heartbeatsByMinute);
         $avgPerMinute = $totalHeartbeatsInWindow > 0 ? round($totalHeartbeatsInWindow / 60, 2) : 0;
 
+        // Use most recent in 60-min window if available, otherwise use most recent ever
+        // (This ensures we always have a timestamp to calculate age from, even if no recent activity)
+        $lastHeartbeatToUse = $lastHeartbeatIn60Min ?? $mostRecentHeartbeat;
+
         return response()->json([
             'total_heartbeats' => count($heartbeats),
             'heartbeats_last_60min' => array_slice($heartbeats, -60), // Last 60
@@ -296,7 +301,7 @@ class HistoricalDataController extends Controller
             'total_in_window' => $totalHeartbeatsInWindow,
             'timestamps' => [
                 'first' => $heartbeats[0] ?? null,
-                'last' => $lastHeartbeatIn60Min ?: null, // Most recent in 60-minute window (or null if none)
+                'last' => $lastHeartbeatToUse ?: null, // Most recent in 60-min window, fallback to most recent ever
                 'current' => now()->toIso8601String(), // ISO 8601 format for proper JS parsing
             ]
         ]);
