@@ -1328,6 +1328,11 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
 
         html_content = response.text
 
+        # DEBUG: Save HTML on first failure for inspection
+        debug_dir = os.path.join(LARAVEL_STORAGE_PATH, 'debug')
+        os.makedirs(debug_dir, mode=0o777, exist_ok=True)
+        debug_file = os.path.join(debug_dir, f'detail_page_{resume_id}.html')
+
         # Pattern 1: const resume_org_path = "https://..." (with various quote types)
         pattern = r'(?:const|var|let)\s+resume_org_path\s*=\s*["\']([^"\']*(?:https://[^"\']*)?)["\']'
         matches = re.findall(pattern, html_content, re.IGNORECASE | re.DOTALL)
@@ -1357,6 +1362,16 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
             print(f"[OK] Found S3 URL (Pattern 3: broad search)")
             logger.info(f"[DETAIL] S3 URL extracted (broad) for {resume_id}")
             return s3_url
+
+        # DEBUG: All patterns failed - save HTML for inspection
+        try:
+            with open(debug_file, 'w', encoding='utf-8') as f:
+                f.write(html_content)
+            os.chmod(debug_file, 0o777)
+            print(f"[DEBUG] Saved detail page to: {debug_file} ({len(html_content)} bytes)")
+            logger.info(f"[DEBUG] Detail page saved for inspection")
+        except Exception as debug_e:
+            logger.warning(f"[DEBUG] Could not save debug file: {debug_e}")
 
         # Pattern 4: SKIP - Don't construct URLs from filenames
         # AWS signed URLs expire after 1 hour. Constructed URLs have no signature.
