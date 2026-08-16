@@ -1826,11 +1826,7 @@ if __name__ == "__main__":
             print("[INFO] Process completed with no downloads")
         print("=" * 70)
 
-        print("\nPress Enter to close this terminal...")
-        try:
-            input()
-        except EOFError:
-            pass
+        # Removed input() - not compatible with cron/background mode
 
         exit(0 if success else 1)
 
@@ -1844,11 +1840,7 @@ if __name__ == "__main__":
         except:
             pass  # If logging fails, continue
 
-        print("\nPress Enter to close this terminal...")
-        try:
-            input()
-        except EOFError:
-            pass
+        # Removed input() - not compatible with cron/background mode
 
         exit(1)
 
