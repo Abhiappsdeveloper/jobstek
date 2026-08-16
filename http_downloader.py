@@ -1316,63 +1316,38 @@ def extract_resume_ids_from_html(html_content):
 
 
 def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net'):
-    """Get fresh S3 signed URL by calling the downloadResume endpoint"""
+    """Get S3 URL from stored URLs file (same as old working approach)"""
     try:
-        # The website has a downloadResume endpoint that generates fresh signed S3 URLs
-        # This is what the browser calls when you click Download button
-        download_endpoint = urljoin(base_url, '/employer/searchResume/downloadResume/')
+        # Load stored S3 URLs - these are the ones that successfully worked before
+        s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
 
-        print(f"[S3-FETCH] Getting fresh S3 URL from: {download_endpoint}")
+        if not os.path.exists(s3_urls_file):
+            logger.warning(f"[S3-STORED] No stored S3 URLs file found")
+            return None
 
-        # POST request with the resume ID as mongo_ids parameter
-        # The endpoint will redirect to the S3 URL
-        data = {'mongo_ids': resume_id}
+        # Search for this resume ID in the stored URLs
+        with open(s3_urls_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith('#'):
+                    continue
 
-        # Follow redirects to get to the final S3 URL
-        # The endpoint may redirect multiple times before reaching S3
-        try:
-            response = session.post(download_endpoint, data=data, timeout=BULLETPROOF_DETAIL_TIMEOUT, allow_redirects=True)
+                # Format: resume_id|filename|s3_url
+                parts = line.split('|')
+                if len(parts) >= 3 and parts[0] == resume_id:
+                    stored_url = parts[2]
+                    if stored_url.startswith('https://tekjobs-resumes'):
+                        print(f"[OK] Using stored S3 URL for {resume_id}")
+                        logger.info(f"[S3-STORED] Using previously stored S3 URL for {resume_id}")
+                        return stored_url
 
-            # Check if we ended up at an S3 URL
-            final_url = response.url if hasattr(response, 'url') else response.headers.get('Location', '')
-
-            if 'tekjobs-resumes' in final_url:
-                print(f"[OK] Got fresh S3 URL from redirect chain")
-                logger.info(f"[S3-FETCH] Fresh S3 URL obtained for {resume_id}")
-                return final_url
-
-            # Check if the response contains the S3 URL directly
-            if 'tekjobs-resumes' in response.text:
-                pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
-                matches = re.findall(pattern, response.text)
-                if matches:
-                    s3_url = matches[0]
-                    print(f"[OK] Found S3 URL in response body")
-                    logger.info(f"[S3-FETCH] S3 URL extracted from response for {resume_id}")
-                    return s3_url
-        except Exception as redirect_e:
-            logger.warning(f"[S3-FETCH] Error following redirects: {redirect_e}")
-
-        # If no S3 URL found
-        print(f"[WARN] S3-FETCH could not obtain S3 URL from endpoint")
-        logger.warning(f"[S3-FETCH] No S3 URL from endpoint for {resume_id}")
-
-        # DEBUG: Save response for inspection
-        debug_dir = os.path.join(LARAVEL_STORAGE_PATH, 'debug')
-        os.makedirs(debug_dir, mode=0o777, exist_ok=True)
-        debug_file = os.path.join(debug_dir, f'download_response_{resume_id}.html')
-        try:
-            with open(debug_file, 'w', encoding='utf-8') as f:
-                f.write(response.text[:5000])  # Save first 5KB
-            os.chmod(debug_file, 0o777)
-        except Exception as debug_e:
-            logger.warning(f"[DEBUG] Could not save response: {debug_e}")
-
+        logger.warning(f"[S3-STORED] No stored URL found for {resume_id}")
+        print(f"[WARN] No stored S3 URL found for {resume_id}")
         return None
 
     except Exception as e:
-        logger.error(f"[ERROR] Failed to get S3 URL from endpoint: {str(e)}")
-        print(f"[ERROR] S3-FETCH error: {type(e).__name__}: {str(e)}")
+        logger.error(f"[ERROR] Failed to read stored S3 URLs: {str(e)}")
+        print(f"[ERROR] S3-STORED error: {type(e).__name__}")
         return None
 
 
