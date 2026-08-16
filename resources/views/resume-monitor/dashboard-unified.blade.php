@@ -691,15 +691,30 @@
 
         // Update heartbeat UI
         function updateHeartbeatUI() {
-            document.getElementById('heartbeat-count').textContent = heartbeatData.total_heartbeats || 0;
-            document.getElementById('heartbeat-avg').textContent = heartbeatData.avg_per_minute || '0.00';
+            // Show heartbeats in last 60 minutes (not total ever)
+            const count60min = heartbeatData.total_in_window || 0;
+            document.getElementById('heartbeat-count').textContent = count60min;
 
-            if (heartbeatData.timestamps?.last) {
+            // Display average with fallback
+            const avgValue = heartbeatData.avg_per_minute !== undefined ?
+                (typeof heartbeatData.avg_per_minute === 'number' ? heartbeatData.avg_per_minute.toFixed(2) : heartbeatData.avg_per_minute) :
+                '0.00';
+            document.getElementById('heartbeat-avg').textContent = avgValue;
+
+            if (heartbeatData.timestamps?.last && heartbeatData.timestamps?.current) {
                 document.getElementById('heartbeat-last').textContent = heartbeatData.timestamps.last;
 
                 // Check if heartbeat is healthy (within 2 minutes)
-                const lastHeartbeatTime = new Date(heartbeatData.timestamps.last);
+                // Parse ISO 8601 dates correctly
+                const lastHeartbeatTime = new Date(heartbeatData.timestamps.last.replace(' ', 'T') + 'Z');
                 const currentTime = new Date(heartbeatData.timestamps.current);
+
+                // Ensure valid dates
+                if (isNaN(lastHeartbeatTime) || isNaN(currentTime)) {
+                    console.error('Invalid heartbeat timestamps:', heartbeatData.timestamps);
+                    return;
+                }
+
                 const ageMs = currentTime - lastHeartbeatTime;
                 const ageSeconds = ageMs / 1000;
                 const isHealthy = ageSeconds < 120; // 2 minutes threshold
@@ -718,6 +733,8 @@
                     const minutes = Math.round(ageSeconds / 60);
                     cronAge.textContent = '✗ NOT RUNNING (' + minutes + 'm old)';
                 }
+            } else {
+                console.warn('Missing heartbeat timestamps in data:', heartbeatData);
             }
 
             // Heartbeat list

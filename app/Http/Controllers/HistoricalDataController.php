@@ -289,10 +289,11 @@ class HistoricalDataController extends Controller
             'heartbeats_by_minute' => $heartbeatsByMinute,
             'minute_count' => count($heartbeatsByMinute),
             'avg_per_minute' => $avgPerMinute,
+            'total_in_window' => $totalHeartbeatsInWindow,
             'timestamps' => [
                 'first' => $heartbeats[0] ?? null,
                 'last' => end($heartbeats) ?: null,
-                'current' => now()->format('Y-m-d H:i:s'),
+                'current' => now()->toIso8601String(), // ISO 8601 format for proper JS parsing
             ]
         ]);
     }
