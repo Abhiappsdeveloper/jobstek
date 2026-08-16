@@ -261,6 +261,9 @@ class HistoricalDataController extends Controller
         $heartbeats = array_unique($heartbeats);
         sort($heartbeats);
 
+        // Track most recent heartbeat in 60-minute window
+        $lastHeartbeatIn60Min = null;
+
         // Group by minute and count
         foreach ($heartbeats as $hb) {
             $hbTime = strtotime($hb);
@@ -269,6 +272,7 @@ class HistoricalDataController extends Controller
 
             // Only include last 60 minutes
             if ($ageMinutes <= 60) {
+                $lastHeartbeatIn60Min = $hb; // Track most recent (array is sorted, so this will be the latest)
                 $minute = date('H:i', $hbTime);
                 if (!isset($heartbeatsByMinute[$minute])) {
                     $heartbeatsByMinute[$minute] = 0;
@@ -292,7 +296,7 @@ class HistoricalDataController extends Controller
             'total_in_window' => $totalHeartbeatsInWindow,
             'timestamps' => [
                 'first' => $heartbeats[0] ?? null,
-                'last' => end($heartbeats) ?: null,
+                'last' => $lastHeartbeatIn60Min ?: null, // Most recent in 60-minute window (or null if none)
                 'current' => now()->toIso8601String(), // ISO 8601 format for proper JS parsing
             ]
         ]);

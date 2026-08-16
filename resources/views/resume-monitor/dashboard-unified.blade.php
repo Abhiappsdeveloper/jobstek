@@ -316,8 +316,8 @@
                 </div>
                 <div class="card">
                     <h3>🔄 Cron</h3>
-                    <div class="card-value"><span class="badge badge-success" id="cron-status">✓</span></div>
-                    <div class="card-stat" id="cron-age">-</div>
+                    <div class="card-value"><span class="badge badge-danger" id="cron-status">✗</span></div>
+                    <div class="card-stat" id="cron-age">Checking...</div>
                 </div>
 
                 <div class="card wide-card">
@@ -705,13 +705,30 @@
                 document.getElementById('heartbeat-last').textContent = heartbeatData.timestamps.last;
 
                 // Check if heartbeat is healthy (within 2 minutes)
-                // Parse ISO 8601 dates correctly
-                const lastHeartbeatTime = new Date(heartbeatData.timestamps.last.replace(' ', 'T') + 'Z');
+                // Parse timestamps - handle both space and T formats
+                let lastHeartbeatTime;
+                if (heartbeatData.timestamps.last.includes('T')) {
+                    // Already ISO 8601 format
+                    lastHeartbeatTime = new Date(heartbeatData.timestamps.last);
+                } else {
+                    // Format: YYYY-MM-DD HH:MM:SS - convert to ISO 8601
+                    lastHeartbeatTime = new Date(heartbeatData.timestamps.last.replace(' ', 'T') + 'Z');
+                }
+
                 const currentTime = new Date(heartbeatData.timestamps.current);
 
                 // Ensure valid dates
-                if (isNaN(lastHeartbeatTime) || isNaN(currentTime)) {
-                    console.error('Invalid heartbeat timestamps:', heartbeatData.timestamps);
+                if (isNaN(lastHeartbeatTime.getTime()) || isNaN(currentTime.getTime())) {
+                    console.error('Invalid heartbeat timestamps:', {
+                        last: heartbeatData.timestamps.last,
+                        current: heartbeatData.timestamps.current,
+                        lastParsed: lastHeartbeatTime,
+                        currentParsed: currentTime
+                    });
+                    // Set to NOT RUNNING if can't parse
+                    document.getElementById('cron-status').textContent = '✗';
+                    document.getElementById('cron-status').className = 'badge badge-danger';
+                    document.getElementById('cron-age').textContent = '✗ Error parsing timestamps';
                     return;
                 }
 
@@ -735,6 +752,10 @@
                 }
             } else {
                 console.warn('Missing heartbeat timestamps in data:', heartbeatData);
+                // Set to NOT RUNNING if no timestamps
+                document.getElementById('cron-status').textContent = '✗';
+                document.getElementById('cron-status').className = 'badge badge-danger';
+                document.getElementById('cron-age').textContent = '✗ No heartbeat data';
             }
 
             // Heartbeat list
