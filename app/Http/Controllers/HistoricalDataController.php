@@ -232,7 +232,17 @@ class HistoricalDataController extends Controller
         $heartbeatsByMinute = [];
         $currentTime = time();
 
-        // Extract heartbeats from log files
+        // READ .cron_heartbeat FILE FIRST (PRIMARY SOURCE OF TRUTH)
+        $heartbeatFile = $basePath . '/.cron_heartbeat';
+        $fileHeartbeat = null;
+        if (file_exists($heartbeatFile)) {
+            $fileHeartbeat = trim(file_get_contents($heartbeatFile));
+            if ($fileHeartbeat) {
+                $heartbeats[] = $fileHeartbeat;
+            }
+        }
+
+        // Then extract heartbeats from log files as SECONDARY source
         if (is_dir($logsPath)) {
             $logFiles = glob($logsPath . '/http_downloader_*.log');
 
@@ -248,22 +258,14 @@ class HistoricalDataController extends Controller
             }
         }
 
-        // Also check the heartbeat file
-        $heartbeatFile = $basePath . '/.cron_heartbeat';
-        if (file_exists($heartbeatFile)) {
-            $fileHeartbeat = trim(file_get_contents($heartbeatFile));
-            if (!in_array($fileHeartbeat, $heartbeats)) {
-                $heartbeats[] = $fileHeartbeat;
-            }
-        }
-
         // Sort and remove duplicates
         $heartbeats = array_unique($heartbeats);
         sort($heartbeats);
 
         // Track most recent heartbeat in 60-minute window AND most recent overall
         $lastHeartbeatIn60Min = null;
-        $mostRecentHeartbeat = end($heartbeats); // Most recent EVER (for fallback)
+        // IMPORTANT: Use .cron_heartbeat file as PRIMARY if it exists, otherwise use last from sorted array
+        $mostRecentHeartbeat = $fileHeartbeat ?: end($heartbeats); // Primary: file, Fallback: last in logs
 
         // Group by minute and count
         foreach ($heartbeats as $hb) {
