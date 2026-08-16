@@ -129,7 +129,7 @@ LOGIN_SUCCESS_FLAG = os.path.join(DEFAULT_DOWNLOAD_DIR, ".login_verified")  # Fl
 BULLETPROOF_DETAIL_TIMEOUT = 600  # 10 minutes for detail page (EXTREME network: 500KB at 5KB/s = 100s + safety)
 BULLETPROOF_S3_TIMEOUT = 3600  # 60 minutes for S3 download (EXTREME: 10MB at 5KB/s = 2048s + safety)
 BULLETPROOF_CONNECTION_TIMEOUT = 300  # 5 minutes for login (EXTREME: 100KB at 5KB/s = 20s + retry overhead + safety)
-BULLETPROOF_MAX_RETRIES = 5  # 5 retry attempts (NEW - PHASE 2)
+BULLETPROOF_MAX_RETRIES = 2  # 2 retry attempts (reduced to prioritize fresh URLs over retrying expired ones)
 BULLETPROOF_BASE_DELAY = 10  # 10 seconds base delay (NEW - PHASE 3)
 
 try:
@@ -1327,6 +1327,7 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
 
         # Collect ALL URLs for this resume ID with timestamps
         url_list = []  # [(s3_url, timestamp), ...]
+        now_ist = datetime.now(IST)
 
         with open(s3_urls_file, 'r', encoding='utf-8') as f:
             for line in f:
@@ -1344,13 +1345,19 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
                             timestamp_match = re.search(r'X-Amz-Date=(\d{8}T\d{6}Z)', stored_url)
                             if timestamp_match:
                                 timestamp_str = timestamp_match.group(1)
-                                # Convert to comparable format (higher = more recent)
-                                url_list.append((stored_url, timestamp_str))
+                                # Check if URL is fresh (< 1 hour old)
+                                url_age_hours = (now_ist - datetime.strptime(timestamp_str, '%Y%m%dT%H%M%SZ').replace(tzinfo=IST)).total_seconds() / 3600
+                                if url_age_hours < 1:
+                                    # Only include URLs less than 1 hour old
+                                    url_list.append((stored_url, timestamp_str))
+                                    print(f"[FRESHNESS-FILTER] URL age: {url_age_hours:.1f}h (fresh, included)")
+                                else:
+                                    print(f"[FRESHNESS-FILTER] URL age: {url_age_hours:.1f}h (expired, skipped)")
                             else:
-                                # No timestamp found, add with old timestamp
-                                url_list.append((stored_url, '00000000T000000Z'))
+                                # No timestamp found, skip (too old)
+                                print(f"[FRESHNESS-FILTER] No timestamp found (skipped)")
                         except:
-                            url_list.append((stored_url, '00000000T000000Z'))
+                            pass  # Skip URLs with parsing errors
 
         # Sort by timestamp (NEWEST FIRST - reverse order)
         if url_list:
