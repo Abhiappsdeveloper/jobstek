@@ -67,8 +67,6 @@ else:
     # Auto-create downloads folder locally
     try:
         os.makedirs(DEFAULT_DOWNLOAD_DIR, exist_ok=True)
-        # Also ensure progress tracking file directory exists (NEW - doesn't modify existing logic)
-        os.makedirs(os.path.dirname(FETCHED_PAGES_TRACKER), exist_ok=True)
     except Exception as e:
         print(f"[WARNING] Could not create downloads directory: {e}")
 
