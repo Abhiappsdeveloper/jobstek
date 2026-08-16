@@ -1540,7 +1540,9 @@ def download_resume_by_id(session, resume_id, download_dir='downloads', base_url
         # Step 2: Download from S3 URL directly
         print(f"[STEP 2] Downloading from S3: {s3_url[:60]}...")
 
-        response = session.get(s3_url, timeout=20, stream=True, allow_redirects=True)
+        # URL-encode to handle spaces and special characters in filenames
+        safe_s3_url = quote(s3_url, safe=':/?#[]@!$&\'()*+,;=')
+        response = session.get(safe_s3_url, timeout=20, stream=True, allow_redirects=True)
 
         if response.status_code != 200:
             print(f"[ERROR] S3 download returned status {response.status_code}")
