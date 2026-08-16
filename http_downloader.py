@@ -1316,38 +1316,63 @@ def extract_resume_ids_from_html(html_content):
 
 
 def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net'):
-    """Get S3 URL from stored URLs file (same as old working approach)"""
+    """Extract FRESH S3 URL from detail page (with AWS signing parameters)"""
     try:
-        # Load stored S3 URLs - these are the ones that successfully worked before
+        # STEP 1: Try to extract FRESH S3 URL from detail page
+        detail_url = urljoin(base_url, f'/employer/searchResume/resume/{resume_id}/')
+        print(f"[EXTRACT] Fetching detail page for fresh S3 URL: {detail_url}")
+
+        try:
+            resp = session.get(detail_url, timeout=30)
+            if resp.status_code == 200:
+                # Extract S3 URL with regex - Pattern 1: const resume_org_path = "..."
+                pattern = r'const\s+resume_org_path\s*=\s*["\']([^"\']+)["\']'
+                matches = re.findall(pattern, resp.text)
+
+                if matches:
+                    fresh_url = matches[0]
+                    # Verify it has AWS signing parameters
+                    if 'X-Amz-' in fresh_url and fresh_url.startswith('https://tekjobs-resumes'):
+                        # Extract timestamp to verify freshness
+                        date_match = re.search(r'X-Amz-Date=([^&]*)', fresh_url)
+                        if date_match:
+                            timestamp = date_match.group(1)
+                            print(f"[OK] Fresh S3 URL extracted (Timestamp: {timestamp})")
+                            logger.info(f"[EXTRACT] Fresh S3 URL for {resume_id} (timestamp: {timestamp})")
+                            return fresh_url
+                        else:
+                            print(f"[OK] Fresh S3 URL extracted (no timestamp found)")
+                            logger.info(f"[EXTRACT] Fresh S3 URL for {resume_id}")
+                            return fresh_url
+        except Exception as e:
+            print(f"[WARN] Failed to extract from detail page: {type(e).__name__}")
+            logger.warning(f"[EXTRACT] Detail page extraction failed: {str(e)}")
+
+        # STEP 2: Fall back to stored URL if extraction fails
         s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
 
-        if not os.path.exists(s3_urls_file):
-            logger.warning(f"[S3-STORED] No stored S3 URLs file found")
-            return None
+        if os.path.exists(s3_urls_file):
+            with open(s3_urls_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line or line.startswith('#'):
+                        continue
 
-        # Search for this resume ID in the stored URLs
-        with open(s3_urls_file, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith('#'):
-                    continue
+                    parts = line.split('|')
+                    if len(parts) >= 3 and parts[0] == resume_id:
+                        stored_url = parts[2]
+                        if stored_url.startswith('https://tekjobs-resumes'):
+                            print(f"[FALLBACK] Using stored URL (extraction failed)")
+                            logger.info(f"[FALLBACK] Using stored URL for {resume_id}")
+                            return stored_url
 
-                # Format: resume_id|filename|s3_url
-                parts = line.split('|')
-                if len(parts) >= 3 and parts[0] == resume_id:
-                    stored_url = parts[2]
-                    if stored_url.startswith('https://tekjobs-resumes'):
-                        print(f"[OK] Using stored S3 URL for {resume_id}")
-                        logger.info(f"[S3-STORED] Using previously stored S3 URL for {resume_id}")
-                        return stored_url
-
-        logger.warning(f"[S3-STORED] No stored URL found for {resume_id}")
-        print(f"[WARN] No stored S3 URL found for {resume_id}")
+        logger.warning(f"[EXTRACT] No S3 URL found (fresh or stored) for {resume_id}")
+        print(f"[ERROR] No S3 URL found for {resume_id}")
         return None
 
     except Exception as e:
-        logger.error(f"[ERROR] Failed to read stored S3 URLs: {str(e)}")
-        print(f"[ERROR] S3-STORED error: {type(e).__name__}")
+        logger.error(f"[ERROR] Failed to extract S3 URL: {str(e)}")
+        print(f"[ERROR] Extraction error: {type(e).__name__}")
         return None
 
 
