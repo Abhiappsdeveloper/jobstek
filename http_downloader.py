@@ -1325,33 +1325,37 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
         print(f"[S3-FETCH] Getting fresh S3 URL from: {download_endpoint}")
 
         # POST request with the resume ID as mongo_ids parameter
-        # The endpoint will redirect to the S3 URL or return it
+        # The endpoint will redirect to the S3 URL
         data = {'mongo_ids': resume_id}
 
-        # Don't follow redirects yet - we need to capture the S3 URL
-        response = session.post(download_endpoint, data=data, timeout=BULLETPROOF_DETAIL_TIMEOUT, allow_redirects=False)
+        # Follow redirects to get to the final S3 URL
+        # The endpoint may redirect multiple times before reaching S3
+        try:
+            response = session.post(download_endpoint, data=data, timeout=BULLETPROOF_DETAIL_TIMEOUT, allow_redirects=True)
 
-        # Check if we got a redirect (301, 302, etc.)
-        if response.status_code in [301, 302, 303, 307, 308]:
-            s3_url = response.headers.get('Location')
-            if s3_url and 'tekjobs-resumes' in s3_url:
-                print(f"[OK] Got fresh S3 URL from redirect")
+            # Check if we ended up at an S3 URL
+            final_url = response.url if hasattr(response, 'url') else response.headers.get('Location', '')
+
+            if 'tekjobs-resumes' in final_url:
+                print(f"[OK] Got fresh S3 URL from redirect chain")
                 logger.info(f"[S3-FETCH] Fresh S3 URL obtained for {resume_id}")
-                return s3_url
+                return final_url
 
-        # Check if the response contains the S3 URL directly
-        if 'tekjobs-resumes' in response.text:
-            pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
-            matches = re.findall(pattern, response.text)
-            if matches:
-                s3_url = matches[0]
-                print(f"[OK] Found S3 URL in response body")
-                logger.info(f"[S3-FETCH] S3 URL extracted from response for {resume_id}")
-                return s3_url
+            # Check if the response contains the S3 URL directly
+            if 'tekjobs-resumes' in response.text:
+                pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
+                matches = re.findall(pattern, response.text)
+                if matches:
+                    s3_url = matches[0]
+                    print(f"[OK] Found S3 URL in response body")
+                    logger.info(f"[S3-FETCH] S3 URL extracted from response for {resume_id}")
+                    return s3_url
+        except Exception as redirect_e:
+            logger.warning(f"[S3-FETCH] Error following redirects: {redirect_e}")
 
-        # If no S3 URL found, the endpoint may have returned an error
-        print(f"[WARN] S3-FETCH returned status {response.status_code}, no redirect to S3 URL")
-        logger.warning(f"[S3-FETCH] No S3 URL from endpoint for {resume_id}, status: {response.status_code}")
+        # If no S3 URL found
+        print(f"[WARN] S3-FETCH could not obtain S3 URL from endpoint")
+        logger.warning(f"[S3-FETCH] No S3 URL from endpoint for {resume_id}")
 
         # DEBUG: Save response for inspection
         debug_dir = os.path.join(LARAVEL_STORAGE_PATH, 'debug')
