@@ -1476,6 +1476,9 @@ def get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa
     if page > 1:
         print(f"[PAGINATION] Resuming from page {page} (previous progress saved)")
 
+    consecutive_empty_pages = 0
+    max_consecutive_empty = 5  # Allow 5 consecutive empty pages before stopping
+
     while page <= calculated_max_pages:
         try:
             print(f"\n[PAGINATION] Fetching page {page}...")
@@ -1489,8 +1492,20 @@ def get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa
             total_pages_checked += 1
 
             if not has_content or not resume_ids:
-                print(f"[PAGINATION] No more resumes found. Stopping at page {page}")
-                break
+                consecutive_empty_pages += 1
+                print(f"[PAGINATION] Empty page {page}. Empty pages so far: {consecutive_empty_pages}/{max_consecutive_empty}")
+
+                # Only stop if we've hit max consecutive empty pages
+                if consecutive_empty_pages >= max_consecutive_empty:
+                    print(f"[PAGINATION] No resumes found after {max_consecutive_empty} consecutive pages. Stopping.")
+                    break
+
+                # Continue to next page instead of breaking immediately
+                page += 1
+                continue
+
+            # Reset counter when we find content
+            consecutive_empty_pages = 0
 
             all_resume_ids.extend(resume_ids)
             print(f"[PAGINATION] Total resumes so far: {len(all_resume_ids):,}")
