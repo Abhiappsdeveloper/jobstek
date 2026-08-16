@@ -1316,113 +1316,68 @@ def extract_resume_ids_from_html(html_content):
 
 
 def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net'):
-    """Get S3 URL from stored URLs file - MOST RECENT FIRST (Freshness Priority)"""
+    """Get fresh S3 signed URL by calling the downloadResume endpoint"""
     try:
-        # Load stored S3 URLs - these are the ones that successfully worked before
-        s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
+        # The website has a downloadResume endpoint that generates fresh signed S3 URLs
+        # This is what the browser calls when you click Download button
+        download_endpoint = urljoin(base_url, '/employer/searchResume/downloadResume/')
 
-        if not os.path.exists(s3_urls_file):
-            logger.warning(f"[S3-STORED] No stored S3 URLs file found")
-            return None
+        print(f"[S3-FETCH] Getting fresh S3 URL from: {download_endpoint}")
 
-        # Collect ALL URLs for this resume ID with timestamps
-        url_list = []  # [(s3_url, timestamp), ...]
-        now_ist = datetime.now(IST)
+        # POST request with the resume ID as mongo_ids parameter
+        # The endpoint will redirect to the S3 URL or return it
+        data = {'mongo_ids': resume_id}
 
-        with open(s3_urls_file, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith('#'):
-                    continue
+        # Don't follow redirects yet - we need to capture the S3 URL
+        response = session.post(download_endpoint, data=data, timeout=20, allow_redirects=False)
 
-                # Format: resume_id|filename|s3_url
-                parts = line.split('|')
-                if len(parts) >= 3 and parts[0] == resume_id:
-                    stored_url = parts[2]
-                    if stored_url.startswith('https://tekjobs-resumes'):
-                        # Extract timestamp from URL: X-Amz-Date=20260815T175023Z
-                        try:
-                            timestamp_match = re.search(r'X-Amz-Date=(\d{8}T\d{6}Z)', stored_url)
-                            if timestamp_match:
-                                timestamp_str = timestamp_match.group(1)
-                                # Check if URL is fresh (< 1 hour old)
-                                url_age_hours = (now_ist - datetime.strptime(timestamp_str, '%Y%m%dT%H%M%SZ').replace(tzinfo=IST)).total_seconds() / 3600
-                                if url_age_hours < 1:
-                                    # Only include URLs less than 1 hour old
-                                    url_list.append((stored_url, timestamp_str))
-                                    print(f"[FRESHNESS-FILTER] URL age: {url_age_hours:.1f}h (fresh, included)")
-                                else:
-                                    print(f"[FRESHNESS-FILTER] URL age: {url_age_hours:.1f}h (expired, skipped)")
-                            else:
-                                # No timestamp found, skip (too old)
-                                print(f"[FRESHNESS-FILTER] No timestamp found (skipped)")
-                        except:
-                            pass  # Skip URLs with parsing errors
+        # Check if we got a redirect (301, 302, etc.)
+        if response.status_code in [301, 302, 303, 307, 308]:
+            s3_url = response.headers.get('Location')
+            if s3_url and 'tekjobs-resumes' in s3_url:
+                print(f"[OK] Got fresh S3 URL from redirect")
+                logger.info(f"[S3-FETCH] Fresh S3 URL obtained from redirect for {resume_id}")
 
-        # Sort by timestamp (NEWEST FIRST - reverse order)
-        if url_list:
-            url_list.sort(key=lambda x: x[1], reverse=True)
-            freshest_url = url_list[0][0]
-            freshest_timestamp = url_list[0][1]
-
-            print(f"[FRESHNESS] Using most recent URL for {resume_id} (timestamp: {freshest_timestamp})")
-            logger.info(f"[S3-FRESHNESS] Selected freshest URL for {resume_id} ({freshest_timestamp})")
-            return freshest_url
-
-        # No stored URL found - try to fetch from API/endpoint
-        print(f"[S3-API-FETCH] No stored URL found for {resume_id}, calling downloadResume API...")
-        logger.info(f"[S3-API-FETCH] Attempting to get S3 URL from API for {resume_id}")
-
-        try:
-            # Call downloadResume API to get S3 URL
-            api_url = f"{base_url}/api/resume/downloadResume"
-            payload = {"resume_id": resume_id}
-
-            response = session.post(api_url, json=payload, timeout=15)
-
-            if response.status_code == 200:
-                # Try to parse response as JSON
+                # Store for future use
                 try:
-                    data = response.json()
-                    if isinstance(data, dict) and 's3_url' in data:
-                        s3_url = data['s3_url']
-                    elif isinstance(data, str) and 'https://tekjobs-resumes' in data:
-                        s3_url = data
-                    else:
-                        s3_url = None
+                    s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
+                    filename = s3_url.split('/')[-1].split('?')[0] if '/' in s3_url else f"resume_{resume_id}"
+                    with open(s3_urls_file, 'a', encoding='utf-8') as f:
+                        f.write(f"{resume_id}|{filename}|{s3_url}\n")
                 except:
-                    # If not JSON, try to extract URL from text response
-                    s3_pattern = r'https://tekjobs-resumes\.s3\.amazonaws\.com/[^"\s<>]+'
-                    matches = re.findall(s3_pattern, response.text)
-                    s3_url = matches[0] if matches else None
+                    pass
 
-                if s3_url:
-                    print(f"[S3-API-SUCCESS] Got S3 URL from API for {resume_id}")
-                    logger.info(f"[S3-API-SUCCESS] Retrieved S3 URL from API for {resume_id}")
+                return s3_url
 
-                    # Store for future use
-                    try:
-                        filename = s3_url.split('/')[-1].split('?')[0] if '/' in s3_url else f"resume_{resume_id}"
-                        with open(s3_urls_file, 'a', encoding='utf-8') as f:
-                            f.write(f"{resume_id}|{filename}|{s3_url}\n")
-                        print(f"[S3-STORED] Saved API URL for {resume_id}")
-                    except:
-                        pass
+        # Check if the response contains the S3 URL directly
+        if 'tekjobs-resumes' in response.text:
+            pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
+            matches = re.findall(pattern, response.text)
+            if matches:
+                s3_url = matches[0]
+                print(f"[OK] Found S3 URL in response body")
+                logger.info(f"[S3-FETCH] S3 URL extracted from response for {resume_id}")
 
-                    return s3_url
+                # Store for future use
+                try:
+                    s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
+                    filename = s3_url.split('/')[-1].split('?')[0] if '/' in s3_url else f"resume_{resume_id}"
+                    with open(s3_urls_file, 'a', encoding='utf-8') as f:
+                        f.write(f"{resume_id}|{filename}|{s3_url}\n")
+                except:
+                    pass
 
-            print(f"[S3-API-FAIL] API returned status {response.status_code}")
-            logger.warning(f"[S3-API-FAIL] API status {response.status_code} for {resume_id}")
-        except Exception as api_error:
-            print(f"[S3-API-ERROR] API call failed: {type(api_error).__name__}")
-            logger.warning(f"[S3-API-ERROR] {str(api_error)[:100]}")
+                return s3_url
 
-        logger.warning(f"[S3-STORED] No S3 URL found (stored or extracted) for {resume_id}")
+        # If no S3 URL found, the endpoint may have returned an error
+        print(f"[WARN] S3-FETCH returned status {response.status_code}, no S3 URL found")
+        logger.warning(f"[S3-FETCH] No S3 URL from endpoint for {resume_id}, status: {response.status_code}")
+
         return None
 
     except Exception as e:
-        logger.error(f"[ERROR] Failed to read stored S3 URLs: {str(e)}")
-        print(f"[ERROR] S3-STORED error: {type(e).__name__}")
+        logger.error(f"[ERROR] Failed to get S3 URL from endpoint: {str(e)}")
+        print(f"[ERROR] S3-FETCH error: {type(e).__name__}: {str(e)[:100]}")
         return None
 
 
