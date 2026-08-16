@@ -1316,7 +1316,7 @@ def extract_resume_ids_from_html(html_content):
 
 
 def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net'):
-    """Get S3 URL from stored URLs file (same as old working approach)"""
+    """Get S3 URL from stored URLs file - MOST RECENT FIRST (Freshness Priority)"""
     try:
         # Load stored S3 URLs - these are the ones that successfully worked before
         s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
@@ -1325,7 +1325,9 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
             logger.warning(f"[S3-STORED] No stored S3 URLs file found")
             return None
 
-        # Search for this resume ID in the stored URLs
+        # Collect ALL URLs for this resume ID with timestamps
+        url_list = []  # [(s3_url, timestamp), ...]
+
         with open(s3_urls_file, 'r', encoding='utf-8') as f:
             for line in f:
                 line = line.strip()
@@ -1337,9 +1339,28 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
                 if len(parts) >= 3 and parts[0] == resume_id:
                     stored_url = parts[2]
                     if stored_url.startswith('https://tekjobs-resumes'):
-                        print(f"[OK] Using stored S3 URL for {resume_id}")
-                        logger.info(f"[S3-STORED] Using previously stored S3 URL for {resume_id}")
-                        return stored_url
+                        # Extract timestamp from URL: X-Amz-Date=20260815T175023Z
+                        try:
+                            timestamp_match = re.search(r'X-Amz-Date=(\d{8}T\d{6}Z)', stored_url)
+                            if timestamp_match:
+                                timestamp_str = timestamp_match.group(1)
+                                # Convert to comparable format (higher = more recent)
+                                url_list.append((stored_url, timestamp_str))
+                            else:
+                                # No timestamp found, add with old timestamp
+                                url_list.append((stored_url, '00000000T000000Z'))
+                        except:
+                            url_list.append((stored_url, '00000000T000000Z'))
+
+        # Sort by timestamp (NEWEST FIRST - reverse order)
+        if url_list:
+            url_list.sort(key=lambda x: x[1], reverse=True)
+            freshest_url = url_list[0][0]
+            freshest_timestamp = url_list[0][1]
+
+            print(f"[FRESHNESS] Using most recent URL for {resume_id} (timestamp: {freshest_timestamp})")
+            logger.info(f"[S3-FRESHNESS] Selected freshest URL for {resume_id} ({freshest_timestamp})")
+            return freshest_url
 
         logger.warning(f"[S3-STORED] No stored URL found for {resume_id}")
         print(f"[WARN] No stored S3 URL found for {resume_id}")
