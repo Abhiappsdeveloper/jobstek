@@ -29,6 +29,9 @@ except ImportError:
     HAS_REQUESTS = False
     requests = None  # Will use urllib wrapper instead
 
+# Set permissive umask for file creation (allows full read/write permissions)
+os.umask(0o000)
+
 # Fix Unicode/Emoji encoding for Windows
 if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -52,9 +55,9 @@ if USE_LARAVEL_STORAGE:
 
         # Try to set permissions (won't fail if permission denied)
         try:
-            os.chmod(os.path.join(SCRIPT_DIR, 'storage'), 0o775)
-            os.chmod(LARAVEL_STORAGE_PATH, 0o775)
-            os.chmod(LOGS_PATH, 0o775)
+            os.chmod(os.path.join(SCRIPT_DIR, 'storage'), 0o777)
+            os.chmod(LARAVEL_STORAGE_PATH, 0o777)
+            os.chmod(LOGS_PATH, 0o777)
         except:
             pass  # Permission changes are optional, script will work without them
     except Exception as e:
@@ -92,7 +95,7 @@ def ensure_all_directories():
             # Check if directory exists first
             if not os.path.exists(directory):
                 # Only create if it doesn't exist
-                os.makedirs(directory, mode=0o775, exist_ok=True)
+                os.makedirs(directory, mode=0o777, exist_ok=True)
                 print(f"[DIRS] ✓ Created: {directory}")
             else:
                 print(f"[DIRS] ✓ Exists: {directory}")
