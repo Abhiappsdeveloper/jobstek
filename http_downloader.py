@@ -14,12 +14,16 @@ import logging
 import time
 import math
 import threading
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin, urlparse, urlencode, quote
 from urllib.request import Request, build_opener, HTTPCookieProcessor
 from urllib.error import URLError, HTTPError
 import http.cookiejar
 import re
+
+# Set IST timezone globally
+IST = timezone(timedelta(hours=5, minutes=30))
+os.environ['TZ'] = 'Asia/Kolkata'
 
 # Try to use requests if available, otherwise use urllib
 try:
@@ -109,9 +113,9 @@ def ensure_all_directories():
             print(f"[DIRS] ✗ Error with {directory}: {e}")
 
 # Logging Setup
-LOG_FILE = os.path.join(LOGS_PATH, f"http_downloader_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
-RESUME_LINKS_FILE = os.path.join(LOGS_PATH, f"resume_links_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
-ERROR_TRACKING_FILE = os.path.join(LOGS_PATH, f"error_tracking_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
+LOG_FILE = os.path.join(LOGS_PATH, f"http_downloader_{datetime.now(IST).strftime('%Y%m%d_%H%M%S')}.log")
+RESUME_LINKS_FILE = os.path.join(LOGS_PATH, f"resume_links_{datetime.now(IST).strftime('%Y%m%d_%H%M%S')}.txt")
+ERROR_TRACKING_FILE = os.path.join(LOGS_PATH, f"error_tracking_{datetime.now(IST).strftime('%Y%m%d_%H%M%S')}.txt")
 DOWNLOADED_TRACKER_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "downloaded_resumes.txt")  # Persistent tracking file
 S3_URLS_TRACKER_FILE = os.path.join(DEFAULT_DOWNLOAD_DIR, "resume_s3_urls.txt")  # Store S3 URLs for quick recovery
 FETCHED_PAGES_TRACKER = os.path.join(DEFAULT_DOWNLOAD_DIR, "fetched_pages_progress.txt")  # Track which pages already fetched (NEW)
@@ -218,13 +222,13 @@ def initialize_tracking_files():
         # Create resume links file
         with open(RESUME_LINKS_FILE, 'w', encoding='utf-8') as f:
             f.write("Resume Links Log\n")
-            f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Generated: {datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S')}\n")
             f.write("=" * 80 + "\n\n")
 
         # Create error tracking file
         with open(ERROR_TRACKING_FILE, 'w', encoding='utf-8') as f:
             f.write("Error Tracking Log\n")
-            f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Generated: {datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S')}\n")
             f.write("=" * 80 + "\n\n")
 
         print(f"[INIT] Resume links will be saved to: {RESUME_LINKS_FILE}")
@@ -239,7 +243,7 @@ def log_resume_link(resume_id, detail_url):
     """Log resume link to tracking file"""
     try:
         with open(RESUME_LINKS_FILE, 'a', encoding='utf-8') as f:
-            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            timestamp = datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S')
             f.write(f"[{timestamp}] Resume ID: {resume_id}\n")
             f.write(f"                Detail URL: {detail_url}\n")
             f.write("\n")
@@ -251,7 +255,7 @@ def log_error(error_type, resume_id, error_message):
     """Log error to tracking file"""
     try:
         with open(ERROR_TRACKING_FILE, 'a', encoding='utf-8') as f:
-            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            timestamp = datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S')
             f.write(f"[{timestamp}] {error_type}\n")
             f.write(f"              Resume ID: {resume_id}\n")
             f.write(f"              Error: {error_message}\n")
@@ -303,7 +307,7 @@ def initialize_downloaded_tracker():
         if not os.path.exists(DOWNLOADED_TRACKER_FILE):
             with open(DOWNLOADED_TRACKER_FILE, 'w', encoding='utf-8') as f:
                 f.write("# Downloaded Resumes Tracker\n")
-                f.write(f"# Auto-generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"# Auto-generated: {datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S')}\n")
                 f.write("# This file tracks which resumes have been successfully downloaded\n")
                 f.write("# Format: One resume ID per line\n\n")
             print(f"[RESUME-SKIP] Created new tracker file: {DOWNLOADED_TRACKER_FILE}")
@@ -322,7 +326,7 @@ def initialize_s3_urls_tracker():
         if not os.path.exists(S3_URLS_TRACKER_FILE):
             with open(S3_URLS_TRACKER_FILE, 'w', encoding='utf-8') as f:
                 f.write("# Resume S3 URLs Tracker\n")
-                f.write(f"# Auto-generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"# Auto-generated: {datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S')}\n")
                 f.write("# Stores S3 URLs for instant recovery if downloads folder deleted\n")
                 f.write("# Format: resume_id|filename|s3_url\n\n")
             print(f"[S3-RECOVERY] Created new S3 URLs tracker: {S3_URLS_TRACKER_FILE}")
@@ -477,7 +481,7 @@ def initialize_fetched_resume_ids_tracker():
         if not os.path.exists(FETCHED_RESUME_IDS_FILE):
             with open(FETCHED_RESUME_IDS_FILE, 'w', encoding='utf-8') as f:
                 f.write("# Fetched Resume IDs Tracker\n")
-                f.write(f"# Auto-generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"# Auto-generated: {datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S')}\n")
                 f.write("# Stores all resume IDs extracted from page fetches\n")
                 f.write("# Used to deduplicate on restart and avoid re-fetching\n")
                 f.write("# Format: One resume ID per line\n\n")
@@ -921,7 +925,7 @@ def mark_login_successful():
     try:
         ensure_file_directory(LOGIN_SUCCESS_FLAG)
         with open(LOGIN_SUCCESS_FLAG, 'w', encoding='utf-8') as f:
-            f.write(f"Login successful at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Login successful at {datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S')}\n")
         print("[LOGIN-CHECK] ✓ Login verified and marked successful")
         logger.info("[LOGIN-CHECK] Login marked as successful")
     except Exception as e:
@@ -975,7 +979,7 @@ def check_cron_health():
     """
     try:
         # Get current time markers
-        current_time = datetime.now()
+        current_time = datetime.now(IST)
         current_minute = current_time.strftime('%Y%m%d_%H%M')
 
         # Check if log file from this minute exists
@@ -1024,16 +1028,16 @@ def check_cron_health():
 
 
 def create_cron_heartbeat():
-    """Create a heartbeat file to track cron runs (NEW - CRON BULLETPROOF)"""
+    """Create a heartbeat file to track cron runs (NEW - CRON BULLETPROOF) - IST TIMEZONE"""
     try:
         ensure_file_directory(os.path.join(DEFAULT_DOWNLOAD_DIR, '.cron_heartbeat'))
         heartbeat_file = os.path.join(DEFAULT_DOWNLOAD_DIR, '.cron_heartbeat')
 
         with open(heartbeat_file, 'w', encoding='utf-8') as f:
-            f.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S\n'))
+            f.write(datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S\n'))
 
-        print("[CRON-HEALTH] ✓ Cron heartbeat recorded")
-        logger.info("[CRON-HEALTH] Cron heartbeat created")
+        print("[CRON-HEALTH] ✓ Cron heartbeat recorded (IST)")
+        logger.info("[CRON-HEALTH] Cron heartbeat created (IST)")
     except Exception as e:
         logger.debug(f"[CRON-HEALTH] Could not create heartbeat: {e}")
 
