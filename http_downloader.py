@@ -1807,10 +1807,10 @@ def main():
 
 if __name__ == "__main__":
     try:
-        success = main()
+        # Ensure all directories exist FIRST (before anything else)
+        ensure_all_directories()
 
-        # Record cron heartbeat (NEW - CRON BULLETPROOF)
-        create_cron_heartbeat()
+        success = main()
 
         print("\n" + "=" * 70)
         if success:
@@ -1844,3 +1844,16 @@ if __name__ == "__main__":
             pass
 
         exit(1)
+
+    finally:
+        # ALWAYS create heartbeat file, even if script fails
+        # This GUARANTEES cron health check updates
+        try:
+            create_cron_heartbeat()
+            print("[CRON-HEALTH] ✓ Heartbeat created in finally block (GUARANTEED)")
+        except Exception as hb_error:
+            print(f"[CRON-HEALTH] ✗ Could not create heartbeat even in finally: {hb_error}")
+            try:
+                logger.error(f"[CRON-HEALTH] Finally block heartbeat failed: {hb_error}")
+            except:
+                pass
