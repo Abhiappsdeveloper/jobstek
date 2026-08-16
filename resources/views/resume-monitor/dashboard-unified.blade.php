@@ -736,6 +736,16 @@
                 const ageSeconds = ageMs / 1000;
                 const isHealthy = ageSeconds < 120; // 2 minutes threshold
 
+                // DEBUG: Log age calculation
+                console.log('Heartbeat Age Calculation:', {
+                    lastHeartbeatStr: heartbeatData.timestamps.last,
+                    currentTimeStr: heartbeatData.timestamps.current,
+                    ageMs: ageMs,
+                    ageSeconds: ageSeconds,
+                    isHealthy: isHealthy,
+                    threshold: 120
+                });
+
                 // Update heartbeat status badge
                 const cronStatus = document.getElementById('cron-status');
                 const cronAge = document.getElementById('cron-age');
