@@ -1369,8 +1369,50 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
             logger.info(f"[S3-FRESHNESS] Selected freshest URL for {resume_id} ({freshest_timestamp})")
             return freshest_url
 
-        logger.warning(f"[S3-STORED] No stored URL found for {resume_id}")
-        print(f"[WARN] No stored S3 URL found for {resume_id}")
+        # No stored URL found - try to fetch from detail page
+        print(f"[S3-FETCH-DETAIL] No stored URL found for {resume_id}, fetching from detail page...")
+        logger.info(f"[S3-FETCH-DETAIL] Attempting to extract S3 URL from detail page for {resume_id}")
+
+        try:
+            # Fetch detail page
+            detail_url = f"{base_url}/employer/resume/{resume_id}"
+            response = session.get(detail_url, timeout=10)
+
+            if response.status_code == 200:
+                html_content = response.text
+
+                # Try to extract S3 URL from HTML - look for S3 download links
+                # Pattern 1: S3 URL in onclick attribute or data-href
+                s3_pattern = r'https://tekjobs-resumes\.s3\.amazonaws\.com/[^"\s<>]+'
+                matches = re.findall(s3_pattern, html_content)
+
+                if matches:
+                    # Use first (freshest) S3 URL found
+                    s3_url = matches[0]
+                    print(f"[S3-EXTRACTED] Found S3 URL from detail page for {resume_id}")
+                    logger.info(f"[S3-EXTRACTED] Extracted S3 URL from detail page for {resume_id}")
+
+                    # Store for future use
+                    try:
+                        filename = s3_url.split('/')[-1].split('?')[0] if '/' in s3_url else f"resume_{resume_id}"
+                        with open(s3_urls_file, 'a', encoding='utf-8') as f:
+                            f.write(f"{resume_id}|{filename}|{s3_url}\n")
+                        print(f"[S3-STORED] Saved extracted URL for {resume_id}")
+                    except:
+                        pass  # Don't fail if storage fails
+
+                    return s3_url
+                else:
+                    print(f"[S3-EXTRACT-FAIL] No S3 URL pattern found in detail page")
+                    logger.warning(f"[S3-EXTRACT-FAIL] Could not find S3 URL in detail page for {resume_id}")
+            else:
+                print(f"[S3-FETCH-FAIL] Detail page returned status {response.status_code}")
+                logger.warning(f"[S3-FETCH-FAIL] Detail page status {response.status_code} for {resume_id}")
+        except Exception as detail_error:
+            print(f"[S3-FETCH-ERROR] Failed to fetch detail page: {type(detail_error).__name__}")
+            logger.warning(f"[S3-FETCH-ERROR] {str(detail_error)[:100]}")
+
+        logger.warning(f"[S3-STORED] No S3 URL found (stored or extracted) for {resume_id}")
         return None
 
     except Exception as e:
