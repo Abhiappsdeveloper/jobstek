@@ -1358,23 +1358,14 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
             logger.info(f"[DETAIL] S3 URL extracted (broad) for {resume_id}")
             return s3_url
 
-        # Pattern 4: Try to find resume filename to construct S3 URL (LAST RESORT)
-        pattern = r'(?:const|var|let)\s+resume_file\s*=\s*["\']([^"\']+)["\']'
-        file_matches = re.findall(pattern, html_content, re.IGNORECASE)
+        # Pattern 4: SKIP - Don't construct URLs from filenames
+        # AWS signed URLs expire after 1 hour. Constructed URLs have no signature.
+        # If we can't extract the fresh signed URL from the detail page, the resume
+        # cannot be downloaded (the signed URL has expired or is not available).
 
-        if file_matches:
-            resume_file = file_matches[0].strip()
-            print(f"[WARN] No S3 URL found, constructing from filename: {resume_file}")
-            logger.warning(f"[DETAIL] Falling back to filename-based URL construction for {resume_id}")
-
-            # Try to construct S3 URL (NOT RECOMMENDED - URLs may be outdated)
-            if resume_file and not resume_file.startswith('https'):
-                s3_url = f"https://tekjobs-resumes.s3.amazonaws.com/{resume_file}"
-                print(f"[WARN] Constructed S3 URL (may fail due to missing AWS signature)")
-                return s3_url
-
-        print(f"[ERROR] Could not find S3 URL in detail page for {resume_id}")
-        logger.error(f"[DETAIL] No S3 URL or filename found for {resume_id}")
+        print(f"[SKIP] Could not find fresh S3 URL - resume cannot be downloaded")
+        print(f"[SKIP] AWS signed URLs expire after 1 hour. Constructed URLs lack AWS signature.")
+        logger.warning(f"[DETAIL] No fresh S3 URL found for {resume_id} - skipping (URL expired or unavailable)")
         return None
 
     except Exception as e:
