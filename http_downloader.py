@@ -335,8 +335,63 @@ def initialize_s3_urls_tracker():
         logger.warning(f"[S3-RECOVERY] Could not initialize S3 tracker: {e}")
 
 
+def is_s3_url_expired(s3_url, hours=1):
+    """Check if S3 URL is expired (older than specified hours)"""
+    try:
+        timestamp_match = re.search(r'X-Amz-Date=(\d{8}T\d{6}Z)', s3_url)
+        if timestamp_match:
+            timestamp_str = timestamp_match.group(1)
+            url_timestamp = datetime.strptime(timestamp_str, '%Y%m%dT%H%M%SZ').replace(tzinfo=IST)
+            now_ist = datetime.now(IST)
+            age_hours = (now_ist - url_timestamp).total_seconds() / 3600
+            return age_hours >= hours
+    except:
+        pass
+    return False
+
+
+def cleanup_expired_s3_urls():
+    """Remove expired S3 URLs from tracker file (keep only fresh URLs < 1 hour old)"""
+    expired_count = 0
+    fresh_count = 0
+    try:
+        if os.path.exists(S3_URLS_TRACKER_FILE):
+            valid_lines = []
+            with open(S3_URLS_TRACKER_FILE, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        try:
+                            parts = line.split('|')
+                            if len(parts) >= 3:
+                                s3_url = parts[2]
+                                if not is_s3_url_expired(s3_url, hours=1):
+                                    valid_lines.append(line)
+                                    fresh_count += 1
+                                else:
+                                    expired_count += 1
+                            else:
+                                valid_lines.append(line)
+                        except:
+                            valid_lines.append(line)
+                    else:
+                        valid_lines.append(line)
+
+            # Rewrite file with only fresh URLs
+            with open(S3_URLS_TRACKER_FILE, 'w', encoding='utf-8') as f:
+                for line in valid_lines:
+                    f.write(line + '\n')
+
+            if expired_count > 0:
+                print(f"[CLEANUP] Removed {expired_count} expired S3 URLs (> 1 hour old)")
+                print(f"[CLEANUP] Kept {fresh_count} fresh S3 URLs (< 1 hour old)")
+                logger.info(f"[CLEANUP] Removed {expired_count} expired, kept {fresh_count} fresh S3 URLs")
+    except Exception as e:
+        logger.warning(f"[CLEANUP] Could not cleanup S3 URLs: {e}")
+
+
 def load_s3_urls():
-    """Load S3 URLs from tracker file for instant recovery"""
+    """Load S3 URLs from tracker file for instant recovery (only fresh URLs < 1 hour old)"""
     s3_urls_dict = {}  # {resume_id: (filename, s3_url)}
     try:
         if os.path.exists(S3_URLS_TRACKER_FILE):
@@ -348,12 +403,14 @@ def load_s3_urls():
                             parts = line.split('|')
                             if len(parts) >= 3:
                                 resume_id, filename, s3_url = parts[0], parts[1], parts[2]
-                                s3_urls_dict[resume_id] = (filename, s3_url)
+                                # SKIP expired URLs (> 1 hour old)
+                                if not is_s3_url_expired(s3_url, hours=1):
+                                    s3_urls_dict[resume_id] = (filename, s3_url)
                         except:
                             pass
         if s3_urls_dict:
-            print(f"[S3-RECOVERY] Loaded {len(s3_urls_dict)} S3 URLs for instant recovery")
-            logger.info(f"[S3-RECOVERY] Loaded {len(s3_urls_dict)} S3 URLs")
+            print(f"[S3-RECOVERY] Loaded {len(s3_urls_dict)} FRESH S3 URLs (< 1 hour old)")
+            logger.info(f"[S3-RECOVERY] Loaded {len(s3_urls_dict)} fresh S3 URLs")
     except Exception as e:
         logger.warning(f"[S3-RECOVERY] Could not load S3 URLs: {e}")
     return s3_urls_dict
@@ -1315,14 +1372,17 @@ def extract_resume_ids_from_html(html_content):
     return resume_ids
 
 
-def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net'):
-    """Get fresh S3 signed URL by calling the downloadResume endpoint"""
+def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net', retry_count=0):
+    """Get fresh S3 signed URL by calling the downloadResume endpoint (with retry logic)"""
     try:
         # The website has a downloadResume endpoint that generates fresh signed S3 URLs
         # This is what the browser calls when you click Download button
         download_endpoint = urljoin(base_url, '/employer/searchResume/downloadResume/')
 
-        print(f"[S3-FETCH] Getting fresh S3 URL from: {download_endpoint}")
+        if retry_count == 0:
+            print(f"[S3-FETCH] Getting fresh S3 URL from: {download_endpoint}")
+        else:
+            print(f"[S3-FETCH] Retry #{retry_count}: Attempting to get fresh S3 URL...")
 
         # POST request with the resume ID as mongo_ids parameter
         # The endpoint will redirect to the S3 URL or return it
@@ -1335,7 +1395,7 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
         if response.status_code in [301, 302, 303, 307, 308]:
             s3_url = response.headers.get('Location')
             if s3_url and 'tekjobs-resumes' in s3_url:
-                print(f"[OK] Got fresh S3 URL from redirect")
+                print(f"[OK] Got fresh S3 URL from redirect (LIVE URL)")
                 logger.info(f"[S3-FETCH] Fresh S3 URL obtained from redirect for {resume_id}")
 
                 # Store for future use
@@ -1355,7 +1415,7 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
             matches = re.findall(pattern, response.text)
             if matches:
                 s3_url = matches[0]
-                print(f"[OK] Found S3 URL in response body")
+                print(f"[OK] Found S3 URL in response body (LIVE URL)")
                 logger.info(f"[S3-FETCH] S3 URL extracted from response for {resume_id}")
 
                 # Store for future use
@@ -1373,11 +1433,24 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
         print(f"[WARN] S3-FETCH returned status {response.status_code}, no S3 URL found")
         logger.warning(f"[S3-FETCH] No S3 URL from endpoint for {resume_id}, status: {response.status_code}")
 
+        # Retry once if first attempt failed
+        if retry_count == 0:
+            print(f"[S3-FETCH] Retrying once more...")
+            time.sleep(2)  # Wait 2 seconds before retry
+            return extract_s3_download_url_from_detail(session, resume_id, base_url, retry_count=1)
+
         return None
 
     except Exception as e:
         logger.error(f"[ERROR] Failed to get S3 URL from endpoint: {str(e)}")
         print(f"[ERROR] S3-FETCH error: {type(e).__name__}: {str(e)[:100]}")
+
+        # Retry once if first attempt failed
+        if retry_count == 0:
+            print(f"[S3-FETCH] Retrying once more...")
+            time.sleep(2)
+            return extract_s3_download_url_from_detail(session, resume_id, base_url, retry_count=1)
+
         return None
 
 
@@ -1700,8 +1773,13 @@ def main():
     downloaded_resumes = load_downloaded_resumes()
     print(f"[RESUME-SKIP] Will skip {len(downloaded_resumes)} already downloaded resume(s)\n")
 
-    # Load S3 URLs for recovery
-    print("[S3-RECOVERY] Loading S3 URLs for instant recovery...")
+    # Cleanup expired S3 URLs (remove URLs older than 1 hour) - NEW
+    print("[CLEANUP] Removing expired S3 URLs (> 1 hour old)...")
+    cleanup_expired_s3_urls()
+    print()
+
+    # Load S3 URLs for recovery (only FRESH URLs < 1 hour old)
+    print("[S3-RECOVERY] Loading FRESH S3 URLs for instant recovery (< 1 hour old)...")
     s3_urls_dict = load_s3_urls()
     print()
 
