@@ -1,0 +1,116 @@
+Error Tracking Log
+Generated: 2026-08-15 18:20:07
+================================================================================
+
+[2026-08-15 18:22:17] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:22:56] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:23:35] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:24:14] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:24:53] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:27:07] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:27:46] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:28:25] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:29:04] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:29:43] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:34:14] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:34:53] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:35:32] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:36:12] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:36:51] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+
+[2026-08-15 18:37:14] DOWNLOAD_EXCEPTION
+              Resume ID: 69665a2422119809c30e879a
+              Error: InvalidURL: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+
+[2026-08-15 18:37:53] DOWNLOAD_EXCEPTION
+              Resume ID: 69665a2422119809c30e879a
+              Error: InvalidURL: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+
+[2026-08-15 18:38:32] DOWNLOAD_EXCEPTION
+              Resume ID: 69665a2422119809c30e879a
+              Error: InvalidURL: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+
+[2026-08-15 18:39:10] DOWNLOAD_EXCEPTION
+              Resume ID: 69665a2422119809c30e879a
+              Error: InvalidURL: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+
+[2026-08-15 18:39:49] DOWNLOAD_EXCEPTION
+              Resume ID: 69665a2422119809c30e879a
+              Error: InvalidURL: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+
+[2026-08-15 18:45:06] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:45:45] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:46:26] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:47:06] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:47:44] DOWNLOAD_EXCEPTION
+              Resume ID: 69727d42d656b893310f153b
+              Error: InvalidURL: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+
+[2026-08-15 18:48:30] S3_DOWNLOAD_ERROR
+              Resume ID: 693b2eef9fe60e44d60b817f
+              Error: S3 returned status code 403
+
+[2026-08-15 18:49:10] S3_DOWNLOAD_ERROR
+              Resume ID: 693b2eef9fe60e44d60b817f
+              Error: S3 returned status code 403
+
+[2026-08-15 18:49:50] S3_DOWNLOAD_ERROR
+              Resume ID: 693b2eef9fe60e44d60b817f
+              Error: S3 returned status code 403
+

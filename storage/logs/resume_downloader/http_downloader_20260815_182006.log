@@ -1,0 +1,669 @@
+2026-08-15 18:20:07,893 - INFO - 
+======================================================================
+2026-08-15 18:20:07,893 - INFO - [STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)
+2026-08-15 18:20:07,893 - INFO - [STARTUP] HTTP Library: urllib (built-in - no dependencies)
+2026-08-15 18:20:07,893 - INFO - [STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)
+2026-08-15 18:20:07,894 - INFO - ======================================================================
+2026-08-15 18:20:07,894 - INFO - [INIT] Tracking files initialized
+2026-08-15 18:20:07,895 - INFO - [RESUME-SKIP] Loaded 80 previously downloaded IDs
+2026-08-15 18:20:07,895 - INFO - [S3-RECOVERY] Loaded 80 S3 URLs
+2026-08-15 18:20:07,896 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+2026-08-15 18:20:07,897 - INFO - [LOGIN] Lazy login mode - authenticate only on 401 error
+2026-08-15 18:20:08,900 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader started
+2026-08-15 18:20:08,900 - INFO - [LOGIN] Lazy login mode - downloads starting immediately
+2026-08-15 18:20:08,901 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:20:08,907 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon
+2026-08-15 18:20:08,923 - INFO - [FETCH-DEDUP] Loaded 2365 fetched resume IDs for deduplication
+2026-08-15 18:20:26,211 - INFO - [DETAIL] S3 URL extracted for 69a1a87c476ad8983c0a97f1
+2026-08-15 18:20:27,253 - INFO - [DOWNLOAD] Success: divya_resume_AOC1uK_5GrF83.docx (19802 bytes) from S3
+2026-08-15 18:20:27,254 - INFO - [RESUME-SKIP] Marked 69a1a87c476ad8983c0a97f1 as downloaded
+2026-08-15 18:20:27,254 - INFO - [S3-RECOVERY] Stored S3 URL for 69a1a87c476ad8983c0a97f1
+2026-08-15 18:20:27,254 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:20:27,255 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69a1a87c476ad8983c0a97f1
+2026-08-15 18:20:33,145 - INFO - [FETCH] Resume list page 164 retrieved
+2026-08-15 18:20:33,146 - INFO - [FETCH-STORE] Page 164: All IDs already fetched, no new data stored
+2026-08-15 18:20:37,265 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:20:41,382 - INFO - [FETCH] Resume list page 165 retrieved
+2026-08-15 18:20:41,383 - INFO - [FETCH-STORE] Page 165: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:20:48,511 - INFO - [DETAIL] S3 URL extracted for 69a0dde685ae083fdb07eaed
+2026-08-15 18:20:49,567 - INFO - [DOWNLOAD] Success: Mahendar_Profile_vfdem2_dlr7gH.docx (32995 bytes) from S3
+2026-08-15 18:20:49,567 - INFO - [RESUME-SKIP] Marked 69a0dde685ae083fdb07eaed as downloaded
+2026-08-15 18:20:49,567 - INFO - [S3-RECOVERY] Stored S3 URL for 69a0dde685ae083fdb07eaed
+2026-08-15 18:20:49,567 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:20:49,568 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69a0dde685ae083fdb07eaed
+2026-08-15 18:20:55,361 - INFO - [FETCH] Resume list page 166 retrieved
+2026-08-15 18:20:55,362 - INFO - [FETCH-STORE] Page 166: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:20:59,578 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:21:03,617 - INFO - [FETCH] Resume list page 167 retrieved
+2026-08-15 18:21:03,618 - INFO - [FETCH-STORE] Page 167: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:21:10,741 - INFO - [DETAIL] S3 URL extracted for 699c92f8eb593e5dcc0abaf1
+2026-08-15 18:21:11,810 - INFO - [DOWNLOAD] Success: Antony_leo_Resume_yl2BwE_Ig9KED.docx (35846 bytes) from S3
+2026-08-15 18:21:11,811 - INFO - [RESUME-SKIP] Marked 699c92f8eb593e5dcc0abaf1 as downloaded
+2026-08-15 18:21:11,811 - INFO - [S3-RECOVERY] Stored S3 URL for 699c92f8eb593e5dcc0abaf1
+2026-08-15 18:21:11,811 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:21:11,811 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 699c92f8eb593e5dcc0abaf1
+2026-08-15 18:21:17,608 - INFO - [FETCH] Resume list page 168 retrieved
+2026-08-15 18:21:17,609 - INFO - [FETCH-STORE] Page 168: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:21:21,823 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:21:25,775 - INFO - [FETCH] Resume list page 169 retrieved
+2026-08-15 18:21:25,775 - INFO - [FETCH-STORE] Page 169: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:21:32,982 - INFO - [DETAIL] S3 URL extracted for 6998c68dd9ff91008c0c5041
+2026-08-15 18:21:34,021 - INFO - [DOWNLOAD] Success: greeshma_CCNA_Professional__OFoh5G_2YxEFB.docx (20347 bytes) from S3
+2026-08-15 18:21:34,022 - INFO - [RESUME-SKIP] Marked 6998c68dd9ff91008c0c5041 as downloaded
+2026-08-15 18:21:34,022 - INFO - [S3-RECOVERY] Stored S3 URL for 6998c68dd9ff91008c0c5041
+2026-08-15 18:21:34,022 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:21:34,023 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6998c68dd9ff91008c0c5041
+2026-08-15 18:21:39,954 - INFO - [FETCH] Resume list page 170 retrieved
+2026-08-15 18:21:39,955 - INFO - [FETCH-STORE] Page 170: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:21:44,033 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:21:48,232 - INFO - [FETCH] Resume list page 171 retrieved
+2026-08-15 18:21:48,233 - INFO - [FETCH-STORE] Page 171: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:21:55,298 - INFO - [DETAIL] S3 URL extracted for 698b59c6501621aac40971d5
+2026-08-15 18:21:56,322 - INFO - [DOWNLOAD] Success: LASYA_vnegCC_vG64y8.docx (28013 bytes) from S3
+2026-08-15 18:21:56,322 - INFO - [RESUME-SKIP] Marked 698b59c6501621aac40971d5 as downloaded
+2026-08-15 18:21:56,322 - INFO - [S3-RECOVERY] Stored S3 URL for 698b59c6501621aac40971d5
+2026-08-15 18:21:56,323 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:21:56,323 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 698b59c6501621aac40971d5
+2026-08-15 18:22:02,289 - INFO - [FETCH] Resume list page 172 retrieved
+2026-08-15 18:22:02,290 - INFO - [FETCH-STORE] Page 172: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:22:06,333 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:22:10,486 - INFO - [FETCH] Resume list page 173 retrieved
+2026-08-15 18:22:10,486 - INFO - [FETCH-STORE] Page 173: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:22:17,719 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:22:24,523 - INFO - [FETCH] Resume list page 174 retrieved
+2026-08-15 18:22:24,523 - INFO - [FETCH-STORE] Page 174: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:22:32,677 - INFO - [FETCH] Resume list page 175 retrieved
+2026-08-15 18:22:32,677 - INFO - [FETCH-STORE] Page 175: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:22:40,848 - INFO - [FETCH] Resume list page 176 retrieved
+2026-08-15 18:22:40,848 - INFO - [FETCH-STORE] Page 176: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:22:47,751 - INFO - [BULLETPROOF] Attempt 2/5
+2026-08-15 18:22:49,099 - INFO - [FETCH] Resume list page 177 retrieved
+2026-08-15 18:22:49,100 - INFO - [FETCH-STORE] Page 177: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:22:56,678 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:23:03,646 - INFO - [FETCH] Resume list page 178 retrieved
+2026-08-15 18:23:03,647 - INFO - [FETCH-STORE] Page 178: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:23:11,760 - INFO - [FETCH] Resume list page 179 retrieved
+2026-08-15 18:23:11,761 - INFO - [FETCH-STORE] Page 179: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:23:19,929 - INFO - [FETCH] Resume list page 180 retrieved
+2026-08-15 18:23:19,930 - INFO - [FETCH-STORE] Page 180: 12 new IDs stored, 0 duplicates skipped
+2026-08-15 18:23:26,710 - INFO - [BULLETPROOF] Attempt 3/5
+2026-08-15 18:23:28,165 - INFO - [FETCH] Resume list page 181 retrieved
+2026-08-15 18:23:28,166 - INFO - [FETCH-STORE] Page 181: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:23:35,628 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:23:42,484 - INFO - [FETCH] Resume list page 182 retrieved
+2026-08-15 18:23:42,484 - INFO - [FETCH-STORE] Page 182: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:23:50,814 - INFO - [FETCH] Resume list page 183 retrieved
+2026-08-15 18:23:50,815 - INFO - [FETCH-STORE] Page 183: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:23:59,030 - INFO - [FETCH] Resume list page 184 retrieved
+2026-08-15 18:23:59,031 - INFO - [FETCH-STORE] Page 184: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:24:05,662 - INFO - [BULLETPROOF] Attempt 4/5
+2026-08-15 18:24:07,294 - INFO - [FETCH] Resume list page 185 retrieved
+2026-08-15 18:24:07,295 - INFO - [FETCH-STORE] Page 185: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:24:14,596 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:24:21,452 - INFO - [FETCH] Resume list page 186 retrieved
+2026-08-15 18:24:21,453 - INFO - [FETCH-STORE] Page 186: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:24:29,673 - INFO - [FETCH] Resume list page 187 retrieved
+2026-08-15 18:24:29,673 - INFO - [FETCH-STORE] Page 187: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:24:37,908 - INFO - [FETCH] Resume list page 188 retrieved
+2026-08-15 18:24:37,909 - INFO - [FETCH-STORE] Page 188: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:24:44,628 - INFO - [BULLETPROOF] Attempt 5/5
+2026-08-15 18:24:46,129 - INFO - [FETCH] Resume list page 189 retrieved
+2026-08-15 18:24:46,130 - INFO - [FETCH-STORE] Page 189: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:24:53,546 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:24:53,547 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+2026-08-15 18:25:00,557 - INFO - [FETCH] Resume list page 190 retrieved
+2026-08-15 18:25:00,558 - INFO - [FETCH-STORE] Page 190: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:25:03,560 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:25:08,764 - INFO - [FETCH] Resume list page 191 retrieved
+2026-08-15 18:25:08,765 - INFO - [FETCH-STORE] Page 191: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:25:15,839 - INFO - [DETAIL] S3 URL extracted for 698301ef4588c92ab6090110
+2026-08-15 18:25:17,649 - INFO - [DOWNLOAD] Success: Valentino_Darisier_Resume_6decGk_50d5Au.pdf (322727 bytes) from S3
+2026-08-15 18:25:17,649 - INFO - [RESUME-SKIP] Marked 698301ef4588c92ab6090110 as downloaded
+2026-08-15 18:25:17,649 - INFO - [S3-RECOVERY] Stored S3 URL for 698301ef4588c92ab6090110
+2026-08-15 18:25:17,650 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:25:17,650 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 698301ef4588c92ab6090110
+2026-08-15 18:25:22,781 - INFO - [FETCH] Resume list page 192 retrieved
+2026-08-15 18:25:22,782 - INFO - [FETCH-STORE] Page 192: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:25:27,661 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:25:31,024 - INFO - [FETCH] Resume list page 193 retrieved
+2026-08-15 18:25:31,025 - INFO - [FETCH-STORE] Page 193: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:25:38,194 - INFO - [DETAIL] S3 URL extracted for 697b9c338ca60f18e90c01a0
+2026-08-15 18:25:40,074 - INFO - [DOWNLOAD] Success: Feryal_Ansari_Resume_HxT4xW_TZJha8.docx (366122 bytes) from S3
+2026-08-15 18:25:40,074 - INFO - [RESUME-SKIP] Marked 697b9c338ca60f18e90c01a0 as downloaded
+2026-08-15 18:25:40,075 - INFO - [S3-RECOVERY] Stored S3 URL for 697b9c338ca60f18e90c01a0
+2026-08-15 18:25:40,075 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:25:40,075 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 697b9c338ca60f18e90c01a0
+2026-08-15 18:25:45,244 - INFO - [FETCH] Resume list page 194 retrieved
+2026-08-15 18:25:45,245 - INFO - [FETCH-STORE] Page 194: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:25:50,086 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:25:53,434 - INFO - [FETCH] Resume list page 195 retrieved
+2026-08-15 18:25:53,434 - INFO - [FETCH-STORE] Page 195: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:26:00,670 - INFO - [DETAIL] S3 URL extracted for 697a3174b8736fcc90019fd1
+2026-08-15 18:26:01,739 - INFO - [DOWNLOAD] Success: Khawar_Ali_hr5iu8_BhnxMd.docx (16126 bytes) from S3
+2026-08-15 18:26:01,739 - INFO - [RESUME-SKIP] Marked 697a3174b8736fcc90019fd1 as downloaded
+2026-08-15 18:26:01,740 - INFO - [S3-RECOVERY] Stored S3 URL for 697a3174b8736fcc90019fd1
+2026-08-15 18:26:01,740 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:26:01,740 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 697a3174b8736fcc90019fd1
+2026-08-15 18:26:07,675 - INFO - [FETCH] Resume list page 196 retrieved
+2026-08-15 18:26:07,676 - INFO - [FETCH-STORE] Page 196: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:26:11,750 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:26:15,928 - INFO - [FETCH] Resume list page 197 retrieved
+2026-08-15 18:26:15,929 - INFO - [FETCH-STORE] Page 197: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:26:23,069 - INFO - [DETAIL] S3 URL extracted for 69778cc639a96577950daf9f
+2026-08-15 18:26:24,096 - INFO - [DOWNLOAD] Success: ServiceNow_Resume_1__m4x6g3_FVYujW.docx (28709 bytes) from S3
+2026-08-15 18:26:24,097 - INFO - [RESUME-SKIP] Marked 69778cc639a96577950daf9f as downloaded
+2026-08-15 18:26:24,097 - INFO - [S3-RECOVERY] Stored S3 URL for 69778cc639a96577950daf9f
+2026-08-15 18:26:24,097 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:26:24,097 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69778cc639a96577950daf9f
+2026-08-15 18:26:30,042 - INFO - [FETCH] Resume list page 198 retrieved
+2026-08-15 18:26:30,043 - INFO - [FETCH-STORE] Page 198: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:26:34,107 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:26:38,245 - INFO - [FETCH] Resume list page 199 retrieved
+2026-08-15 18:26:38,246 - INFO - [FETCH-STORE] Page 199: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:26:45,413 - INFO - [DETAIL] S3 URL extracted for 69727f22c9572768cb0498ef
+2026-08-15 18:26:46,438 - INFO - [DOWNLOAD] Success: Hasan_Java_Full_Stack_developer_8qPp4M_1oY8Gr.docx (19768 bytes) from S3
+2026-08-15 18:26:46,439 - INFO - [RESUME-SKIP] Marked 69727f22c9572768cb0498ef as downloaded
+2026-08-15 18:26:46,439 - INFO - [S3-RECOVERY] Stored S3 URL for 69727f22c9572768cb0498ef
+2026-08-15 18:26:46,439 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:26:46,439 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69727f22c9572768cb0498ef
+2026-08-15 18:26:52,440 - INFO - [FETCH] Resume list page 200 retrieved
+2026-08-15 18:26:52,441 - INFO - [FETCH-STORE] Page 200: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:26:56,449 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:27:00,741 - INFO - [FETCH] Resume list page 201 retrieved
+2026-08-15 18:27:00,741 - INFO - [FETCH-STORE] Page 201: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:27:07,855 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:27:14,682 - INFO - [FETCH] Resume list page 202 retrieved
+2026-08-15 18:27:14,683 - INFO - [FETCH-STORE] Page 202: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:27:22,896 - INFO - [FETCH] Resume list page 203 retrieved
+2026-08-15 18:27:22,897 - INFO - [FETCH-STORE] Page 203: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:27:31,126 - INFO - [FETCH] Resume list page 204 retrieved
+2026-08-15 18:27:31,127 - INFO - [FETCH-STORE] Page 204: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:27:37,887 - INFO - [BULLETPROOF] Attempt 2/5
+2026-08-15 18:27:39,378 - INFO - [FETCH] Resume list page 205 retrieved
+2026-08-15 18:27:39,379 - INFO - [FETCH-STORE] Page 205: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:27:46,835 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:27:53,755 - INFO - [FETCH] Resume list page 206 retrieved
+2026-08-15 18:27:53,757 - INFO - [FETCH-STORE] Page 206: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:28:02,031 - INFO - [FETCH] Resume list page 207 retrieved
+2026-08-15 18:28:02,032 - INFO - [FETCH-STORE] Page 207: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:28:10,178 - INFO - [FETCH] Resume list page 208 retrieved
+2026-08-15 18:28:10,179 - INFO - [FETCH-STORE] Page 208: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:28:16,867 - INFO - [BULLETPROOF] Attempt 3/5
+2026-08-15 18:28:18,383 - INFO - [FETCH] Resume list page 209 retrieved
+2026-08-15 18:28:18,384 - INFO - [FETCH-STORE] Page 209: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:28:25,734 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:28:32,654 - INFO - [FETCH] Resume list page 210 retrieved
+2026-08-15 18:28:32,655 - INFO - [FETCH-STORE] Page 210: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:28:40,800 - INFO - [FETCH] Resume list page 211 retrieved
+2026-08-15 18:28:40,801 - INFO - [FETCH-STORE] Page 211: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:28:48,985 - INFO - [FETCH] Resume list page 212 retrieved
+2026-08-15 18:28:48,986 - INFO - [FETCH-STORE] Page 212: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:28:55,765 - INFO - [BULLETPROOF] Attempt 4/5
+2026-08-15 18:28:57,198 - INFO - [FETCH] Resume list page 213 retrieved
+2026-08-15 18:28:57,199 - INFO - [FETCH-STORE] Page 213: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:29:04,739 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:29:11,726 - INFO - [FETCH] Resume list page 214 retrieved
+2026-08-15 18:29:11,726 - INFO - [FETCH-STORE] Page 214: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:29:20,034 - INFO - [FETCH] Resume list page 215 retrieved
+2026-08-15 18:29:20,035 - INFO - [FETCH-STORE] Page 215: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:29:28,134 - INFO - [FETCH] Resume list page 216 retrieved
+2026-08-15 18:29:28,135 - INFO - [FETCH-STORE] Page 216: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:29:34,772 - INFO - [BULLETPROOF] Attempt 5/5
+2026-08-15 18:29:36,388 - INFO - [FETCH] Resume list page 217 retrieved
+2026-08-15 18:29:36,389 - INFO - [FETCH-STORE] Page 217: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:29:43,678 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:29:43,679 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69727d42d656b893310f153b after all retries
+2026-08-15 18:29:50,586 - INFO - [FETCH] Resume list page 218 retrieved
+2026-08-15 18:29:50,587 - INFO - [FETCH-STORE] Page 218: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:29:53,690 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:29:58,735 - INFO - [FETCH] Resume list page 219 retrieved
+2026-08-15 18:29:58,736 - INFO - [FETCH-STORE] Page 219: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:30:06,001 - INFO - [DETAIL] S3 URL extracted for 69727bb604d915a3040f84c5
+2026-08-15 18:30:07,035 - INFO - [DOWNLOAD] Success: Teja_Divi_wjPyxg_s6IXeh.docx (18581 bytes) from S3
+2026-08-15 18:30:07,036 - INFO - [RESUME-SKIP] Marked 69727bb604d915a3040f84c5 as downloaded
+2026-08-15 18:30:07,036 - INFO - [S3-RECOVERY] Stored S3 URL for 69727bb604d915a3040f84c5
+2026-08-15 18:30:07,036 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:30:07,037 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69727bb604d915a3040f84c5
+2026-08-15 18:30:12,949 - INFO - [FETCH] Resume list page 220 retrieved
+2026-08-15 18:30:12,950 - INFO - [FETCH-STORE] Page 220: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:30:17,047 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:30:21,207 - INFO - [FETCH] Resume list page 221 retrieved
+2026-08-15 18:30:21,208 - INFO - [FETCH-STORE] Page 221: 11 new IDs stored, 0 duplicates skipped
+2026-08-15 18:30:28,380 - INFO - [DETAIL] S3 URL extracted for 69727ac367a781816503a74c
+2026-08-15 18:30:29,393 - INFO - [DOWNLOAD] Success: Anitha_Fullstack_Developer_GwQlJy_NWarM3.docx (18137 bytes) from S3
+2026-08-15 18:30:29,393 - INFO - [RESUME-SKIP] Marked 69727ac367a781816503a74c as downloaded
+2026-08-15 18:30:29,394 - INFO - [S3-RECOVERY] Stored S3 URL for 69727ac367a781816503a74c
+2026-08-15 18:30:29,394 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:30:29,394 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69727ac367a781816503a74c
+2026-08-15 18:30:29,457 - INFO - [FETCH] Resume list page 222 retrieved
+2026-08-15 18:30:29,458 - INFO - [FETCH-STORE] Page 222: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:30:37,703 - INFO - [FETCH] Resume list page 223 retrieved
+2026-08-15 18:30:37,703 - INFO - [FETCH-STORE] Page 223: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:30:39,404 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:30:45,941 - INFO - [FETCH] Resume list page 224 retrieved
+2026-08-15 18:30:45,941 - INFO - [FETCH-STORE] Page 224: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:30:53,141 - INFO - [DETAIL] S3 URL extracted for 696fb1023c68409e75046541
+2026-08-15 18:30:54,414 - INFO - [DOWNLOAD] Success: AmruthaDataEngineer_x2mTsa_bEh3lX.pdf (67800 bytes) from S3
+2026-08-15 18:30:54,415 - INFO - [RESUME-SKIP] Marked 696fb1023c68409e75046541 as downloaded
+2026-08-15 18:30:54,415 - INFO - [S3-RECOVERY] Stored S3 URL for 696fb1023c68409e75046541
+2026-08-15 18:30:54,415 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:30:54,415 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 696fb1023c68409e75046541
+2026-08-15 18:30:59,962 - INFO - [FETCH] Resume list page 225 retrieved
+2026-08-15 18:30:59,962 - INFO - [FETCH-STORE] Page 225: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:31:04,439 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:31:08,125 - INFO - [FETCH] Resume list page 226 retrieved
+2026-08-15 18:31:08,126 - INFO - [FETCH-STORE] Page 226: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:31:15,394 - INFO - [DETAIL] S3 URL extracted for 696d83aad087ae833806e199
+2026-08-15 18:31:16,421 - INFO - [DOWNLOAD] Success: Pradeep_SNow_CV_V5YrrY_BapitQ.docx (17969 bytes) from S3
+2026-08-15 18:31:16,421 - INFO - [RESUME-SKIP] Marked 696d83aad087ae833806e199 as downloaded
+2026-08-15 18:31:16,422 - INFO - [S3-RECOVERY] Stored S3 URL for 696d83aad087ae833806e199
+2026-08-15 18:31:16,422 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:31:16,422 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 696d83aad087ae833806e199
+2026-08-15 18:31:22,321 - INFO - [FETCH] Resume list page 227 retrieved
+2026-08-15 18:31:22,322 - INFO - [FETCH-STORE] Page 227: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:31:26,432 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:31:30,528 - INFO - [FETCH] Resume list page 228 retrieved
+2026-08-15 18:31:30,529 - INFO - [FETCH-STORE] Page 228: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:31:37,682 - INFO - [DETAIL] S3 URL extracted for 696a74195914e45af00679c6
+2026-08-15 18:31:38,958 - INFO - [DOWNLOAD] Success: SD_Resume_rPlT0l_VPfrvR.pdf (102828 bytes) from S3
+2026-08-15 18:31:38,958 - INFO - [RESUME-SKIP] Marked 696a74195914e45af00679c6 as downloaded
+2026-08-15 18:31:38,958 - INFO - [S3-RECOVERY] Stored S3 URL for 696a74195914e45af00679c6
+2026-08-15 18:31:38,958 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:31:38,958 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 696a74195914e45af00679c6
+2026-08-15 18:31:44,648 - INFO - [FETCH] Resume list page 229 retrieved
+2026-08-15 18:31:44,649 - INFO - [FETCH-STORE] Page 229: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:31:48,968 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:31:52,832 - INFO - [FETCH] Resume list page 230 retrieved
+2026-08-15 18:31:52,833 - INFO - [FETCH-STORE] Page 230: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:32:00,106 - INFO - [DETAIL] S3 URL extracted for 69693245302dc110a80d2385
+2026-08-15 18:32:01,396 - INFO - [DOWNLOAD] Success: AndrewsM_Resume_SNow_Dev_1__zEuKSx_JlDGiV.pdf (91108 bytes) from S3
+2026-08-15 18:32:01,397 - INFO - [RESUME-SKIP] Marked 69693245302dc110a80d2385 as downloaded
+2026-08-15 18:32:01,397 - INFO - [S3-RECOVERY] Stored S3 URL for 69693245302dc110a80d2385
+2026-08-15 18:32:01,397 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:32:01,397 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69693245302dc110a80d2385
+2026-08-15 18:32:07,083 - INFO - [FETCH] Resume list page 231 retrieved
+2026-08-15 18:32:07,084 - INFO - [FETCH-STORE] Page 231: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:32:11,407 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:32:15,247 - INFO - [FETCH] Resume list page 232 retrieved
+2026-08-15 18:32:15,247 - INFO - [FETCH-STORE] Page 232: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:32:22,372 - INFO - [DETAIL] S3 URL extracted for 696928868add04828a0ffb45
+2026-08-15 18:32:23,440 - INFO - [DOWNLOAD] Success: Updated_Resume_WP_copy_eVaYgG_bsOJDl.docx (15606 bytes) from S3
+2026-08-15 18:32:23,440 - INFO - [RESUME-SKIP] Marked 696928868add04828a0ffb45 as downloaded
+2026-08-15 18:32:23,440 - INFO - [S3-RECOVERY] Stored S3 URL for 696928868add04828a0ffb45
+2026-08-15 18:32:23,440 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:32:23,441 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 696928868add04828a0ffb45
+2026-08-15 18:32:29,297 - INFO - [FETCH] Resume list page 233 retrieved
+2026-08-15 18:32:29,298 - INFO - [FETCH-STORE] Page 233: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:32:33,451 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:32:37,532 - INFO - [FETCH] Resume list page 234 retrieved
+2026-08-15 18:32:37,533 - INFO - [FETCH-STORE] Page 234: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:32:44,673 - INFO - [DETAIL] S3 URL extracted for 69683fcce07d46910a049f08
+2026-08-15 18:32:45,942 - INFO - [DOWNLOAD] Success: TEDDY_UDEAJA_5wPPJZ_16zJQE.pdf (102188 bytes) from S3
+2026-08-15 18:32:45,942 - INFO - [RESUME-SKIP] Marked 69683fcce07d46910a049f08 as downloaded
+2026-08-15 18:32:45,943 - INFO - [S3-RECOVERY] Stored S3 URL for 69683fcce07d46910a049f08
+2026-08-15 18:32:45,943 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:32:45,943 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69683fcce07d46910a049f08
+2026-08-15 18:32:51,593 - INFO - [FETCH] Resume list page 235 retrieved
+2026-08-15 18:32:51,593 - INFO - [FETCH-STORE] Page 235: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:32:55,953 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:32:59,835 - INFO - [FETCH] Resume list page 236 retrieved
+2026-08-15 18:32:59,836 - INFO - [FETCH-STORE] Page 236: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:33:07,077 - INFO - [DETAIL] S3 URL extracted for 6966f4138e42dbc40c0c5ac7
+2026-08-15 18:33:08,123 - INFO - [DOWNLOAD] Success: Ayafor_Divine_CV__qi46cF_vGX0cS.docx (16414 bytes) from S3
+2026-08-15 18:33:08,123 - INFO - [RESUME-SKIP] Marked 6966f4138e42dbc40c0c5ac7 as downloaded
+2026-08-15 18:33:08,123 - INFO - [S3-RECOVERY] Stored S3 URL for 6966f4138e42dbc40c0c5ac7
+2026-08-15 18:33:08,123 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:33:08,123 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6966f4138e42dbc40c0c5ac7
+2026-08-15 18:33:14,136 - INFO - [FETCH] Resume list page 237 retrieved
+2026-08-15 18:33:14,137 - INFO - [FETCH-STORE] Page 237: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:33:18,133 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:33:22,297 - INFO - [FETCH] Resume list page 238 retrieved
+2026-08-15 18:33:22,298 - INFO - [FETCH-STORE] Page 238: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:33:29,521 - INFO - [DETAIL] S3 URL extracted for 69669f885914e45af006774a
+2026-08-15 18:33:30,559 - INFO - [DOWNLOAD] Success: M_Farhan_Malik_ServiceNow_bnd2Lf_bcuzIo.docx (18284 bytes) from S3
+2026-08-15 18:33:30,559 - INFO - [RESUME-SKIP] Marked 69669f885914e45af006774a as downloaded
+2026-08-15 18:33:30,560 - INFO - [S3-RECOVERY] Stored S3 URL for 69669f885914e45af006774a
+2026-08-15 18:33:30,560 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:33:30,560 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69669f885914e45af006774a
+2026-08-15 18:33:36,515 - INFO - [FETCH] Resume list page 239 retrieved
+2026-08-15 18:33:36,516 - INFO - [FETCH-STORE] Page 239: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:33:40,570 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:33:44,735 - INFO - [FETCH] Resume list page 240 retrieved
+2026-08-15 18:33:44,737 - INFO - [FETCH-STORE] Page 240: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:33:51,834 - INFO - [DETAIL] S3 URL extracted for 696682a058d3c830e40d1315
+2026-08-15 18:33:53,373 - INFO - [DOWNLOAD] Success: fEI9wf-slke7p-eA8SS4-Ali%20Bangash%20Resume.pdf (126785 bytes) from S3
+2026-08-15 18:33:53,373 - INFO - [RESUME-SKIP] Marked 696682a058d3c830e40d1315 as downloaded
+2026-08-15 18:33:53,374 - INFO - [S3-RECOVERY] Stored S3 URL for 696682a058d3c830e40d1315
+2026-08-15 18:33:53,374 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:33:53,374 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 696682a058d3c830e40d1315
+2026-08-15 18:33:58,763 - INFO - [FETCH] Resume list page 241 retrieved
+2026-08-15 18:33:58,764 - INFO - [FETCH-STORE] Page 241: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:34:03,384 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:34:06,971 - INFO - [FETCH] Resume list page 242 retrieved
+2026-08-15 18:34:06,971 - INFO - [FETCH-STORE] Page 242: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:34:14,154 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:34:21,111 - INFO - [FETCH] Resume list page 243 retrieved
+2026-08-15 18:34:21,112 - INFO - [FETCH-STORE] Page 243: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:34:29,396 - INFO - [FETCH] Resume list page 244 retrieved
+2026-08-15 18:34:29,397 - INFO - [FETCH-STORE] Page 244: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:34:37,748 - INFO - [FETCH] Resume list page 245 retrieved
+2026-08-15 18:34:37,749 - INFO - [FETCH-STORE] Page 245: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:34:44,187 - INFO - [BULLETPROOF] Attempt 2/5
+2026-08-15 18:34:46,003 - INFO - [FETCH] Resume list page 246 retrieved
+2026-08-15 18:34:46,004 - INFO - [FETCH-STORE] Page 246: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:34:53,206 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:35:00,079 - INFO - [FETCH] Resume list page 247 retrieved
+2026-08-15 18:35:00,080 - INFO - [FETCH-STORE] Page 247: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:35:08,297 - INFO - [FETCH] Resume list page 248 retrieved
+2026-08-15 18:35:08,298 - INFO - [FETCH-STORE] Page 248: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:35:16,554 - INFO - [FETCH] Resume list page 249 retrieved
+2026-08-15 18:35:16,555 - INFO - [FETCH-STORE] Page 249: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:35:23,238 - INFO - [BULLETPROOF] Attempt 3/5
+2026-08-15 18:35:24,744 - INFO - [FETCH] Resume list page 250 retrieved
+2026-08-15 18:35:24,744 - INFO - [FETCH-STORE] Page 250: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:35:32,099 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:35:33,130 - INFO - [FETCH] Resume list page 251 retrieved
+2026-08-15 18:35:33,131 - INFO - [FETCH-STORE] Page 251: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:35:41,237 - INFO - [FETCH] Resume list page 252 retrieved
+2026-08-15 18:35:41,237 - INFO - [FETCH-STORE] Page 252: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:35:49,503 - INFO - [FETCH] Resume list page 253 retrieved
+2026-08-15 18:35:49,504 - INFO - [FETCH-STORE] Page 253: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:35:57,612 - INFO - [FETCH] Resume list page 254 retrieved
+2026-08-15 18:35:57,613 - INFO - [FETCH-STORE] Page 254: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:36:02,134 - INFO - [BULLETPROOF] Attempt 4/5
+2026-08-15 18:36:05,695 - INFO - [FETCH] Resume list page 255 retrieved
+2026-08-15 18:36:05,696 - INFO - [FETCH-STORE] Page 255: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:36:12,877 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:36:19,764 - INFO - [FETCH] Resume list page 256 retrieved
+2026-08-15 18:36:19,765 - INFO - [FETCH-STORE] Page 256: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:36:27,912 - INFO - [FETCH] Resume list page 257 retrieved
+2026-08-15 18:36:27,913 - INFO - [FETCH-STORE] Page 257: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:36:36,143 - INFO - [FETCH] Resume list page 258 retrieved
+2026-08-15 18:36:36,144 - INFO - [FETCH-STORE] Page 258: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:36:42,909 - INFO - [BULLETPROOF] Attempt 5/5
+2026-08-15 18:36:44,364 - INFO - [FETCH] Resume list page 259 retrieved
+2026-08-15 18:36:44,365 - INFO - [FETCH-STORE] Page 259: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:36:51,814 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 18:36:51,816 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+2026-08-15 18:36:58,785 - INFO - [FETCH] Resume list page 260 retrieved
+2026-08-15 18:36:58,785 - INFO - [FETCH-STORE] Page 260: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:37:01,826 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:37:06,997 - INFO - [FETCH] Resume list page 261 retrieved
+2026-08-15 18:37:06,998 - INFO - [FETCH-STORE] Page 261: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:37:14,035 - ERROR - [ERROR] Download failed for 69665a2422119809c30e879a: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+2026-08-15 18:37:20,974 - INFO - [FETCH] Resume list page 262 retrieved
+2026-08-15 18:37:20,975 - INFO - [FETCH-STORE] Page 262: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:37:29,225 - INFO - [FETCH] Resume list page 263 retrieved
+2026-08-15 18:37:29,226 - INFO - [FETCH-STORE] Page 263: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:37:37,452 - INFO - [FETCH] Resume list page 264 retrieved
+2026-08-15 18:37:37,453 - INFO - [FETCH-STORE] Page 264: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:37:44,067 - INFO - [BULLETPROOF] Attempt 2/5
+2026-08-15 18:37:45,669 - INFO - [FETCH] Resume list page 265 retrieved
+2026-08-15 18:37:45,670 - INFO - [FETCH-STORE] Page 265: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:37:53,115 - ERROR - [ERROR] Download failed for 69665a2422119809c30e879a: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+2026-08-15 18:38:00,036 - INFO - [FETCH] Resume list page 266 retrieved
+2026-08-15 18:38:00,037 - INFO - [FETCH-STORE] Page 266: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:38:08,262 - INFO - [FETCH] Resume list page 267 retrieved
+2026-08-15 18:38:08,263 - INFO - [FETCH-STORE] Page 267: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:38:16,415 - INFO - [FETCH] Resume list page 268 retrieved
+2026-08-15 18:38:16,416 - INFO - [FETCH-STORE] Page 268: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:38:23,147 - INFO - [BULLETPROOF] Attempt 3/5
+2026-08-15 18:38:24,610 - INFO - [FETCH] Resume list page 269 retrieved
+2026-08-15 18:38:24,611 - INFO - [FETCH-STORE] Page 269: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:38:32,036 - ERROR - [ERROR] Download failed for 69665a2422119809c30e879a: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+2026-08-15 18:38:38,977 - INFO - [FETCH] Resume list page 270 retrieved
+2026-08-15 18:38:38,978 - INFO - [FETCH-STORE] Page 270: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:38:47,111 - INFO - [FETCH] Resume list page 271 retrieved
+2026-08-15 18:38:47,111 - INFO - [FETCH-STORE] Page 271: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:38:55,320 - INFO - [FETCH] Resume list page 272 retrieved
+2026-08-15 18:38:55,320 - INFO - [FETCH-STORE] Page 272: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:39:02,068 - INFO - [BULLETPROOF] Attempt 4/5
+2026-08-15 18:39:03,428 - INFO - [FETCH] Resume list page 273 retrieved
+2026-08-15 18:39:03,429 - INFO - [FETCH-STORE] Page 273: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:39:10,974 - ERROR - [ERROR] Download failed for 69665a2422119809c30e879a: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+2026-08-15 18:39:17,924 - INFO - [FETCH] Resume list page 274 retrieved
+2026-08-15 18:39:17,925 - INFO - [FETCH-STORE] Page 274: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:39:26,186 - INFO - [FETCH] Resume list page 275 retrieved
+2026-08-15 18:39:26,187 - INFO - [FETCH-STORE] Page 275: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:39:34,452 - INFO - [FETCH] Resume list page 276 retrieved
+2026-08-15 18:39:34,453 - INFO - [FETCH-STORE] Page 276: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:39:41,005 - INFO - [BULLETPROOF] Attempt 5/5
+2026-08-15 18:39:42,544 - INFO - [FETCH] Resume list page 277 retrieved
+2026-08-15 18:39:42,544 - INFO - [FETCH-STORE] Page 277: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:39:49,902 - ERROR - [ERROR] Download failed for 69665a2422119809c30e879a: URL can't contain control characters. '/v2WA3B-ClglkF-RABbUB-Farman Ali Khan Resume.pdf' (found at least ' ')
+2026-08-15 18:39:49,905 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69665a2422119809c30e879a after all retries
+2026-08-15 18:39:56,855 - INFO - [FETCH] Resume list page 278 retrieved
+2026-08-15 18:39:56,855 - INFO - [FETCH-STORE] Page 278: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:39:59,915 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:40:05,023 - INFO - [FETCH] Resume list page 279 retrieved
+2026-08-15 18:40:05,024 - INFO - [FETCH-STORE] Page 279: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:40:12,157 - INFO - [DETAIL] S3 URL extracted for 6965834a58ad3ff2cb0ca42a
+2026-08-15 18:40:13,903 - INFO - [DOWNLOAD] Success: SDA0126R3P_WK3TeP_LNiTdh.pdf (269361 bytes) from S3
+2026-08-15 18:40:13,904 - INFO - [RESUME-SKIP] Marked 6965834a58ad3ff2cb0ca42a as downloaded
+2026-08-15 18:40:13,904 - INFO - [S3-RECOVERY] Stored S3 URL for 6965834a58ad3ff2cb0ca42a
+2026-08-15 18:40:13,904 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:40:13,904 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6965834a58ad3ff2cb0ca42a
+2026-08-15 18:40:19,094 - INFO - [FETCH] Resume list page 280 retrieved
+2026-08-15 18:40:19,094 - INFO - [FETCH-STORE] Page 280: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:40:23,914 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:40:27,348 - INFO - [FETCH] Resume list page 281 retrieved
+2026-08-15 18:40:27,349 - INFO - [FETCH-STORE] Page 281: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:40:34,544 - INFO - [DETAIL] S3 URL extracted for 695285a03563d65eca0e7ac5
+2026-08-15 18:40:35,549 - INFO - [FETCH] Resume list page 282 retrieved
+2026-08-15 18:40:35,550 - INFO - [FETCH-STORE] Page 282: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:40:35,815 - INFO - [DOWNLOAD] Success: TianJian_Wang_Resume_sDVbfL_lUEknf.pdf (68990 bytes) from S3
+2026-08-15 18:40:35,815 - INFO - [RESUME-SKIP] Marked 695285a03563d65eca0e7ac5 as downloaded
+2026-08-15 18:40:35,815 - INFO - [S3-RECOVERY] Stored S3 URL for 695285a03563d65eca0e7ac5
+2026-08-15 18:40:35,815 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:40:35,816 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 695285a03563d65eca0e7ac5
+2026-08-15 18:40:43,769 - INFO - [FETCH] Resume list page 283 retrieved
+2026-08-15 18:40:43,770 - INFO - [FETCH-STORE] Page 283: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:40:45,826 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:40:52,024 - INFO - [FETCH] Resume list page 284 retrieved
+2026-08-15 18:40:52,025 - INFO - [FETCH-STORE] Page 284: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:40:59,207 - INFO - [DETAIL] S3 URL extracted for 6946d79722f252f7d10fcb6b
+2026-08-15 18:41:00,760 - INFO - [DOWNLOAD] Success: Aditya_Patadiya_Software_Engineering_bUkt9z_d1CT1V.pdf (118428 bytes) from S3
+2026-08-15 18:41:00,761 - INFO - [RESUME-SKIP] Marked 6946d79722f252f7d10fcb6b as downloaded
+2026-08-15 18:41:00,761 - INFO - [S3-RECOVERY] Stored S3 URL for 6946d79722f252f7d10fcb6b
+2026-08-15 18:41:00,762 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:41:00,762 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6946d79722f252f7d10fcb6b
+2026-08-15 18:41:06,167 - INFO - [FETCH] Resume list page 285 retrieved
+2026-08-15 18:41:06,168 - INFO - [FETCH-STORE] Page 285: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:41:10,772 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:41:14,304 - INFO - [FETCH] Resume list page 286 retrieved
+2026-08-15 18:41:14,304 - INFO - [FETCH-STORE] Page 286: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:41:21,628 - INFO - [DETAIL] S3 URL extracted for 694184cb8aa50e62be07a8c7
+2026-08-15 18:41:22,874 - INFO - [DOWNLOAD] Success: Ansh_kumar_Resume_8028El_vL19pn.pdf (56543 bytes) from S3
+2026-08-15 18:41:22,874 - INFO - [RESUME-SKIP] Marked 694184cb8aa50e62be07a8c7 as downloaded
+2026-08-15 18:41:22,875 - INFO - [S3-RECOVERY] Stored S3 URL for 694184cb8aa50e62be07a8c7
+2026-08-15 18:41:22,875 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:41:22,875 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 694184cb8aa50e62be07a8c7
+2026-08-15 18:41:28,530 - INFO - [FETCH] Resume list page 287 retrieved
+2026-08-15 18:41:28,530 - INFO - [FETCH-STORE] Page 287: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:41:32,885 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:41:36,805 - INFO - [FETCH] Resume list page 288 retrieved
+2026-08-15 18:41:36,806 - INFO - [FETCH-STORE] Page 288: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:41:44,052 - INFO - [DETAIL] S3 URL extracted for 6940480940f8b8a9750b6566
+2026-08-15 18:41:45,120 - INFO - [DOWNLOAD] Success: Chaitanya_Python_Developer_1__iGobmO_RZTvBV.docx (23604 bytes) from S3
+2026-08-15 18:41:45,120 - INFO - [RESUME-SKIP] Marked 6940480940f8b8a9750b6566 as downloaded
+2026-08-15 18:41:45,121 - INFO - [S3-RECOVERY] Stored S3 URL for 6940480940f8b8a9750b6566
+2026-08-15 18:41:45,121 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:41:45,121 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6940480940f8b8a9750b6566
+2026-08-15 18:41:51,086 - INFO - [FETCH] Resume list page 289 retrieved
+2026-08-15 18:41:51,086 - INFO - [FETCH-STORE] Page 289: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:41:55,131 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:41:59,388 - INFO - [FETCH] Resume list page 290 retrieved
+2026-08-15 18:41:59,389 - INFO - [FETCH-STORE] Page 290: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:42:06,646 - INFO - [DETAIL] S3 URL extracted for 693da9ea54a77fce0009d5d1
+2026-08-15 18:42:07,680 - INFO - [DOWNLOAD] Success: Venkat_Middleware_Profile_SNzDCQ_u1mfRG.docx (17287 bytes) from S3
+2026-08-15 18:42:07,680 - INFO - [RESUME-SKIP] Marked 693da9ea54a77fce0009d5d1 as downloaded
+2026-08-15 18:42:07,680 - INFO - [S3-RECOVERY] Stored S3 URL for 693da9ea54a77fce0009d5d1
+2026-08-15 18:42:07,680 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:42:07,681 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693da9ea54a77fce0009d5d1
+2026-08-15 18:42:13,536 - INFO - [FETCH] Resume list page 291 retrieved
+2026-08-15 18:42:13,536 - INFO - [FETCH-STORE] Page 291: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:42:17,690 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:42:21,854 - INFO - [FETCH] Resume list page 292 retrieved
+2026-08-15 18:42:21,855 - INFO - [FETCH-STORE] Page 292: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:42:29,080 - INFO - [DETAIL] S3 URL extracted for 693c7d8b8aa50e62be07a54c
+2026-08-15 18:42:30,094 - INFO - [DOWNLOAD] Success: NAING_NAING_AYE_RESUME_rWF8nz_tpMaHu.pdf (46552 bytes) from S3
+2026-08-15 18:42:30,095 - INFO - [RESUME-SKIP] Marked 693c7d8b8aa50e62be07a54c as downloaded
+2026-08-15 18:42:30,095 - INFO - [S3-RECOVERY] Stored S3 URL for 693c7d8b8aa50e62be07a54c
+2026-08-15 18:42:30,095 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:42:30,095 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693c7d8b8aa50e62be07a54c
+2026-08-15 18:42:36,145 - INFO - [FETCH] Resume list page 293 retrieved
+2026-08-15 18:42:36,145 - INFO - [FETCH-STORE] Page 293: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:42:40,105 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:42:44,431 - INFO - [FETCH] Resume list page 294 retrieved
+2026-08-15 18:42:44,432 - INFO - [FETCH-STORE] Page 294: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:42:51,541 - INFO - [DETAIL] S3 URL extracted for 693c79ce8eba94b9ac0e6e05
+2026-08-15 18:42:52,594 - INFO - [DOWNLOAD] Success: Resume_Jayanth_Sarampati_uIgbrA_cEezWL.docx (29479 bytes) from S3
+2026-08-15 18:42:52,595 - INFO - [RESUME-SKIP] Marked 693c79ce8eba94b9ac0e6e05 as downloaded
+2026-08-15 18:42:52,595 - INFO - [S3-RECOVERY] Stored S3 URL for 693c79ce8eba94b9ac0e6e05
+2026-08-15 18:42:52,595 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:42:52,595 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693c79ce8eba94b9ac0e6e05
+2026-08-15 18:42:58,557 - INFO - [FETCH] Resume list page 295 retrieved
+2026-08-15 18:42:58,558 - INFO - [FETCH-STORE] Page 295: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:43:02,605 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:43:06,803 - INFO - [FETCH] Resume list page 296 retrieved
+2026-08-15 18:43:06,804 - INFO - [FETCH-STORE] Page 296: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:43:13,987 - INFO - [DETAIL] S3 URL extracted for 693c7405569e00aea700e0b3
+2026-08-15 18:43:15,040 - INFO - [DOWNLOAD] Success: Resume_Priyanka_DA_8tQi1B_pr9oOX.docx (28938 bytes) from S3
+2026-08-15 18:43:15,041 - INFO - [RESUME-SKIP] Marked 693c7405569e00aea700e0b3 as downloaded
+2026-08-15 18:43:15,041 - INFO - [S3-RECOVERY] Stored S3 URL for 693c7405569e00aea700e0b3
+2026-08-15 18:43:15,041 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:43:15,041 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693c7405569e00aea700e0b3
+2026-08-15 18:43:20,968 - INFO - [FETCH] Resume list page 297 retrieved
+2026-08-15 18:43:20,968 - INFO - [FETCH-STORE] Page 297: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:43:25,051 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:43:29,304 - INFO - [FETCH] Resume list page 298 retrieved
+2026-08-15 18:43:29,305 - INFO - [FETCH-STORE] Page 298: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:43:36,493 - INFO - [DETAIL] S3 URL extracted for 693c1edf7c630ee956025ea8
+2026-08-15 18:43:38,006 - INFO - [DOWNLOAD] Success: Resume_Mesyia_Lawson__pu9JEH_iHgk2T.pdf (139335 bytes) from S3
+2026-08-15 18:43:38,006 - INFO - [RESUME-SKIP] Marked 693c1edf7c630ee956025ea8 as downloaded
+2026-08-15 18:43:38,006 - INFO - [S3-RECOVERY] Stored S3 URL for 693c1edf7c630ee956025ea8
+2026-08-15 18:43:38,007 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:43:38,007 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693c1edf7c630ee956025ea8
+2026-08-15 18:43:43,355 - INFO - [FETCH] Resume list page 299 retrieved
+2026-08-15 18:43:43,356 - INFO - [FETCH-STORE] Page 299: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:43:48,018 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:43:51,632 - INFO - [FETCH] Resume list page 300 retrieved
+2026-08-15 18:43:51,633 - INFO - [FETCH-STORE] Page 300: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:43:58,836 - INFO - [DETAIL] S3 URL extracted for 693c1508dfab6213000bc39c
+2026-08-15 18:44:00,112 - INFO - [DOWNLOAD] Success: Alex_FullStack_U5sGfl_xhxv1U.pdf (61765 bytes) from S3
+2026-08-15 18:44:00,112 - INFO - [RESUME-SKIP] Marked 693c1508dfab6213000bc39c as downloaded
+2026-08-15 18:44:00,113 - INFO - [S3-RECOVERY] Stored S3 URL for 693c1508dfab6213000bc39c
+2026-08-15 18:44:00,113 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:44:00,113 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693c1508dfab6213000bc39c
+2026-08-15 18:44:05,812 - INFO - [FETCH] Resume list page 301 retrieved
+2026-08-15 18:44:05,813 - INFO - [FETCH-STORE] Page 301: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:44:10,123 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:44:14,128 - INFO - [FETCH] Resume list page 302 retrieved
+2026-08-15 18:44:14,129 - INFO - [FETCH-STORE] Page 302: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:44:21,241 - INFO - [DETAIL] S3 URL extracted for 693ba1957f436aea7b041e69
+2026-08-15 18:44:22,807 - INFO - [DOWNLOAD] Success: Plinio_Resume_01_2025_nhn2Mn_ELeSdQ.pdf (128002 bytes) from S3
+2026-08-15 18:44:22,808 - INFO - [RESUME-SKIP] Marked 693ba1957f436aea7b041e69 as downloaded
+2026-08-15 18:44:22,808 - INFO - [S3-RECOVERY] Stored S3 URL for 693ba1957f436aea7b041e69
+2026-08-15 18:44:22,808 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:44:22,808 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693ba1957f436aea7b041e69
+2026-08-15 18:44:28,283 - INFO - [FETCH] Resume list page 303 retrieved
+2026-08-15 18:44:28,284 - INFO - [FETCH-STORE] Page 303: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:44:32,818 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:44:36,507 - INFO - [FETCH] Resume list page 304 retrieved
+2026-08-15 18:44:36,508 - INFO - [FETCH-STORE] Page 304: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:44:43,731 - INFO - [DETAIL] S3 URL extracted for 693b3f2e3f4c01e91607208a
+2026-08-15 18:44:44,975 - INFO - [DOWNLOAD] Success: Byung_Kyu_P_MERN_Fullstack_Developer_Resume_VPw1JA_hMOPIH.pdf (53657 bytes) from S3
+2026-08-15 18:44:44,975 - INFO - [RESUME-SKIP] Marked 693b3f2e3f4c01e91607208a as downloaded
+2026-08-15 18:44:44,975 - INFO - [S3-RECOVERY] Stored S3 URL for 693b3f2e3f4c01e91607208a
+2026-08-15 18:44:44,976 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:44:44,976 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693b3f2e3f4c01e91607208a
+2026-08-15 18:44:50,725 - INFO - [FETCH] Resume list page 305 retrieved
+2026-08-15 18:44:50,726 - INFO - [FETCH-STORE] Page 305: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:44:54,986 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:44:58,976 - INFO - [FETCH] Resume list page 306 retrieved
+2026-08-15 18:44:58,977 - INFO - [FETCH-STORE] Page 306: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:45:06,178 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:45:13,145 - INFO - [FETCH] Resume list page 307 retrieved
+2026-08-15 18:45:13,146 - INFO - [FETCH-STORE] Page 307: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:45:21,387 - INFO - [FETCH] Resume list page 308 retrieved
+2026-08-15 18:45:21,388 - INFO - [FETCH-STORE] Page 308: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:45:29,548 - INFO - [FETCH] Resume list page 309 retrieved
+2026-08-15 18:45:29,549 - INFO - [FETCH-STORE] Page 309: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:45:36,210 - INFO - [BULLETPROOF] Attempt 2/5
+2026-08-15 18:45:37,761 - INFO - [FETCH] Resume list page 310 retrieved
+2026-08-15 18:45:37,762 - INFO - [FETCH-STORE] Page 310: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:45:45,147 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:45:45,900 - INFO - [FETCH] Resume list page 311 retrieved
+2026-08-15 18:45:45,901 - INFO - [FETCH-STORE] Page 311: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:45:54,179 - INFO - [FETCH] Resume list page 312 retrieved
+2026-08-15 18:45:54,180 - INFO - [FETCH-STORE] Page 312: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:46:02,458 - INFO - [FETCH] Resume list page 313 retrieved
+2026-08-15 18:46:02,459 - INFO - [FETCH-STORE] Page 313: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:46:10,658 - INFO - [FETCH] Resume list page 314 retrieved
+2026-08-15 18:46:10,659 - INFO - [FETCH-STORE] Page 314: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:46:15,179 - INFO - [BULLETPROOF] Attempt 3/5
+2026-08-15 18:46:18,935 - INFO - [FETCH] Resume list page 315 retrieved
+2026-08-15 18:46:18,936 - INFO - [FETCH-STORE] Page 315: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:46:26,140 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:46:33,054 - INFO - [FETCH] Resume list page 316 retrieved
+2026-08-15 18:46:33,055 - INFO - [FETCH-STORE] Page 316: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:46:41,206 - INFO - [FETCH] Resume list page 317 retrieved
+2026-08-15 18:46:41,207 - INFO - [FETCH-STORE] Page 317: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:46:49,375 - INFO - [FETCH] Resume list page 318 retrieved
+2026-08-15 18:46:49,376 - INFO - [FETCH-STORE] Page 318: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:46:56,172 - INFO - [BULLETPROOF] Attempt 4/5
+2026-08-15 18:46:57,619 - INFO - [FETCH] Resume list page 319 retrieved
+2026-08-15 18:46:57,620 - INFO - [FETCH-STORE] Page 319: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:47:06,008 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:47:12,949 - INFO - [FETCH] Resume list page 320 retrieved
+2026-08-15 18:47:12,950 - INFO - [FETCH-STORE] Page 320: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:47:21,142 - INFO - [FETCH] Resume list page 321 retrieved
+2026-08-15 18:47:21,143 - INFO - [FETCH-STORE] Page 321: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:47:29,399 - INFO - [FETCH] Resume list page 322 retrieved
+2026-08-15 18:47:29,400 - INFO - [FETCH-STORE] Page 322: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:47:36,055 - INFO - [BULLETPROOF] Attempt 5/5
+2026-08-15 18:47:37,570 - INFO - [FETCH] Resume list page 323 retrieved
+2026-08-15 18:47:37,571 - INFO - [FETCH-STORE] Page 323: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:47:44,988 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 18:47:45,007 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69727d42d656b893310f153b after all retries
+2026-08-15 18:47:51,924 - INFO - [FETCH] Resume list page 324 retrieved
+2026-08-15 18:47:51,925 - INFO - [FETCH-STORE] Page 324: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:47:55,018 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:48:00,120 - INFO - [FETCH] Resume list page 325 retrieved
+2026-08-15 18:48:00,121 - INFO - [FETCH-STORE] Page 325: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:48:07,340 - INFO - [DETAIL] S3 URL extracted for 693b399392239bd0aa0118f8
+2026-08-15 18:48:08,905 - INFO - [DOWNLOAD] Success: Sharmeela_Shankar_Resume_QRkb7W_ohNXqC.pdf (126910 bytes) from S3
+2026-08-15 18:48:08,905 - INFO - [RESUME-SKIP] Marked 693b399392239bd0aa0118f8 as downloaded
+2026-08-15 18:48:08,918 - INFO - [S3-RECOVERY] Stored S3 URL for 693b399392239bd0aa0118f8
+2026-08-15 18:48:08,918 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-15 18:48:08,919 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693b399392239bd0aa0118f8
+2026-08-15 18:48:14,335 - INFO - [FETCH] Resume list page 326 retrieved
+2026-08-15 18:48:14,336 - INFO - [FETCH-STORE] Page 326: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:48:18,929 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 18:48:22,535 - INFO - [FETCH] Resume list page 327 retrieved
+2026-08-15 18:48:22,536 - INFO - [FETCH-STORE] Page 327: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:48:30,609 - ERROR - [DOWNLOAD] S3 status 403 for 693b2eef9fe60e44d60b817f
+2026-08-15 18:48:36,652 - INFO - [FETCH] Resume list page 328 retrieved
+2026-08-15 18:48:36,653 - INFO - [FETCH-STORE] Page 328: 13 new IDs stored, 0 duplicates skipped
+2026-08-15 18:48:44,847 - INFO - [FETCH] Resume list page 329 retrieved
+2026-08-15 18:48:44,848 - INFO - [FETCH-STORE] Page 329: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:48:53,008 - INFO - [FETCH] Resume list page 330 retrieved
+2026-08-15 18:48:53,009 - INFO - [FETCH-STORE] Page 330: 14 new IDs stored, 0 duplicates skipped
+2026-08-15 18:49:00,644 - INFO - [BULLETPROOF] Attempt 2/5
+2026-08-15 18:49:01,268 - INFO - [FETCH] Resume list page 331 retrieved
+2026-08-15 18:49:01,269 - INFO - [FETCH-STORE] Page 331: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:49:10,345 - ERROR - [DOWNLOAD] S3 status 403 for 693b2eef9fe60e44d60b817f
+2026-08-15 18:49:16,496 - INFO - [FETCH] Resume list page 332 retrieved
+2026-08-15 18:49:16,497 - INFO - [FETCH-STORE] Page 332: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:49:24,690 - INFO - [FETCH] Resume list page 333 retrieved
+2026-08-15 18:49:24,690 - INFO - [FETCH-STORE] Page 333: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:49:33,017 - INFO - [FETCH] Resume list page 334 retrieved
+2026-08-15 18:49:33,017 - INFO - [FETCH-STORE] Page 334: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:49:40,375 - INFO - [BULLETPROOF] Attempt 3/5
+2026-08-15 18:49:41,334 - INFO - [FETCH] Resume list page 335 retrieved
+2026-08-15 18:49:41,335 - INFO - [FETCH-STORE] Page 335: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:49:50,057 - ERROR - [DOWNLOAD] S3 status 403 for 693b2eef9fe60e44d60b817f
+2026-08-15 18:49:56,266 - INFO - [FETCH] Resume list page 336 retrieved
+2026-08-15 18:49:56,266 - INFO - [FETCH-STORE] Page 336: 15 new IDs stored, 0 duplicates skipped
+2026-08-15 18:50:04,436 - INFO - [FETCH] Resume list page 337 retrieved
+2026-08-15 18:50:04,436 - INFO - [FETCH-STORE] Page 337: 15 new IDs stored, 0 duplicates skipped

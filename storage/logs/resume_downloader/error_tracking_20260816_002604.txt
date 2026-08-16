@@ -1,0 +1,8 @@
+Error Tracking Log
+Generated: 2026-08-16 00:26:04
+================================================================================
+
+[2026-08-16 00:26:29] DOWNLOAD_EXCEPTION
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: InvalidURL: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+

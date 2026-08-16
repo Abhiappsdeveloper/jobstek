@@ -1,0 +1,101 @@
+2026-08-15 19:51:05,781 - INFO - 
+======================================================================
+2026-08-15 19:51:05,781 - INFO - [STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)
+2026-08-15 19:51:05,782 - INFO - [STARTUP] HTTP Library: urllib (built-in - no dependencies)
+2026-08-15 19:51:05,782 - INFO - [STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)
+2026-08-15 19:51:05,782 - INFO - ======================================================================
+2026-08-15 19:51:05,782 - INFO - [INIT] Tracking files initialized
+2026-08-15 19:51:05,783 - INFO - [RESUME-SKIP] Loaded 162 previously downloaded IDs
+2026-08-15 19:51:05,785 - INFO - [S3-RECOVERY] Loaded 162 S3 URLs
+2026-08-15 19:51:05,785 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+2026-08-15 19:51:05,786 - INFO - [LOGIN] Lazy login mode - authenticate only on 401 error
+2026-08-15 19:51:06,787 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader started
+2026-08-15 19:51:06,787 - INFO - [LOGIN] Lazy login mode - downloads starting immediately
+2026-08-15 19:51:06,788 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 19:51:06,787 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon
+2026-08-15 19:51:06,817 - INFO - [FETCH-DEDUP] Loaded 9628 fetched resume IDs for deduplication
+2026-08-15 19:51:28,682 - INFO - [FETCH] Resume list page 666 retrieved
+2026-08-15 19:51:28,682 - INFO - [FETCH-STORE] Page 666: All IDs already fetched, no new data stored
+2026-08-15 19:51:34,219 - ERROR - [DOWNLOAD] No S3 URL found for 6983ac22806bdffbd70ccb0b
+2026-08-15 19:51:41,037 - INFO - [FETCH] Resume list page 667 retrieved
+2026-08-15 19:51:41,040 - INFO - [PAGINATION] Total pages: 2, Total resumes: 15
+2026-08-15 19:51:41,041 - INFO - [STORAGE] Using Laravel storage folder
+2026-08-15 19:51:50,013 - INFO - [DETAIL] S3 URL extracted for 67a11b01ec37d55c002bfa73
+2026-08-15 19:51:51,114 - INFO - [DOWNLOAD] Success: Jayasai_kollu_Data_Scientist_3__W599RY_7AGv8p.docx (19392 bytes) from S3
+2026-08-15 19:51:51,114 - INFO - [RESUME-SKIP] Marked 67a11b01ec37d55c002bfa73 as downloaded
+2026-08-15 19:51:51,115 - INFO - [S3-RECOVERY] Stored S3 URL for 67a11b01ec37d55c002bfa73
+2026-08-15 19:52:00,944 - INFO - [DETAIL] S3 URL extracted for 67a119fd51b41c0b0656a1e5
+2026-08-15 19:52:02,019 - INFO - [DOWNLOAD] Success: PRERANA_DATA_ENGINEER_RESUME_2BvgY0_1apOgS.docx (17288 bytes) from S3
+2026-08-15 19:52:02,019 - INFO - [RESUME-SKIP] Marked 67a119fd51b41c0b0656a1e5 as downloaded
+2026-08-15 19:52:02,019 - INFO - [S3-RECOVERY] Stored S3 URL for 67a119fd51b41c0b0656a1e5
+2026-08-15 19:52:04,249 - INFO - [BULLETPROOF] Attempt 2/5
+2026-08-15 19:52:11,928 - INFO - [DETAIL] S3 URL extracted for 67a119d5cb386e211d6acb53
+2026-08-15 19:52:12,741 - INFO - [DOWNLOAD] Success: Deva_Gopal_Java_Full_Stack_7__vIz7Mu_caPFfX.docx (13898 bytes) from S3
+2026-08-15 19:52:12,741 - INFO - [RESUME-SKIP] Marked 67a119d5cb386e211d6acb53 as downloaded
+2026-08-15 19:52:12,741 - INFO - [S3-RECOVERY] Stored S3 URL for 67a119d5cb386e211d6acb53
+2026-08-15 19:52:19,595 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 19:52:27,212 - INFO - [DETAIL] S3 URL extracted for 67a11967852e06212a510c59
+2026-08-15 19:52:28,526 - INFO - [DOWNLOAD] Success: Java_resume_88evlG_5IybHc.pdf (64840 bytes) from S3
+2026-08-15 19:52:28,526 - INFO - [RESUME-SKIP] Marked 67a11967852e06212a510c59 as downloaded
+2026-08-15 19:52:28,526 - INFO - [S3-RECOVERY] Stored S3 URL for 67a11967852e06212a510c59
+2026-08-15 19:52:38,398 - INFO - [DETAIL] S3 URL extracted for 67a1194d187a36653109e683
+2026-08-15 19:52:40,039 - INFO - [DOWNLOAD] Success: Denis_Senior_Software_Engineer_lnag7Q_wSSR3L.pdf (130854 bytes) from S3
+2026-08-15 19:52:40,039 - INFO - [RESUME-SKIP] Marked 67a1194d187a36653109e683 as downloaded
+2026-08-15 19:52:40,039 - INFO - [S3-RECOVERY] Stored S3 URL for 67a1194d187a36653109e683
+2026-08-15 19:52:49,626 - INFO - [BULLETPROOF] Attempt 3/5
+2026-08-15 19:52:49,974 - INFO - [DETAIL] S3 URL extracted for 67a11885f06782696377bf73
+2026-08-15 19:52:51,307 - INFO - [DOWNLOAD] Success: Paul_Hofmann_Resume_2024_OYWmL8_kltgeQ.pdf (84149 bytes) from S3
+2026-08-15 19:52:51,307 - INFO - [RESUME-SKIP] Marked 67a11885f06782696377bf73 as downloaded
+2026-08-15 19:52:51,307 - INFO - [S3-RECOVERY] Stored S3 URL for 67a11885f06782696377bf73
+2026-08-15 19:52:58,624 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 19:53:06,212 - INFO - [DETAIL] S3 URL extracted for 67a117eb31ed79578e65eaa3
+2026-08-15 19:53:07,265 - INFO - [DOWNLOAD] Success: Evan_L_Sticca_CV_2024_a_QExbRy_8F0Xfz.docx (13768 bytes) from S3
+2026-08-15 19:53:07,265 - INFO - [RESUME-SKIP] Marked 67a117eb31ed79578e65eaa3 as downloaded
+2026-08-15 19:53:07,265 - INFO - [S3-RECOVERY] Stored S3 URL for 67a117eb31ed79578e65eaa3
+2026-08-15 19:53:17,280 - INFO - [DETAIL] S3 URL extracted for 67a117a49e165a67a36f7b64
+2026-08-15 19:53:18,617 - INFO - [DOWNLOAD] Success: Nikhil_Master_Java_Resume_UP9T7R_c3UvVn.pdf (59687 bytes) from S3
+2026-08-15 19:53:18,617 - INFO - [RESUME-SKIP] Marked 67a117a49e165a67a36f7b64 as downloaded
+2026-08-15 19:53:18,617 - INFO - [S3-RECOVERY] Stored S3 URL for 67a117a49e165a67a36f7b64
+2026-08-15 19:53:28,467 - INFO - [DETAIL] S3 URL extracted for 67a117698eb0773e0a440b45
+2026-08-15 19:53:28,655 - INFO - [BULLETPROOF] Attempt 4/5
+2026-08-15 19:53:30,358 - INFO - [DOWNLOAD] Success: Resume_11_1rxIMp_DsaWfM.pdf (372826 bytes) from S3
+2026-08-15 19:53:30,358 - INFO - [RESUME-SKIP] Marked 67a117698eb0773e0a440b45 as downloaded
+2026-08-15 19:53:30,359 - INFO - [S3-RECOVERY] Stored S3 URL for 67a117698eb0773e0a440b45
+2026-08-15 19:53:37,510 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 19:53:45,306 - INFO - [DETAIL] S3 URL extracted for 67a1172e46adf866b51c6314
+2026-08-15 19:53:46,888 - INFO - [DOWNLOAD] Success: Nitish_Big_Data_Hadoop_Data_Engineer_a4d0gJ_yOPKqd.pdf (149043 bytes) from S3
+2026-08-15 19:53:46,888 - INFO - [RESUME-SKIP] Marked 67a1172e46adf866b51c6314 as downloaded
+2026-08-15 19:53:46,888 - INFO - [S3-RECOVERY] Stored S3 URL for 67a1172e46adf866b51c6314
+2026-08-15 19:53:56,833 - INFO - [DETAIL] S3 URL extracted for 67a116a8c9bdd553e7079432
+2026-08-15 19:53:58,147 - INFO - [DOWNLOAD] Success: Vijay_resume_1__9WbO3l_7hVJpH.pdf (96625 bytes) from S3
+2026-08-15 19:53:58,147 - INFO - [RESUME-SKIP] Marked 67a116a8c9bdd553e7079432 as downloaded
+2026-08-15 19:53:58,147 - INFO - [S3-RECOVERY] Stored S3 URL for 67a116a8c9bdd553e7079432
+2026-08-15 19:54:07,541 - INFO - [BULLETPROOF] Attempt 5/5
+2026-08-15 19:54:08,020 - INFO - [DETAIL] S3 URL extracted for 67a116051f3be06d055e7574
+2026-08-15 19:54:09,072 - INFO - [DOWNLOAD] Success: Jonathan_Merritt_Resume_1_3__LYhccu_1i0Doc.docx (24757 bytes) from S3
+2026-08-15 19:54:09,072 - INFO - [RESUME-SKIP] Marked 67a116051f3be06d055e7574 as downloaded
+2026-08-15 19:54:09,073 - INFO - [S3-RECOVERY] Stored S3 URL for 67a116051f3be06d055e7574
+2026-08-15 19:54:16,547 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 19:54:16,549 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+2026-08-15 19:54:24,172 - INFO - [DETAIL] S3 URL extracted for 67a114e1c96daf3549109966
+2026-08-15 19:54:25,285 - INFO - [DOWNLOAD] Success: ZADARahmatResume_Copy_rvUPBZ_LSbKJG.doc (63233 bytes) from S3
+2026-08-15 19:54:25,285 - INFO - [RESUME-SKIP] Marked 67a114e1c96daf3549109966 as downloaded
+2026-08-15 19:54:25,285 - INFO - [S3-RECOVERY] Stored S3 URL for 67a114e1c96daf3549109966
+2026-08-15 19:54:26,559 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 19:54:35,215 - INFO - [DETAIL] S3 URL extracted for 67a1144a28f39c14a13fdf53
+2026-08-15 19:54:36,226 - INFO - [DOWNLOAD] Success: AditiChoudhary_DataEngineer_0zKYBV_C9lXPT.pdf (32836 bytes) from S3
+2026-08-15 19:54:36,226 - INFO - [RESUME-SKIP] Marked 67a1144a28f39c14a13fdf53 as downloaded
+2026-08-15 19:54:36,227 - INFO - [S3-RECOVERY] Stored S3 URL for 67a1144a28f39c14a13fdf53
+2026-08-15 19:54:42,855 - ERROR - [ERROR] Download failed for 69727d42d656b893310f153b: URL can't contain control characters. '/Tkxxy2-pAEJx6-qR0t4e-Layaswi Resume.docx' (found at least ' ')
+2026-08-15 19:54:50,482 - INFO - [DETAIL] S3 URL extracted for 67a113f0fe73ac07a35def94
+2026-08-15 19:54:52,358 - INFO - [DOWNLOAD] Success: Rishabh_Dinesh_Singh_resume_ReVeU7_EVHYOn.pdf (358135 bytes) from S3
+2026-08-15 19:54:52,358 - INFO - [RESUME-SKIP] Marked 67a113f0fe73ac07a35def94 as downloaded
+2026-08-15 19:54:52,358 - INFO - [S3-RECOVERY] Stored S3 URL for 67a113f0fe73ac07a35def94
+2026-08-15 19:54:53,379 - INFO - [S3-RECOVERY] All files present, no recovery needed
+2026-08-15 19:54:53,379 - INFO - [COMPLETE] Downloads - Skipped: 0, Successful: 15, Failed: 0, Total: 15
+2026-08-15 19:54:53,379 - INFO - [S3-RECOVERY] Recovery - Recovered: 0, Failed: 0
+2026-08-15 19:54:53,379 - INFO - [TRACKING] Resume links saved to: /home/u792878158/domains/jobstek.norloxsolutionscrm.com/public_html/storage/logs/resume_downloader/resume_links_20260815_195104.txt
+2026-08-15 19:54:53,379 - INFO - [TRACKING] Errors tracked in: /home/u792878158/domains/jobstek.norloxsolutionscrm.com/public_html/storage/logs/resume_downloader/error_tracking_20260815_195104.txt
+2026-08-15 19:54:53,379 - INFO - [TRACKING] Downloaded tracker saved to: /home/u792878158/domains/jobstek.norloxsolutionscrm.com/public_html/storage/resumes/downloaded_resumes.txt
+2026-08-15 19:54:53,379 - INFO - [TRACKING] S3 URLs tracker saved to: /home/u792878158/domains/jobstek.norloxsolutionscrm.com/public_html/storage/resumes/resume_s3_urls.txt
+2026-08-15 19:54:53,380 - INFO - [CRON-HEALTH] Cron heartbeat created

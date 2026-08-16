@@ -1,0 +1,21 @@
+2026-08-15 23:03:03,885 - INFO - 
+======================================================================
+2026-08-15 23:03:03,886 - INFO - [STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)
+2026-08-15 23:03:03,886 - INFO - [STARTUP] HTTP Library: urllib (built-in - no dependencies)
+2026-08-15 23:03:03,886 - INFO - [STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)
+2026-08-15 23:03:03,886 - INFO - ======================================================================
+2026-08-15 23:03:03,887 - INFO - [INIT] Tracking files initialized
+2026-08-15 23:03:03,888 - INFO - [RESUME-SKIP] Loaded 177 previously downloaded IDs
+2026-08-15 23:03:03,889 - INFO - [S3-RECOVERY] Loaded 177 S3 URLs
+2026-08-15 23:03:03,889 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+2026-08-15 23:03:03,890 - INFO - [LOGIN] Lazy login mode - authenticate only on 401 error
+2026-08-15 23:03:04,891 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader started
+2026-08-15 23:03:04,892 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon
+2026-08-15 23:03:04,892 - INFO - [LOGIN] Lazy login mode - downloads starting immediately
+2026-08-15 23:03:04,898 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 23:03:04,902 - INFO - [FETCH-DEDUP] Loaded 9628 fetched resume IDs for deduplication
+2026-08-15 23:03:27,484 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 23:03:33,492 - INFO - [FETCH] Resume list page 666 retrieved
+2026-08-15 23:03:33,493 - INFO - [PAGINATION] Total pages: 1, Total resumes: 0
+2026-08-15 23:03:33,494 - INFO - [INFO] No resumes found
+2026-08-15 23:03:33,495 - INFO - [CRON-HEALTH] Cron heartbeat created

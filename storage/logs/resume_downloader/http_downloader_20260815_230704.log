@@ -1,0 +1,45 @@
+2026-08-15 23:07:05,035 - INFO - 
+======================================================================
+2026-08-15 23:07:05,036 - INFO - [STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)
+2026-08-15 23:07:05,036 - INFO - [STARTUP] HTTP Library: urllib (built-in - no dependencies)
+2026-08-15 23:07:05,036 - INFO - [STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)
+2026-08-15 23:07:05,036 - INFO - ======================================================================
+2026-08-15 23:07:05,036 - INFO - [INIT] Tracking files initialized
+2026-08-15 23:07:05,037 - INFO - [RESUME-SKIP] Loaded 177 previously downloaded IDs
+2026-08-15 23:07:05,038 - INFO - [S3-RECOVERY] Loaded 177 S3 URLs
+2026-08-15 23:07:05,038 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+2026-08-15 23:07:05,039 - INFO - [LOGIN] Lazy login mode - authenticate only on 401 error
+2026-08-15 23:07:06,040 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader started
+2026-08-15 23:07:06,040 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon
+2026-08-15 23:07:06,041 - INFO - [LOGIN] Lazy login mode - downloads starting immediately
+2026-08-15 23:07:06,050 - INFO - [FETCH-DEDUP] Loaded 9628 fetched resume IDs for deduplication
+2026-08-15 23:07:06,050 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-15 23:07:22,452 - INFO - [FETCH] Resume list page 666 retrieved
+2026-08-15 23:07:22,453 - INFO - [FETCH-STORE] Page 666: All IDs already fetched, no new data stored
+2026-08-15 23:07:29,803 - ERROR - [ERROR] Download failed for 6983ac22806bdffbd70ccb0b: URL can't contain control characters. '/eUi8nu-vHtIWP-pITqqs-Sai Lasya Priya Kamma 3.docx' (found at least ' ')
+2026-08-15 23:07:36,242 - INFO - [FETCH] Resume list page 667 retrieved
+2026-08-15 23:07:36,245 - INFO - [PAGINATION] Total pages: 2, Total resumes: 15
+2026-08-15 23:07:36,247 - INFO - [STORAGE] Using Laravel storage folder
+2026-08-15 23:07:36,247 - INFO - [RESUME-SKIP] Skipped 67a11b01ec37d55c002bfa73 (already downloaded)
+2026-08-15 23:07:36,247 - INFO - [RESUME-SKIP] Skipped 67a119fd51b41c0b0656a1e5 (already downloaded)
+2026-08-15 23:07:36,247 - INFO - [RESUME-SKIP] Skipped 67a119d5cb386e211d6acb53 (already downloaded)
+2026-08-15 23:07:36,247 - INFO - [RESUME-SKIP] Skipped 67a11967852e06212a510c59 (already downloaded)
+2026-08-15 23:07:36,247 - INFO - [RESUME-SKIP] Skipped 67a1194d187a36653109e683 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a11885f06782696377bf73 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a117eb31ed79578e65eaa3 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a117a49e165a67a36f7b64 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a117698eb0773e0a440b45 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a1172e46adf866b51c6314 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a116a8c9bdd553e7079432 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a116051f3be06d055e7574 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a114e1c96daf3549109966 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a1144a28f39c14a13fdf53 (already downloaded)
+2026-08-15 23:07:36,248 - INFO - [RESUME-SKIP] Skipped 67a113f0fe73ac07a35def94 (already downloaded)
+2026-08-15 23:07:36,252 - INFO - [S3-RECOVERY] All files present, no recovery needed
+2026-08-15 23:07:36,252 - INFO - [COMPLETE] Downloads - Skipped: 15, Successful: 0, Failed: 0, Total: 0
+2026-08-15 23:07:36,252 - INFO - [S3-RECOVERY] Recovery - Recovered: 0, Failed: 0
+2026-08-15 23:07:36,252 - INFO - [TRACKING] Resume links saved to: /home/u792878158/domains/jobstek.norloxsolutionscrm.com/public_html/storage/logs/resume_downloader/resume_links_20260815_230704.txt
+2026-08-15 23:07:36,252 - INFO - [TRACKING] Errors tracked in: /home/u792878158/domains/jobstek.norloxsolutionscrm.com/public_html/storage/logs/resume_downloader/error_tracking_20260815_230704.txt
+2026-08-15 23:07:36,252 - INFO - [TRACKING] Downloaded tracker saved to: /home/u792878158/domains/jobstek.norloxsolutionscrm.com/public_html/storage/resumes/downloaded_resumes.txt
+2026-08-15 23:07:36,252 - INFO - [TRACKING] S3 URLs tracker saved to: /home/u792878158/domains/jobstek.norloxsolutionscrm.com/public_html/storage/resumes/resume_s3_urls.txt
+2026-08-15 23:07:36,253 - INFO - [CRON-HEALTH] Cron heartbeat created
