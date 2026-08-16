@@ -1372,85 +1372,86 @@ def extract_resume_ids_from_html(html_content):
     return resume_ids
 
 
-def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net', retry_count=0):
-    """Get fresh S3 signed URL by calling the downloadResume endpoint (with retry logic)"""
+def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net'):
+    """Extract S3 URL from resume detail page HTML (proven working method)"""
     try:
-        # The website has a downloadResume endpoint that generates fresh signed S3 URLs
-        # This is what the browser calls when you click Download button
-        download_endpoint = urljoin(base_url, '/employer/searchResume/downloadResume/')
+        # Fetch the detail page that contains the S3 URL
+        detail_url = urljoin(base_url, f'/employer/searchResume/resume/{resume_id}/')
+        print(f"[DETAIL] Fetching detail page for {resume_id}...")
 
-        if retry_count == 0:
-            print(f"[S3-FETCH] Getting fresh S3 URL from: {download_endpoint}")
-        else:
-            print(f"[S3-FETCH] Retry #{retry_count}: Attempting to get fresh S3 URL...")
+        response = session.get(detail_url, timeout=20)
+        response.raise_for_status()
 
-        # POST request with the resume ID as mongo_ids parameter
-        # The endpoint will redirect to the S3 URL or return it
-        data = {'mongo_ids': resume_id}
+        html_content = response.text
 
-        # Don't follow redirects yet - we need to capture the S3 URL
-        response = session.post(download_endpoint, data=data, timeout=20, allow_redirects=False)
+        # Pattern 1: const resume_org_path = "https://..." (with various quote types)
+        pattern = r'(?:const|var|let)\s+resume_org_path\s*=\s*["\']([^"\']*(?:https://[^"\']*)?)["\']'
+        matches = re.findall(pattern, html_content, re.IGNORECASE | re.DOTALL)
 
-        # Check if we got a redirect (301, 302, etc.)
-        if response.status_code in [301, 302, 303, 307, 308]:
-            s3_url = response.headers.get('Location')
-            if s3_url and 'tekjobs-resumes' in s3_url:
-                print(f"[OK] Got fresh S3 URL from redirect (LIVE URL)")
-                logger.info(f"[S3-FETCH] Fresh S3 URL obtained from redirect for {resume_id}")
+        if matches and matches[0].startswith('https'):
+            s3_url = matches[0].strip()
+            print(f"[OK] Found fresh S3 URL in detail page (Pattern 1: LIVE URL)")
+            logger.info(f"[DETAIL] Fresh S3 URL extracted for {resume_id}")
 
-                # Store for future use
-                try:
-                    s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
-                    filename = s3_url.split('/')[-1].split('?')[0] if '/' in s3_url else f"resume_{resume_id}"
-                    with open(s3_urls_file, 'a', encoding='utf-8') as f:
-                        f.write(f"{resume_id}|{filename}|{s3_url}\n")
-                except:
-                    pass
+            # Store for future use
+            try:
+                s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
+                filename = s3_url.split('/')[-1].split('?')[0] if '/' in s3_url else f"resume_{resume_id}"
+                with open(s3_urls_file, 'a', encoding='utf-8') as f:
+                    f.write(f"{resume_id}|{filename}|{s3_url}\n")
+            except:
+                pass
 
-                return s3_url
+            return s3_url
 
-        # Check if the response contains the S3 URL directly
-        if 'tekjobs-resumes' in response.text:
-            pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
-            matches = re.findall(pattern, response.text)
-            if matches:
-                s3_url = matches[0]
-                print(f"[OK] Found S3 URL in response body (LIVE URL)")
-                logger.info(f"[S3-FETCH] S3 URL extracted from response for {resume_id}")
+        # Pattern 2: resume_org_path: "https://..." (object property syntax)
+        pattern = r'resume_org_path\s*:\s*["\']([^"\']*(?:https://[^"\']*)?)["\']'
+        matches = re.findall(pattern, html_content, re.IGNORECASE | re.DOTALL)
 
-                # Store for future use
-                try:
-                    s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
-                    filename = s3_url.split('/')[-1].split('?')[0] if '/' in s3_url else f"resume_{resume_id}"
-                    with open(s3_urls_file, 'a', encoding='utf-8') as f:
-                        f.write(f"{resume_id}|{filename}|{s3_url}\n")
-                except:
-                    pass
+        if matches and matches[0].startswith('https'):
+            s3_url = matches[0].strip()
+            print(f"[OK] Found fresh S3 URL in detail page (Pattern 2: LIVE URL)")
+            logger.info(f"[DETAIL] Fresh S3 URL extracted (alt) for {resume_id}")
 
-                return s3_url
+            # Store for future use
+            try:
+                s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
+                filename = s3_url.split('/')[-1].split('?')[0] if '/' in s3_url else f"resume_{resume_id}"
+                with open(s3_urls_file, 'a', encoding='utf-8') as f:
+                    f.write(f"{resume_id}|{filename}|{s3_url}\n")
+            except:
+                pass
 
-        # If no S3 URL found, the endpoint may have returned an error
-        print(f"[WARN] S3-FETCH returned status {response.status_code}, no S3 URL found")
-        logger.warning(f"[S3-FETCH] No S3 URL from endpoint for {resume_id}, status: {response.status_code}")
+            return s3_url
 
-        # Retry once if first attempt failed
-        if retry_count == 0:
-            print(f"[S3-FETCH] Retrying once more...")
-            time.sleep(2)  # Wait 2 seconds before retry
-            return extract_s3_download_url_from_detail(session, resume_id, base_url, retry_count=1)
+        # Pattern 3: Broader search for any https://tekjobs-resumes... URL
+        pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
+        matches = re.findall(pattern, html_content)
 
+        if matches:
+            s3_url = matches[0]  # Get first match
+            print(f"[OK] Found fresh S3 URL in detail page (Pattern 3: LIVE URL)")
+            logger.info(f"[DETAIL] Fresh S3 URL extracted (broad) for {resume_id}")
+
+            # Store for future use
+            try:
+                s3_urls_file = os.path.join(LARAVEL_STORAGE_PATH, 'resume_s3_urls.txt')
+                filename = s3_url.split('/')[-1].split('?')[0] if '/' in s3_url else f"resume_{resume_id}"
+                with open(s3_urls_file, 'a', encoding='utf-8') as f:
+                    f.write(f"{resume_id}|{filename}|{s3_url}\n")
+            except:
+                pass
+
+            return s3_url
+
+        # No S3 URL found in detail page
+        print(f"[WARN] Could not find fresh S3 URL in detail page")
+        logger.warning(f"[DETAIL] No fresh S3 URL found for {resume_id}")
         return None
 
     except Exception as e:
-        logger.error(f"[ERROR] Failed to get S3 URL from endpoint: {str(e)}")
-        print(f"[ERROR] S3-FETCH error: {type(e).__name__}: {str(e)[:100]}")
-
-        # Retry once if first attempt failed
-        if retry_count == 0:
-            print(f"[S3-FETCH] Retrying once more...")
-            time.sleep(2)
-            return extract_s3_download_url_from_detail(session, resume_id, base_url, retry_count=1)
-
+        logger.error(f"[ERROR] Failed to extract S3 URL from detail page: {str(e)}")
+        print(f"[ERROR] Detail page error: {type(e).__name__}: {str(e)[:100]}")
         return None
 
 
