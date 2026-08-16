@@ -1316,76 +1316,59 @@ def extract_resume_ids_from_html(html_content):
 
 
 def extract_s3_download_url_from_detail(session, resume_id, base_url='https://www.tekjobs.net'):
-    """Extract the actual S3 file URL from resume detail page"""
+    """Get fresh S3 signed URL by calling the downloadResume endpoint"""
     try:
-        # Fetch the detail page
-        detail_url = urljoin(base_url, f'/employer/searchResume/resume/{resume_id}/')
-        print(f"[DETAIL] Fetching detail page for {resume_id}...")
+        # The website has a downloadResume endpoint that generates fresh signed S3 URLs
+        # This is what the browser calls when you click Download button
+        download_endpoint = urljoin(base_url, '/employer/searchResume/downloadResume/')
 
-        # Use bulletproof timeout for detail page (NEW - PHASE 1 timeout)
-        response = session.get(detail_url, timeout=BULLETPROOF_DETAIL_TIMEOUT)
-        response.raise_for_status()
+        print(f"[S3-FETCH] Getting fresh S3 URL from: {download_endpoint}")
 
-        html_content = response.text
+        # POST request with the resume ID as mongo_ids parameter
+        # The endpoint will redirect to the S3 URL or return it
+        data = {'mongo_ids': resume_id}
 
-        # DEBUG: Save HTML on first failure for inspection
+        # Don't follow redirects yet - we need to capture the S3 URL
+        response = session.post(download_endpoint, data=data, timeout=BULLETPROOF_DETAIL_TIMEOUT, allow_redirects=False)
+
+        # Check if we got a redirect (301, 302, etc.)
+        if response.status_code in [301, 302, 303, 307, 308]:
+            s3_url = response.headers.get('Location')
+            if s3_url and 'tekjobs-resumes' in s3_url:
+                print(f"[OK] Got fresh S3 URL from redirect")
+                logger.info(f"[S3-FETCH] Fresh S3 URL obtained for {resume_id}")
+                return s3_url
+
+        # Check if the response contains the S3 URL directly
+        if 'tekjobs-resumes' in response.text:
+            pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
+            matches = re.findall(pattern, response.text)
+            if matches:
+                s3_url = matches[0]
+                print(f"[OK] Found S3 URL in response body")
+                logger.info(f"[S3-FETCH] S3 URL extracted from response for {resume_id}")
+                return s3_url
+
+        # If no S3 URL found, the endpoint may have returned an error
+        print(f"[WARN] S3-FETCH returned status {response.status_code}, no redirect to S3 URL")
+        logger.warning(f"[S3-FETCH] No S3 URL from endpoint for {resume_id}, status: {response.status_code}")
+
+        # DEBUG: Save response for inspection
         debug_dir = os.path.join(LARAVEL_STORAGE_PATH, 'debug')
         os.makedirs(debug_dir, mode=0o777, exist_ok=True)
-        debug_file = os.path.join(debug_dir, f'detail_page_{resume_id}.html')
-
-        # Pattern 1: const resume_org_path = "https://..." (with various quote types)
-        pattern = r'(?:const|var|let)\s+resume_org_path\s*=\s*["\']([^"\']*(?:https://[^"\']*)?)["\']'
-        matches = re.findall(pattern, html_content, re.IGNORECASE | re.DOTALL)
-
-        if matches and matches[0].startswith('https'):
-            s3_url = matches[0].strip()
-            print(f"[OK] Found S3 URL (Pattern 1: const/var/let)")
-            logger.info(f"[DETAIL] S3 URL extracted for {resume_id}")
-            return s3_url
-
-        # Pattern 2: resume_org_path: "https://..." (object property syntax)
-        pattern = r'resume_org_path\s*:\s*["\']([^"\']*(?:https://[^"\']*)?)["\']'
-        matches = re.findall(pattern, html_content, re.IGNORECASE | re.DOTALL)
-
-        if matches and matches[0].startswith('https'):
-            s3_url = matches[0].strip()
-            print(f"[OK] Found S3 URL (Pattern 2: object property)")
-            logger.info(f"[DETAIL] S3 URL extracted (alt) for {resume_id}")
-            return s3_url
-
-        # Pattern 3: Broader search for any https://tekjobs-resumes... URL
-        pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
-        matches = re.findall(pattern, html_content)
-
-        if matches:
-            s3_url = matches[0]  # Get first match
-            print(f"[OK] Found S3 URL (Pattern 3: broad search)")
-            logger.info(f"[DETAIL] S3 URL extracted (broad) for {resume_id}")
-            return s3_url
-
-        # DEBUG: All patterns failed - save HTML for inspection
+        debug_file = os.path.join(debug_dir, f'download_response_{resume_id}.html')
         try:
             with open(debug_file, 'w', encoding='utf-8') as f:
-                f.write(html_content)
+                f.write(response.text[:5000])  # Save first 5KB
             os.chmod(debug_file, 0o777)
-            print(f"[DEBUG] Saved detail page to: {debug_file} ({len(html_content)} bytes)")
-            logger.info(f"[DEBUG] Detail page saved for inspection")
         except Exception as debug_e:
-            logger.warning(f"[DEBUG] Could not save debug file: {debug_e}")
+            logger.warning(f"[DEBUG] Could not save response: {debug_e}")
 
-        # Pattern 4: SKIP - Don't construct URLs from filenames
-        # AWS signed URLs expire after 1 hour. Constructed URLs have no signature.
-        # If we can't extract the fresh signed URL from the detail page, the resume
-        # cannot be downloaded (the signed URL has expired or is not available).
-
-        print(f"[SKIP] Could not find fresh S3 URL - resume cannot be downloaded")
-        print(f"[SKIP] AWS signed URLs expire after 1 hour. Constructed URLs lack AWS signature.")
-        logger.warning(f"[DETAIL] No fresh S3 URL found for {resume_id} - skipping (URL expired or unavailable)")
         return None
 
     except Exception as e:
-        logger.error(f"[ERROR] Failed to extract S3 URL: {str(e)}")
-        print(f"[ERROR] Detail page error: {type(e).__name__}: {str(e)}")
+        logger.error(f"[ERROR] Failed to get S3 URL from endpoint: {str(e)}")
+        print(f"[ERROR] S3-FETCH error: {type(e).__name__}: {str(e)}")
         return None
 
 
