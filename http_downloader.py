@@ -1328,46 +1328,58 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
 
         html_content = response.text
 
-        # Look for the S3 URL in JavaScript: const resume_org_path = "https://..."
-        pattern = r'const\s+resume_org_path\s*=\s*["\']([^"\']+)["\']'
-        matches = re.findall(pattern, html_content)
+        # Pattern 1: const resume_org_path = "https://..." (with various quote types)
+        pattern = r'(?:const|var|let)\s+resume_org_path\s*=\s*["\']([^"\']*(?:https://[^"\']*)?)["\']'
+        matches = re.findall(pattern, html_content, re.IGNORECASE | re.DOTALL)
 
-        if matches:
-            s3_url = matches[0]
-            print(f"[OK] Found S3 URL")
+        if matches and matches[0].startswith('https'):
+            s3_url = matches[0].strip()
+            print(f"[OK] Found S3 URL (Pattern 1: const/var/let)")
             logger.info(f"[DETAIL] S3 URL extracted for {resume_id}")
             return s3_url
 
-        # Alternative pattern: resume_org_path: "https://..."
-        pattern = r'resume_org_path\s*:\s*["\']([^"\']+)["\']'
-        matches = re.findall(pattern, html_content)
+        # Pattern 2: resume_org_path: "https://..." (object property syntax)
+        pattern = r'resume_org_path\s*:\s*["\']([^"\']*(?:https://[^"\']*)?)["\']'
+        matches = re.findall(pattern, html_content, re.IGNORECASE | re.DOTALL)
 
-        if matches:
-            s3_url = matches[0]
-            print(f"[OK] Found S3 URL (alternative pattern)")
+        if matches and matches[0].startswith('https'):
+            s3_url = matches[0].strip()
+            print(f"[OK] Found S3 URL (Pattern 2: object property)")
             logger.info(f"[DETAIL] S3 URL extracted (alt) for {resume_id}")
             return s3_url
 
-        # Also try to find resume filename to construct S3 URL
-        pattern = r'const\s+resume_file\s*=\s*["\']([^"\']+)["\']'
-        file_matches = re.findall(pattern, html_content)
+        # Pattern 3: Broader search for any https://tekjobs-resumes... URL
+        pattern = r'(https://tekjobs-resumes\.s3\.amazonaws\.com/[^\s"\'<>]+)'
+        matches = re.findall(pattern, html_content)
+
+        if matches:
+            s3_url = matches[0]  # Get first match
+            print(f"[OK] Found S3 URL (Pattern 3: broad search)")
+            logger.info(f"[DETAIL] S3 URL extracted (broad) for {resume_id}")
+            return s3_url
+
+        # Pattern 4: Try to find resume filename to construct S3 URL (LAST RESORT)
+        pattern = r'(?:const|var|let)\s+resume_file\s*=\s*["\']([^"\']+)["\']'
+        file_matches = re.findall(pattern, html_content, re.IGNORECASE)
 
         if file_matches:
-            resume_file = file_matches[0]
-            print(f"[INFO] Found resume file path: {resume_file}")
+            resume_file = file_matches[0].strip()
+            print(f"[WARN] No S3 URL found, constructing from filename: {resume_file}")
+            logger.warning(f"[DETAIL] Falling back to filename-based URL construction for {resume_id}")
 
-            # Try to construct S3 URL
-            if resume_file:
+            # Try to construct S3 URL (NOT RECOMMENDED - URLs may be outdated)
+            if resume_file and not resume_file.startswith('https'):
                 s3_url = f"https://tekjobs-resumes.s3.amazonaws.com/{resume_file}"
-                print(f"[OK] Constructed S3 URL")
+                print(f"[WARN] Constructed S3 URL (may fail due to missing AWS signature)")
                 return s3_url
 
-        print(f"[WARN] Could not find S3 URL in detail page")
+        print(f"[ERROR] Could not find S3 URL in detail page for {resume_id}")
+        logger.error(f"[DETAIL] No S3 URL or filename found for {resume_id}")
         return None
 
     except Exception as e:
         logger.error(f"[ERROR] Failed to extract S3 URL: {str(e)}")
-        print(f"[ERROR] Detail page error: {type(e).__name__}")
+        print(f"[ERROR] Detail page error: {type(e).__name__}: {str(e)}")
         return None
 
 
