@@ -1341,7 +1341,10 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
         print(f"[EXTRACT] Fetching detail page for fresh S3 URL: {detail_url}")
 
         try:
-            resp = session.get(detail_url, timeout=30)
+            print(f"[EXTRACT] Waiting 2 seconds for page to fully load...")
+            time.sleep(2)  # Wait for page to fully load and S3 URLs to be embedded
+
+            resp = session.get(detail_url, timeout=60)  # Increased timeout to 60 seconds
             if resp.status_code == 200:
                 # Extract S3 URL with regex - Pattern 1: const resume_org_path = "..."
                 pattern = r'const\s+resume_org_path\s*=\s*["\']([^"\']+)["\']'
@@ -1357,10 +1360,12 @@ def extract_s3_download_url_from_detail(session, resume_id, base_url='https://ww
                             timestamp = date_match.group(1)
                             print(f"[OK] Fresh S3 URL extracted (Timestamp: {timestamp})")
                             logger.info(f"[EXTRACT] Fresh S3 URL for {resume_id} (timestamp: {timestamp})")
+                            time.sleep(1)  # Brief delay to not hammer server
                             return fresh_url
                         else:
                             print(f"[OK] Fresh S3 URL extracted (no timestamp found)")
                             logger.info(f"[EXTRACT] Fresh S3 URL for {resume_id}")
+                            time.sleep(1)  # Brief delay to not hammer server
                             return fresh_url
         except Exception as e:
             print(f"[WARN] Failed to extract from detail page: {type(e).__name__}")
