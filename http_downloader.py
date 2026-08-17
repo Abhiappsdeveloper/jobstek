@@ -1568,8 +1568,17 @@ def download_resume_by_id(session, resume_id, download_dir='downloads', base_url
         # Step 2: Download from S3 URL directly
         print(f"[STEP 2] Downloading from S3: {s3_url[:60]}...")
 
-        # URL-encode to handle spaces and special characters in filenames
-        safe_s3_url = quote(s3_url, safe=':/?#[]@!$&\'()*+,;=')
+        # The S3 URL is copied verbatim from the page's JS (already percent-encoded
+        # by AWS, including %2F inside the signed X-Amz-Credential parameter).
+        # Re-quoting the whole URL double-encodes those sequences (%2F -> %252F),
+        # which corrupts the AWS signature and causes S3 to return 400 Bad Request.
+        # Only encode a literal space in the path portion (before the query string);
+        # leave the already-encoded query string untouched.
+        if '?' in s3_url:
+            _path, _query = s3_url.split('?', 1)
+            safe_s3_url = quote(_path, safe=':/') + '?' + _query
+        else:
+            safe_s3_url = quote(s3_url, safe=':/')
         response = session.get(safe_s3_url, timeout=20, stream=True, allow_redirects=True)
 
         if response.status_code != 200:
