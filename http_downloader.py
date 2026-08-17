@@ -786,8 +786,13 @@ def robust_download_with_retry(session, resume_id, s3_url, file_path, resume_ind
             logger.info(f"[BULLETPROOF-RETRY] Attempt {attempt}/{max_retries}")
 
             # Download with bulletproof timeout (NEW - PHASE 1)
-            # URL-encode to handle spaces and special characters in filenames
-            safe_s3_url = quote(s3_url, safe=':/?#[]@!$&\'()*+,;=')
+            # Same double-encoding bug as download_resume_by_id: this URL is
+            # already percent-encoded by AWS, so only quote the path portion.
+            if '?' in s3_url:
+                _path, _query = s3_url.split('?', 1)
+                safe_s3_url = quote(_path, safe=':/') + '?' + _query
+            else:
+                safe_s3_url = quote(s3_url, safe=':/')
             response = session.get(safe_s3_url, timeout=BULLETPROOF_S3_TIMEOUT, stream=True, allow_redirects=True)
 
             if response.status_code != 200:
@@ -1190,8 +1195,13 @@ def check_and_recover_missing_files(download_dir, s3_urls_dict, session):
                     print(f"[S3-RECOVERY] Recovering: {filename}...")
 
                     # Download from S3 URL directly
-                    # URL-encode to handle spaces and special characters in filenames
-                    safe_s3_url = quote(s3_url, safe=':/?#[]@!$&\'()*+,;=')
+                    # Same double-encoding bug as download_resume_by_id: this URL is
+                    # already percent-encoded by AWS, so only quote the path portion.
+                    if '?' in s3_url:
+                        _path, _query = s3_url.split('?', 1)
+                        safe_s3_url = quote(_path, safe=':/') + '?' + _query
+                    else:
+                        safe_s3_url = quote(s3_url, safe=':/')
                     response = session.get(safe_s3_url, timeout=20, stream=True, allow_redirects=True)
                     if response.status_code == 200:
                         file_path = os.path.join(download_dir, filename)
