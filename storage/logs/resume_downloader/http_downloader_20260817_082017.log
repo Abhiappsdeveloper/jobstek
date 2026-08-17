@@ -1,0 +1,886 @@
+2026-08-17 02:50:17,517 - INFO - 
+======================================================================
+2026-08-17 02:50:17,517 - INFO - [STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)
+2026-08-17 02:50:17,517 - INFO - [STARTUP] HTTP Library: requests
+2026-08-17 02:50:17,518 - INFO - [STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)
+2026-08-17 02:50:17,518 - INFO - ======================================================================
+2026-08-17 02:50:17,521 - INFO - [INIT] Tracking files initialized
+2026-08-17 02:50:17,522 - INFO - [RESUME-SKIP] Loaded 203 previously downloaded IDs
+2026-08-17 02:50:17,524 - INFO - [S3-RECOVERY] Loaded 203 S3 URLs
+2026-08-17 02:50:17,524 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+2026-08-17 02:50:17,524 - INFO - [LOGIN] Lazy login mode - authenticate only on 401 error
+2026-08-17 02:50:18,569 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader started
+2026-08-17 02:50:18,570 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon
+2026-08-17 02:50:18,571 - INFO - [LOGIN] Lazy login mode - downloads starting immediately
+2026-08-17 02:50:18,576 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:50:18,599 - INFO - [FETCH-DEDUP] Loaded 9628 fetched resume IDs for deduplication
+2026-08-17 02:50:34,765 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6983ac22806bdffbd70ccb0b
+2026-08-17 02:50:34,765 - ERROR - [DOWNLOAD] No S3 URL found for 6983ac22806bdffbd70ccb0b
+2026-08-17 02:50:34,772 - INFO - [BULLETPROOF] No S3 URL found for 6983ac22806bdffbd70ccb0b - skipping retries
+2026-08-17 02:50:34,773 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+2026-08-17 02:50:41,795 - INFO - [FETCH] Resume list page 293 retrieved
+2026-08-17 02:50:41,796 - INFO - [FETCH-STORE] Page 293: All IDs already fetched, no new data stored
+2026-08-17 02:50:44,774 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:50:50,335 - INFO - [FETCH] Resume list page 294 retrieved
+2026-08-17 02:50:50,336 - INFO - [FETCH-STORE] Page 294: All IDs already fetched, no new data stored
+2026-08-17 02:50:56,279 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 69727d42d656b893310f153b
+2026-08-17 02:50:56,279 - ERROR - [DOWNLOAD] No S3 URL found for 69727d42d656b893310f153b
+2026-08-17 02:50:56,296 - INFO - [BULLETPROOF] No S3 URL found for 69727d42d656b893310f153b - skipping retries
+2026-08-17 02:50:56,297 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69727d42d656b893310f153b after all retries
+2026-08-17 02:51:03,035 - INFO - [FETCH] Resume list page 295 retrieved
+2026-08-17 02:51:03,037 - INFO - [FETCH-STORE] Page 295: All IDs already fetched, no new data stored
+2026-08-17 02:51:06,297 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:51:09,784 - INFO - [FETCH] Resume list page 296 retrieved
+2026-08-17 02:51:09,785 - INFO - [FETCH-STORE] Page 296: All IDs already fetched, no new data stored
+2026-08-17 02:51:17,359 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6983ac22806bdffbd70ccb0b
+2026-08-17 02:51:17,359 - ERROR - [DOWNLOAD] No S3 URL found for 6983ac22806bdffbd70ccb0b
+2026-08-17 02:51:17,403 - INFO - [BULLETPROOF] No S3 URL found for 6983ac22806bdffbd70ccb0b - skipping retries
+2026-08-17 02:51:17,404 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+2026-08-17 02:51:23,984 - INFO - [FETCH] Resume list page 297 retrieved
+2026-08-17 02:51:23,985 - INFO - [FETCH-STORE] Page 297: All IDs already fetched, no new data stored
+2026-08-17 02:51:27,405 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:51:30,770 - INFO - [FETCH] Resume list page 298 retrieved
+2026-08-17 02:51:30,771 - INFO - [FETCH-STORE] Page 298: All IDs already fetched, no new data stored
+2026-08-17 02:51:38,529 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 69665a2422119809c30e879a
+2026-08-17 02:51:38,530 - ERROR - [DOWNLOAD] No S3 URL found for 69665a2422119809c30e879a
+2026-08-17 02:51:38,544 - INFO - [BULLETPROOF] No S3 URL found for 69665a2422119809c30e879a - skipping retries
+2026-08-17 02:51:38,545 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69665a2422119809c30e879a after all retries
+2026-08-17 02:51:46,961 - INFO - [FETCH] Resume list page 299 retrieved
+2026-08-17 02:51:46,961 - INFO - [FETCH-STORE] Page 299: All IDs already fetched, no new data stored
+2026-08-17 02:51:48,546 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:51:54,196 - INFO - [FETCH] Resume list page 300 retrieved
+2026-08-17 02:51:54,198 - INFO - [FETCH-STORE] Page 300: All IDs already fetched, no new data stored
+2026-08-17 02:52:01,403 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 69727d42d656b893310f153b
+2026-08-17 02:52:01,404 - ERROR - [DOWNLOAD] No S3 URL found for 69727d42d656b893310f153b
+2026-08-17 02:52:01,410 - INFO - [BULLETPROOF] No S3 URL found for 69727d42d656b893310f153b - skipping retries
+2026-08-17 02:52:01,410 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69727d42d656b893310f153b after all retries
+2026-08-17 02:52:08,117 - INFO - [FETCH] Resume list page 301 retrieved
+2026-08-17 02:52:08,119 - INFO - [FETCH-STORE] Page 301: All IDs already fetched, no new data stored
+2026-08-17 02:52:11,411 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:52:14,893 - INFO - [FETCH] Resume list page 302 retrieved
+2026-08-17 02:52:14,894 - INFO - [FETCH-STORE] Page 302: All IDs already fetched, no new data stored
+2026-08-17 02:52:22,662 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 693b2eef9fe60e44d60b817f
+2026-08-17 02:52:22,662 - ERROR - [DOWNLOAD] No S3 URL found for 693b2eef9fe60e44d60b817f
+2026-08-17 02:52:22,676 - INFO - [BULLETPROOF] No S3 URL found for 693b2eef9fe60e44d60b817f - skipping retries
+2026-08-17 02:52:22,676 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 693b2eef9fe60e44d60b817f after all retries
+2026-08-17 02:52:29,044 - INFO - [FETCH] Resume list page 303 retrieved
+2026-08-17 02:52:29,045 - INFO - [FETCH-STORE] Page 303: All IDs already fetched, no new data stored
+2026-08-17 02:52:32,678 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:52:35,771 - INFO - [FETCH] Resume list page 304 retrieved
+2026-08-17 02:52:35,772 - INFO - [FETCH-STORE] Page 304: All IDs already fetched, no new data stored
+2026-08-17 02:52:43,450 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 693b06991f5534ad8007e62e
+2026-08-17 02:52:43,451 - ERROR - [DOWNLOAD] No S3 URL found for 693b06991f5534ad8007e62e
+2026-08-17 02:52:43,465 - INFO - [BULLETPROOF] No S3 URL found for 693b06991f5534ad8007e62e - skipping retries
+2026-08-17 02:52:43,465 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 693b06991f5534ad8007e62e after all retries
+2026-08-17 02:52:49,906 - INFO - [FETCH] Resume list page 305 retrieved
+2026-08-17 02:52:49,907 - INFO - [FETCH-STORE] Page 305: All IDs already fetched, no new data stored
+2026-08-17 02:52:53,467 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:52:56,471 - INFO - [FETCH] Resume list page 306 retrieved
+2026-08-17 02:52:56,472 - INFO - [FETCH-STORE] Page 306: All IDs already fetched, no new data stored
+2026-08-17 02:53:04,137 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 69665a2422119809c30e879a
+2026-08-17 02:53:04,137 - ERROR - [DOWNLOAD] No S3 URL found for 69665a2422119809c30e879a
+2026-08-17 02:53:04,143 - INFO - [BULLETPROOF] No S3 URL found for 69665a2422119809c30e879a - skipping retries
+2026-08-17 02:53:04,143 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69665a2422119809c30e879a after all retries
+2026-08-17 02:53:10,596 - INFO - [FETCH] Resume list page 307 retrieved
+2026-08-17 02:53:10,597 - INFO - [FETCH-STORE] Page 307: All IDs already fetched, no new data stored
+2026-08-17 02:53:14,144 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:53:20,617 - INFO - [FETCH] Resume list page 308 retrieved
+2026-08-17 02:53:20,618 - INFO - [FETCH-STORE] Page 308: All IDs already fetched, no new data stored
+2026-08-17 02:53:25,126 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 693b2eef9fe60e44d60b817f
+2026-08-17 02:53:25,126 - ERROR - [DOWNLOAD] No S3 URL found for 693b2eef9fe60e44d60b817f
+2026-08-17 02:53:25,130 - INFO - [BULLETPROOF] No S3 URL found for 693b2eef9fe60e44d60b817f - skipping retries
+2026-08-17 02:53:25,130 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 693b2eef9fe60e44d60b817f after all retries
+2026-08-17 02:53:31,888 - INFO - [FETCH] Resume list page 309 retrieved
+2026-08-17 02:53:31,889 - INFO - [FETCH-STORE] Page 309: All IDs already fetched, no new data stored
+2026-08-17 02:53:35,131 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:53:39,669 - INFO - [FETCH] Resume list page 310 retrieved
+2026-08-17 02:53:39,670 - INFO - [FETCH-STORE] Page 310: All IDs already fetched, no new data stored
+2026-08-17 02:53:46,529 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 693b06991f5534ad8007e62e
+2026-08-17 02:53:46,530 - ERROR - [DOWNLOAD] No S3 URL found for 693b06991f5534ad8007e62e
+2026-08-17 02:53:46,543 - INFO - [BULLETPROOF] No S3 URL found for 693b06991f5534ad8007e62e - skipping retries
+2026-08-17 02:53:46,544 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 693b06991f5534ad8007e62e after all retries
+2026-08-17 02:53:53,283 - INFO - [FETCH] Resume list page 311 retrieved
+2026-08-17 02:53:53,284 - INFO - [FETCH-STORE] Page 311: All IDs already fetched, no new data stored
+2026-08-17 02:53:56,545 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:54:00,349 - INFO - [FETCH] Resume list page 312 retrieved
+2026-08-17 02:54:00,350 - INFO - [FETCH-STORE] Page 312: All IDs already fetched, no new data stored
+2026-08-17 02:54:07,726 - INFO - [EXTRACT] Fresh S3 URL for 69324106d292f81d1f0e3cf4 (timestamp: 20260817T025409Z)
+2026-08-17 02:54:10,313 - INFO - [DOWNLOAD] Success: milind_lombar_Resume_uv0MCX_9PRws2.docx (26206 bytes) from S3
+2026-08-17 02:54:10,315 - INFO - [RESUME-SKIP] Marked 69324106d292f81d1f0e3cf4 as downloaded
+2026-08-17 02:54:10,317 - INFO - [S3-RECOVERY] Stored S3 URL for 69324106d292f81d1f0e3cf4
+2026-08-17 02:54:10,317 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:54:10,319 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69324106d292f81d1f0e3cf4
+2026-08-17 02:54:14,381 - INFO - [FETCH] Resume list page 313 retrieved
+2026-08-17 02:54:14,381 - INFO - [FETCH-STORE] Page 313: All IDs already fetched, no new data stored
+2026-08-17 02:54:20,320 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:54:21,443 - INFO - [FETCH] Resume list page 314 retrieved
+2026-08-17 02:54:21,445 - INFO - [FETCH-STORE] Page 314: All IDs already fetched, no new data stored
+2026-08-17 02:54:29,533 - INFO - [FETCH] Resume list page 315 retrieved
+2026-08-17 02:54:29,534 - INFO - [FETCH-STORE] Page 315: All IDs already fetched, no new data stored
+2026-08-17 02:54:37,836 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6931fd020e50112e5b033c4d
+2026-08-17 02:54:37,836 - ERROR - [DOWNLOAD] No S3 URL found for 6931fd020e50112e5b033c4d
+2026-08-17 02:54:37,840 - INFO - [BULLETPROOF] No S3 URL found for 6931fd020e50112e5b033c4d - skipping retries
+2026-08-17 02:54:37,840 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6931fd020e50112e5b033c4d after all retries
+2026-08-17 02:54:42,542 - INFO - [FETCH] Resume list page 316 retrieved
+2026-08-17 02:54:42,543 - INFO - [FETCH-STORE] Page 316: All IDs already fetched, no new data stored
+2026-08-17 02:54:47,841 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:54:49,608 - INFO - [FETCH] Resume list page 317 retrieved
+2026-08-17 02:54:49,609 - INFO - [FETCH-STORE] Page 317: All IDs already fetched, no new data stored
+2026-08-17 02:54:56,567 - INFO - [FETCH] Resume list page 318 retrieved
+2026-08-17 02:54:56,568 - INFO - [FETCH-STORE] Page 318: All IDs already fetched, no new data stored
+2026-08-17 02:55:03,971 - INFO - [EXTRACT] Fresh S3 URL for 6931e99b5b66827ce50e335c (timestamp: 20260817T025505Z)
+2026-08-17 02:55:06,740 - INFO - [DOWNLOAD] Success: Roger_Nguyen_COejPJ_vtjhbn.pdf (117384 bytes) from S3
+2026-08-17 02:55:06,742 - INFO - [RESUME-SKIP] Marked 6931e99b5b66827ce50e335c as downloaded
+2026-08-17 02:55:06,743 - INFO - [S3-RECOVERY] Stored S3 URL for 6931e99b5b66827ce50e335c
+2026-08-17 02:55:06,743 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:55:06,744 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6931e99b5b66827ce50e335c
+2026-08-17 02:55:10,801 - INFO - [FETCH] Resume list page 319 retrieved
+2026-08-17 02:55:10,801 - INFO - [FETCH-STORE] Page 319: All IDs already fetched, no new data stored
+2026-08-17 02:55:16,745 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:55:17,866 - INFO - [FETCH] Resume list page 320 retrieved
+2026-08-17 02:55:17,867 - INFO - [FETCH-STORE] Page 320: All IDs already fetched, no new data stored
+2026-08-17 02:55:24,931 - INFO - [FETCH] Resume list page 321 retrieved
+2026-08-17 02:55:24,933 - INFO - [FETCH-STORE] Page 321: All IDs already fetched, no new data stored
+2026-08-17 02:55:31,996 - INFO - [FETCH] Resume list page 322 retrieved
+2026-08-17 02:55:31,997 - INFO - [FETCH-STORE] Page 322: All IDs already fetched, no new data stored
+2026-08-17 02:55:32,305 - INFO - [EXTRACT] Fresh S3 URL for 6931e5383ef7a7dc8304a828 (timestamp: 20260817T025534Z)
+2026-08-17 02:55:36,094 - INFO - [DOWNLOAD] Success: RUJUL_SHARMA_resume_iYCXcK_ySPqS3.pdf (232196 bytes) from S3
+2026-08-17 02:55:36,096 - INFO - [RESUME-SKIP] Marked 6931e5383ef7a7dc8304a828 as downloaded
+2026-08-17 02:55:36,097 - INFO - [S3-RECOVERY] Stored S3 URL for 6931e5383ef7a7dc8304a828
+2026-08-17 02:55:36,098 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:55:36,098 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6931e5383ef7a7dc8304a828
+2026-08-17 02:55:39,041 - INFO - [FETCH] Resume list page 323 retrieved
+2026-08-17 02:55:39,042 - INFO - [FETCH-STORE] Page 323: All IDs already fetched, no new data stored
+2026-08-17 02:55:46,000 - INFO - [FETCH] Resume list page 324 retrieved
+2026-08-17 02:55:46,001 - INFO - [FETCH-STORE] Page 324: All IDs already fetched, no new data stored
+2026-08-17 02:55:46,099 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:55:52,988 - INFO - [FETCH] Resume list page 325 retrieved
+2026-08-17 02:55:52,989 - INFO - [FETCH-STORE] Page 325: All IDs already fetched, no new data stored
+2026-08-17 02:56:00,364 - INFO - [EXTRACT] Fresh S3 URL for 6931dccf3ef7a7dc8304a821 (timestamp: 20260817T025602Z)
+2026-08-17 02:56:03,744 - INFO - [DOWNLOAD] Success: Naveen_SDE_4__bSiDPN_8r1nOz.pdf (147293 bytes) from S3
+2026-08-17 02:56:03,746 - INFO - [RESUME-SKIP] Marked 6931dccf3ef7a7dc8304a821 as downloaded
+2026-08-17 02:56:03,748 - INFO - [S3-RECOVERY] Stored S3 URL for 6931dccf3ef7a7dc8304a821
+2026-08-17 02:56:03,748 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:56:03,750 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6931dccf3ef7a7dc8304a821
+2026-08-17 02:56:07,120 - INFO - [FETCH] Resume list page 326 retrieved
+2026-08-17 02:56:07,122 - INFO - [FETCH-STORE] Page 326: All IDs already fetched, no new data stored
+2026-08-17 02:56:13,751 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:56:14,022 - INFO - [FETCH] Resume list page 327 retrieved
+2026-08-17 02:56:14,023 - INFO - [FETCH-STORE] Page 327: All IDs already fetched, no new data stored
+2026-08-17 02:56:20,987 - INFO - [FETCH] Resume list page 328 retrieved
+2026-08-17 02:56:20,988 - INFO - [FETCH-STORE] Page 328: All IDs already fetched, no new data stored
+2026-08-17 02:56:28,462 - INFO - [EXTRACT] Fresh S3 URL for 6931d7e1787f180093076a44 (timestamp: 20260817T025630Z)
+2026-08-17 02:56:30,877 - INFO - [DOWNLOAD] Success: Sunil_Java_resume_7xYXc3_A9mVyp.docx (48598 bytes) from S3
+2026-08-17 02:56:30,879 - INFO - [RESUME-SKIP] Marked 6931d7e1787f180093076a44 as downloaded
+2026-08-17 02:56:30,880 - INFO - [S3-RECOVERY] Stored S3 URL for 6931d7e1787f180093076a44
+2026-08-17 02:56:30,881 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:56:30,882 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6931d7e1787f180093076a44
+2026-08-17 02:56:35,220 - INFO - [FETCH] Resume list page 329 retrieved
+2026-08-17 02:56:35,221 - INFO - [FETCH-STORE] Page 329: All IDs already fetched, no new data stored
+2026-08-17 02:56:40,883 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:56:42,242 - INFO - [FETCH] Resume list page 330 retrieved
+2026-08-17 02:56:42,243 - INFO - [FETCH-STORE] Page 330: All IDs already fetched, no new data stored
+2026-08-17 02:56:49,308 - INFO - [FETCH] Resume list page 331 retrieved
+2026-08-17 02:56:49,309 - INFO - [FETCH-STORE] Page 331: All IDs already fetched, no new data stored
+2026-08-17 02:56:56,682 - INFO - [EXTRACT] Fresh S3 URL for 6931bbeaf9cc909b870a9730 (timestamp: 20260817T025658Z)
+2026-08-17 02:56:59,380 - INFO - [DOWNLOAD] Success: AvinashReddyMoraResume_BsdEmr_UzEEA7.pdf (123967 bytes) from S3
+2026-08-17 02:56:59,381 - INFO - [RESUME-SKIP] Marked 6931bbeaf9cc909b870a9730 as downloaded
+2026-08-17 02:56:59,381 - INFO - [S3-RECOVERY] Stored S3 URL for 6931bbeaf9cc909b870a9730
+2026-08-17 02:56:59,382 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:56:59,382 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6931bbeaf9cc909b870a9730
+2026-08-17 02:57:03,282 - INFO - [FETCH] Resume list page 332 retrieved
+2026-08-17 02:57:03,284 - INFO - [FETCH-STORE] Page 332: All IDs already fetched, no new data stored
+2026-08-17 02:57:09,383 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:57:10,300 - INFO - [FETCH] Resume list page 333 retrieved
+2026-08-17 02:57:10,301 - INFO - [FETCH-STORE] Page 333: All IDs already fetched, no new data stored
+2026-08-17 02:57:17,263 - INFO - [FETCH] Resume list page 334 retrieved
+2026-08-17 02:57:17,264 - INFO - [FETCH-STORE] Page 334: All IDs already fetched, no new data stored
+2026-08-17 02:57:24,636 - INFO - [EXTRACT] Fresh S3 URL for 6931a54f322104d5ce06f705 (timestamp: 20260817T025726Z)
+2026-08-17 02:57:29,170 - INFO - [DOWNLOAD] Success: Manasa_PythonDeveloper_lcXeCh_LIdccw.pdf (637812 bytes) from S3
+2026-08-17 02:57:29,171 - INFO - [RESUME-SKIP] Marked 6931a54f322104d5ce06f705 as downloaded
+2026-08-17 02:57:29,172 - INFO - [S3-RECOVERY] Stored S3 URL for 6931a54f322104d5ce06f705
+2026-08-17 02:57:29,172 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:57:29,173 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6931a54f322104d5ce06f705
+2026-08-17 02:57:31,436 - INFO - [FETCH] Resume list page 335 retrieved
+2026-08-17 02:57:31,436 - INFO - [FETCH-STORE] Page 335: All IDs already fetched, no new data stored
+2026-08-17 02:57:38,460 - INFO - [FETCH] Resume list page 336 retrieved
+2026-08-17 02:57:38,461 - INFO - [FETCH-STORE] Page 336: All IDs already fetched, no new data stored
+2026-08-17 02:57:39,174 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:57:45,423 - INFO - [FETCH] Resume list page 337 retrieved
+2026-08-17 02:57:45,423 - INFO - [FETCH-STORE] Page 337: All IDs already fetched, no new data stored
+2026-08-17 02:57:52,798 - INFO - [EXTRACT] Fresh S3 URL for 6931a4870c5a1dd0df0f70c5 (timestamp: 20260817T025754Z)
+2026-08-17 02:57:55,457 - INFO - [DOWNLOAD] Success: Yamini_Python_Resume_vYVgNP_KLgm4i.pdf (100620 bytes) from S3
+2026-08-17 02:57:55,458 - INFO - [RESUME-SKIP] Marked 6931a4870c5a1dd0df0f70c5 as downloaded
+2026-08-17 02:57:55,459 - INFO - [S3-RECOVERY] Stored S3 URL for 6931a4870c5a1dd0df0f70c5
+2026-08-17 02:57:55,460 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:57:55,462 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6931a4870c5a1dd0df0f70c5
+2026-08-17 02:57:59,556 - INFO - [FETCH] Resume list page 338 retrieved
+2026-08-17 02:57:59,557 - INFO - [FETCH-STORE] Page 338: All IDs already fetched, no new data stored
+2026-08-17 02:58:05,464 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:58:06,662 - INFO - [FETCH] Resume list page 339 retrieved
+2026-08-17 02:58:06,663 - INFO - [FETCH-STORE] Page 339: All IDs already fetched, no new data stored
+2026-08-17 02:58:13,992 - INFO - [FETCH] Resume list page 340 retrieved
+2026-08-17 02:58:13,993 - INFO - [FETCH-STORE] Page 340: All IDs already fetched, no new data stored
+2026-08-17 02:58:21,265 - INFO - [EXTRACT] Fresh S3 URL for 6931a1f1787f180093076a1c (timestamp: 20260817T025823Z)
+2026-08-17 02:58:23,652 - INFO - [DOWNLOAD] Success: Gagan_Kumar_QA_y36qbc_zfoGpe.docx (28906 bytes) from S3
+2026-08-17 02:58:23,654 - INFO - [RESUME-SKIP] Marked 6931a1f1787f180093076a1c as downloaded
+2026-08-17 02:58:23,657 - INFO - [S3-RECOVERY] Stored S3 URL for 6931a1f1787f180093076a1c
+2026-08-17 02:58:23,657 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:58:23,659 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6931a1f1787f180093076a1c
+2026-08-17 02:58:28,023 - INFO - [FETCH] Resume list page 341 retrieved
+2026-08-17 02:58:28,024 - INFO - [FETCH-STORE] Page 341: All IDs already fetched, no new data stored
+2026-08-17 02:58:33,660 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:58:34,985 - INFO - [FETCH] Resume list page 342 retrieved
+2026-08-17 02:58:34,987 - INFO - [FETCH-STORE] Page 342: All IDs already fetched, no new data stored
+2026-08-17 02:58:41,948 - INFO - [FETCH] Resume list page 343 retrieved
+2026-08-17 02:58:41,949 - INFO - [FETCH-STORE] Page 343: All IDs already fetched, no new data stored
+2026-08-17 02:58:49,322 - INFO - [EXTRACT] Fresh S3 URL for 693193f3e766fa803b0a0676 (timestamp: 20260817T025851Z)
+2026-08-17 02:58:51,701 - INFO - [DOWNLOAD] Success: IndhuVarshaVeeramalaResume_1__OrjbGh_3ahKqf.docx (27102 bytes) from S3
+2026-08-17 02:58:51,703 - INFO - [RESUME-SKIP] Marked 693193f3e766fa803b0a0676 as downloaded
+2026-08-17 02:58:51,704 - INFO - [S3-RECOVERY] Stored S3 URL for 693193f3e766fa803b0a0676
+2026-08-17 02:58:51,704 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:58:51,705 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693193f3e766fa803b0a0676
+2026-08-17 02:58:56,079 - INFO - [FETCH] Resume list page 344 retrieved
+2026-08-17 02:58:56,080 - INFO - [FETCH-STORE] Page 344: All IDs already fetched, no new data stored
+2026-08-17 02:59:01,706 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:59:03,084 - INFO - [FETCH] Resume list page 345 retrieved
+2026-08-17 02:59:03,085 - INFO - [FETCH-STORE] Page 345: All IDs already fetched, no new data stored
+2026-08-17 02:59:10,413 - INFO - [FETCH] Resume list page 346 retrieved
+2026-08-17 02:59:10,414 - INFO - [FETCH-STORE] Page 346: All IDs already fetched, no new data stored
+2026-08-17 02:59:17,686 - INFO - [EXTRACT] Fresh S3 URL for 693166caa1d9e2ec7800d6af (timestamp: 20260817T025919Z)
+2026-08-17 02:59:20,364 - INFO - [DOWNLOAD] Success: _IVIDTEK_INC_RAKSHIT_DESHPANDE_resume_OB6d93_lw5zqc.pdf (147374 bytes) from S3
+2026-08-17 02:59:20,366 - INFO - [RESUME-SKIP] Marked 693166caa1d9e2ec7800d6af as downloaded
+2026-08-17 02:59:20,367 - INFO - [S3-RECOVERY] Stored S3 URL for 693166caa1d9e2ec7800d6af
+2026-08-17 02:59:20,367 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:59:20,369 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693166caa1d9e2ec7800d6af
+2026-08-17 02:59:24,384 - INFO - [FETCH] Resume list page 347 retrieved
+2026-08-17 02:59:24,385 - INFO - [FETCH-STORE] Page 347: All IDs already fetched, no new data stored
+2026-08-17 02:59:30,370 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:59:31,451 - INFO - [FETCH] Resume list page 348 retrieved
+2026-08-17 02:59:31,452 - INFO - [FETCH-STORE] Page 348: All IDs already fetched, no new data stored
+2026-08-17 02:59:38,515 - INFO - [FETCH] Resume list page 349 retrieved
+2026-08-17 02:59:38,515 - INFO - [FETCH-STORE] Page 349: All IDs already fetched, no new data stored
+2026-08-17 02:59:45,954 - INFO - [EXTRACT] Fresh S3 URL for 693144dded9cbef54e054e2f (timestamp: 20260817T025947Z)
+2026-08-17 02:59:48,103 - INFO - [DOWNLOAD] Success: SOWJANYA_DAVULURU_Resume_2025_Latest_dvYDhE_KqzypD.docx (17537 bytes) from S3
+2026-08-17 02:59:48,106 - INFO - [RESUME-SKIP] Marked 693144dded9cbef54e054e2f as downloaded
+2026-08-17 02:59:48,108 - INFO - [S3-RECOVERY] Stored S3 URL for 693144dded9cbef54e054e2f
+2026-08-17 02:59:48,109 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 02:59:48,110 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693144dded9cbef54e054e2f
+2026-08-17 02:59:52,648 - INFO - [FETCH] Resume list page 350 retrieved
+2026-08-17 02:59:52,650 - INFO - [FETCH-STORE] Page 350: All IDs already fetched, no new data stored
+2026-08-17 02:59:58,111 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 02:59:59,610 - INFO - [FETCH] Resume list page 351 retrieved
+2026-08-17 02:59:59,611 - INFO - [FETCH-STORE] Page 351: All IDs already fetched, no new data stored
+2026-08-17 03:00:06,530 - INFO - [FETCH] Resume list page 352 retrieved
+2026-08-17 03:00:06,531 - INFO - [FETCH-STORE] Page 352: All IDs already fetched, no new data stored
+2026-08-17 03:00:13,850 - INFO - [EXTRACT] Fresh S3 URL for 693120ebd243110c1c08ff21 (timestamp: 20260817T030015Z)
+2026-08-17 03:00:17,324 - INFO - [DOWNLOAD] Success: Miguel_Delgadillo_Resume_2026_US_vfKVUS_u1uLSP.pdf (274666 bytes) from S3
+2026-08-17 03:00:17,326 - INFO - [RESUME-SKIP] Marked 693120ebd243110c1c08ff21 as downloaded
+2026-08-17 03:00:17,328 - INFO - [S3-RECOVERY] Stored S3 URL for 693120ebd243110c1c08ff21
+2026-08-17 03:00:17,329 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:00:17,331 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693120ebd243110c1c08ff21
+2026-08-17 03:00:20,559 - INFO - [FETCH] Resume list page 353 retrieved
+2026-08-17 03:00:20,561 - INFO - [FETCH-STORE] Page 353: All IDs already fetched, no new data stored
+2026-08-17 03:00:27,332 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:00:27,573 - INFO - [FETCH] Resume list page 354 retrieved
+2026-08-17 03:00:27,574 - INFO - [FETCH-STORE] Page 354: All IDs already fetched, no new data stored
+2026-08-17 03:00:34,690 - INFO - [FETCH] Resume list page 355 retrieved
+2026-08-17 03:00:34,691 - INFO - [FETCH-STORE] Page 355: All IDs already fetched, no new data stored
+2026-08-17 03:00:37,256 - INFO - [EXTRACT] Fresh S3 URL for 6931147c714a62ecb50c5f9e (timestamp: 20260817T030039Z)
+2026-08-17 03:00:39,711 - INFO - [DOWNLOAD] Success: ZK_Resume_U0fBfn_n6mPVH.pdf (69379 bytes) from S3
+2026-08-17 03:00:39,713 - INFO - [RESUME-SKIP] Marked 6931147c714a62ecb50c5f9e as downloaded
+2026-08-17 03:00:39,715 - INFO - [S3-RECOVERY] Stored S3 URL for 6931147c714a62ecb50c5f9e
+2026-08-17 03:00:39,715 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:00:39,718 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6931147c714a62ecb50c5f9e
+2026-08-17 03:00:41,756 - INFO - [FETCH] Resume list page 356 retrieved
+2026-08-17 03:00:41,757 - INFO - [FETCH-STORE] Page 356: All IDs already fetched, no new data stored
+2026-08-17 03:00:48,760 - INFO - [FETCH] Resume list page 357 retrieved
+2026-08-17 03:00:48,761 - INFO - [FETCH-STORE] Page 357: All IDs already fetched, no new data stored
+2026-08-17 03:00:49,719 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:00:55,827 - INFO - [FETCH] Resume list page 358 retrieved
+2026-08-17 03:00:55,829 - INFO - [FETCH-STORE] Page 358: All IDs already fetched, no new data stored
+2026-08-17 03:01:03,264 - INFO - [EXTRACT] Fresh S3 URL for 6930f1ad947286021f014181 (timestamp: 20260817T030105Z)
+2026-08-17 03:01:06,537 - INFO - [DOWNLOAD] Success: Resume_fhpNf0_vqefku.pdf (154057 bytes) from S3
+2026-08-17 03:01:06,539 - INFO - [RESUME-SKIP] Marked 6930f1ad947286021f014181 as downloaded
+2026-08-17 03:01:06,541 - INFO - [S3-RECOVERY] Stored S3 URL for 6930f1ad947286021f014181
+2026-08-17 03:01:06,542 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:01:06,544 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6930f1ad947286021f014181
+2026-08-17 03:01:10,120 - INFO - [FETCH] Resume list page 359 retrieved
+2026-08-17 03:01:10,122 - INFO - [FETCH-STORE] Page 359: All IDs already fetched, no new data stored
+2026-08-17 03:01:16,545 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:01:17,186 - INFO - [FETCH] Resume list page 360 retrieved
+2026-08-17 03:01:17,187 - INFO - [FETCH-STORE] Page 360: All IDs already fetched, no new data stored
+2026-08-17 03:01:24,148 - INFO - [FETCH] Resume list page 361 retrieved
+2026-08-17 03:01:24,148 - INFO - [FETCH-STORE] Page 361: All IDs already fetched, no new data stored
+2026-08-17 03:01:31,524 - INFO - [EXTRACT] Fresh S3 URL for 6930d72eddb6c06b1c0fda78 (timestamp: 20260817T030133Z)
+2026-08-17 03:01:34,286 - INFO - [DOWNLOAD] Success: DhileepKumar_Pagadala_Resume_qSvYep_mPuJA9.docx (42823 bytes) from S3
+2026-08-17 03:01:34,289 - INFO - [RESUME-SKIP] Marked 6930d72eddb6c06b1c0fda78 as downloaded
+2026-08-17 03:01:34,291 - INFO - [S3-RECOVERY] Stored S3 URL for 6930d72eddb6c06b1c0fda78
+2026-08-17 03:01:34,292 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:01:34,294 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6930d72eddb6c06b1c0fda78
+2026-08-17 03:01:38,281 - INFO - [FETCH] Resume list page 362 retrieved
+2026-08-17 03:01:38,282 - INFO - [FETCH-STORE] Page 362: All IDs already fetched, no new data stored
+2026-08-17 03:01:44,295 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:01:45,449 - INFO - [FETCH] Resume list page 363 retrieved
+2026-08-17 03:01:45,450 - INFO - [FETCH-STORE] Page 363: All IDs already fetched, no new data stored
+2026-08-17 03:01:52,514 - INFO - [FETCH] Resume list page 364 retrieved
+2026-08-17 03:01:52,515 - INFO - [FETCH-STORE] Page 364: All IDs already fetched, no new data stored
+2026-08-17 03:01:59,786 - INFO - [EXTRACT] Fresh S3 URL for 6930d67cddb6c06b1c0fda76 (timestamp: 20260817T030201Z)
+2026-08-17 03:02:02,686 - INFO - [DOWNLOAD] Success: Pranay_Nalimela_16__W0iiS2_8WBKrT.pdf (88447 bytes) from S3
+2026-08-17 03:02:02,689 - INFO - [RESUME-SKIP] Marked 6930d67cddb6c06b1c0fda76 as downloaded
+2026-08-17 03:02:02,691 - INFO - [S3-RECOVERY] Stored S3 URL for 6930d67cddb6c06b1c0fda76
+2026-08-17 03:02:02,691 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:02:02,693 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6930d67cddb6c06b1c0fda76
+2026-08-17 03:02:06,645 - INFO - [FETCH] Resume list page 365 retrieved
+2026-08-17 03:02:06,646 - INFO - [FETCH-STORE] Page 365: All IDs already fetched, no new data stored
+2026-08-17 03:02:12,694 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:02:13,711 - INFO - [FETCH] Resume list page 366 retrieved
+2026-08-17 03:02:13,712 - INFO - [FETCH-STORE] Page 366: All IDs already fetched, no new data stored
+2026-08-17 03:02:20,673 - INFO - [FETCH] Resume list page 367 retrieved
+2026-08-17 03:02:20,675 - INFO - [FETCH-STORE] Page 367: All IDs already fetched, no new data stored
+2026-08-17 03:02:27,974 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6931fd020e50112e5b033c4d
+2026-08-17 03:02:27,975 - ERROR - [DOWNLOAD] No S3 URL found for 6931fd020e50112e5b033c4d
+2026-08-17 03:02:27,983 - INFO - [BULLETPROOF] No S3 URL found for 6931fd020e50112e5b033c4d - skipping retries
+2026-08-17 03:02:27,984 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6931fd020e50112e5b033c4d after all retries
+2026-08-17 03:02:34,702 - INFO - [FETCH] Resume list page 368 retrieved
+2026-08-17 03:02:34,703 - INFO - [FETCH-STORE] Page 368: All IDs already fetched, no new data stored
+2026-08-17 03:02:37,985 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:02:42,076 - INFO - [FETCH] Resume list page 369 retrieved
+2026-08-17 03:02:42,077 - INFO - [FETCH-STORE] Page 369: All IDs already fetched, no new data stored
+2026-08-17 03:02:49,245 - INFO - [EXTRACT] Fresh S3 URL for 6930c128d243110c1c08ff07 (timestamp: 20260817T030251Z)
+2026-08-17 03:02:52,351 - INFO - [DOWNLOAD] Success: Arun_Resume_Y1B6Sg_sW25LO.pdf (193069 bytes) from S3
+2026-08-17 03:02:52,354 - INFO - [RESUME-SKIP] Marked 6930c128d243110c1c08ff07 as downloaded
+2026-08-17 03:02:52,356 - INFO - [S3-RECOVERY] Stored S3 URL for 6930c128d243110c1c08ff07
+2026-08-17 03:02:52,357 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:02:52,359 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6930c128d243110c1c08ff07
+2026-08-17 03:02:56,003 - INFO - [FETCH] Resume list page 370 retrieved
+2026-08-17 03:02:56,004 - INFO - [FETCH-STORE] Page 370: All IDs already fetched, no new data stored
+2026-08-17 03:03:02,360 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:03:03,068 - INFO - [FETCH] Resume list page 371 retrieved
+2026-08-17 03:03:03,069 - INFO - [FETCH-STORE] Page 371: All IDs already fetched, no new data stored
+2026-08-17 03:03:10,030 - INFO - [FETCH] Resume list page 372 retrieved
+2026-08-17 03:03:10,032 - INFO - [FETCH-STORE] Page 372: All IDs already fetched, no new data stored
+2026-08-17 03:03:17,405 - INFO - [EXTRACT] Fresh S3 URL for 6930baa33ef7a7dc8304a7a1 (timestamp: 20260817T030319Z)
+2026-08-17 03:03:20,578 - INFO - [DOWNLOAD] Success: Priyanshu_Rastogi_Python_AI_ML_Resume_WhKl7b_c0ii1w.pdf (226877 bytes) from S3
+2026-08-17 03:03:20,581 - INFO - [RESUME-SKIP] Marked 6930baa33ef7a7dc8304a7a1 as downloaded
+2026-08-17 03:03:20,583 - INFO - [S3-RECOVERY] Stored S3 URL for 6930baa33ef7a7dc8304a7a1
+2026-08-17 03:03:20,584 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:03:20,587 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6930baa33ef7a7dc8304a7a1
+2026-08-17 03:03:24,161 - INFO - [FETCH] Resume list page 373 retrieved
+2026-08-17 03:03:24,162 - INFO - [FETCH-STORE] Page 373: All IDs already fetched, no new data stored
+2026-08-17 03:03:30,588 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:03:31,534 - INFO - [FETCH] Resume list page 374 retrieved
+2026-08-17 03:03:31,535 - INFO - [FETCH-STORE] Page 374: All IDs already fetched, no new data stored
+2026-08-17 03:03:38,602 - INFO - [FETCH] Resume list page 375 retrieved
+2026-08-17 03:03:38,603 - INFO - [FETCH-STORE] Page 375: All IDs already fetched, no new data stored
+2026-08-17 03:03:45,872 - INFO - [EXTRACT] Fresh S3 URL for 6930b315c6363dd316084807 (timestamp: 20260817T030347Z)
+2026-08-17 03:03:49,968 - INFO - [DOWNLOAD] Success: Yasvitha_Resume_kepPzp_kf4anZ.pdf (175490 bytes) from S3
+2026-08-17 03:03:49,971 - INFO - [RESUME-SKIP] Marked 6930b315c6363dd316084807 as downloaded
+2026-08-17 03:03:49,973 - INFO - [S3-RECOVERY] Stored S3 URL for 6930b315c6363dd316084807
+2026-08-17 03:03:49,973 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:03:49,975 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6930b315c6363dd316084807
+2026-08-17 03:03:52,630 - INFO - [FETCH] Resume list page 376 retrieved
+2026-08-17 03:03:52,631 - INFO - [FETCH-STORE] Page 376: All IDs already fetched, no new data stored
+2026-08-17 03:03:59,695 - INFO - [FETCH] Resume list page 377 retrieved
+2026-08-17 03:03:59,696 - INFO - [FETCH-STORE] Page 377: All IDs already fetched, no new data stored
+2026-08-17 03:03:59,977 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:04:06,862 - INFO - [FETCH] Resume list page 378 retrieved
+2026-08-17 03:04:06,864 - INFO - [FETCH-STORE] Page 378: All IDs already fetched, no new data stored
+2026-08-17 03:04:14,032 - INFO - [EXTRACT] Fresh S3 URL for 6930b0fd74e9fc8bad0ee468 (timestamp: 20260817T030415Z)
+2026-08-17 03:04:18,025 - INFO - [DOWNLOAD] Success: Mowzli_Sre_Mohan_Resume_jVRmzW_ynym7r.pdf (224448 bytes) from S3
+2026-08-17 03:04:18,027 - INFO - [RESUME-SKIP] Marked 6930b0fd74e9fc8bad0ee468 as downloaded
+2026-08-17 03:04:18,029 - INFO - [S3-RECOVERY] Stored S3 URL for 6930b0fd74e9fc8bad0ee468
+2026-08-17 03:04:18,030 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:04:18,031 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6930b0fd74e9fc8bad0ee468
+2026-08-17 03:04:20,790 - INFO - [FETCH] Resume list page 379 retrieved
+2026-08-17 03:04:20,792 - INFO - [FETCH-STORE] Page 379: All IDs already fetched, no new data stored
+2026-08-17 03:04:27,854 - INFO - [FETCH] Resume list page 380 retrieved
+2026-08-17 03:04:27,855 - INFO - [FETCH-STORE] Page 380: All IDs already fetched, no new data stored
+2026-08-17 03:04:28,033 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:04:34,920 - INFO - [FETCH] Resume list page 381 retrieved
+2026-08-17 03:04:34,921 - INFO - [FETCH-STORE] Page 381: All IDs already fetched, no new data stored
+2026-08-17 03:04:42,294 - INFO - [EXTRACT] Fresh S3 URL for 6930ac4a294f99f4af0bee3a (timestamp: 20260817T030444Z)
+2026-08-17 03:04:44,753 - INFO - [DOWNLOAD] Success: Vishnu_Java_FSD_EEbWQk_9uQNIS.docx (71015 bytes) from S3
+2026-08-17 03:04:44,755 - INFO - [RESUME-SKIP] Marked 6930ac4a294f99f4af0bee3a as downloaded
+2026-08-17 03:04:44,757 - INFO - [S3-RECOVERY] Stored S3 URL for 6930ac4a294f99f4af0bee3a
+2026-08-17 03:04:44,757 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:04:44,759 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6930ac4a294f99f4af0bee3a
+2026-08-17 03:04:49,051 - INFO - [FETCH] Resume list page 382 retrieved
+2026-08-17 03:04:49,052 - INFO - [FETCH-STORE] Page 382: All IDs already fetched, no new data stored
+2026-08-17 03:04:54,760 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:04:56,117 - INFO - [FETCH] Resume list page 383 retrieved
+2026-08-17 03:04:56,118 - INFO - [FETCH-STORE] Page 383: All IDs already fetched, no new data stored
+2026-08-17 03:05:03,080 - INFO - [FETCH] Resume list page 384 retrieved
+2026-08-17 03:05:03,081 - INFO - [FETCH-STORE] Page 384: All IDs already fetched, no new data stored
+2026-08-17 03:05:10,454 - INFO - [EXTRACT] Fresh S3 URL for 6930abb6294c76edbb031e50 (timestamp: 20260817T030512Z)
+2026-08-17 03:05:12,939 - INFO - [DOWNLOAD] Success: Aarthi_Resume_St3Nxp_sJqzOk.pdf (40079 bytes) from S3
+2026-08-17 03:05:12,941 - INFO - [RESUME-SKIP] Marked 6930abb6294c76edbb031e50 as downloaded
+2026-08-17 03:05:12,943 - INFO - [S3-RECOVERY] Stored S3 URL for 6930abb6294c76edbb031e50
+2026-08-17 03:05:12,944 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:05:12,946 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6930abb6294c76edbb031e50
+2026-08-17 03:05:17,315 - INFO - [FETCH] Resume list page 385 retrieved
+2026-08-17 03:05:17,316 - INFO - [FETCH-STORE] Page 385: All IDs already fetched, no new data stored
+2026-08-17 03:05:22,947 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:05:24,381 - INFO - [FETCH] Resume list page 386 retrieved
+2026-08-17 03:05:24,383 - INFO - [FETCH-STORE] Page 386: All IDs already fetched, no new data stored
+2026-08-17 03:05:31,342 - INFO - [FETCH] Resume list page 387 retrieved
+2026-08-17 03:05:31,343 - INFO - [FETCH-STORE] Page 387: All IDs already fetched, no new data stored
+2026-08-17 03:05:38,305 - INFO - [FETCH] Resume list page 388 retrieved
+2026-08-17 03:05:38,306 - INFO - [FETCH-STORE] Page 388: All IDs already fetched, no new data stored
+2026-08-17 03:05:38,720 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6930a9426f75dab0ae0fca3a
+2026-08-17 03:05:38,721 - ERROR - [DOWNLOAD] No S3 URL found for 6930a9426f75dab0ae0fca3a
+2026-08-17 03:05:38,734 - INFO - [BULLETPROOF] No S3 URL found for 6930a9426f75dab0ae0fca3a - skipping retries
+2026-08-17 03:05:38,734 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6930a9426f75dab0ae0fca3a after all retries
+2026-08-17 03:05:45,372 - INFO - [FETCH] Resume list page 389 retrieved
+2026-08-17 03:05:45,373 - INFO - [FETCH-STORE] Page 389: All IDs already fetched, no new data stored
+2026-08-17 03:05:48,735 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:05:52,538 - INFO - [FETCH] Resume list page 390 retrieved
+2026-08-17 03:05:52,540 - INFO - [FETCH-STORE] Page 390: All IDs already fetched, no new data stored
+2026-08-17 03:06:00,217 - INFO - [EXTRACT] Fresh S3 URL for 69309e4096a25b9ab4037b05 (timestamp: 20260817T030601Z)
+2026-08-17 03:06:02,882 - INFO - [DOWNLOAD] Success: Abhilash_DataEngineer_pZIrVe_G9q4hC.docx (42120 bytes) from S3
+2026-08-17 03:06:02,886 - INFO - [RESUME-SKIP] Marked 69309e4096a25b9ab4037b05 as downloaded
+2026-08-17 03:06:02,888 - INFO - [S3-RECOVERY] Stored S3 URL for 69309e4096a25b9ab4037b05
+2026-08-17 03:06:02,889 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:06:02,890 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69309e4096a25b9ab4037b05
+2026-08-17 03:06:06,671 - INFO - [FETCH] Resume list page 391 retrieved
+2026-08-17 03:06:06,671 - INFO - [FETCH-STORE] Page 391: All IDs already fetched, no new data stored
+2026-08-17 03:06:12,891 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:06:13,736 - INFO - [FETCH] Resume list page 392 retrieved
+2026-08-17 03:06:13,737 - INFO - [FETCH-STORE] Page 392: All IDs already fetched, no new data stored
+2026-08-17 03:06:21,106 - INFO - [FETCH] Resume list page 393 retrieved
+2026-08-17 03:06:21,107 - INFO - [FETCH-STORE] Page 393: All IDs already fetched, no new data stored
+2026-08-17 03:06:28,279 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 693094d2ed9cbef54e054def
+2026-08-17 03:06:28,279 - ERROR - [DOWNLOAD] No S3 URL found for 693094d2ed9cbef54e054def
+2026-08-17 03:06:28,293 - INFO - [BULLETPROOF] No S3 URL found for 693094d2ed9cbef54e054def - skipping retries
+2026-08-17 03:06:28,293 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 693094d2ed9cbef54e054def after all retries
+2026-08-17 03:06:34,934 - INFO - [FETCH] Resume list page 394 retrieved
+2026-08-17 03:06:34,936 - INFO - [FETCH-STORE] Page 394: All IDs already fetched, no new data stored
+2026-08-17 03:06:38,294 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:06:41,998 - INFO - [FETCH] Resume list page 395 retrieved
+2026-08-17 03:06:41,999 - INFO - [FETCH-STORE] Page 395: All IDs already fetched, no new data stored
+2026-08-17 03:06:49,372 - INFO - [EXTRACT] Fresh S3 URL for 69308bf83ef7a7dc8304a77e (timestamp: 20260817T030651Z)
+2026-08-17 03:06:52,447 - INFO - [DOWNLOAD] Success: Tony_Diala_EoBe9X_bvh8aD.pdf (132177 bytes) from S3
+2026-08-17 03:06:52,450 - INFO - [RESUME-SKIP] Marked 69308bf83ef7a7dc8304a77e as downloaded
+2026-08-17 03:06:52,452 - INFO - [S3-RECOVERY] Stored S3 URL for 69308bf83ef7a7dc8304a77e
+2026-08-17 03:06:52,453 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:06:52,454 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69308bf83ef7a7dc8304a77e
+2026-08-17 03:06:56,128 - INFO - [FETCH] Resume list page 396 retrieved
+2026-08-17 03:06:56,130 - INFO - [FETCH-STORE] Page 396: All IDs already fetched, no new data stored
+2026-08-17 03:07:02,456 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:07:03,194 - INFO - [FETCH] Resume list page 397 retrieved
+2026-08-17 03:07:03,195 - INFO - [FETCH-STORE] Page 397: All IDs already fetched, no new data stored
+2026-08-17 03:07:10,157 - INFO - [FETCH] Resume list page 398 retrieved
+2026-08-17 03:07:10,159 - INFO - [FETCH-STORE] Page 398: All IDs already fetched, no new data stored
+2026-08-17 03:07:17,535 - INFO - [EXTRACT] Fresh S3 URL for 693073c546c1c5b36e01a702 (timestamp: 20260817T030719Z)
+2026-08-17 03:07:20,093 - INFO - [DOWNLOAD] Success: Krishna_Gurijala_resume_8b4QmM_oUSioT.docx (63425 bytes) from S3
+2026-08-17 03:07:20,096 - INFO - [RESUME-SKIP] Marked 693073c546c1c5b36e01a702 as downloaded
+2026-08-17 03:07:20,098 - INFO - [S3-RECOVERY] Stored S3 URL for 693073c546c1c5b36e01a702
+2026-08-17 03:07:20,099 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:07:20,101 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693073c546c1c5b36e01a702
+2026-08-17 03:07:24,596 - INFO - [FETCH] Resume list page 399 retrieved
+2026-08-17 03:07:24,597 - INFO - [FETCH-STORE] Page 399: All IDs already fetched, no new data stored
+2026-08-17 03:07:30,102 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:07:31,663 - INFO - [FETCH] Resume list page 400 retrieved
+2026-08-17 03:07:31,665 - INFO - [FETCH-STORE] Page 400: All IDs already fetched, no new data stored
+2026-08-17 03:07:38,626 - INFO - [FETCH] Resume list page 401 retrieved
+2026-08-17 03:07:38,627 - INFO - [FETCH-STORE] Page 401: All IDs already fetched, no new data stored
+2026-08-17 03:07:46,025 - INFO - [EXTRACT] Fresh S3 URL for 69306b8357a72edd2904979e (timestamp: 20260817T030747Z)
+2026-08-17 03:07:49,072 - INFO - [DOWNLOAD] Success: Saraswati_Bhimini_DDCNYC_1__NdFJsE_LEW2bu.docx (105602 bytes) from S3
+2026-08-17 03:07:49,074 - INFO - [RESUME-SKIP] Marked 69306b8357a72edd2904979e as downloaded
+2026-08-17 03:07:49,076 - INFO - [S3-RECOVERY] Stored S3 URL for 69306b8357a72edd2904979e
+2026-08-17 03:07:49,077 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:07:49,079 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69306b8357a72edd2904979e
+2026-08-17 03:07:52,859 - INFO - [FETCH] Resume list page 402 retrieved
+2026-08-17 03:07:52,861 - INFO - [FETCH-STORE] Page 402: All IDs already fetched, no new data stored
+2026-08-17 03:07:59,080 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:07:59,924 - INFO - [FETCH] Resume list page 403 retrieved
+2026-08-17 03:07:59,925 - INFO - [FETCH-STORE] Page 403: All IDs already fetched, no new data stored
+2026-08-17 03:08:06,991 - INFO - [FETCH] Resume list page 404 retrieved
+2026-08-17 03:08:06,992 - INFO - [FETCH-STORE] Page 404: All IDs already fetched, no new data stored
+2026-08-17 03:08:14,364 - INFO - [EXTRACT] Fresh S3 URL for 69305bbec67f099f5a0d825a (timestamp: 20260817T030816Z)
+2026-08-17 03:08:17,331 - INFO - [DOWNLOAD] Success: Anish_Reddy_Devulapally_Resume_R52GeF_oGjgER.pdf (175128 bytes) from S3
+2026-08-17 03:08:17,333 - INFO - [RESUME-SKIP] Marked 69305bbec67f099f5a0d825a as downloaded
+2026-08-17 03:08:17,333 - INFO - [S3-RECOVERY] Stored S3 URL for 69305bbec67f099f5a0d825a
+2026-08-17 03:08:17,334 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:08:17,334 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 69305bbec67f099f5a0d825a
+2026-08-17 03:08:21,122 - INFO - [FETCH] Resume list page 405 retrieved
+2026-08-17 03:08:21,123 - INFO - [FETCH-STORE] Page 405: All IDs already fetched, no new data stored
+2026-08-17 03:08:27,335 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:08:28,289 - INFO - [FETCH] Resume list page 406 retrieved
+2026-08-17 03:08:28,291 - INFO - [FETCH-STORE] Page 406: All IDs already fetched, no new data stored
+2026-08-17 03:08:35,457 - INFO - [FETCH] Resume list page 407 retrieved
+2026-08-17 03:08:35,492 - INFO - [FETCH-STORE] Page 407: All IDs already fetched, no new data stored
+2026-08-17 03:08:42,831 - INFO - [EXTRACT] Fresh S3 URL for 693053b3960351f5f303258f (timestamp: 20260817T030844Z)
+2026-08-17 03:08:45,497 - INFO - [DOWNLOAD] Success: Christopher_Young_Rkd1F0_QESDzi.pdf (78477 bytes) from S3
+2026-08-17 03:08:45,500 - INFO - [RESUME-SKIP] Marked 693053b3960351f5f303258f as downloaded
+2026-08-17 03:08:45,502 - INFO - [S3-RECOVERY] Stored S3 URL for 693053b3960351f5f303258f
+2026-08-17 03:08:45,502 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:08:45,504 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693053b3960351f5f303258f
+2026-08-17 03:08:49,589 - INFO - [FETCH] Resume list page 408 retrieved
+2026-08-17 03:08:49,590 - INFO - [FETCH-STORE] Page 408: All IDs already fetched, no new data stored
+2026-08-17 03:08:55,506 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:08:56,656 - INFO - [FETCH] Resume list page 409 retrieved
+2026-08-17 03:08:56,657 - INFO - [FETCH-STORE] Page 409: All IDs already fetched, no new data stored
+2026-08-17 03:09:03,617 - INFO - [FETCH] Resume list page 410 retrieved
+2026-08-17 03:09:03,619 - INFO - [FETCH-STORE] Page 410: All IDs already fetched, no new data stored
+2026-08-17 03:09:11,112 - INFO - [EXTRACT] Fresh S3 URL for 693002dfa1d9e2ec7800d605 (timestamp: 20260817T030913Z)
+2026-08-17 03:09:13,783 - INFO - [DOWNLOAD] Success: Anthony_Wilson_ZYCZD3_CiLtI9.pdf (134680 bytes) from S3
+2026-08-17 03:09:13,786 - INFO - [RESUME-SKIP] Marked 693002dfa1d9e2ec7800d605 as downloaded
+2026-08-17 03:09:13,788 - INFO - [S3-RECOVERY] Stored S3 URL for 693002dfa1d9e2ec7800d605
+2026-08-17 03:09:13,789 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:09:13,790 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 693002dfa1d9e2ec7800d605
+2026-08-17 03:09:17,954 - INFO - [FETCH] Resume list page 411 retrieved
+2026-08-17 03:09:17,955 - INFO - [FETCH-STORE] Page 411: All IDs already fetched, no new data stored
+2026-08-17 03:09:23,792 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:09:24,917 - INFO - [FETCH] Resume list page 412 retrieved
+2026-08-17 03:09:24,919 - INFO - [FETCH-STORE] Page 412: All IDs already fetched, no new data stored
+2026-08-17 03:09:31,879 - INFO - [FETCH] Resume list page 413 retrieved
+2026-08-17 03:09:31,881 - INFO - [FETCH-STORE] Page 413: All IDs already fetched, no new data stored
+2026-08-17 03:09:39,254 - INFO - [EXTRACT] Fresh S3 URL for 692fca9b5b66827ce50e324d (timestamp: 20260817T030941Z)
+2026-08-17 03:09:42,838 - INFO - [DOWNLOAD] Success: OS_KIRAN_SQE_RESUME_12_25_1N6TAx_eSnQ1O.pdf (219882 bytes) from S3
+2026-08-17 03:09:42,840 - INFO - [RESUME-SKIP] Marked 692fca9b5b66827ce50e324d as downloaded
+2026-08-17 03:09:42,840 - INFO - [S3-RECOVERY] Stored S3 URL for 692fca9b5b66827ce50e324d
+2026-08-17 03:09:42,841 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:09:42,841 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692fca9b5b66827ce50e324d
+2026-08-17 03:09:46,113 - INFO - [FETCH] Resume list page 414 retrieved
+2026-08-17 03:09:46,114 - INFO - [FETCH-STORE] Page 414: All IDs already fetched, no new data stored
+2026-08-17 03:09:52,842 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:09:53,178 - INFO - [FETCH] Resume list page 415 retrieved
+2026-08-17 03:09:53,180 - INFO - [FETCH-STORE] Page 415: All IDs already fetched, no new data stored
+2026-08-17 03:10:00,346 - INFO - [FETCH] Resume list page 416 retrieved
+2026-08-17 03:10:00,348 - INFO - [FETCH-STORE] Page 416: All IDs already fetched, no new data stored
+2026-08-17 03:10:07,628 - INFO - [EXTRACT] Fresh S3 URL for 692fc4f046c1c5b36e01a6b1 (timestamp: 20260817T031009Z)
+2026-08-17 03:10:10,693 - INFO - [DOWNLOAD] Success: Kalaivani_Palaniappan_Resume_2__QubIxH_y6hqpG.pdf (127250 bytes) from S3
+2026-08-17 03:10:10,696 - INFO - [RESUME-SKIP] Marked 692fc4f046c1c5b36e01a6b1 as downloaded
+2026-08-17 03:10:10,698 - INFO - [S3-RECOVERY] Stored S3 URL for 692fc4f046c1c5b36e01a6b1
+2026-08-17 03:10:10,699 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:10:10,701 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692fc4f046c1c5b36e01a6b1
+2026-08-17 03:10:14,580 - INFO - [FETCH] Resume list page 417 retrieved
+2026-08-17 03:10:14,581 - INFO - [FETCH-STORE] Page 417: All IDs already fetched, no new data stored
+2026-08-17 03:10:20,702 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:10:21,646 - INFO - [FETCH] Resume list page 418 retrieved
+2026-08-17 03:10:21,647 - INFO - [FETCH-STORE] Page 418: All IDs already fetched, no new data stored
+2026-08-17 03:10:29,017 - INFO - [FETCH] Resume list page 419 retrieved
+2026-08-17 03:10:29,018 - INFO - [FETCH-STORE] Page 419: All IDs already fetched, no new data stored
+2026-08-17 03:10:36,087 - INFO - [EXTRACT] Fresh S3 URL for 692fb22bf9cc909b870a962a (timestamp: 20260817T031037Z)
+2026-08-17 03:10:39,291 - INFO - [DOWNLOAD] Success: James_Hughes_Senior_Software_Engineer_y1krSH_7Jpokk.pdf (204789 bytes) from S3
+2026-08-17 03:10:39,293 - INFO - [RESUME-SKIP] Marked 692fb22bf9cc909b870a962a as downloaded
+2026-08-17 03:10:39,295 - INFO - [S3-RECOVERY] Stored S3 URL for 692fb22bf9cc909b870a962a
+2026-08-17 03:10:39,296 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:10:39,298 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692fb22bf9cc909b870a962a
+2026-08-17 03:10:42,844 - INFO - [FETCH] Resume list page 420 retrieved
+2026-08-17 03:10:42,846 - INFO - [FETCH-STORE] Page 420: All IDs already fetched, no new data stored
+2026-08-17 03:10:49,300 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:10:49,908 - INFO - [FETCH] Resume list page 421 retrieved
+2026-08-17 03:10:49,910 - INFO - [FETCH-STORE] Page 421: All IDs already fetched, no new data stored
+2026-08-17 03:10:56,973 - INFO - [FETCH] Resume list page 422 retrieved
+2026-08-17 03:10:56,973 - INFO - [FETCH-STORE] Page 422: All IDs already fetched, no new data stored
+2026-08-17 03:11:04,247 - INFO - [EXTRACT] Fresh S3 URL for 692fb03dddb6c06b1c0fd9da (timestamp: 20260817T031106Z)
+2026-08-17 03:11:07,754 - INFO - [DOWNLOAD] Success: CV_AIALL_PrashantS_Nov2025_1vFo6y_nZdIY4.docx (225087 bytes) from S3
+2026-08-17 03:11:07,757 - INFO - [RESUME-SKIP] Marked 692fb03dddb6c06b1c0fd9da as downloaded
+2026-08-17 03:11:07,759 - INFO - [S3-RECOVERY] Stored S3 URL for 692fb03dddb6c06b1c0fd9da
+2026-08-17 03:11:07,760 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:11:07,761 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692fb03dddb6c06b1c0fd9da
+2026-08-17 03:11:11,105 - INFO - [FETCH] Resume list page 423 retrieved
+2026-08-17 03:11:11,106 - INFO - [FETCH-STORE] Page 423: All IDs already fetched, no new data stored
+2026-08-17 03:11:17,762 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:11:18,170 - INFO - [FETCH] Resume list page 424 retrieved
+2026-08-17 03:11:18,171 - INFO - [FETCH-STORE] Page 424: All IDs already fetched, no new data stored
+2026-08-17 03:11:25,237 - INFO - [FETCH] Resume list page 425 retrieved
+2026-08-17 03:11:25,238 - INFO - [FETCH-STORE] Page 425: All IDs already fetched, no new data stored
+2026-08-17 03:11:32,739 - INFO - [EXTRACT] Fresh S3 URL for 692fb036b054df7b85000dc3 (timestamp: 20260817T031134Z)
+2026-08-17 03:11:36,737 - INFO - [DOWNLOAD] Success: CV_AIALL_PrashantS_Nov2025_kG8EFX_2gka2i.docx (225087 bytes) from S3
+2026-08-17 03:11:36,740 - INFO - [RESUME-SKIP] Marked 692fb036b054df7b85000dc3 as downloaded
+2026-08-17 03:11:36,742 - INFO - [S3-RECOVERY] Stored S3 URL for 692fb036b054df7b85000dc3
+2026-08-17 03:11:36,742 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:11:36,744 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692fb036b054df7b85000dc3
+2026-08-17 03:11:39,471 - INFO - [FETCH] Resume list page 426 retrieved
+2026-08-17 03:11:39,472 - INFO - [FETCH-STORE] Page 426: All IDs already fetched, no new data stored
+2026-08-17 03:11:46,638 - INFO - [FETCH] Resume list page 427 retrieved
+2026-08-17 03:11:46,639 - INFO - [FETCH-STORE] Page 427: All IDs already fetched, no new data stored
+2026-08-17 03:11:46,745 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:11:54,111 - INFO - [FETCH] Resume list page 428 retrieved
+2026-08-17 03:11:54,112 - INFO - [FETCH-STORE] Page 428: All IDs already fetched, no new data stored
+2026-08-17 03:12:01,077 - INFO - [EXTRACT] Fresh S3 URL for 692faa9fe766fa803b0a059c (timestamp: 20260817T031202Z)
+2026-08-17 03:12:03,739 - INFO - [DOWNLOAD] Success: Srinivas_Fiori_Consultant_Resume_L9QwD2_6bVFXg.docx (28901 bytes) from S3
+2026-08-17 03:12:03,741 - INFO - [RESUME-SKIP] Marked 692faa9fe766fa803b0a059c as downloaded
+2026-08-17 03:12:03,743 - INFO - [S3-RECOVERY] Stored S3 URL for 692faa9fe766fa803b0a059c
+2026-08-17 03:12:03,744 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:12:03,745 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692faa9fe766fa803b0a059c
+2026-08-17 03:12:07,835 - INFO - [FETCH] Resume list page 429 retrieved
+2026-08-17 03:12:07,836 - INFO - [FETCH-STORE] Page 429: All IDs already fetched, no new data stored
+2026-08-17 03:12:13,747 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:12:15,002 - INFO - [FETCH] Resume list page 430 retrieved
+2026-08-17 03:12:15,002 - INFO - [FETCH-STORE] Page 430: All IDs already fetched, no new data stored
+2026-08-17 03:12:21,966 - INFO - [FETCH] Resume list page 431 retrieved
+2026-08-17 03:12:21,967 - INFO - [FETCH-STORE] Page 431: All IDs already fetched, no new data stored
+2026-08-17 03:12:29,370 - INFO - [EXTRACT] Fresh S3 URL for 692f9579d243110c1c08fe79 (timestamp: 20260817T031231Z)
+2026-08-17 03:12:31,933 - INFO - [DOWNLOAD] Success: Java_Full_Stack_Developer_Bharathi_Kodavatikanti_3_updated_b1lvKD_FBM5HI.docx (35517 bytes) from S3
+2026-08-17 03:12:31,935 - INFO - [RESUME-SKIP] Marked 692f9579d243110c1c08fe79 as downloaded
+2026-08-17 03:12:31,937 - INFO - [S3-RECOVERY] Stored S3 URL for 692f9579d243110c1c08fe79
+2026-08-17 03:12:31,938 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:12:31,940 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f9579d243110c1c08fe79
+2026-08-17 03:12:36,097 - INFO - [FETCH] Resume list page 432 retrieved
+2026-08-17 03:12:36,099 - INFO - [FETCH-STORE] Page 432: All IDs already fetched, no new data stored
+2026-08-17 03:12:41,941 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:12:43,162 - INFO - [FETCH] Resume list page 433 retrieved
+2026-08-17 03:12:43,164 - INFO - [FETCH-STORE] Page 433: All IDs already fetched, no new data stored
+2026-08-17 03:12:50,227 - INFO - [FETCH] Resume list page 434 retrieved
+2026-08-17 03:12:50,228 - INFO - [FETCH-STORE] Page 434: All IDs already fetched, no new data stored
+2026-08-17 03:12:57,603 - INFO - [EXTRACT] Fresh S3 URL for 692f6800294f99f4af0bed9b (timestamp: 20260817T031259Z)
+2026-08-17 03:12:59,757 - INFO - [DOWNLOAD] Success: Wei_nFS_qNlp9n_bh8HfO.docx (17462 bytes) from S3
+2026-08-17 03:12:59,759 - INFO - [RESUME-SKIP] Marked 692f6800294f99f4af0bed9b as downloaded
+2026-08-17 03:12:59,762 - INFO - [S3-RECOVERY] Stored S3 URL for 692f6800294f99f4af0bed9b
+2026-08-17 03:12:59,762 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:12:59,764 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f6800294f99f4af0bed9b
+2026-08-17 03:13:04,359 - INFO - [FETCH] Resume list page 435 retrieved
+2026-08-17 03:13:04,360 - INFO - [FETCH-STORE] Page 435: All IDs already fetched, no new data stored
+2026-08-17 03:13:09,765 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:13:11,425 - INFO - [FETCH] Resume list page 436 retrieved
+2026-08-17 03:13:11,426 - INFO - [FETCH-STORE] Page 436: All IDs already fetched, no new data stored
+2026-08-17 03:13:18,489 - INFO - [FETCH] Resume list page 437 retrieved
+2026-08-17 03:13:18,491 - INFO - [FETCH-STORE] Page 437: All IDs already fetched, no new data stored
+2026-08-17 03:13:25,865 - INFO - [EXTRACT] Fresh S3 URL for 692f6444b054df7b85000da5 (timestamp: 20260817T031327Z)
+2026-08-17 03:13:29,451 - INFO - [DOWNLOAD] Success: NickMitchell_FS_nVEIjs_GP3UhP.pdf (227370 bytes) from S3
+2026-08-17 03:13:29,452 - INFO - [RESUME-SKIP] Marked 692f6444b054df7b85000da5 as downloaded
+2026-08-17 03:13:29,454 - INFO - [S3-RECOVERY] Stored S3 URL for 692f6444b054df7b85000da5
+2026-08-17 03:13:29,454 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:13:29,455 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f6444b054df7b85000da5
+2026-08-17 03:13:33,030 - INFO - [FETCH] Resume list page 438 retrieved
+2026-08-17 03:13:33,031 - INFO - [FETCH-STORE] Page 438: All IDs already fetched, no new data stored
+2026-08-17 03:13:39,456 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:13:40,098 - INFO - [FETCH] Resume list page 439 retrieved
+2026-08-17 03:13:40,099 - INFO - [FETCH-STORE] Page 439: All IDs already fetched, no new data stored
+2026-08-17 03:13:47,164 - INFO - [FETCH] Resume list page 440 retrieved
+2026-08-17 03:13:47,165 - INFO - [FETCH-STORE] Page 440: All IDs already fetched, no new data stored
+2026-08-17 03:13:54,538 - INFO - [EXTRACT] Fresh S3 URL for 692f48cb57a72edd29049712 (timestamp: 20260817T031356Z)
+2026-08-17 03:13:57,608 - INFO - [DOWNLOAD] Success: Yifei_Chen_jgAW5D_iqWwoo.pdf (93009 bytes) from S3
+2026-08-17 03:13:57,610 - INFO - [RESUME-SKIP] Marked 692f48cb57a72edd29049712 as downloaded
+2026-08-17 03:13:57,613 - INFO - [S3-RECOVERY] Stored S3 URL for 692f48cb57a72edd29049712
+2026-08-17 03:13:57,614 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:13:57,617 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f48cb57a72edd29049712
+2026-08-17 03:14:01,294 - INFO - [FETCH] Resume list page 441 retrieved
+2026-08-17 03:14:01,295 - INFO - [FETCH-STORE] Page 441: All IDs already fetched, no new data stored
+2026-08-17 03:14:07,619 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:14:08,462 - INFO - [FETCH] Resume list page 442 retrieved
+2026-08-17 03:14:08,464 - INFO - [FETCH-STORE] Page 442: All IDs already fetched, no new data stored
+2026-08-17 03:14:15,527 - INFO - [FETCH] Resume list page 443 retrieved
+2026-08-17 03:14:15,528 - INFO - [FETCH-STORE] Page 443: All IDs already fetched, no new data stored
+2026-08-17 03:14:22,799 - INFO - [EXTRACT] Fresh S3 URL for 692f463ad243110c1c08fe4e (timestamp: 20260817T031424Z)
+2026-08-17 03:14:25,162 - INFO - [DOWNLOAD] Success: Renzo_Lobo_Resume_Nov_11_2025_Bc1hpN_ReyA8M.docx (18692 bytes) from S3
+2026-08-17 03:14:25,163 - INFO - [RESUME-SKIP] Marked 692f463ad243110c1c08fe4e as downloaded
+2026-08-17 03:14:25,163 - INFO - [S3-RECOVERY] Stored S3 URL for 692f463ad243110c1c08fe4e
+2026-08-17 03:14:25,164 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:14:25,164 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f463ad243110c1c08fe4e
+2026-08-17 03:14:29,551 - INFO - [FETCH] Resume list page 444 retrieved
+2026-08-17 03:14:29,552 - INFO - [FETCH-STORE] Page 444: All IDs already fetched, no new data stored
+2026-08-17 03:14:35,165 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:14:36,514 - INFO - [FETCH] Resume list page 445 retrieved
+2026-08-17 03:14:36,515 - INFO - [FETCH-STORE] Page 445: All IDs already fetched, no new data stored
+2026-08-17 03:14:43,886 - INFO - [FETCH] Resume list page 446 retrieved
+2026-08-17 03:14:43,887 - INFO - [FETCH-STORE] Page 446: All IDs already fetched, no new data stored
+2026-08-17 03:14:50,885 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 692f423ee766fa803b0a0575
+2026-08-17 03:14:50,885 - ERROR - [DOWNLOAD] No S3 URL found for 692f423ee766fa803b0a0575
+2026-08-17 03:14:50,891 - INFO - [BULLETPROOF] No S3 URL found for 692f423ee766fa803b0a0575 - skipping retries
+2026-08-17 03:14:50,891 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 692f423ee766fa803b0a0575 after all retries
+2026-08-17 03:14:57,609 - INFO - [FETCH] Resume list page 447 retrieved
+2026-08-17 03:14:57,610 - INFO - [FETCH-STORE] Page 447: All IDs already fetched, no new data stored
+2026-08-17 03:15:00,892 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:15:04,674 - INFO - [FETCH] Resume list page 448 retrieved
+2026-08-17 03:15:04,675 - INFO - [FETCH-STORE] Page 448: All IDs already fetched, no new data stored
+2026-08-17 03:15:12,048 - INFO - [EXTRACT] Fresh S3 URL for 692f316496a25b9ab4037a3c (timestamp: 20260817T031513Z)
+2026-08-17 03:15:14,711 - INFO - [DOWNLOAD] Success: Venkata_Java_Full_Stack_dFw4TT_wWMqPl.docx (45659 bytes) from S3
+2026-08-17 03:15:14,714 - INFO - [RESUME-SKIP] Marked 692f316496a25b9ab4037a3c as downloaded
+2026-08-17 03:15:14,716 - INFO - [S3-RECOVERY] Stored S3 URL for 692f316496a25b9ab4037a3c
+2026-08-17 03:15:14,717 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:15:14,719 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f316496a25b9ab4037a3c
+2026-08-17 03:15:18,908 - INFO - [FETCH] Resume list page 449 retrieved
+2026-08-17 03:15:18,909 - INFO - [FETCH-STORE] Page 449: All IDs already fetched, no new data stored
+2026-08-17 03:15:24,719 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:15:25,973 - INFO - [FETCH] Resume list page 450 retrieved
+2026-08-17 03:15:25,974 - INFO - [FETCH-STORE] Page 450: All IDs already fetched, no new data stored
+2026-08-17 03:15:33,039 - INFO - [FETCH] Resume list page 451 retrieved
+2026-08-17 03:15:33,040 - INFO - [FETCH-STORE] Page 451: All IDs already fetched, no new data stored
+2026-08-17 03:15:40,516 - INFO - [EXTRACT] Fresh S3 URL for 692f30c7ed9cbef54e054d46 (timestamp: 20260817T031542Z)
+2026-08-17 03:15:46,351 - INFO - [DOWNLOAD] Success: Pranjalee_Kshirsagar_B_XGw3jX_5YxRcm.pdf (803804 bytes) from S3
+2026-08-17 03:15:46,353 - INFO - [RESUME-SKIP] Marked 692f30c7ed9cbef54e054d46 as downloaded
+2026-08-17 03:15:46,354 - INFO - [S3-RECOVERY] Stored S3 URL for 692f30c7ed9cbef54e054d46
+2026-08-17 03:15:46,354 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:15:46,354 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f30c7ed9cbef54e054d46
+2026-08-17 03:15:47,273 - INFO - [FETCH] Resume list page 452 retrieved
+2026-08-17 03:15:47,274 - INFO - [FETCH-STORE] Page 452: All IDs already fetched, no new data stored
+2026-08-17 03:15:54,339 - INFO - [FETCH] Resume list page 453 retrieved
+2026-08-17 03:15:54,340 - INFO - [FETCH-STORE] Page 453: All IDs already fetched, no new data stored
+2026-08-17 03:15:56,356 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:16:01,710 - INFO - [FETCH] Resume list page 454 retrieved
+2026-08-17 03:16:01,711 - INFO - [FETCH-STORE] Page 454: All IDs already fetched, no new data stored
+2026-08-17 03:16:08,781 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6930a9426f75dab0ae0fca3a
+2026-08-17 03:16:08,782 - ERROR - [DOWNLOAD] No S3 URL found for 6930a9426f75dab0ae0fca3a
+2026-08-17 03:16:08,796 - INFO - [BULLETPROOF] No S3 URL found for 6930a9426f75dab0ae0fca3a - skipping retries
+2026-08-17 03:16:08,797 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6930a9426f75dab0ae0fca3a after all retries
+2026-08-17 03:16:15,536 - INFO - [FETCH] Resume list page 455 retrieved
+2026-08-17 03:16:15,537 - INFO - [FETCH-STORE] Page 455: All IDs already fetched, no new data stored
+2026-08-17 03:16:18,798 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:16:22,499 - INFO - [FETCH] Resume list page 456 retrieved
+2026-08-17 03:16:22,500 - INFO - [FETCH-STORE] Page 456: All IDs already fetched, no new data stored
+2026-08-17 03:16:29,873 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 693094d2ed9cbef54e054def
+2026-08-17 03:16:29,874 - ERROR - [DOWNLOAD] No S3 URL found for 693094d2ed9cbef54e054def
+2026-08-17 03:16:29,888 - INFO - [BULLETPROOF] No S3 URL found for 693094d2ed9cbef54e054def - skipping retries
+2026-08-17 03:16:29,888 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 693094d2ed9cbef54e054def after all retries
+2026-08-17 03:16:36,630 - INFO - [FETCH] Resume list page 457 retrieved
+2026-08-17 03:16:36,631 - INFO - [FETCH-STORE] Page 457: All IDs already fetched, no new data stored
+2026-08-17 03:16:39,889 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:16:43,695 - INFO - [FETCH] Resume list page 458 retrieved
+2026-08-17 03:16:43,696 - INFO - [FETCH-STORE] Page 458: All IDs already fetched, no new data stored
+2026-08-17 03:16:51,090 - INFO - [EXTRACT] Fresh S3 URL for 692f2e21960351f5f3032509 (timestamp: 20260817T031652Z)
+2026-08-17 03:16:53,324 - INFO - [DOWNLOAD] Success: Yamini_Java_FSD_QFHw1I_n2xMbs.docx (22711 bytes) from S3
+2026-08-17 03:16:53,326 - INFO - [RESUME-SKIP] Marked 692f2e21960351f5f3032509 as downloaded
+2026-08-17 03:16:53,328 - INFO - [S3-RECOVERY] Stored S3 URL for 692f2e21960351f5f3032509
+2026-08-17 03:16:53,329 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:16:53,330 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f2e21960351f5f3032509
+2026-08-17 03:16:58,236 - INFO - [FETCH] Resume list page 459 retrieved
+2026-08-17 03:16:58,237 - INFO - [FETCH-STORE] Page 459: All IDs already fetched, no new data stored
+2026-08-17 03:17:03,331 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:17:05,915 - INFO - [FETCH] Resume list page 460 retrieved
+2026-08-17 03:17:05,917 - INFO - [FETCH-STORE] Page 460: All IDs already fetched, no new data stored
+2026-08-17 03:17:13,305 - INFO - [EXTRACT] Fresh S3 URL for 692f1831787f1800930768e5 (timestamp: 20260817T031715Z)
+2026-08-17 03:17:16,570 - INFO - [DOWNLOAD] Success: Akbar_Shaik_FMPYyG_sGEqRC.pdf (206850 bytes) from S3
+2026-08-17 03:17:16,573 - INFO - [RESUME-SKIP] Marked 692f1831787f1800930768e5 as downloaded
+2026-08-17 03:17:16,575 - INFO - [S3-RECOVERY] Stored S3 URL for 692f1831787f1800930768e5
+2026-08-17 03:17:16,575 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:17:16,577 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f1831787f1800930768e5
+2026-08-17 03:17:20,353 - INFO - [FETCH] Resume list page 461 retrieved
+2026-08-17 03:17:20,354 - INFO - [FETCH-STORE] Page 461: All IDs already fetched, no new data stored
+2026-08-17 03:17:26,579 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:17:27,420 - INFO - [FETCH] Resume list page 462 retrieved
+2026-08-17 03:17:27,421 - INFO - [FETCH-STORE] Page 462: All IDs already fetched, no new data stored
+2026-08-17 03:17:34,487 - INFO - [FETCH] Resume list page 463 retrieved
+2026-08-17 03:17:34,488 - INFO - [FETCH-STORE] Page 463: All IDs already fetched, no new data stored
+2026-08-17 03:17:41,756 - INFO - [EXTRACT] Fresh S3 URL for 692f1035283ced74df02a099 (timestamp: 20260817T031743Z)
+2026-08-17 03:17:44,349 - INFO - [DOWNLOAD] Success: MEGHANA_DONTHI_gz6ffa_wVQVMT.docx (57866 bytes) from S3
+2026-08-17 03:17:44,352 - INFO - [RESUME-SKIP] Marked 692f1035283ced74df02a099 as downloaded
+2026-08-17 03:17:44,352 - INFO - [S3-RECOVERY] Stored S3 URL for 692f1035283ced74df02a099
+2026-08-17 03:17:44,353 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:17:44,353 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f1035283ced74df02a099
+2026-08-17 03:17:48,617 - INFO - [FETCH] Resume list page 464 retrieved
+2026-08-17 03:17:48,618 - INFO - [FETCH-STORE] Page 464: All IDs already fetched, no new data stored
+2026-08-17 03:17:54,354 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:17:55,682 - INFO - [FETCH] Resume list page 465 retrieved
+2026-08-17 03:17:55,683 - INFO - [FETCH-STORE] Page 465: All IDs already fetched, no new data stored
+2026-08-17 03:18:02,748 - INFO - [FETCH] Resume list page 466 retrieved
+2026-08-17 03:18:02,749 - INFO - [FETCH-STORE] Page 466: All IDs already fetched, no new data stored
+2026-08-17 03:18:10,121 - INFO - [EXTRACT] Fresh S3 URL for 692f0c0874e9fc8bad0ee387 (timestamp: 20260817T031811Z)
+2026-08-17 03:18:14,356 - INFO - [DOWNLOAD] Success: NeetaJain_Resume_11_1_2025_docx_w7fs9v_AgxD5T.pdf (702136 bytes) from S3
+2026-08-17 03:18:14,359 - INFO - [RESUME-SKIP] Marked 692f0c0874e9fc8bad0ee387 as downloaded
+2026-08-17 03:18:14,361 - INFO - [S3-RECOVERY] Stored S3 URL for 692f0c0874e9fc8bad0ee387
+2026-08-17 03:18:14,361 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:18:14,363 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f0c0874e9fc8bad0ee387
+2026-08-17 03:18:16,878 - INFO - [FETCH] Resume list page 467 retrieved
+2026-08-17 03:18:16,880 - INFO - [FETCH-STORE] Page 467: All IDs already fetched, no new data stored
+2026-08-17 03:18:23,944 - INFO - [FETCH] Resume list page 468 retrieved
+2026-08-17 03:18:23,945 - INFO - [FETCH-STORE] Page 468: All IDs already fetched, no new data stored
+2026-08-17 03:18:24,364 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:18:31,009 - INFO - [FETCH] Resume list page 469 retrieved
+2026-08-17 03:18:31,011 - INFO - [FETCH-STORE] Page 469: All IDs already fetched, no new data stored
+2026-08-17 03:18:38,384 - INFO - [EXTRACT] Fresh S3 URL for 692f0ab1d1d23bd57b0fc5d4 (timestamp: 20260817T031840Z)
+2026-08-17 03:18:41,787 - INFO - [DOWNLOAD] Success: RajeshChowdary_Bandi_Fusion_SCM_Techno_Functional__98piWP_8PBSKl.docx (27628 bytes) from S3
+2026-08-17 03:18:41,790 - INFO - [RESUME-SKIP] Marked 692f0ab1d1d23bd57b0fc5d4 as downloaded
+2026-08-17 03:18:41,792 - INFO - [S3-RECOVERY] Stored S3 URL for 692f0ab1d1d23bd57b0fc5d4
+2026-08-17 03:18:41,792 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:18:41,794 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692f0ab1d1d23bd57b0fc5d4
+2026-08-17 03:18:45,140 - INFO - [FETCH] Resume list page 470 retrieved
+2026-08-17 03:18:45,141 - INFO - [FETCH-STORE] Page 470: All IDs already fetched, no new data stored
+2026-08-17 03:18:51,796 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:18:52,207 - INFO - [FETCH] Resume list page 471 retrieved
+2026-08-17 03:18:52,208 - INFO - [FETCH-STORE] Page 471: All IDs already fetched, no new data stored
+2026-08-17 03:18:59,272 - INFO - [FETCH] Resume list page 472 retrieved
+2026-08-17 03:18:59,273 - INFO - [FETCH-STORE] Page 472: All IDs already fetched, no new data stored
+2026-08-17 03:19:06,643 - INFO - [EXTRACT] Fresh S3 URL for 692efd4c947286021f014080 (timestamp: 20260817T031908Z)
+2026-08-17 03:19:10,125 - INFO - [DOWNLOAD] Success: Bryan_West_fihjmI_HtwyAz.pdf (173198 bytes) from S3
+2026-08-17 03:19:10,126 - INFO - [RESUME-SKIP] Marked 692efd4c947286021f014080 as downloaded
+2026-08-17 03:19:10,127 - INFO - [S3-RECOVERY] Stored S3 URL for 692efd4c947286021f014080
+2026-08-17 03:19:10,127 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:19:10,127 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692efd4c947286021f014080
+2026-08-17 03:19:13,301 - INFO - [FETCH] Resume list page 473 retrieved
+2026-08-17 03:19:13,302 - INFO - [FETCH-STORE] Page 473: All IDs already fetched, no new data stored
+2026-08-17 03:19:20,128 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:19:20,366 - INFO - [FETCH] Resume list page 474 retrieved
+2026-08-17 03:19:20,367 - INFO - [FETCH-STORE] Page 474: All IDs already fetched, no new data stored
+2026-08-17 03:19:27,432 - INFO - [FETCH] Resume list page 475 retrieved
+2026-08-17 03:19:27,433 - INFO - [FETCH-STORE] Page 475: All IDs already fetched, no new data stored
+2026-08-17 03:19:34,744 - INFO - [EXTRACT] Fresh S3 URL for 692efcdc5b66827ce50e31d4 (timestamp: 20260817T031936Z)
+2026-08-17 03:19:37,570 - INFO - [DOWNLOAD] Success: William_Wenlai_Zhang_Resume_glfdpd_mo6YnD.pdf (58202 bytes) from S3
+2026-08-17 03:19:37,573 - INFO - [RESUME-SKIP] Marked 692efcdc5b66827ce50e31d4 as downloaded
+2026-08-17 03:19:37,575 - INFO - [S3-RECOVERY] Stored S3 URL for 692efcdc5b66827ce50e31d4
+2026-08-17 03:19:37,576 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:19:37,577 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692efcdc5b66827ce50e31d4
+2026-08-17 03:19:41,460 - INFO - [FETCH] Resume list page 476 retrieved
+2026-08-17 03:19:41,461 - INFO - [FETCH-STORE] Page 476: All IDs already fetched, no new data stored
+2026-08-17 03:19:47,580 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:19:48,526 - INFO - [FETCH] Resume list page 477 retrieved
+2026-08-17 03:19:48,528 - INFO - [FETCH-STORE] Page 477: All IDs already fetched, no new data stored
+2026-08-17 03:19:55,592 - INFO - [FETCH] Resume list page 478 retrieved
+2026-08-17 03:19:55,593 - INFO - [FETCH-STORE] Page 478: All IDs already fetched, no new data stored
+2026-08-17 03:20:02,966 - INFO - [EXTRACT] Fresh S3 URL for 692ef68679c2c7d5100879a3 (timestamp: 20260817T032004Z)
+2026-08-17 03:20:05,730 - INFO - [DOWNLOAD] Success: Alvin_iOS_5U9IxO_Iot7sJ.pdf (69515 bytes) from S3
+2026-08-17 03:20:05,731 - INFO - [RESUME-SKIP] Marked 692ef68679c2c7d5100879a3 as downloaded
+2026-08-17 03:20:05,734 - INFO - [S3-RECOVERY] Stored S3 URL for 692ef68679c2c7d5100879a3
+2026-08-17 03:20:05,734 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:20:05,735 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692ef68679c2c7d5100879a3
+2026-08-17 03:20:09,723 - INFO - [FETCH] Resume list page 479 retrieved
+2026-08-17 03:20:09,725 - INFO - [FETCH-STORE] Page 479: All IDs already fetched, no new data stored
+2026-08-17 03:20:15,737 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:20:16,685 - INFO - [FETCH] Resume list page 480 retrieved
+2026-08-17 03:20:16,685 - INFO - [FETCH-STORE] Page 480: All IDs already fetched, no new data stored
+2026-08-17 03:20:23,854 - INFO - [FETCH] Resume list page 481 retrieved
+2026-08-17 03:20:23,855 - INFO - [FETCH-STORE] Page 481: All IDs already fetched, no new data stored
+2026-08-17 03:20:31,158 - INFO - [EXTRACT] Fresh S3 URL for 692ed6dcf9cc909b870a95aa (timestamp: 20260817T032033Z)
+2026-08-17 03:20:34,112 - INFO - [DOWNLOAD] Success: Ben_Robles_7k2Dpm_YYUIYs.pdf (168479 bytes) from S3
+2026-08-17 03:20:34,114 - INFO - [RESUME-SKIP] Marked 692ed6dcf9cc909b870a95aa as downloaded
+2026-08-17 03:20:34,116 - INFO - [S3-RECOVERY] Stored S3 URL for 692ed6dcf9cc909b870a95aa
+2026-08-17 03:20:34,116 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:20:34,118 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692ed6dcf9cc909b870a95aa
+2026-08-17 03:20:37,883 - INFO - [FETCH] Resume list page 482 retrieved
+2026-08-17 03:20:37,884 - INFO - [FETCH-STORE] Page 482: All IDs already fetched, no new data stored
+2026-08-17 03:20:44,120 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:20:45,255 - INFO - [FETCH] Resume list page 483 retrieved
+2026-08-17 03:20:45,256 - INFO - [FETCH-STORE] Page 483: All IDs already fetched, no new data stored
+2026-08-17 03:20:52,325 - INFO - [FETCH] Resume list page 484 retrieved
+2026-08-17 03:20:52,325 - INFO - [FETCH-STORE] Page 484: All IDs already fetched, no new data stored
+2026-08-17 03:20:54,267 - INFO - [EXTRACT] Fresh S3 URL for 692ec883960351f5f30324c3 (timestamp: 20260817T032056Z)
+2026-08-17 03:20:57,242 - INFO - [DOWNLOAD] Success: Jesse_Yu_Resume_jkMKfH_VC2bhg.pdf (123569 bytes) from S3
+2026-08-17 03:20:57,245 - INFO - [RESUME-SKIP] Marked 692ec883960351f5f30324c3 as downloaded
+2026-08-17 03:20:57,247 - INFO - [S3-RECOVERY] Stored S3 URL for 692ec883960351f5f30324c3
+2026-08-17 03:20:57,247 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:20:57,249 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692ec883960351f5f30324c3
+2026-08-17 03:20:59,386 - INFO - [FETCH] Resume list page 485 retrieved
+2026-08-17 03:20:59,386 - INFO - [FETCH-STORE] Page 485: All IDs already fetched, no new data stored
+2026-08-17 03:21:06,451 - INFO - [FETCH] Resume list page 486 retrieved
+2026-08-17 03:21:06,452 - INFO - [FETCH-STORE] Page 486: All IDs already fetched, no new data stored
+2026-08-17 03:21:07,250 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:21:13,312 - INFO - [FETCH] Resume list page 487 retrieved
+2026-08-17 03:21:13,314 - INFO - [FETCH-STORE] Page 487: All IDs already fetched, no new data stored
+2026-08-17 03:21:20,689 - INFO - [EXTRACT] Fresh S3 URL for 692e8e3f3ef7a7dc8304a683 (timestamp: 20260817T032122Z)
+2026-08-17 03:21:22,960 - INFO - [DOWNLOAD] Success: Rushali_Singh_Resume_ZrjS3l_JPW2L2.docx (18605 bytes) from S3
+2026-08-17 03:21:22,963 - INFO - [RESUME-SKIP] Marked 692e8e3f3ef7a7dc8304a683 as downloaded
+2026-08-17 03:21:22,966 - INFO - [S3-RECOVERY] Stored S3 URL for 692e8e3f3ef7a7dc8304a683
+2026-08-17 03:21:22,967 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:21:22,970 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692e8e3f3ef7a7dc8304a683
+2026-08-17 03:21:27,444 - INFO - [FETCH] Resume list page 488 retrieved
+2026-08-17 03:21:27,445 - INFO - [FETCH-STORE] Page 488: All IDs already fetched, no new data stored
+2026-08-17 03:21:32,971 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:21:34,816 - INFO - [FETCH] Resume list page 489 retrieved
+2026-08-17 03:21:34,817 - INFO - [FETCH-STORE] Page 489: All IDs already fetched, no new data stored
+2026-08-17 03:21:41,883 - INFO - [FETCH] Resume list page 490 retrieved
+2026-08-17 03:21:41,883 - INFO - [FETCH-STORE] Page 490: All IDs already fetched, no new data stored
+2026-08-17 03:21:49,257 - INFO - [EXTRACT] Fresh S3 URL for 692e743b787f18009307688d (timestamp: 20260817T032151Z)
+2026-08-17 03:21:52,532 - INFO - [DOWNLOAD] Success: Roshan_Prabhu_s_Resume_Ct7mf9_e3xJ0c.pdf (94209 bytes) from S3
+2026-08-17 03:21:52,533 - INFO - [RESUME-SKIP] Marked 692e743b787f18009307688d as downloaded
+2026-08-17 03:21:52,534 - INFO - [S3-RECOVERY] Stored S3 URL for 692e743b787f18009307688d
+2026-08-17 03:21:52,535 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-17 03:21:52,536 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 692e743b787f18009307688d
+2026-08-17 03:21:56,115 - INFO - [FETCH] Resume list page 491 retrieved
+2026-08-17 03:21:56,117 - INFO - [FETCH-STORE] Page 491: All IDs already fetched, no new data stored
+2026-08-17 03:22:02,536 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 03:22:03,182 - INFO - [FETCH] Resume list page 492 retrieved
+2026-08-17 03:22:03,184 - INFO - [FETCH-STORE] Page 492: All IDs already fetched, no new data stored
