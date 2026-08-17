@@ -67,3 +67,38 @@
 2026-08-17 01:27:08,058 - INFO - [FETCH] Resume list page 205 retrieved
 2026-08-17 01:27:08,059 - INFO - [FETCH-STORE] Page 205: All IDs already fetched, no new data stored
 2026-08-17 01:27:11,282 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:27:15,394 - INFO - [FETCH] Resume list page 206 retrieved
+2026-08-17 01:27:15,394 - INFO - [FETCH-STORE] Page 206: All IDs already fetched, no new data stored
+2026-08-17 01:27:22,568 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 693b2eef9fe60e44d60b817f
+2026-08-17 01:27:22,569 - ERROR - [DOWNLOAD] No S3 URL found for 693b2eef9fe60e44d60b817f
+2026-08-17 01:27:22,582 - INFO - [BULLETPROOF] No S3 URL found for 693b2eef9fe60e44d60b817f - skipping retries
+2026-08-17 01:27:22,582 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 693b2eef9fe60e44d60b817f after all retries
+2026-08-17 01:27:29,429 - INFO - [FETCH] Resume list page 207 retrieved
+2026-08-17 01:27:29,430 - INFO - [FETCH-STORE] Page 207: All IDs already fetched, no new data stored
+2026-08-17 01:27:32,583 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:27:36,424 - INFO - [FETCH] Resume list page 208 retrieved
+2026-08-17 01:27:36,424 - INFO - [FETCH-STORE] Page 208: All IDs already fetched, no new data stored
+2026-08-17 01:27:43,795 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 693b06991f5534ad8007e62e
+2026-08-17 01:27:43,795 - ERROR - [DOWNLOAD] No S3 URL found for 693b06991f5534ad8007e62e
+2026-08-17 01:27:43,808 - INFO - [BULLETPROOF] No S3 URL found for 693b06991f5534ad8007e62e - skipping retries
+2026-08-17 01:27:43,809 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 693b06991f5534ad8007e62e after all retries
+2026-08-17 01:27:50,555 - INFO - [FETCH] Resume list page 209 retrieved
+2026-08-17 01:27:50,556 - INFO - [FETCH-STORE] Page 209: All IDs already fetched, no new data stored
+2026-08-17 01:27:53,810 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:27:57,621 - INFO - [FETCH] Resume list page 210 retrieved
+2026-08-17 01:27:57,622 - INFO - [FETCH-STORE] Page 210: All IDs already fetched, no new data stored
+2026-08-17 01:28:05,061 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 69665a2422119809c30e879a
+2026-08-17 01:28:05,062 - ERROR - [DOWNLOAD] No S3 URL found for 69665a2422119809c30e879a
+2026-08-17 01:28:05,068 - INFO - [BULLETPROOF] No S3 URL found for 69665a2422119809c30e879a - skipping retries
+2026-08-17 01:28:05,068 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69665a2422119809c30e879a after all retries
+2026-08-17 01:28:11,751 - INFO - [FETCH] Resume list page 211 retrieved
+2026-08-17 01:28:11,752 - INFO - [FETCH-STORE] Page 211: All IDs already fetched, no new data stored
+2026-08-17 01:28:15,069 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:28:18,814 - INFO - [FETCH] Resume list page 212 retrieved
+2026-08-17 01:28:18,815 - INFO - [FETCH-STORE] Page 212: All IDs already fetched, no new data stored
+2026-08-17 01:28:26,257 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 693b2eef9fe60e44d60b817f
+2026-08-17 01:28:26,258 - ERROR - [DOWNLOAD] No S3 URL found for 693b2eef9fe60e44d60b817f
+2026-08-17 01:28:26,265 - INFO - [BULLETPROOF] No S3 URL found for 693b2eef9fe60e44d60b817f - skipping retries
+2026-08-17 01:28:26,265 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 693b2eef9fe60e44d60b817f after all retries
+2026-08-17 01:28:32,945 - INFO - [FETCH] Resume list page 213 retrieved
+2026-08-17 01:28:32,946 - INFO - [FETCH-STORE] Page 213: All IDs already fetched, no new data stored
