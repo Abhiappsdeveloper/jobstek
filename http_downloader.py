@@ -868,6 +868,7 @@ def bulletproof_download_with_retries(session, resume_id, download_dir, base_url
     max_retries = BULLETPROOF_MAX_RETRIES
     attempt = 0
     last_error = None
+    skip_retries = False
 
     while attempt < max_retries:
         attempt += 1
@@ -885,6 +886,23 @@ def bulletproof_download_with_retries(session, resume_id, download_dir, base_url
                 return True
             else:
                 last_error = "download_resume_by_id returned False"
+
+                # Check if this is a "no S3 URL" error (resume has no file)
+                # If so, skip retries and return immediately
+                error_log_file = os.path.join(LOGS_PATH, f"error_tracking_*.txt")
+                try:
+                    # Look for recent error logs
+                    import glob
+                    error_files = glob.glob(error_log_file.replace('*', '[0-9]*'))
+                    if error_files:
+                        with open(error_files[-1], 'r', encoding='utf-8') as f:
+                            error_content = f.read()
+                            if f'Resume ID: {resume_id}' in error_content and 'S3_URL_NOT_FOUND' in error_content:
+                                print(f"[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)")
+                                logger.info(f"[BULLETPROOF] No S3 URL found for {resume_id} - skipping retries")
+                                return False
+                except:
+                    pass  # If we can't read error log, proceed with retries
 
                 if attempt < max_retries:
                     delay = get_adaptive_delay('timeout')
