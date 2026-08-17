@@ -1,0 +1,5 @@
+2026-08-17 04:08:50,860 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+2026-08-17 04:08:58,687 - INFO - [LOGIN] Login page status: 200
+2026-08-17 04:09:06,239 - INFO - [LOGIN] Login POST successful: 200
+2026-08-17 04:09:06,245 - INFO - [LOGIN-CHECK] Login marked as successful
+2026-08-17 04:09:23,482 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6983ac22806bdffbd70ccb0b
