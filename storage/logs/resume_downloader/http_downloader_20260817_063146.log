@@ -1,0 +1,61 @@
+2026-08-17 01:01:46,711 - INFO - 
+======================================================================
+2026-08-17 01:01:46,712 - INFO - [STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)
+2026-08-17 01:01:46,712 - INFO - [STARTUP] HTTP Library: requests
+2026-08-17 01:01:46,712 - INFO - [STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)
+2026-08-17 01:01:46,712 - INFO - ======================================================================
+2026-08-17 01:01:46,714 - INFO - [INIT] Tracking files initialized
+2026-08-17 01:01:46,715 - INFO - [RESUME-SKIP] Loaded 177 previously downloaded IDs
+2026-08-17 01:01:46,717 - INFO - [S3-RECOVERY] Loaded 177 S3 URLs
+2026-08-17 01:01:46,718 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+2026-08-17 01:01:46,718 - INFO - [LOGIN] Lazy login mode - authenticate only on 401 error
+2026-08-17 01:01:47,724 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader started
+2026-08-17 01:01:47,724 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon
+2026-08-17 01:01:47,725 - INFO - [LOGIN] Lazy login mode - downloads starting immediately
+2026-08-17 01:01:47,737 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:01:47,743 - INFO - [FETCH-DEDUP] Loaded 9628 fetched resume IDs for deduplication
+2026-08-17 01:02:04,194 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6983ac22806bdffbd70ccb0b
+2026-08-17 01:02:04,195 - ERROR - [DOWNLOAD] No S3 URL found for 6983ac22806bdffbd70ccb0b
+2026-08-17 01:02:04,215 - INFO - [BULLETPROOF] No S3 URL found for 6983ac22806bdffbd70ccb0b - skipping retries
+2026-08-17 01:02:04,216 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+2026-08-17 01:02:11,252 - INFO - [FETCH] Resume list page 56 retrieved
+2026-08-17 01:02:11,252 - INFO - [FETCH-STORE] Page 56: All IDs already fetched, no new data stored
+2026-08-17 01:02:14,217 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:02:18,322 - INFO - [FETCH] Resume list page 57 retrieved
+2026-08-17 01:02:18,323 - INFO - [FETCH-STORE] Page 57: All IDs already fetched, no new data stored
+2026-08-17 01:02:25,798 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 69727d42d656b893310f153b
+2026-08-17 01:02:25,799 - ERROR - [DOWNLOAD] No S3 URL found for 69727d42d656b893310f153b
+2026-08-17 01:02:25,817 - INFO - [BULLETPROOF] No S3 URL found for 69727d42d656b893310f153b - skipping retries
+2026-08-17 01:02:25,817 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69727d42d656b893310f153b after all retries
+2026-08-17 01:02:32,449 - INFO - [FETCH] Resume list page 58 retrieved
+2026-08-17 01:02:32,449 - INFO - [FETCH-STORE] Page 58: All IDs already fetched, no new data stored
+2026-08-17 01:02:35,818 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:02:41,356 - INFO - [FETCH] Resume list page 59 retrieved
+2026-08-17 01:02:41,356 - INFO - [FETCH-STORE] Page 59: All IDs already fetched, no new data stored
+2026-08-17 01:02:46,997 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6983ac22806bdffbd70ccb0b
+2026-08-17 01:02:46,998 - ERROR - [DOWNLOAD] No S3 URL found for 6983ac22806bdffbd70ccb0b
+2026-08-17 01:02:47,060 - INFO - [BULLETPROOF] No S3 URL found for 6983ac22806bdffbd70ccb0b - skipping retries
+2026-08-17 01:02:47,060 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+2026-08-17 01:02:54,464 - INFO - [FETCH] Resume list page 60 retrieved
+2026-08-17 01:02:54,466 - INFO - [FETCH-STORE] Page 60: All IDs already fetched, no new data stored
+2026-08-17 01:02:57,062 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:03:01,537 - INFO - [FETCH] Resume list page 61 retrieved
+2026-08-17 01:03:01,539 - INFO - [FETCH-STORE] Page 61: All IDs already fetched, no new data stored
+2026-08-17 01:03:08,804 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 69665a2422119809c30e879a
+2026-08-17 01:03:08,804 - ERROR - [DOWNLOAD] No S3 URL found for 69665a2422119809c30e879a
+2026-08-17 01:03:08,815 - INFO - [BULLETPROOF] No S3 URL found for 69665a2422119809c30e879a - skipping retries
+2026-08-17 01:03:08,816 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69665a2422119809c30e879a after all retries
+2026-08-17 01:03:15,661 - INFO - [FETCH] Resume list page 62 retrieved
+2026-08-17 01:03:15,661 - INFO - [FETCH-STORE] Page 62: All IDs already fetched, no new data stored
+2026-08-17 01:03:18,817 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:03:23,136 - INFO - [FETCH] Resume list page 63 retrieved
+2026-08-17 01:03:23,136 - INFO - [FETCH-STORE] Page 63: All IDs already fetched, no new data stored
+2026-08-17 01:03:30,430 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 69727d42d656b893310f153b
+2026-08-17 01:03:30,431 - ERROR - [DOWNLOAD] No S3 URL found for 69727d42d656b893310f153b
+2026-08-17 01:03:30,450 - INFO - [BULLETPROOF] No S3 URL found for 69727d42d656b893310f153b - skipping retries
+2026-08-17 01:03:30,450 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 69727d42d656b893310f153b after all retries
+2026-08-17 01:03:37,371 - INFO - [FETCH] Resume list page 64 retrieved
+2026-08-17 01:03:37,372 - INFO - [FETCH-STORE] Page 64: All IDs already fetched, no new data stored
+2026-08-17 01:03:40,451 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-17 01:03:44,541 - INFO - [FETCH] Resume list page 65 retrieved
+2026-08-17 01:03:44,542 - INFO - [FETCH-STORE] Page 65: All IDs already fetched, no new data stored

@@ -1,0 +1,32 @@
+Error Tracking Log
+Generated: 2026-08-17 06:51:52
+================================================================================
+
+[2026-08-17 06:52:10] S3_URL_NOT_FOUND
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:52:31] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:52:52] S3_URL_NOT_FOUND
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:53:14] S3_URL_NOT_FOUND
+              Resume ID: 69665a2422119809c30e879a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:53:35] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:54:18] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:55:01] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+

@@ -1,0 +1,92 @@
+Error Tracking Log
+Generated: 2026-08-17 06:24:10
+================================================================================
+
+[2026-08-17 06:24:27] S3_URL_NOT_FOUND
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:24:48] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:25:09] S3_URL_NOT_FOUND
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:25:30] S3_URL_NOT_FOUND
+              Resume ID: 69665a2422119809c30e879a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:25:51] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:26:12] S3_URL_NOT_FOUND
+              Resume ID: 693b2eef9fe60e44d60b817f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:26:33] S3_URL_NOT_FOUND
+              Resume ID: 693b06991f5534ad8007e62e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:26:54] S3_URL_NOT_FOUND
+              Resume ID: 69665a2422119809c30e879a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:27:15] S3_URL_NOT_FOUND
+              Resume ID: 693b2eef9fe60e44d60b817f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:27:36] S3_URL_NOT_FOUND
+              Resume ID: 693b06991f5534ad8007e62e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-17 06:27:58] S3_DOWNLOAD_ERROR
+              Resume ID: 69385d0dad6a3644270c0179
+              Error: S3 returned status code 400
+
+[2026-08-17 06:28:19] S3_DOWNLOAD_ERROR
+              Resume ID: 6938472cb6cd091916039333
+              Error: S3 returned status code 400
+
+[2026-08-17 06:28:40] S3_DOWNLOAD_ERROR
+              Resume ID: 69384349b5a5051fd0048dc6
+              Error: S3 returned status code 400
+
+[2026-08-17 06:29:01] S3_DOWNLOAD_ERROR
+              Resume ID: 6938162d35e07053c803110f
+              Error: S3 returned status code 400
+
+[2026-08-17 06:29:24] S3_DOWNLOAD_ERROR
+              Resume ID: 6937808460b43a46d202eb34
+              Error: S3 returned status code 400
+
+[2026-08-17 06:30:05] S3_DOWNLOAD_ERROR
+              Resume ID: 6937808460b43a46d202eb34
+              Error: S3 returned status code 400
+
+[2026-08-17 06:30:46] S3_DOWNLOAD_ERROR
+              Resume ID: 6937808460b43a46d202eb34
+              Error: S3 returned status code 400
+
+[2026-08-17 06:31:28] S3_DOWNLOAD_ERROR
+              Resume ID: 6937808460b43a46d202eb34
+              Error: S3 returned status code 400
+
+[2026-08-17 06:32:11] S3_DOWNLOAD_ERROR
+              Resume ID: 6937808460b43a46d202eb34
+              Error: S3 returned status code 400
+
+[2026-08-17 06:32:34] S3_DOWNLOAD_ERROR
+              Resume ID: 693755400fcc7e67a50f099b
+              Error: S3 returned status code 400
+
+[2026-08-17 06:33:17] S3_DOWNLOAD_ERROR
+              Resume ID: 693755400fcc7e67a50f099b
+              Error: S3 returned status code 400
+
+[2026-08-17 06:34:00] S3_DOWNLOAD_ERROR
+              Resume ID: 693755400fcc7e67a50f099b
+              Error: S3 returned status code 400
+

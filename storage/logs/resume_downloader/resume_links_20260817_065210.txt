@@ -1,0 +1,15 @@
+[2026-08-17 06:53:19] Resume ID: 69385d0dad6a3644270c0179
+                Detail URL: https://www.tekjobs.net/employer/searchResume/resume/69385d0dad6a3644270c0179/
+
+[2026-08-17 06:53:44] Resume ID: 6938472cb6cd091916039333
+                Detail URL: https://www.tekjobs.net/employer/searchResume/resume/6938472cb6cd091916039333/
+
+[2026-08-17 06:54:07] Resume ID: 69384349b5a5051fd0048dc6
+                Detail URL: https://www.tekjobs.net/employer/searchResume/resume/69384349b5a5051fd0048dc6/
+
+[2026-08-17 06:54:31] Resume ID: 6938162d35e07053c803110f
+                Detail URL: https://www.tekjobs.net/employer/searchResume/resume/6938162d35e07053c803110f/
+
+[2026-08-17 06:54:54] Resume ID: 6937808460b43a46d202eb34
+                Detail URL: https://www.tekjobs.net/employer/searchResume/resume/6937808460b43a46d202eb34/
+

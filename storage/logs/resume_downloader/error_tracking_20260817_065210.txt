@@ -1,0 +1,20 @@
+[2026-08-17 06:53:31] S3_DOWNLOAD_ERROR
+              Resume ID: 69385d0dad6a3644270c0179
+              Error: S3 returned status code 400
+
+[2026-08-17 06:53:56] S3_DOWNLOAD_ERROR
+              Resume ID: 6938472cb6cd091916039333
+              Error: S3 returned status code 400
+
+[2026-08-17 06:54:20] S3_DOWNLOAD_ERROR
+              Resume ID: 69384349b5a5051fd0048dc6
+              Error: S3 returned status code 400
+
+[2026-08-17 06:54:43] S3_DOWNLOAD_ERROR
+              Resume ID: 6938162d35e07053c803110f
+              Error: S3 returned status code 400
+
+[2026-08-17 06:55:06] S3_DOWNLOAD_ERROR
+              Resume ID: 6937808460b43a46d202eb34
+              Error: S3 returned status code 400
+
