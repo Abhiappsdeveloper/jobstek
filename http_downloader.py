@@ -1832,7 +1832,7 @@ if __name__ == "__main__":
 
         print("\nPress Enter to close this terminal...")
         try:
-            input()
+            pass  # input() disabled for server/cron execution
         except EOFError:
             pass
 
@@ -1850,7 +1850,7 @@ if __name__ == "__main__":
 
         print("\nPress Enter to close this terminal...")
         try:
-            input()
+            pass  # input() disabled for server/cron execution
         except EOFError:
             pass
 
