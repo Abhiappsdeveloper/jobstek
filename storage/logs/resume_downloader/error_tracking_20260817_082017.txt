@@ -3698,3 +3698,391 @@ Generated: 2026-08-17 08:20:17
               Resume ID: 67b3a531eef3205e5052bf53
               Error: Could not extract S3 URL from detail page
 
+[2026-08-18 02:39:48] S3_URL_NOT_FOUND
+              Resume ID: 67b3a531eef3205e5052bf53
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 02:42:17] DOWNLOAD_EXCEPTION
+              Resume ID: 68361ebc32411530a40ad651
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 02:44:24] S3_URL_NOT_FOUND
+              Resume ID: 683345adba304c59df19b2a4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 02:46:11] DOWNLOAD_EXCEPTION
+              Resume ID: 67b39e03f625d911b73f27b4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 02:46:32] S3_URL_NOT_FOUND
+              Resume ID: 683345adba304c59df19b2a4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 02:48:25] DOWNLOAD_EXCEPTION
+              Resume ID: 681ce7adde2f0b347a745c43
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 02:50:30] DOWNLOAD_EXCEPTION
+              Resume ID: 681b754e22d8830d1f5ec937
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 02:51:45] DOWNLOAD_EXCEPTION
+              Resume ID: 681b72fd86c437529747fae3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 02:55:09] DOWNLOAD_EXCEPTION
+              Resume ID: 67b38f77ba7ee1196628a653
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 02:57:23] DOWNLOAD_EXCEPTION
+              Resume ID: 67b386f2eeba2944f6444bd3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 02:58:15] DOWNLOAD_EXCEPTION
+              Resume ID: 681b2163b12d935d1321d47c
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 02:59:42] DOWNLOAD_EXCEPTION
+              Resume ID: 67b3811783d30018740a4d66
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:02:18] DOWNLOAD_EXCEPTION
+              Resume ID: 681a8b33a21d460ee7237549
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:03:37] S3_URL_NOT_FOUND
+              Resume ID: 681a778212f7fb3542097f53
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:04:28] DOWNLOAD_EXCEPTION
+              Resume ID: 681a73a19d5913272575b653
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:08:18] S3_URL_NOT_FOUND
+              Resume ID: 67b36e9983c6fe3ad94f0c73
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:08:33] S3_URL_NOT_FOUND
+              Resume ID: 67b36e9983c6fe3ad94f0c73
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:08:52] S3_URL_NOT_FOUND
+              Resume ID: 681a778212f7fb3542097f53
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:12:16] DOWNLOAD_EXCEPTION
+              Resume ID: 67b3683df41c4141e61a1ae3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:13:43] DOWNLOAD_EXCEPTION
+              Resume ID: 67b3667578b2334418671be6
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:17:24] DOWNLOAD_EXCEPTION
+              Resume ID: 67b35e4886094531f018ed73
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:19:06] DOWNLOAD_EXCEPTION
+              Resume ID: 681a2058d9c8bd56563e1195
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:21:27] DOWNLOAD_EXCEPTION
+              Resume ID: 67b32532f83ebb0748772cd4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:23:10] DOWNLOAD_EXCEPTION
+              Resume ID: 67b2dff70ba10217e268f6f4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:24:01] DOWNLOAD_EXCEPTION
+              Resume ID: 68191333abdd3344182c6647
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:25:35] DOWNLOAD_EXCEPTION
+              Resume ID: 67b26f59225ab46a427c2c64
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:25:57] DOWNLOAD_EXCEPTION
+              Resume ID: 6818ad099ffccc7563636373
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:26:26] DOWNLOAD_EXCEPTION
+              Resume ID: 67b25ef7db956702d74e2025
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:28:09] DOWNLOAD_EXCEPTION
+              Resume ID: 67b24608a50b9737c85cdb63
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:28:37] S3_URL_NOT_FOUND
+              Resume ID: 67b226649a30ff16b3521283
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:28:50] S3_URL_NOT_FOUND
+              Resume ID: 67b226649a30ff16b3521283
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:29:57] DOWNLOAD_EXCEPTION
+              Resume ID: 6816218614244737a1618233
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:30:26] DOWNLOAD_EXCEPTION
+              Resume ID: 67b1870631718817f1487705
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:30:47] DOWNLOAD_EXCEPTION
+              Resume ID: 6815e3123420cb34940f289f
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:31:16] DOWNLOAD_EXCEPTION
+              Resume ID: 67b152303dff5f704d1b349b
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:31:46] DOWNLOAD_EXCEPTION
+              Resume ID: 67b147fe92c6a565736cc1e3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:32:15] DOWNLOAD_EXCEPTION
+              Resume ID: 67b12f04392f1570fb5aadf3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:32:39] DOWNLOAD_EXCEPTION
+              Resume ID: 68158302186d783fc9179644
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:33:36] DOWNLOAD_EXCEPTION
+              Resume ID: 67b1021910161c7bbb3b9315
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:34:26] DOWNLOAD_EXCEPTION
+              Resume ID: 681524fc353e9c56d55a4796
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:34:54] DOWNLOAD_EXCEPTION
+              Resume ID: 67b0ccf319b59418633acdb5
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:36:44] DOWNLOAD_EXCEPTION
+              Resume ID: 67b02faf90aa9b7f9c3db093
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:38:55] S3_URL_NOT_FOUND
+              Resume ID: 67afbc420f66796d0606a967
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:41:26] DOWNLOAD_EXCEPTION
+              Resume ID: 67afaf2aa2afe53bf04d66b4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:42:41] DOWNLOAD_EXCEPTION
+              Resume ID: 67afaa814fd67104926624e3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:43:03] DOWNLOAD_EXCEPTION
+              Resume ID: 6814ef2d85416d7830348b23
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:44:44] S3_URL_NOT_FOUND
+              Resume ID: 6814e957c6171f2e7467cb13
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:46:53] S3_URL_NOT_FOUND
+              Resume ID: 67af96b5cf849f20220bcdc3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:47:09] S3_URL_NOT_FOUND
+              Resume ID: 67af96b5cf849f20220bcdc3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 03:50:09] DOWNLOAD_EXCEPTION
+              Resume ID: 6814d1501457e3600c751505
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:51:59] DOWNLOAD_EXCEPTION
+              Resume ID: 67af80e7c0959b050f392bd3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:55:01] DOWNLOAD_EXCEPTION
+              Resume ID: 6815e3123420cb34940f289f
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:55:50] DOWNLOAD_EXCEPTION
+              Resume ID: 681524fc353e9c56d55a4796
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:57:38] DOWNLOAD_EXCEPTION
+              Resume ID: 6814a71f67526314c05d2cd3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 03:59:41] DOWNLOAD_EXCEPTION
+              Resume ID: 67af6599d47da205496dee13
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:00:03] DOWNLOAD_EXCEPTION
+              Resume ID: 6814913a9209255be56d1483
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:00:40] DOWNLOAD_EXCEPTION
+              Resume ID: 67af6466b9f4717cdc7f67f3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:01:40] S3_DOWNLOAD_ERROR
+              Resume ID: 67af61cb821b3c566f35e624
+              Error: S3 returned status code 403
+
+[2026-08-18 04:02:02] DOWNLOAD_EXCEPTION
+              Resume ID: 67af61cb821b3c566f35e624
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:05:13] DOWNLOAD_EXCEPTION
+              Resume ID: 67af547a72a4a42c7e3ee653
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:06:40] DOWNLOAD_EXCEPTION
+              Resume ID: 67af0db256049c53525542a3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:07:02] DOWNLOAD_EXCEPTION
+              Resume ID: 68143dc1166f4b680b027bc5
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:08:16] DOWNLOAD_EXCEPTION
+              Resume ID: 681424c3b8643d0b6d33d2a3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:09:07] S3_URL_NOT_FOUND
+              Resume ID: 67aedb16c65bb41fa3295ff4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 04:09:20] S3_URL_NOT_FOUND
+              Resume ID: 67aedb16c65bb41fa3295ff4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 04:09:57] S3_URL_NOT_FOUND
+              Resume ID: 6814e957c6171f2e7467cb13
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 04:13:05] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae968d16d5e307ac3f642a
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:13:27] DOWNLOAD_EXCEPTION
+              Resume ID: 6813f9faf5be4367f82123c5
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:15:11] DOWNLOAD_EXCEPTION
+              Resume ID: 6813f32545ad210ff440c334
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:16:02] DOWNLOAD_EXCEPTION
+              Resume ID: 6813eee67e5c27642937f313
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:18:42] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae5f52f698aa658a31dea3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:21:30] DOWNLOAD_EXCEPTION
+              Resume ID: 6813e3c59b9fc217bd1472b3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:21:59] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae569ce449994fce121a93
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:24:11] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae4d85d1b74e25cd6dc9b3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:25:11] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae4a460c502f0a4b2f4283
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:25:40] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae4825e3502256da7a9384
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:26:02] DOWNLOAD_EXCEPTION
+              Resume ID: 6813df5676688a21f0469e26
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:28:45] DOWNLOAD_EXCEPTION
+              Resume ID: 6813dd108ac9f329953d44d5
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:30:03] DOWNLOAD_EXCEPTION
+              Resume ID: 6813db8ade07112f3f5d4ab7
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:31:22] DOWNLOAD_EXCEPTION
+              Resume ID: 68143dc1166f4b680b027bc5
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:32:20] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae3a9385463f6978620cd4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:33:47] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae35e185912563942445a4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:35:15] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae3210a19fbb1d6114501d
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:35:36] DOWNLOAD_EXCEPTION
+              Resume ID: 6813d567b4212b7b9634d774
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:38:53] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae25829b3d5b7b1b408f13
+              Error: ConnectionError: HTTPSConnectionPool(host='tekjobs-resumes.s3.amazonaws.com', port=443): Max retries exceeded with url: /2025-02-13/Anusha_SrData_Engineer_1__zHZgGd_BsHCr4.docx?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXMAXJLALZMBWNPEX%2F20260817%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260817T230842Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=16a0f1cf9cf48702fce24c7f85c20397fbc5c2fb7b4b7a42ddcb6946e453e165 (Caused by NameResolutionError("HTTPSConnection(host='tekjobs-resumes.s3.amazonaws.com', port=443): Failed to resolve 'tekjobs-resumes.s3.amazonaws.com' ([Errno 11001] getaddrinfo failed)"))
+
+[2026-08-18 04:41:19] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae18afbbed1114f31af755
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:41:41] DOWNLOAD_EXCEPTION
+              Resume ID: 6813cd80d57c056845193b43
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:42:10] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae1805763d141d5b6ed893
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:45:58] DOWNLOAD_EXCEPTION
+              Resume ID: 67ae07f72911813faf43e467
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:49:01] DOWNLOAD_EXCEPTION
+              Resume ID: 6813b4567d21961ec32d4705
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:49:59] DOWNLOAD_EXCEPTION
+              Resume ID: 67adfa9c1f503c70622cb6a2
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:50:21] DOWNLOAD_EXCEPTION
+              Resume ID: 6813b16f90f88374e82c9687
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:51:11] DOWNLOAD_EXCEPTION
+              Resume ID: 6813ad442380530d3e53c768
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:51:40] DOWNLOAD_EXCEPTION
+              Resume ID: 67adef2a03e8b465be62cc9c
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:52:59] DOWNLOAD_EXCEPTION
+              Resume ID: 6813abd8ee57c1369201fe24
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-18 04:54:04] S3_URL_NOT_FOUND
+              Resume ID: 67ad90aef595c55ee80d12b3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 04:54:19] S3_URL_NOT_FOUND
+              Resume ID: 67ad90aef595c55ee80d12b3
+              Error: Could not extract S3 URL from detail page
+
