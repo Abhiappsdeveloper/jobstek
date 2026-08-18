@@ -1,0 +1,24 @@
+2026-08-18 17:47:34,507 - INFO - 
+======================================================================
+2026-08-18 17:47:34,508 - INFO - [STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)
+2026-08-18 17:47:34,509 - INFO - [STARTUP] HTTP Library: requests
+2026-08-18 17:47:34,509 - INFO - [STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)
+2026-08-18 17:47:34,509 - INFO - ======================================================================
+2026-08-18 17:47:34,512 - INFO - [INIT] Tracking files initialized
+2026-08-18 17:47:34,520 - INFO - [RESUME-SKIP] Loaded 8492 previously downloaded IDs
+2026-08-18 17:47:34,583 - INFO - [S3-RECOVERY] Loaded 8492 S3 URLs
+2026-08-18 17:47:34,584 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+2026-08-18 17:47:34,584 - INFO - [LOGIN] Lazy login mode - authenticate only on 401 error
+2026-08-18 17:47:35,591 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader started
+2026-08-18 17:47:35,592 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon
+2026-08-18 17:47:35,592 - INFO - [LOGIN] Lazy login mode - downloads starting immediately
+2026-08-18 17:47:35,594 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-18 17:47:35,603 - INFO - [FETCH-DEDUP] Loaded 9628 fetched resume IDs for deduplication
+2026-08-18 17:47:51,776 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6983ac22806bdffbd70ccb0b
+2026-08-18 17:47:51,776 - ERROR - [DOWNLOAD] No S3 URL found for 6983ac22806bdffbd70ccb0b
+2026-08-18 17:47:51,787 - INFO - [BULLETPROOF] No S3 URL found for 6983ac22806bdffbd70ccb0b - skipping retries
+2026-08-18 17:47:51,787 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+2026-08-18 17:47:58,300 - INFO - [FETCH] Resume list page 667 retrieved
+2026-08-18 17:47:58,304 - INFO - [PAGINATION] Total pages: 1, Total resumes: 0
+2026-08-18 17:47:58,305 - INFO - [INFO] No resumes found
+2026-08-18 17:47:58,312 - INFO - [CRON-HEALTH] Cron heartbeat created (IST)

@@ -1,0 +1,28 @@
+2026-08-18 16:45:55,641 - INFO - 
+======================================================================
+2026-08-18 16:45:55,642 - INFO - [STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)
+2026-08-18 16:45:55,643 - INFO - [STARTUP] HTTP Library: requests
+2026-08-18 16:45:55,644 - INFO - [STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)
+2026-08-18 16:45:55,645 - INFO - ======================================================================
+2026-08-18 16:45:55,649 - INFO - [INIT] Tracking files initialized
+2026-08-18 16:45:55,668 - INFO - [RESUME-SKIP] Loaded 8492 previously downloaded IDs
+2026-08-18 16:45:55,716 - INFO - [S3-RECOVERY] Loaded 8492 S3 URLs
+2026-08-18 16:45:55,717 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+2026-08-18 16:45:55,717 - INFO - [LOGIN] Lazy login mode - authenticate only on 401 error
+2026-08-18 16:45:56,717 - INFO - [BULLETPROOF-LOGIN] Login with retry logic started
+2026-08-18 16:46:04,953 - INFO - [LOGIN] Login page status: 200
+2026-08-18 16:46:12,515 - INFO - [LOGIN] Login POST successful: 200
+2026-08-18 16:46:12,518 - INFO - [LOGIN-CHECK] Login marked as successful
+2026-08-18 16:46:12,519 - INFO - [BULLETPROOF-LOGIN] Login successful on attempt 1
+2026-08-18 16:46:12,520 - INFO - [LOGIN] Session authenticated successfully before downloads
+2026-08-18 16:46:12,524 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader started
+2026-08-18 16:46:12,525 - INFO - [LOGIN] Lazy login mode - downloads starting immediately
+2026-08-18 16:46:12,525 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon
+2026-08-18 16:46:12,527 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-18 16:46:12,543 - INFO - [FETCH-DEDUP] Loaded 9628 fetched resume IDs for deduplication
+2026-08-18 16:46:27,798 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6983ac22806bdffbd70ccb0b
+2026-08-18 16:46:27,798 - ERROR - [DOWNLOAD] No S3 URL found for 6983ac22806bdffbd70ccb0b
+2026-08-18 16:46:27,810 - INFO - [BULLETPROOF] No S3 URL found for 6983ac22806bdffbd70ccb0b - skipping retries
+2026-08-18 16:46:27,810 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+2026-08-18 16:46:34,592 - INFO - [FETCH] Resume list page 666 retrieved
+2026-08-18 16:46:34,594 - INFO - [FETCH-STORE] Page 666: All IDs already fetched, no new data stored

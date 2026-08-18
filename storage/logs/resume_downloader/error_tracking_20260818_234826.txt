@@ -1,0 +1,1884 @@
+Error Tracking Log
+Generated: 2026-08-18 23:48:26
+================================================================================
+
+[2026-08-18 23:48:46] S3_URL_NOT_FOUND
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:49:12] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:49:33] S3_URL_NOT_FOUND
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:49:54] S3_URL_NOT_FOUND
+              Resume ID: 69665a2422119809c30e879a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:50:15] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:50:36] S3_URL_NOT_FOUND
+              Resume ID: 693b2eef9fe60e44d60b817f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:50:58] S3_URL_NOT_FOUND
+              Resume ID: 693b06991f5534ad8007e62e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:51:19] S3_URL_NOT_FOUND
+              Resume ID: 69665a2422119809c30e879a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:51:40] S3_URL_NOT_FOUND
+              Resume ID: 693b2eef9fe60e44d60b817f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:52:02] S3_URL_NOT_FOUND
+              Resume ID: 693b06991f5534ad8007e62e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:52:29] S3_URL_NOT_FOUND
+              Resume ID: 6931fd020e50112e5b033c4d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:52:50] S3_URL_NOT_FOUND
+              Resume ID: 6931fd020e50112e5b033c4d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:53:11] S3_URL_NOT_FOUND
+              Resume ID: 6930a9426f75dab0ae0fca3a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:53:36] S3_URL_NOT_FOUND
+              Resume ID: 693094d2ed9cbef54e054def
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:54:00] S3_URL_NOT_FOUND
+              Resume ID: 692f423ee766fa803b0a0575
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:54:23] S3_URL_NOT_FOUND
+              Resume ID: 6930a9426f75dab0ae0fca3a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:54:49] S3_URL_NOT_FOUND
+              Resume ID: 693094d2ed9cbef54e054def
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:55:11] S3_URL_NOT_FOUND
+              Resume ID: 692f423ee766fa803b0a0575
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:56:01] S3_URL_NOT_FOUND
+              Resume ID: 691de8fd83044b101d08e8f5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:56:22] S3_URL_NOT_FOUND
+              Resume ID: 691d133df0eee50c660492dd
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:56:44] S3_URL_NOT_FOUND
+              Resume ID: 691de8fd83044b101d08e8f5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:57:05] S3_URL_NOT_FOUND
+              Resume ID: 691d133df0eee50c660492dd
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:57:28] S3_DOWNLOAD_ERROR
+              Resume ID: 691c8854c5e2bbbdca0b335e
+              Error: S3 returned status code 403
+
+[2026-08-18 23:57:52] S3_DOWNLOAD_ERROR
+              Resume ID: 691c8854c5e2bbbdca0b335e
+              Error: S3 returned status code 403
+
+[2026-08-18 23:58:18] S3_URL_NOT_FOUND
+              Resume ID: 691b4fde50806570610b8b0c
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:59:04] S3_URL_NOT_FOUND
+              Resume ID: 691b3d56036e65f19708bd32
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:59:26] S3_URL_NOT_FOUND
+              Resume ID: 691b4fde50806570610b8b0c
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-18 23:59:47] S3_URL_NOT_FOUND
+              Resume ID: 691b3d56036e65f19708bd32
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:00:34] S3_URL_NOT_FOUND
+              Resume ID: 69187a6db40eab56fa04a14e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:00:56] S3_URL_NOT_FOUND
+              Resume ID: 69187a6db40eab56fa04a14e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:01:50] S3_URL_NOT_FOUND
+              Resume ID: 6917a1f471ce4ca1470c870d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:02:12] S3_URL_NOT_FOUND
+              Resume ID: 6917a1f471ce4ca1470c870d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:02:58] S3_URL_NOT_FOUND
+              Resume ID: 691765e6a0652a55650436be
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:03:20] S3_URL_NOT_FOUND
+              Resume ID: 691765e6a0652a55650436be
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:03:44] S3_URL_NOT_FOUND
+              Resume ID: 691758e6535280d25b066e0c
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:04:06] S3_URL_NOT_FOUND
+              Resume ID: 691758e6535280d25b066e0c
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:04:27] S3_URL_NOT_FOUND
+              Resume ID: 691745e84fb34f5a6704c4ce
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:04:49] S3_URL_NOT_FOUND
+              Resume ID: 691745e84fb34f5a6704c4ce
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:05:10] S3_URL_NOT_FOUND
+              Resume ID: 691730b671ce4ca1470c8642
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:05:32] S3_URL_NOT_FOUND
+              Resume ID: 691730b671ce4ca1470c8642
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:07:14] S3_DOWNLOAD_ERROR
+              Resume ID: 69161b15c084cc82ef0be1a6
+              Error: S3 returned status code 403
+
+[2026-08-19 00:07:37] S3_DOWNLOAD_ERROR
+              Resume ID: 69161b15c084cc82ef0be1a6
+              Error: S3 returned status code 403
+
+[2026-08-19 00:08:08] S3_DOWNLOAD_ERROR
+              Resume ID: 6915edee50806570610b86cb
+              Error: S3 returned status code 403
+
+[2026-08-19 00:08:34] S3_DOWNLOAD_ERROR
+              Resume ID: 6915edee50806570610b86cb
+              Error: S3 returned status code 403
+
+[2026-08-19 00:09:01] S3_DOWNLOAD_ERROR
+              Resume ID: 6915e79ae730664a490cbd60
+              Error: S3 returned status code 403
+
+[2026-08-19 00:09:29] S3_DOWNLOAD_ERROR
+              Resume ID: 6915e79ae730664a490cbd60
+              Error: S3 returned status code 403
+
+[2026-08-19 00:09:49] S3_URL_NOT_FOUND
+              Resume ID: 6915165585e2a744250e6aa9
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:10:11] S3_URL_NOT_FOUND
+              Resume ID: 6915165585e2a744250e6aa9
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:11:57] S3_URL_NOT_FOUND
+              Resume ID: 6914d6a58a04e1f1ec0ca511
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:12:21] S3_URL_NOT_FOUND
+              Resume ID: 6914d6a58a04e1f1ec0ca511
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:13:17] S3_URL_NOT_FOUND
+              Resume ID: 6914c661bab64e81fa09358e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:13:40] S3_DOWNLOAD_ERROR
+              Resume ID: 6914bc60712b8909a90ac4ca
+              Error: S3 returned status code 403
+
+[2026-08-19 00:14:02] S3_URL_NOT_FOUND
+              Resume ID: 6914c661bab64e81fa09358e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:14:26] S3_DOWNLOAD_ERROR
+              Resume ID: 6914bc60712b8909a90ac4ca
+              Error: S3 returned status code 403
+
+[2026-08-19 00:14:53] S3_URL_NOT_FOUND
+              Resume ID: 6914ac4fab0d5d8a3309e702
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:15:20] S3_URL_NOT_FOUND
+              Resume ID: 6914ac4fab0d5d8a3309e702
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:15:43] S3_DOWNLOAD_ERROR
+              Resume ID: 6913f65a35a0258bb00fd5f2
+              Error: S3 returned status code 403
+
+[2026-08-19 00:16:50] S3_DOWNLOAD_ERROR
+              Resume ID: 6913f65a35a0258bb00fd5f2
+              Error: S3 returned status code 403
+
+[2026-08-19 00:17:14] S3_URL_NOT_FOUND
+              Resume ID: 69138ae5a225ccaf32052c89
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:17:35] S3_URL_NOT_FOUND
+              Resume ID: 69138ae5a225ccaf32052c89
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:18:31] S3_URL_NOT_FOUND
+              Resume ID: 690c548098c92d09d9073720
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:18:56] S3_URL_NOT_FOUND
+              Resume ID: 690c548098c92d09d9073720
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:19:18] S3_URL_NOT_FOUND
+              Resume ID: 690b41c746554c1047003508
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:19:40] S3_URL_NOT_FOUND
+              Resume ID: 690b41c746554c1047003508
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:20:00] S3_URL_NOT_FOUND
+              Resume ID: 690a337d53eda5223b085f7f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:20:28] S3_URL_NOT_FOUND
+              Resume ID: 690a1a853ffcb3a36e0b8482
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:20:54] S3_URL_NOT_FOUND
+              Resume ID: 690a337d53eda5223b085f7f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:21:15] S3_URL_NOT_FOUND
+              Resume ID: 690a1a853ffcb3a36e0b8482
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:21:41] S3_URL_NOT_FOUND
+              Resume ID: 69092ecb53eda5223b085e6d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:22:38] S3_URL_NOT_FOUND
+              Resume ID: 69091c5ffb2c2e264905b234
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:23:41] S3_URL_NOT_FOUND
+              Resume ID: 69092ecb53eda5223b085e6d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:24:02] S3_URL_NOT_FOUND
+              Resume ID: 69091c5ffb2c2e264905b234
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:24:34] S3_DOWNLOAD_ERROR
+              Resume ID: 690519cc8e889b68120e07c4
+              Error: S3 returned status code 403
+
+[2026-08-19 00:25:03] S3_DOWNLOAD_ERROR
+              Resume ID: 690519cc8e889b68120e07c4
+              Error: S3 returned status code 403
+
+[2026-08-19 00:26:01] S3_URL_NOT_FOUND
+              Resume ID: 6904c42cb81f5d30990873bf
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:26:24] S3_URL_NOT_FOUND
+              Resume ID: 6904c42cb81f5d30990873bf
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:29:21] S3_URL_NOT_FOUND
+              Resume ID: 690297c578213b8dd7089352
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:29:42] S3_URL_NOT_FOUND
+              Resume ID: 690297c578213b8dd7089352
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:30:03] S3_URL_NOT_FOUND
+              Resume ID: 69015cef8851ac62840bd24d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:30:26] S3_URL_NOT_FOUND
+              Resume ID: 69015cef8851ac62840bd24d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:30:51] S3_URL_NOT_FOUND
+              Resume ID: 6900c25dfb2c2e264905ab33
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:31:11] S3_URL_NOT_FOUND
+              Resume ID: 6900c25dfb2c2e264905ab33
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:32:04] S3_URL_NOT_FOUND
+              Resume ID: 68ff9cb3738c5aa31d05af09
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:32:26] S3_URL_NOT_FOUND
+              Resume ID: 68ff9cb3738c5aa31d05af09
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:32:47] S3_URL_NOT_FOUND
+              Resume ID: 68ff949a177e2ee411081ee3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:33:08] S3_URL_NOT_FOUND
+              Resume ID: 68ff949a177e2ee411081ee3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:34:00] S3_URL_NOT_FOUND
+              Resume ID: 68fbc537a29b776598048150
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:34:27] S3_URL_NOT_FOUND
+              Resume ID: 68fbc537a29b776598048150
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:34:55] S3_URL_NOT_FOUND
+              Resume ID: 68faa766325722cea1052f6b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:35:19] S3_URL_NOT_FOUND
+              Resume ID: 68faa766325722cea1052f6b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:35:44] S3_DOWNLOAD_ERROR
+              Resume ID: 68fa9ec2a947893c710d981f
+              Error: S3 returned status code 403
+
+[2026-08-19 00:36:07] S3_DOWNLOAD_ERROR
+              Resume ID: 68fa9ec2a947893c710d981f
+              Error: S3 returned status code 403
+
+[2026-08-19 00:38:11] S3_DOWNLOAD_ERROR
+              Resume ID: 68f1124abac7ade4170ced93
+              Error: S3 returned status code 403
+
+[2026-08-19 00:39:08] S3_DOWNLOAD_ERROR
+              Resume ID: 68f1124abac7ade4170ced93
+              Error: S3 returned status code 403
+
+[2026-08-19 00:39:34] S3_URL_NOT_FOUND
+              Resume ID: 68f01adce9ecbb7b7d01bccb
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:40:11] S3_URL_NOT_FOUND
+              Resume ID: 68f01adce9ecbb7b7d01bccb
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:41:53] S3_URL_NOT_FOUND
+              Resume ID: 68ef1a7e33f0a3f8350fbc70
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:42:17] S3_URL_NOT_FOUND
+              Resume ID: 68ef1a7e33f0a3f8350fbc70
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:42:42] S3_URL_NOT_FOUND
+              Resume ID: 68eebf8f808a9b252d018e47
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:43:12] S3_URL_NOT_FOUND
+              Resume ID: 68eebf8f808a9b252d018e47
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:45:11] DOWNLOAD_EXCEPTION
+              Resume ID: 68eebb447592cd630e02690a
+              Error: ConnectionError: HTTPSConnectionPool(host='tekjobs-resumes.s3.amazonaws.com', port=443): Read timed out.
+
+[2026-08-19 00:46:06] S3_URL_NOT_FOUND
+              Resume ID: 68eea8f9a35b3571c108382b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:46:31] S3_URL_NOT_FOUND
+              Resume ID: 68eea8f9a35b3571c108382b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:46:52] S3_URL_NOT_FOUND
+              Resume ID: 68eea07298868103c9092ad8
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:47:17] S3_URL_NOT_FOUND
+              Resume ID: 68eea07298868103c9092ad8
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:48:28] DOWNLOAD_EXCEPTION
+              Resume ID: 68db8accb5ff1f11d300901d
+              Error: ConnectionError: HTTPSConnectionPool(host='tekjobs-resumes.s3.amazonaws.com', port=443): Read timed out.
+
+[2026-08-19 00:50:12] S3_URL_NOT_FOUND
+              Resume ID: 68d6bf73048bb8a9800cc1e4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:51:36] S3_URL_NOT_FOUND
+              Resume ID: 68d3fcf7dbc6cd79470b49de
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:52:35] S3_URL_NOT_FOUND
+              Resume ID: 68d3fcf7dbc6cd79470b49de
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:52:56] S3_URL_NOT_FOUND
+              Resume ID: 68d29574dbc6cd79470b4909
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:53:17] S3_URL_NOT_FOUND
+              Resume ID: 68d29574dbc6cd79470b4909
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:53:56] S3_URL_NOT_FOUND
+              Resume ID: 683345adba304c59df19b2a4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:54:21] S3_URL_NOT_FOUND
+              Resume ID: 683345adba304c59df19b2a4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:54:42] S3_URL_NOT_FOUND
+              Resume ID: 681a778212f7fb3542097f53
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:55:08] S3_URL_NOT_FOUND
+              Resume ID: 681a778212f7fb3542097f53
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:57:44] S3_URL_NOT_FOUND
+              Resume ID: 6814e957c6171f2e7467cb13
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:58:43] S3_URL_NOT_FOUND
+              Resume ID: 6814e957c6171f2e7467cb13
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 00:59:38] S3_URL_NOT_FOUND
+              Resume ID: 68137793d5fd6f39016f5d83
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:00:04] S3_URL_NOT_FOUND
+              Resume ID: 6813714715df0520a52f5353
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:00:44] S3_URL_NOT_FOUND
+              Resume ID: 68136f2a0db45776e4520004
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:01:17] S3_URL_NOT_FOUND
+              Resume ID: 68136c3d0c63be5aba1ed346
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:01:36] S3_URL_NOT_FOUND
+              Resume ID: 68134257476b203254787c07
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:01:48] S3_URL_NOT_FOUND
+              Resume ID: 6812db15cb8f500293116b74
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:02:11] S3_URL_NOT_FOUND
+              Resume ID: 68137793d5fd6f39016f5d83
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:04:06] S3_DOWNLOAD_ERROR
+              Resume ID: 6812952f2ed520052e6f7723
+              Error: S3 returned status code 403
+
+[2026-08-19 01:04:28] S3_URL_NOT_FOUND
+              Resume ID: 6813714715df0520a52f5353
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:04:48] S3_URL_NOT_FOUND
+              Resume ID: 68136f2a0db45776e4520004
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:05:15] S3_URL_NOT_FOUND
+              Resume ID: 68136c3d0c63be5aba1ed346
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:05:36] S3_URL_NOT_FOUND
+              Resume ID: 68134257476b203254787c07
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:05:57] S3_URL_NOT_FOUND
+              Resume ID: 68128987b177304d41354836
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:06:18] S3_URL_NOT_FOUND
+              Resume ID: 681288b008245c278c078c83
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:06:39] S3_URL_NOT_FOUND
+              Resume ID: 6812db15cb8f500293116b74
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:07:00] S3_URL_NOT_FOUND
+              Resume ID: 681285b0278ed51ae74763e3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:07:21] S3_URL_NOT_FOUND
+              Resume ID: 681284f5697b8c09ee14fb22
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:08:08] S3_DOWNLOAD_ERROR
+              Resume ID: 6812952f2ed520052e6f7723
+              Error: S3 returned status code 403
+
+[2026-08-19 01:08:31] S3_URL_NOT_FOUND
+              Resume ID: 681272bd0c1428536e44be43
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:08:52] S3_URL_NOT_FOUND
+              Resume ID: 68128987b177304d41354836
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:09:13] S3_URL_NOT_FOUND
+              Resume ID: 681288b008245c278c078c83
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:10:06] S3_URL_NOT_FOUND
+              Resume ID: 681285b0278ed51ae74763e3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:10:27] S3_URL_NOT_FOUND
+              Resume ID: 681284f5697b8c09ee14fb22
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:11:16] S3_URL_NOT_FOUND
+              Resume ID: 68123ff834975f0cfb2b8494
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:11:36] S3_URL_NOT_FOUND
+              Resume ID: 681272bd0c1428536e44be43
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:13:01] S3_URL_NOT_FOUND
+              Resume ID: 681150177ce09421620c2308
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:13:22] S3_URL_NOT_FOUND
+              Resume ID: 68123ff834975f0cfb2b8494
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:13:48] S3_URL_NOT_FOUND
+              Resume ID: 68113bdc4dcd2062c9441933
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:14:11] S3_URL_NOT_FOUND
+              Resume ID: 681128a9af1077113a36ab62
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:14:32] S3_URL_NOT_FOUND
+              Resume ID: 681118894aba2e1ea63ce124
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:14:53] S3_URL_NOT_FOUND
+              Resume ID: 68111659925314371b1a1314
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:15:15] S3_URL_NOT_FOUND
+              Resume ID: 681150177ce09421620c2308
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:15:36] S3_URL_NOT_FOUND
+              Resume ID: 68113bdc4dcd2062c9441933
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:15:57] S3_URL_NOT_FOUND
+              Resume ID: 6810e22c79d6b36ec4279a14
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:16:20] S3_URL_NOT_FOUND
+              Resume ID: 681128a9af1077113a36ab62
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:16:49] S3_URL_NOT_FOUND
+              Resume ID: 681118894aba2e1ea63ce124
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:17:14] S3_URL_NOT_FOUND
+              Resume ID: 68111659925314371b1a1314
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:17:35] S3_URL_NOT_FOUND
+              Resume ID: 6810d5f5e251a928642256a5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:17:56] S3_URL_NOT_FOUND
+              Resume ID: 6810d4ad592217498b7aa6ce
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:18:44] S3_URL_NOT_FOUND
+              Resume ID: 6810e22c79d6b36ec4279a14
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:19:05] S3_URL_NOT_FOUND
+              Resume ID: 6810d5f5e251a928642256a5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:19:26] S3_URL_NOT_FOUND
+              Resume ID: 6810d4ad592217498b7aa6ce
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:19:47] S3_URL_NOT_FOUND
+              Resume ID: 680fa9a0005ac86a450548b6
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:20:08] S3_URL_NOT_FOUND
+              Resume ID: 680d7a287df1d3733813d943
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:20:29] S3_URL_NOT_FOUND
+              Resume ID: 680fa9a0005ac86a450548b6
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:20:53] S3_DOWNLOAD_ERROR
+              Resume ID: 680d609aeb00767e9578b433
+              Error: S3 returned status code 403
+
+[2026-08-19 01:21:18] S3_URL_NOT_FOUND
+              Resume ID: 680c4252d7e5e01270090573
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:21:39] S3_URL_NOT_FOUND
+              Resume ID: 680bf10eab78c84879521b39
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:22:00] S3_URL_NOT_FOUND
+              Resume ID: 680d7a287df1d3733813d943
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:22:21] S3_URL_NOT_FOUND
+              Resume ID: 680bdc938d4a4c538d778323
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:22:42] S3_URL_NOT_FOUND
+              Resume ID: 680bda9d52fe0a15a920a613
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:23:05] S3_DOWNLOAD_ERROR
+              Resume ID: 680d609aeb00767e9578b433
+              Error: S3 returned status code 403
+
+[2026-08-19 01:23:31] S3_URL_NOT_FOUND
+              Resume ID: 680c4252d7e5e01270090573
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:23:52] S3_URL_NOT_FOUND
+              Resume ID: 680bf10eab78c84879521b39
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:24:13] S3_URL_NOT_FOUND
+              Resume ID: 680bb76361822a66865ec443
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:24:34] S3_URL_NOT_FOUND
+              Resume ID: 680ba96431a20a4ff935a833
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:24:55] S3_URL_NOT_FOUND
+              Resume ID: 680bdc938d4a4c538d778323
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:25:16] S3_URL_NOT_FOUND
+              Resume ID: 680bda9d52fe0a15a920a613
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:26:05] S3_URL_NOT_FOUND
+              Resume ID: 680b98314e52fe27f15163b5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:26:26] S3_URL_NOT_FOUND
+              Resume ID: 680b8bc77084fc1570691834
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:26:47] S3_URL_NOT_FOUND
+              Resume ID: 680bb76361822a66865ec443
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:27:08] S3_URL_NOT_FOUND
+              Resume ID: 680ba96431a20a4ff935a833
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:27:29] S3_URL_NOT_FOUND
+              Resume ID: 680b98314e52fe27f15163b5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:27:57] S3_URL_NOT_FOUND
+              Resume ID: 680b8bc77084fc1570691834
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:28:17] S3_URL_NOT_FOUND
+              Resume ID: 680aa9362f049d50f620b0e3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:28:40] S3_URL_NOT_FOUND
+              Resume ID: 680aa79ea80ddb36cb135503
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:29:01] S3_URL_NOT_FOUND
+              Resume ID: 680aa742730bea7969241b98
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:29:24] S3_URL_NOT_FOUND
+              Resume ID: 680aa9362f049d50f620b0e3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:29:50] S3_URL_NOT_FOUND
+              Resume ID: 680aa79ea80ddb36cb135503
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:30:11] S3_URL_NOT_FOUND
+              Resume ID: 680aa742730bea7969241b98
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:31:00] S3_URL_NOT_FOUND
+              Resume ID: 680a7c410c80c167827094a7
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:31:21] S3_URL_NOT_FOUND
+              Resume ID: 680a7a06754ffa48ec283b93
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:31:42] S3_URL_NOT_FOUND
+              Resume ID: 680a775cb5318e670a736c98
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:32:04] S3_URL_NOT_FOUND
+              Resume ID: 680a720948850c1cb20a7872
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:32:25] S3_URL_NOT_FOUND
+              Resume ID: 680a6d1581b4f44cd8163794
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:32:46] S3_URL_NOT_FOUND
+              Resume ID: 680a5c8cf25d4250057dc7ea
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:33:07] S3_URL_NOT_FOUND
+              Resume ID: 680a7c410c80c167827094a7
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:33:28] S3_URL_NOT_FOUND
+              Resume ID: 680a7a06754ffa48ec283b93
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:33:49] S3_URL_NOT_FOUND
+              Resume ID: 680a775cb5318e670a736c98
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:34:10] S3_URL_NOT_FOUND
+              Resume ID: 680a720948850c1cb20a7872
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:34:31] S3_URL_NOT_FOUND
+              Resume ID: 680a6d1581b4f44cd8163794
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:34:52] S3_URL_NOT_FOUND
+              Resume ID: 680a5c8cf25d4250057dc7ea
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:35:15] S3_DOWNLOAD_ERROR
+              Resume ID: 680a324b5906fa6d15387614
+              Error: S3 returned status code 403
+
+[2026-08-19 01:40:45] S3_DOWNLOAD_ERROR
+              Resume ID: 680a324b5906fa6d15387614
+              Error: S3 returned status code 403
+
+[2026-08-19 01:47:06] S3_URL_NOT_FOUND
+              Resume ID: 68092c76f49ce046b63da465
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:49:57] S3_URL_NOT_FOUND
+              Resume ID: 680928a4595a205b2d1f5134
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:57:03] DOWNLOAD_EXCEPTION
+              Resume ID: 6809187db00f6933d5531873
+              Error: ConnectionError: HTTPSConnectionPool(host='tekjobs-resumes.s3.amazonaws.com', port=443): Read timed out.
+
+[2026-08-19 01:57:55] S3_URL_NOT_FOUND
+              Resume ID: 6809173ebb6b0072ec6eebe3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:58:03] S3_URL_NOT_FOUND
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:58:23] S3_URL_NOT_FOUND
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:58:34] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:58:47] S3_URL_NOT_FOUND
+              Resume ID: 69727d42d656b893310f153b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:58:58] S3_URL_NOT_FOUND
+              Resume ID: 69665a2422119809c30e879a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:59:14] S3_URL_NOT_FOUND
+              Resume ID: 69665a2422119809c30e879a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:59:25] S3_URL_NOT_FOUND
+              Resume ID: 693b2eef9fe60e44d60b817f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:59:40] S3_URL_NOT_FOUND
+              Resume ID: 693b2eef9fe60e44d60b817f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 01:59:51] S3_URL_NOT_FOUND
+              Resume ID: 693b06991f5534ad8007e62e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:00:07] S3_URL_NOT_FOUND
+              Resume ID: 693b06991f5534ad8007e62e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:00:18] S3_URL_NOT_FOUND
+              Resume ID: 6931fd020e50112e5b033c4d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:00:33] S3_URL_NOT_FOUND
+              Resume ID: 6931fd020e50112e5b033c4d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:00:44] S3_URL_NOT_FOUND
+              Resume ID: 6930a9426f75dab0ae0fca3a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:01:00] S3_URL_NOT_FOUND
+              Resume ID: 6930a9426f75dab0ae0fca3a
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:01:11] S3_URL_NOT_FOUND
+              Resume ID: 693094d2ed9cbef54e054def
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:01:24] S3_URL_NOT_FOUND
+              Resume ID: 693094d2ed9cbef54e054def
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:01:40] S3_URL_NOT_FOUND
+              Resume ID: 692f423ee766fa803b0a0575
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:01:53] S3_URL_NOT_FOUND
+              Resume ID: 692f423ee766fa803b0a0575
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:02:09] S3_URL_NOT_FOUND
+              Resume ID: 691de8fd83044b101d08e8f5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:02:22] S3_URL_NOT_FOUND
+              Resume ID: 691de8fd83044b101d08e8f5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:02:37] S3_URL_NOT_FOUND
+              Resume ID: 691d133df0eee50c660492dd
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:02:50] S3_URL_NOT_FOUND
+              Resume ID: 691d133df0eee50c660492dd
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:03:07] S3_DOWNLOAD_ERROR
+              Resume ID: 691c8854c5e2bbbdca0b335e
+              Error: S3 returned status code 403
+
+[2026-08-19 02:03:22] S3_DOWNLOAD_ERROR
+              Resume ID: 691c8854c5e2bbbdca0b335e
+              Error: S3 returned status code 403
+
+[2026-08-19 02:03:36] S3_URL_NOT_FOUND
+              Resume ID: 691b4fde50806570610b8b0c
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:03:49] S3_URL_NOT_FOUND
+              Resume ID: 691b4fde50806570610b8b0c
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:04:04] S3_URL_NOT_FOUND
+              Resume ID: 691b3d56036e65f19708bd32
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:04:17] S3_URL_NOT_FOUND
+              Resume ID: 691b3d56036e65f19708bd32
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:04:33] S3_URL_NOT_FOUND
+              Resume ID: 69187a6db40eab56fa04a14e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:04:46] S3_URL_NOT_FOUND
+              Resume ID: 69187a6db40eab56fa04a14e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:05:01] S3_URL_NOT_FOUND
+              Resume ID: 6917a1f471ce4ca1470c870d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:05:14] S3_URL_NOT_FOUND
+              Resume ID: 6917a1f471ce4ca1470c870d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:05:30] S3_URL_NOT_FOUND
+              Resume ID: 691765e6a0652a55650436be
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:05:43] S3_URL_NOT_FOUND
+              Resume ID: 691765e6a0652a55650436be
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:05:51] S3_URL_NOT_FOUND
+              Resume ID: 68090715a59b3d519671ebe3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:05:58] S3_URL_NOT_FOUND
+              Resume ID: 691758e6535280d25b066e0c
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:06:18] S3_URL_NOT_FOUND
+              Resume ID: 691758e6535280d25b066e0c
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:06:29] S3_URL_NOT_FOUND
+              Resume ID: 691745e84fb34f5a6704c4ce
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:06:45] S3_URL_NOT_FOUND
+              Resume ID: 691745e84fb34f5a6704c4ce
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:06:56] S3_URL_NOT_FOUND
+              Resume ID: 691730b671ce4ca1470c8642
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:07:11] S3_URL_NOT_FOUND
+              Resume ID: 691730b671ce4ca1470c8642
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:07:25] S3_DOWNLOAD_ERROR
+              Resume ID: 69161b15c084cc82ef0be1a6
+              Error: S3 returned status code 403
+
+[2026-08-19 02:07:30] S3_URL_NOT_FOUND
+              Resume ID: 68092c76f49ce046b63da465
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:07:40] S3_DOWNLOAD_ERROR
+              Resume ID: 69161b15c084cc82ef0be1a6
+              Error: S3 returned status code 403
+
+[2026-08-19 02:07:50] S3_URL_NOT_FOUND
+              Resume ID: 680928a4595a205b2d1f5134
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:08:00] S3_DOWNLOAD_ERROR
+              Resume ID: 6915edee50806570610b86cb
+              Error: S3 returned status code 403
+
+[2026-08-19 02:08:10] S3_URL_NOT_FOUND
+              Resume ID: 680905628209ea0ff3165ac3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:08:20] S3_DOWNLOAD_ERROR
+              Resume ID: 6915edee50806570610b86cb
+              Error: S3 returned status code 403
+
+[2026-08-19 02:08:39] DOWNLOAD_EXCEPTION
+              Resume ID: 6915e79ae730664a490cbd60
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 02:08:54] S3_DOWNLOAD_ERROR
+              Resume ID: 6915e79ae730664a490cbd60
+              Error: S3 returned status code 403
+
+[2026-08-19 02:09:07] S3_URL_NOT_FOUND
+              Resume ID: 6915165585e2a744250e6aa9
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:09:20] S3_URL_NOT_FOUND
+              Resume ID: 6915165585e2a744250e6aa9
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:09:36] S3_URL_NOT_FOUND
+              Resume ID: 6914d6a58a04e1f1ec0ca511
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:09:49] S3_URL_NOT_FOUND
+              Resume ID: 6914d6a58a04e1f1ec0ca511
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:10:05] S3_URL_NOT_FOUND
+              Resume ID: 6914c661bab64e81fa09358e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:10:18] S3_URL_NOT_FOUND
+              Resume ID: 6914c661bab64e81fa09358e
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:10:35] S3_DOWNLOAD_ERROR
+              Resume ID: 6914bc60712b8909a90ac4ca
+              Error: S3 returned status code 403
+
+[2026-08-19 02:10:57] S3_DOWNLOAD_ERROR
+              Resume ID: 6914bc60712b8909a90ac4ca
+              Error: S3 returned status code 403
+
+[2026-08-19 02:11:08] S3_URL_NOT_FOUND
+              Resume ID: 6914ac4fab0d5d8a3309e702
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:11:23] S3_URL_NOT_FOUND
+              Resume ID: 6914ac4fab0d5d8a3309e702
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:11:37] S3_DOWNLOAD_ERROR
+              Resume ID: 6913f65a35a0258bb00fd5f2
+              Error: S3 returned status code 403
+
+[2026-08-19 02:11:51] DOWNLOAD_EXCEPTION
+              Resume ID: 6913f65a35a0258bb00fd5f2
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 02:12:02] S3_URL_NOT_FOUND
+              Resume ID: 69138ae5a225ccaf32052c89
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:12:18] S3_URL_NOT_FOUND
+              Resume ID: 69138ae5a225ccaf32052c89
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:12:29] S3_URL_NOT_FOUND
+              Resume ID: 690c548098c92d09d9073720
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:12:44] S3_URL_NOT_FOUND
+              Resume ID: 690c548098c92d09d9073720
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:12:55] S3_URL_NOT_FOUND
+              Resume ID: 690b41c746554c1047003508
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:13:11] S3_URL_NOT_FOUND
+              Resume ID: 690b41c746554c1047003508
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:13:22] S3_URL_NOT_FOUND
+              Resume ID: 690a337d53eda5223b085f7f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:13:37] S3_URL_NOT_FOUND
+              Resume ID: 690a337d53eda5223b085f7f
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:13:48] S3_URL_NOT_FOUND
+              Resume ID: 690a1a853ffcb3a36e0b8482
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:13:54] S3_DOWNLOAD_ERROR
+              Resume ID: 6808f0f02e038823e22bfae3
+              Error: S3 returned status code 403
+
+[2026-08-19 02:14:01] S3_URL_NOT_FOUND
+              Resume ID: 690a1a853ffcb3a36e0b8482
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:14:12] S3_URL_NOT_FOUND
+              Resume ID: 69092ecb53eda5223b085e6d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:14:28] S3_URL_NOT_FOUND
+              Resume ID: 69092ecb53eda5223b085e6d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:14:39] S3_URL_NOT_FOUND
+              Resume ID: 69091c5ffb2c2e264905b234
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:14:47] S3_URL_NOT_FOUND
+              Resume ID: 6808e9faec518b2187722595
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:14:54] S3_URL_NOT_FOUND
+              Resume ID: 69091c5ffb2c2e264905b234
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:15:08] S3_DOWNLOAD_ERROR
+              Resume ID: 690519cc8e889b68120e07c4
+              Error: S3 returned status code 403
+
+[2026-08-19 02:15:23] DOWNLOAD_EXCEPTION
+              Resume ID: 690519cc8e889b68120e07c4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 02:15:34] S3_URL_NOT_FOUND
+              Resume ID: 6904c42cb81f5d30990873bf
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:15:50] S3_URL_NOT_FOUND
+              Resume ID: 6904c42cb81f5d30990873bf
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:16:01] S3_URL_NOT_FOUND
+              Resume ID: 690297c578213b8dd7089352
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:16:16] S3_URL_NOT_FOUND
+              Resume ID: 690297c578213b8dd7089352
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:16:28] S3_URL_NOT_FOUND
+              Resume ID: 69015cef8851ac62840bd24d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:16:43] S3_URL_NOT_FOUND
+              Resume ID: 69015cef8851ac62840bd24d
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:16:54] S3_URL_NOT_FOUND
+              Resume ID: 6900c25dfb2c2e264905ab33
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:17:09] S3_URL_NOT_FOUND
+              Resume ID: 6900c25dfb2c2e264905ab33
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:17:20] S3_URL_NOT_FOUND
+              Resume ID: 68ff9cb3738c5aa31d05af09
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:17:36] S3_URL_NOT_FOUND
+              Resume ID: 68ff9cb3738c5aa31d05af09
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:17:47] S3_URL_NOT_FOUND
+              Resume ID: 68ff949a177e2ee411081ee3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:18:02] S3_URL_NOT_FOUND
+              Resume ID: 68ff949a177e2ee411081ee3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:18:13] S3_URL_NOT_FOUND
+              Resume ID: 68fbc537a29b776598048150
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:18:29] S3_URL_NOT_FOUND
+              Resume ID: 68fbc537a29b776598048150
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:18:40] S3_URL_NOT_FOUND
+              Resume ID: 68faa766325722cea1052f6b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:18:53] S3_URL_NOT_FOUND
+              Resume ID: 68faa766325722cea1052f6b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:19:06] S3_DOWNLOAD_ERROR
+              Resume ID: 68fa9ec2a947893c710d981f
+              Error: S3 returned status code 403
+
+[2026-08-19 02:19:27] S3_DOWNLOAD_ERROR
+              Resume ID: 68fa9ec2a947893c710d981f
+              Error: S3 returned status code 403
+
+[2026-08-19 02:19:40] S3_DOWNLOAD_ERROR
+              Resume ID: 68f1124abac7ade4170ced93
+              Error: S3 returned status code 403
+
+[2026-08-19 02:19:56] S3_DOWNLOAD_ERROR
+              Resume ID: 68f1124abac7ade4170ced93
+              Error: S3 returned status code 403
+
+[2026-08-19 02:20:07] S3_URL_NOT_FOUND
+              Resume ID: 68f01adce9ecbb7b7d01bccb
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:20:15] S3_URL_NOT_FOUND
+              Resume ID: 6808515d028d6b5af9192bdc
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:20:22] S3_URL_NOT_FOUND
+              Resume ID: 68f01adce9ecbb7b7d01bccb
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:20:33] S3_URL_NOT_FOUND
+              Resume ID: 68ef1a7e33f0a3f8350fbc70
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:20:49] S3_URL_NOT_FOUND
+              Resume ID: 68ef1a7e33f0a3f8350fbc70
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:21:00] S3_URL_NOT_FOUND
+              Resume ID: 68eebf8f808a9b252d018e47
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:21:20] S3_URL_NOT_FOUND
+              Resume ID: 68eebf8f808a9b252d018e47
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:21:31] S3_URL_NOT_FOUND
+              Resume ID: 68eea8f9a35b3571c108382b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:21:39] S3_URL_NOT_FOUND
+              Resume ID: 6809173ebb6b0072ec6eebe3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:21:46] S3_URL_NOT_FOUND
+              Resume ID: 68eea8f9a35b3571c108382b
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:21:57] S3_URL_NOT_FOUND
+              Resume ID: 68eea07298868103c9092ad8
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:22:05] S3_URL_NOT_FOUND
+              Resume ID: 68090715a59b3d519671ebe3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:22:13] S3_URL_NOT_FOUND
+              Resume ID: 68eea07298868103c9092ad8
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:22:24] S3_URL_NOT_FOUND
+              Resume ID: 68d3fcf7dbc6cd79470b49de
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:22:39] S3_URL_NOT_FOUND
+              Resume ID: 68d3fcf7dbc6cd79470b49de
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:22:50] S3_URL_NOT_FOUND
+              Resume ID: 68d29574dbc6cd79470b4909
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:23:06] S3_URL_NOT_FOUND
+              Resume ID: 68d29574dbc6cd79470b4909
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:23:17] S3_URL_NOT_FOUND
+              Resume ID: 683345adba304c59df19b2a4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:23:32] S3_URL_NOT_FOUND
+              Resume ID: 683345adba304c59df19b2a4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:23:44] S3_URL_NOT_FOUND
+              Resume ID: 681a778212f7fb3542097f53
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:23:59] S3_URL_NOT_FOUND
+              Resume ID: 681a778212f7fb3542097f53
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:24:10] S3_URL_NOT_FOUND
+              Resume ID: 6814e957c6171f2e7467cb13
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:24:25] S3_URL_NOT_FOUND
+              Resume ID: 6814e957c6171f2e7467cb13
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:24:37] S3_URL_NOT_FOUND
+              Resume ID: 68137793d5fd6f39016f5d83
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:24:52] S3_URL_NOT_FOUND
+              Resume ID: 68137793d5fd6f39016f5d83
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:25:03] S3_URL_NOT_FOUND
+              Resume ID: 6813714715df0520a52f5353
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:25:19] S3_URL_NOT_FOUND
+              Resume ID: 6813714715df0520a52f5353
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:25:30] S3_URL_NOT_FOUND
+              Resume ID: 68136f2a0db45776e4520004
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:25:45] S3_URL_NOT_FOUND
+              Resume ID: 68136f2a0db45776e4520004
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:25:56] S3_URL_NOT_FOUND
+              Resume ID: 68136c3d0c63be5aba1ed346
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:26:12] S3_URL_NOT_FOUND
+              Resume ID: 68136c3d0c63be5aba1ed346
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:26:23] S3_URL_NOT_FOUND
+              Resume ID: 68134257476b203254787c07
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:26:38] S3_URL_NOT_FOUND
+              Resume ID: 68134257476b203254787c07
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:26:49] S3_URL_NOT_FOUND
+              Resume ID: 6812db15cb8f500293116b74
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:27:05] S3_URL_NOT_FOUND
+              Resume ID: 6812db15cb8f500293116b74
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:27:18] S3_DOWNLOAD_ERROR
+              Resume ID: 6812952f2ed520052e6f7723
+              Error: S3 returned status code 403
+
+[2026-08-19 02:27:39] S3_DOWNLOAD_ERROR
+              Resume ID: 6812952f2ed520052e6f7723
+              Error: S3 returned status code 403
+
+[2026-08-19 02:27:54] S3_URL_NOT_FOUND
+              Resume ID: 68128987b177304d41354836
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:28:07] S3_URL_NOT_FOUND
+              Resume ID: 68128987b177304d41354836
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:28:23] S3_URL_NOT_FOUND
+              Resume ID: 681288b008245c278c078c83
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:28:36] S3_URL_NOT_FOUND
+              Resume ID: 681288b008245c278c078c83
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:28:51] S3_URL_NOT_FOUND
+              Resume ID: 681285b0278ed51ae74763e3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:29:05] S3_URL_NOT_FOUND
+              Resume ID: 681285b0278ed51ae74763e3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:29:16] S3_URL_NOT_FOUND
+              Resume ID: 681284f5697b8c09ee14fb22
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:29:29] S3_URL_NOT_FOUND
+              Resume ID: 681284f5697b8c09ee14fb22
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:29:44] S3_URL_NOT_FOUND
+              Resume ID: 681272bd0c1428536e44be43
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:29:57] S3_URL_NOT_FOUND
+              Resume ID: 681272bd0c1428536e44be43
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:30:17] S3_URL_NOT_FOUND
+              Resume ID: 68123ff834975f0cfb2b8494
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:30:36] S3_URL_NOT_FOUND
+              Resume ID: 68123ff834975f0cfb2b8494
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:30:47] S3_URL_NOT_FOUND
+              Resume ID: 681150177ce09421620c2308
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:31:03] S3_URL_NOT_FOUND
+              Resume ID: 681150177ce09421620c2308
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:31:14] S3_URL_NOT_FOUND
+              Resume ID: 68113bdc4dcd2062c9441933
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:31:27] S3_URL_NOT_FOUND
+              Resume ID: 68113bdc4dcd2062c9441933
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:31:53] S3_URL_NOT_FOUND
+              Resume ID: 681128a9af1077113a36ab62
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:32:07] S3_URL_NOT_FOUND
+              Resume ID: 681128a9af1077113a36ab62
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:32:19] S3_URL_NOT_FOUND
+              Resume ID: 681118894aba2e1ea63ce124
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:32:34] S3_URL_NOT_FOUND
+              Resume ID: 681118894aba2e1ea63ce124
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:32:45] S3_URL_NOT_FOUND
+              Resume ID: 68111659925314371b1a1314
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:33:01] S3_URL_NOT_FOUND
+              Resume ID: 68111659925314371b1a1314
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:33:12] S3_URL_NOT_FOUND
+              Resume ID: 6810e22c79d6b36ec4279a14
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:33:27] S3_URL_NOT_FOUND
+              Resume ID: 6810e22c79d6b36ec4279a14
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:33:39] S3_URL_NOT_FOUND
+              Resume ID: 6810d5f5e251a928642256a5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:33:54] S3_URL_NOT_FOUND
+              Resume ID: 6810d5f5e251a928642256a5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:34:05] S3_URL_NOT_FOUND
+              Resume ID: 6810d4ad592217498b7aa6ce
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:34:18] S3_URL_NOT_FOUND
+              Resume ID: 6810d4ad592217498b7aa6ce
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:34:29] S3_URL_NOT_FOUND
+              Resume ID: 680fa9a0005ac86a450548b6
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:34:45] S3_URL_NOT_FOUND
+              Resume ID: 680fa9a0005ac86a450548b6
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:34:56] S3_URL_NOT_FOUND
+              Resume ID: 680d7a287df1d3733813d943
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:35:12] S3_URL_NOT_FOUND
+              Resume ID: 680d7a287df1d3733813d943
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:35:13] S3_URL_NOT_FOUND
+              Resume ID: 680905628209ea0ff3165ac3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:35:26] S3_DOWNLOAD_ERROR
+              Resume ID: 680d609aeb00767e9578b433
+              Error: S3 returned status code 403
+
+[2026-08-19 02:35:36] S3_DOWNLOAD_ERROR
+              Resume ID: 6808f0f02e038823e22bfae3
+              Error: S3 returned status code 403
+
+[2026-08-19 02:35:43] S3_DOWNLOAD_ERROR
+              Resume ID: 680d609aeb00767e9578b433
+              Error: S3 returned status code 403
+
+[2026-08-19 02:35:55] S3_URL_NOT_FOUND
+              Resume ID: 680c4252d7e5e01270090573
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:36:03] S3_URL_NOT_FOUND
+              Resume ID: 6808e9faec518b2187722595
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:36:10] S3_URL_NOT_FOUND
+              Resume ID: 680c4252d7e5e01270090573
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:36:21] S3_URL_NOT_FOUND
+              Resume ID: 680bf10eab78c84879521b39
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:36:29] S3_URL_NOT_FOUND
+              Resume ID: 6808515d028d6b5af9192bdc
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:36:37] S3_URL_NOT_FOUND
+              Resume ID: 680bf10eab78c84879521b39
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:36:48] S3_URL_NOT_FOUND
+              Resume ID: 680bdc938d4a4c538d778323
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:37:03] S3_URL_NOT_FOUND
+              Resume ID: 680bdc938d4a4c538d778323
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:37:14] S3_URL_NOT_FOUND
+              Resume ID: 680bda9d52fe0a15a920a613
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:37:30] S3_URL_NOT_FOUND
+              Resume ID: 680bda9d52fe0a15a920a613
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:37:41] S3_URL_NOT_FOUND
+              Resume ID: 680bb76361822a66865ec443
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:37:56] S3_URL_NOT_FOUND
+              Resume ID: 680bb76361822a66865ec443
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:38:07] S3_URL_NOT_FOUND
+              Resume ID: 680ba96431a20a4ff935a833
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:38:23] S3_URL_NOT_FOUND
+              Resume ID: 680ba96431a20a4ff935a833
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:38:34] S3_URL_NOT_FOUND
+              Resume ID: 680b98314e52fe27f15163b5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:38:49] S3_URL_NOT_FOUND
+              Resume ID: 680b98314e52fe27f15163b5
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:39:01] S3_URL_NOT_FOUND
+              Resume ID: 680b8bc77084fc1570691834
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:39:15] S3_URL_NOT_FOUND
+              Resume ID: 680b8bc77084fc1570691834
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:39:26] S3_URL_NOT_FOUND
+              Resume ID: 680aa9362f049d50f620b0e3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:39:47] S3_URL_NOT_FOUND
+              Resume ID: 680aa9362f049d50f620b0e3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:39:58] S3_URL_NOT_FOUND
+              Resume ID: 680aa79ea80ddb36cb135503
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:40:16] S3_URL_NOT_FOUND
+              Resume ID: 680aa79ea80ddb36cb135503
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:40:28] S3_URL_NOT_FOUND
+              Resume ID: 680aa742730bea7969241b98
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:40:43] S3_URL_NOT_FOUND
+              Resume ID: 680aa742730bea7969241b98
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:40:54] S3_URL_NOT_FOUND
+              Resume ID: 680a7c410c80c167827094a7
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:41:09] S3_URL_NOT_FOUND
+              Resume ID: 680a7c410c80c167827094a7
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:41:21] S3_URL_NOT_FOUND
+              Resume ID: 680a7a06754ffa48ec283b93
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:41:37] S3_URL_NOT_FOUND
+              Resume ID: 680a7a06754ffa48ec283b93
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:41:48] S3_URL_NOT_FOUND
+              Resume ID: 680a775cb5318e670a736c98
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:42:03] S3_URL_NOT_FOUND
+              Resume ID: 680a775cb5318e670a736c98
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:42:14] S3_URL_NOT_FOUND
+              Resume ID: 680a720948850c1cb20a7872
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:42:30] S3_URL_NOT_FOUND
+              Resume ID: 680a720948850c1cb20a7872
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:42:41] S3_URL_NOT_FOUND
+              Resume ID: 680a6d1581b4f44cd8163794
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:42:57] S3_URL_NOT_FOUND
+              Resume ID: 680a6d1581b4f44cd8163794
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:43:08] S3_URL_NOT_FOUND
+              Resume ID: 680a5c8cf25d4250057dc7ea
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:43:23] S3_URL_NOT_FOUND
+              Resume ID: 680a5c8cf25d4250057dc7ea
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:43:37] S3_DOWNLOAD_ERROR
+              Resume ID: 680a324b5906fa6d15387614
+              Error: S3 returned status code 403
+
+[2026-08-19 02:43:52] S3_DOWNLOAD_ERROR
+              Resume ID: 680a324b5906fa6d15387614
+              Error: S3 returned status code 403
+
+[2026-08-19 02:44:03] S3_URL_NOT_FOUND
+              Resume ID: 68092c76f49ce046b63da465
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:44:16] S3_URL_NOT_FOUND
+              Resume ID: 68092c76f49ce046b63da465
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:44:27] S3_URL_NOT_FOUND
+              Resume ID: 680928a4595a205b2d1f5134
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:44:43] S3_URL_NOT_FOUND
+              Resume ID: 680928a4595a205b2d1f5134
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:44:54] S3_URL_NOT_FOUND
+              Resume ID: 6809173ebb6b0072ec6eebe3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:45:09] S3_URL_NOT_FOUND
+              Resume ID: 6809173ebb6b0072ec6eebe3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:45:20] S3_URL_NOT_FOUND
+              Resume ID: 68090715a59b3d519671ebe3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:45:36] S3_URL_NOT_FOUND
+              Resume ID: 68090715a59b3d519671ebe3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:45:47] S3_URL_NOT_FOUND
+              Resume ID: 680905628209ea0ff3165ac3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:46:05] S3_URL_NOT_FOUND
+              Resume ID: 680905628209ea0ff3165ac3
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:46:18] S3_DOWNLOAD_ERROR
+              Resume ID: 6808f0f02e038823e22bfae3
+              Error: S3 returned status code 403
+
+[2026-08-19 02:46:38] S3_DOWNLOAD_ERROR
+              Resume ID: 6808f0f02e038823e22bfae3
+              Error: S3 returned status code 403
+
+[2026-08-19 02:46:49] S3_URL_NOT_FOUND
+              Resume ID: 6808e9faec518b2187722595
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:47:04] S3_URL_NOT_FOUND
+              Resume ID: 6808e9faec518b2187722595
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:47:15] S3_URL_NOT_FOUND
+              Resume ID: 6808515d028d6b5af9192bdc
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:47:31] S3_URL_NOT_FOUND
+              Resume ID: 6808515d028d6b5af9192bdc
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:47:58] S3_URL_NOT_FOUND
+              Resume ID: 6807ab01a2198b71c3070893
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:48:16] S3_URL_NOT_FOUND
+              Resume ID: 6807ab01a2198b71c3070893
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:48:24] S3_URL_NOT_FOUND
+              Resume ID: 6807ab01a2198b71c3070893
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:50:56] S3_URL_NOT_FOUND
+              Resume ID: 6807a1467a1f444ca3500cb4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:51:09] S3_URL_NOT_FOUND
+              Resume ID: 6807a1467a1f444ca3500cb4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:51:26] DOWNLOAD_EXCEPTION
+              Resume ID: 680799ecb2ae3d1a6e0630e4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 02:51:47] S3_URL_NOT_FOUND
+              Resume ID: 6807a1467a1f444ca3500cb4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:53:19] S3_URL_NOT_FOUND
+              Resume ID: 6807524a7596e704bb6fb643
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:53:34] S3_URL_NOT_FOUND
+              Resume ID: 6807524a7596e704bb6fb643
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:54:23] DOWNLOAD_EXCEPTION
+              Resume ID: 680736c5de3cd2214911c66c
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 02:54:38] S3_URL_NOT_FOUND
+              Resume ID: 6807524a7596e704bb6fb643
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 02:54:59] DOWNLOAD_EXCEPTION
+              Resume ID: 68074ddb72b92b02d8730645
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 02:55:28] DOWNLOAD_EXCEPTION
+              Resume ID: 6807051d15363620c9261e48
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 02:56:49] DOWNLOAD_EXCEPTION
+              Resume ID: 68070868833361369d4b71a4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 02:59:33] DOWNLOAD_EXCEPTION
+              Resume ID: 6806bfbbe0a14a5068383705
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:05:04] DOWNLOAD_EXCEPTION
+              Resume ID: 680681c8980d414d16459853
+              Error: ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+[2026-08-19 03:05:35] DOWNLOAD_EXCEPTION
+              Resume ID: 680680c8a3df43646d53f6b3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:06:26] DOWNLOAD_EXCEPTION
+              Resume ID: 6806ac48c5b3cb0c414f5ab3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:07:16] DOWNLOAD_EXCEPTION
+              Resume ID: 6806a9b5641d271f2c7d5745
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:07:56] S3_URL_NOT_FOUND
+              Resume ID: 6806684d4129bd3a6f7f1394
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 03:08:04] S3_URL_NOT_FOUND
+              Resume ID: 6807ab01a2198b71c3070893
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 03:08:11] S3_URL_NOT_FOUND
+              Resume ID: 6806684d4129bd3a6f7f1394
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 03:09:01] DOWNLOAD_EXCEPTION
+              Resume ID: 68065db783cb037209641a43
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:11:56] DOWNLOAD_EXCEPTION
+              Resume ID: 6805ae9f7804fe52c50e0e96
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:12:18] DOWNLOAD_EXCEPTION
+              Resume ID: 68068909c27f491838190104
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:14:04] DOWNLOAD_EXCEPTION
+              Resume ID: 68067fac8bb657527425ef23
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:14:59] S3_URL_NOT_FOUND
+              Resume ID: 6807a1467a1f444ca3500cb4
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 03:15:19] S3_URL_NOT_FOUND
+              Resume ID: 6807524a7596e704bb6fb643
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 03:16:15] DOWNLOAD_EXCEPTION
+              Resume ID: 68070868833361369d4b71a4
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:17:34] DOWNLOAD_EXCEPTION
+              Resume ID: 680416102630c932b53818e3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:18:24] S3_URL_NOT_FOUND
+              Resume ID: 6806684d4129bd3a6f7f1394
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 03:18:53] DOWNLOAD_EXCEPTION
+              Resume ID: 6803fc7ce7245a120438ee07
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:21:40] DOWNLOAD_EXCEPTION
+              Resume ID: 68064aaf7a80e15cd95b6f15
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:24:15] DOWNLOAD_EXCEPTION
+              Resume ID: 6802b239bd3bfe740d4a6a02
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:25:06] DOWNLOAD_EXCEPTION
+              Resume ID: 6802ad62e7241b744031eb23
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:26:17] DOWNLOAD_EXCEPTION
+              Resume ID: 6805547e4149fe1b4e02dbc3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 03:28:11] S3_URL_NOT_FOUND
+              Resume ID: 6802a1da3d752242b531eb23
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 03:28:27] S3_URL_NOT_FOUND
+              Resume ID: 6802a1da3d752242b531eb23
+              Error: Could not extract S3 URL from detail page
+

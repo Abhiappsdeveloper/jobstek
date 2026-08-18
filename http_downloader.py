@@ -1453,47 +1453,61 @@ def calculate_max_pages(total_candidates, resumes_per_page=15):
     return max_pages
 
 
-def get_resume_list_page(session, page=1, base_url='https://www.tekjobs.net', country='usa'):
+def get_resume_list_page(session, page=1, base_url='https://www.tekjobs.net', country='usa', max_retries=3):
     """Fetch resume list page and extract resume IDs"""
     print(f"[FETCH] Getting resume list for page {page}...")
 
-    try:
-        # Fetch the resume search page using index/page format
-        url = urljoin(base_url, f'/employer/searchResume/index/{page}/?country={country}')
-        print(f"[FETCH] Requesting: {url}")
+    url = urljoin(base_url, f'/employer/searchResume/index/{page}/?country={country}')
 
-        response = session.get(url, timeout=15)
-        response.raise_for_status()
+    for attempt in range(1, max_retries + 1):
+        try:
+            print(f"[FETCH] Requesting: {url} (attempt {attempt}/{max_retries})")
 
-        print(f"[OK] Resume list page fetched (status: {response.status_code})")
-        logger.info(f"[FETCH] Resume list page {page} retrieved")
+            response = session.get(url, timeout=30)
+            response.raise_for_status()
 
-        # Extract resume IDs from the page
-        resume_ids = extract_resume_ids_from_html(response.text)
+            print(f"[OK] Resume list page fetched (status: {response.status_code})")
+            logger.info(f"[FETCH] Resume list page {page} retrieved")
 
-        # Extract total candidates count on first page
-        total_count = None
-        if page == 1:
-            total_count = extract_total_candidates_count(response.text)
+            # Extract resume IDs from the page
+            resume_ids = extract_resume_ids_from_html(response.text)
 
-        if resume_ids:
-            print(f"[OK] Found {len(resume_ids)} resume(s) on page {page}")
-            return resume_ids, True, total_count  # Return IDs, has_next indicator, and total count
-        else:
-            print(f"[WARN] No resume IDs found on page {page}")
-            return [], False, total_count  # No IDs found, likely last page
+            # Extract total candidates count on first page
+            total_count = None
+            if page == 1:
+                total_count = extract_total_candidates_count(response.text)
 
-    except Exception as e:
-        logger.error(f"[ERROR] Failed to get resume list page {page}: {str(e)}")
-        print(f"[ERROR] Failed to get resume list: {str(e)}")
-        return [], False, None
+            if resume_ids:
+                print(f"[OK] Found {len(resume_ids)} resume(s) on page {page}")
+                return resume_ids, True, total_count  # Return IDs, has_next indicator, and total count
+            else:
+                print(f"[WARN] No resume IDs found on page {page}")
+                return [], False, total_count  # No IDs found, likely last page
+
+        except Exception as e:
+            logger.error(f"[ERROR] Failed to get resume list page {page} (attempt {attempt}/{max_retries}): {str(e)}")
+            print(f"[ERROR] Failed to get resume list (attempt {attempt}/{max_retries}): {str(e)}")
+            if attempt < max_retries:
+                wait_s = 5 * attempt
+                print(f"[RETRY] Retrying page {page} in {wait_s}s...")
+                time.sleep(wait_s)
+                continue
+            # All retries exhausted on a genuine network error - signal transient failure,
+            # NOT end-of-pagination, so the caller doesn't stop scanning permanently.
+            logger.error(f"[ERROR] Giving up on page {page} after {max_retries} attempts")
+            return [], None, None  # has_content=None means "transient error", distinct from False ("no more pages")
 
 
 def get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa', max_pages=None):
     """Fetch resume IDs from all pages by incrementing page number (with deduplication on restart)"""
     all_resume_ids = []
-    # Load last fetched page to resume from where we left off (NEW - doesn't modify existing logic)
-    page = get_last_fetched_page()
+    # Site lists newest resumes first, so new resumes always land near page 1 and pages
+    # beyond the last-ever-seen page are permanently empty. Always start from page 1 and
+    # rely on per-resume-ID dedup (fetched_ids_set / downloaded tracker) to skip resumes
+    # already handled, instead of resuming from a saved deep page (which would miss new
+    # resumes inserted at the front). (User confirmed page 666 is the last page with any
+    # content; pages 667+ are verified empty.)
+    page = 1
     total_pages_checked = 0
     calculated_max_pages = max_pages or 10000  # Large default if not calculated
 
@@ -1518,6 +1532,13 @@ def get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa
 
             total_pages_checked += 1
 
+            if has_content is None:
+                # Transient network error after retries - skip this page for now but keep
+                # scanning forward instead of permanently stopping pagination on a timeout.
+                print(f"[PAGINATION] Transient error on page {page}, moving to next page (will not mark as last page)")
+                page += 1
+                continue
+
             if not has_content or not resume_ids:
                 print(f"[PAGINATION] No more resumes found. Stopping at page {page}")
                 break
@@ -1529,7 +1550,9 @@ def get_all_resume_ids(session, base_url='https://www.tekjobs.net', country='usa
             store_fetched_resume_ids(resume_ids, page, fetched_ids_set)
 
             # Save fetching progress after each page (NEW - doesn't modify existing logic)
-            save_fetched_page(page)
+            # Save page+1 (next page to fetch) so a restart jumps straight past this
+            # already-fully-processed page instead of re-fetching and re-skipping it.
+            save_fetched_page(page + 1)
 
             # Progress indicator
             if page % 10 == 0:

@@ -1,0 +1,115 @@
+[DIRS] Checking and creating required directories...
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\logs\resume_downloader
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\resumes
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\framework
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\framework\cache
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\framework\sessions
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\framework\views
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\logs
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\bootstrap
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\bootstrap\cache
+[DIRS] Checking and creating required directories...
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\logs\resume_downloader
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\resumes
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\framework
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\framework\cache
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\framework\sessions
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\framework\views
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\storage\logs
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\bootstrap
+[DIRS] ✓ Exists: C:\xampp\htdocs\jobstek\bootstrap\cache
+[CACHE] Rebuilding Laravel cache...
+2026-08-18 17:47:34,507 - INFO - 
+======================================================================
+2026-08-18 17:47:34,508 - INFO - [STARTUP] TekJobs Resume Downloader - Requests-based (No Selenium)
+2026-08-18 17:47:34,509 - INFO - [STARTUP] HTTP Library: requests
+2026-08-18 17:47:34,509 - INFO - [STARTUP] Environment: Hostinger Shared Hosting (Laravel Storage)
+2026-08-18 17:47:34,509 - INFO - ======================================================================
+
+======================================================================
+TekJobs Resume Downloader - HTTP Direct Download
+HTTP Library: requests
+Environment: Hostinger Shared Hosting (Using Laravel storage)
+======================================================================
+
+[INIT] Initializing tracking files...
+[INIT] Resume links will be saved to: C:\xampp\htdocs\jobstek\storage\logs\resume_downloader\resume_links_20260818_231734.txt
+[INIT] Errors will be tracked in: C:\xampp\htdocs\jobstek\storage\logs\resume_downloader\error_tracking_20260818_231734.txt
+2026-08-18 17:47:34,512 - INFO - [INIT] Tracking files initialized
+
+[RESUME-SKIP] Loading previously downloaded resumes...
+[RESUME-SKIP] Loaded 8492 previously downloaded resume IDs
+2026-08-18 17:47:34,520 - INFO - [RESUME-SKIP] Loaded 8492 previously downloaded IDs
+[RESUME-SKIP] Will skip 8492 already downloaded resume(s)
+
+[S3-RECOVERY] Loading S3 URLs for instant recovery...
+[S3-RECOVERY] Loaded 8492 S3 URLs for instant recovery
+2026-08-18 17:47:34,583 - INFO - [S3-RECOVERY] Loaded 8492 S3 URLs
+
+2026-08-18 17:47:34,584 - WARNING - [WARNING] Using hardcoded credentials. Set TEKJOBS_EMAIL and TEKJOBS_PASSWORD environment variables for production
+
+[STEP 1] Preparing session...
+[LOGIN] Will only authenticate if server requires it (lazy login)
+2026-08-18 17:47:34,584 - INFO - [LOGIN] Lazy login mode - authenticate only on 401 error
+
+[PARALLEL-SETUP] Initializing parallel downloader...
+[PARALLEL-DOWNLOAD] Starting parallel download thread...
+[PARALLEL-DOWNLOAD] ✓ Started parallel downloader in background
+2026-08-18 17:47:35,591 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader started
+[PARALLEL-DOWNLOAD] ✓ Parallel downloader thread started (runs in background)
+[LOGIN] Using lazy login - will authenticate only if needed
+2026-08-18 17:47:35,592 - INFO - [PARALLEL-DOWNLOAD] Parallel downloader thread started as daemon
+[PARALLEL-SETUP] Parallel downloader will start downloading stored resume IDs automatically
+
+[STEP 2] Fetching resume list from all pages...
+2026-08-18 17:47:35,592 - INFO - [LOGIN] Lazy login mode - downloads starting immediately
+[PARALLEL-DOWNLOAD] Downloading: 6983ac22806bdffbd70ccb0b
+[BULLETPROOF] Attempt 1/5 to download 6983ac22806bdffbd70ccb0b
+2026-08-18 17:47:35,594 - INFO - [BULLETPROOF] Attempt 1/5
+[FETCH-DEDUP] Loaded 9628 previously fetched resume IDs
+2026-08-18 17:47:35,603 - INFO - [FETCH-DEDUP] Loaded 9628 fetched resume IDs for deduplication
+[DOWNLOAD] Processing resume ID: 6983ac22806bdffbd70ccb0b
+
+[PAGINATION] Starting to fetch resumes from all pages...
+[PAGINATION] URL format: /employer/searchResume/index/PAGE/?country=usa
+[PAGINATION] Resuming from page 667 (previous progress saved)
+
+[PAGINATION] Fetching page 667...
+[FETCH] Getting resume list for page 667...
+[FETCH] Requesting: https://www.tekjobs.net/employer/searchResume/index/667/?country=usa (attempt 1/3)
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6983ac22806bdffbd70ccb0b/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+2026-08-18 17:47:51,776 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6983ac22806bdffbd70ccb0b
+[ERROR] No S3 URL found for 6983ac22806bdffbd70ccb0b
+[ERROR] Could not find S3 URL for resume 6983ac22806bdffbd70ccb0b
+2026-08-18 17:47:51,776 - ERROR - [DOWNLOAD] No S3 URL found for 6983ac22806bdffbd70ccb0b
+[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)
+2026-08-18 17:47:51,787 - INFO - [BULLETPROOF] No S3 URL found for 6983ac22806bdffbd70ccb0b - skipping retries
+2026-08-18 17:47:51,787 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6983ac22806bdffbd70ccb0b after all retries
+[OK] Resume list page fetched (status: 200)
+2026-08-18 17:47:58,300 - INFO - [FETCH] Resume list page 667 retrieved
+[WARN] No resume IDs found on page 667
+[PAGINATION] No more resumes found. Stopping at page 667
+
+[PAGINATION] ========================================
+[PAGINATION] Pagination Complete!
+[PAGINATION] Pages scanned: 1
+[PAGINATION] Total resumes found: 0
+[PAGINATION] ========================================
+
+2026-08-18 17:47:58,304 - INFO - [PAGINATION] Total pages: 1, Total resumes: 0
+
+[INFO] No resumes available to download
+2026-08-18 17:47:58,305 - INFO - [INFO] No resumes found
+
+======================================================================
+[INFO] Process completed with no downloads
+======================================================================
+
+Press Enter to close this terminal...
+[CRON-HEALTH] ✓ Cron heartbeat recorded (IST)
+2026-08-18 17:47:58,312 - INFO - [CRON-HEALTH] Cron heartbeat created (IST)
+[CRON-HEALTH] ✓ Heartbeat created in finally block (GUARANTEED)
