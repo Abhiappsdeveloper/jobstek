@@ -30315,3 +30315,1602 @@ Environment: Hostinger Shared Hosting (Using Laravel storage)
 [EXTRACT] Waiting 2 seconds for page to fully load...
 [OK] Fresh S3 URL extracted (Timestamp: 20260818T215957Z)
 2026-08-18 21:59:57,083 - INFO - [EXTRACT] Fresh S3 URL for 680437ac516ff570c56243b5 (timestamp: 20260818T215957Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/WORKU_BE...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220005Z)
+2026-08-18 22:00:04,852 - INFO - [EXTRACT] Fresh S3 URL for 6802915e0afd655b305d5646 (timestamp: 20260818T220005Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-10-27/Naga_Sud...
+[STEP 3] Writing file: Naga_Sudhakar_Oracle_ERP_Finance_Functional_Consultant_QShTpj_ibhWIp.docx
+[OK] Downloaded: Naga_Sudhakar_Oracle_ERP_Finance_Functional_Consultant_QShTpj_ibhWIp.docx (452,512 bytes)
+2026-08-18 22:00:09,474 - INFO - [DOWNLOAD] Success: Naga_Sudhakar_Oracle_ERP_Finance_Functional_Consultant_QShTpj_ibhWIp.docx (452512 bytes) from S3
+2026-08-18 22:00:09,476 - INFO - [RESUME-SKIP] Marked 6802915e0afd655b305d5646 as downloaded
+2026-08-18 22:00:09,476 - INFO - [S3-RECOVERY] Stored S3 URL for 6802915e0afd655b305d5646
+
+[3637/9584] Downloading resume 3637/9584...
+[DOWNLOAD] Processing resume ID: 680290a06a45c404346878e3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680290a06a45c404346878e3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[STEP 3] Writing file: WORKU_BELIE_3__M0jzYX_fyDrv0.pdf
+[OK] Downloaded: WORKU_BELIE_3__M0jzYX_fyDrv0.pdf (299,898 bytes)
+2026-08-18 22:00:18,682 - INFO - [DOWNLOAD] Success: WORKU_BELIE_3__M0jzYX_fyDrv0.pdf (299898 bytes) from S3
+2026-08-18 22:00:18,684 - INFO - [RESUME-SKIP] Marked 680437ac516ff570c56243b5 as downloaded
+2026-08-18 22:00:18,687 - INFO - [S3-RECOVERY] Stored S3 URL for 680437ac516ff570c56243b5
+[BULLETPROOF] ✓ Downloaded 680437ac516ff570c56243b5 on attempt 1
+2026-08-18 22:00:18,688 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 680437ac516ff570c56243b5 (Total: 272)
+2026-08-18 22:00:18,690 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 680437ac516ff570c56243b5
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220021Z)
+2026-08-18 22:00:20,516 - INFO - [EXTRACT] Fresh S3 URL for 680290a06a45c404346878e3 (timestamp: 20260818T220021Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Vasanth_...
+[STEP 3] Writing file: Vasanth_V_avgFa3_uTaaCF.docx
+[OK] Downloaded: Vasanth_V_avgFa3_uTaaCF.docx (26,554 bytes)
+2026-08-18 22:00:22,170 - INFO - [DOWNLOAD] Success: Vasanth_V_avgFa3_uTaaCF.docx (26554 bytes) from S3
+2026-08-18 22:00:22,172 - INFO - [RESUME-SKIP] Marked 680290a06a45c404346878e3 as downloaded
+2026-08-18 22:00:22,174 - INFO - [S3-RECOVERY] Stored S3 URL for 680290a06a45c404346878e3
+
+[3638/9584] Downloading resume 3638/9584...
+[DOWNLOAD] Processing resume ID: 680290395c3cc450722aaff4
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680290395c3cc450722aaff4/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6804345ef2436860df1d2e73
+[BULLETPROOF] Attempt 1/5 to download 6804345ef2436860df1d2e73
+2026-08-18 22:00:28,692 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6804345ef2436860df1d2e73
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6804345ef2436860df1d2e73/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220033Z)
+2026-08-18 22:00:33,331 - INFO - [EXTRACT] Fresh S3 URL for 680290395c3cc450722aaff4 (timestamp: 20260818T220033Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/SammyAnd...
+[STEP 3] Writing file: SammyAndrawos_X6bmUc_O0ijAY.pdf
+[OK] Downloaded: SammyAndrawos_X6bmUc_O0ijAY.pdf (124,423 bytes)
+2026-08-18 22:00:36,303 - INFO - [DOWNLOAD] Success: SammyAndrawos_X6bmUc_O0ijAY.pdf (124423 bytes) from S3
+2026-08-18 22:00:36,306 - INFO - [RESUME-SKIP] Marked 680290395c3cc450722aaff4 as downloaded
+2026-08-18 22:00:36,309 - INFO - [S3-RECOVERY] Stored S3 URL for 680290395c3cc450722aaff4
+
+[3639/9584] Downloading resume 3639/9584...
+[DOWNLOAD] Processing resume ID: 68028dd01beaa501ec3c88f3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68028dd01beaa501ec3c88f3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220039Z)
+2026-08-18 22:00:38,885 - INFO - [EXTRACT] Fresh S3 URL for 6804345ef2436860df1d2e73 (timestamp: 20260818T220039Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Karan_fu...
+[STEP 3] Writing file: Karan_full_stack_dev_Zfjid4_rqXkcj.pdf
+[OK] Downloaded: Karan_full_stack_dev_Zfjid4_rqXkcj.pdf (103,349 bytes)
+2026-08-18 22:00:40,259 - INFO - [DOWNLOAD] Success: Karan_full_stack_dev_Zfjid4_rqXkcj.pdf (103349 bytes) from S3
+2026-08-18 22:00:40,263 - INFO - [RESUME-SKIP] Marked 6804345ef2436860df1d2e73 as downloaded
+2026-08-18 22:00:40,266 - INFO - [S3-RECOVERY] Stored S3 URL for 6804345ef2436860df1d2e73
+[BULLETPROOF] ✓ Downloaded 6804345ef2436860df1d2e73 on attempt 1
+2026-08-18 22:00:40,267 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6804345ef2436860df1d2e73 (Total: 273)
+2026-08-18 22:00:40,269 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6804345ef2436860df1d2e73
+2026-08-18 22:00:47,509 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 68028dd01beaa501ec3c88f3
+[ERROR] No S3 URL found for 68028dd01beaa501ec3c88f3
+[ERROR] Could not find S3 URL for resume 68028dd01beaa501ec3c88f3
+2026-08-18 22:00:47,509 - ERROR - [DOWNLOAD] No S3 URL found for 68028dd01beaa501ec3c88f3
+[RETRY] Attempt 2/2 for resume 3639...
+[PARALLEL-DOWNLOAD] Downloading: 680420f3b346c374cc5832e9
+[BULLETPROOF] Attempt 1/5 to download 680420f3b346c374cc5832e9
+2026-08-18 22:00:50,271 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 680420f3b346c374cc5832e9
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680420f3b346c374cc5832e9/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[DOWNLOAD] Processing resume ID: 68028dd01beaa501ec3c88f3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68028dd01beaa501ec3c88f3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220101Z)
+2026-08-18 22:01:00,359 - INFO - [EXTRACT] Fresh S3 URL for 680420f3b346c374cc5832e9 (timestamp: 20260818T220101Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-30/Sumathi_...
+[STEP 3] Writing file: Sumathi_SAP_Technical_fzoFG6_fgmTxT.pdf
+[OK] Downloaded: Sumathi_SAP_Technical_fzoFG6_fgmTxT.pdf (165,008 bytes)
+2026-08-18 22:01:08,152 - INFO - [DOWNLOAD] Success: Sumathi_SAP_Technical_fzoFG6_fgmTxT.pdf (165008 bytes) from S3
+2026-08-18 22:01:08,156 - INFO - [RESUME-SKIP] Marked 680420f3b346c374cc5832e9 as downloaded
+2026-08-18 22:01:08,162 - INFO - [S3-RECOVERY] Stored S3 URL for 680420f3b346c374cc5832e9
+[BULLETPROOF] ✓ Downloaded 680420f3b346c374cc5832e9 on attempt 1
+2026-08-18 22:01:08,163 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 680420f3b346c374cc5832e9 (Total: 274)
+2026-08-18 22:01:08,168 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 680420f3b346c374cc5832e9
+2026-08-18 22:01:08,191 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 68028dd01beaa501ec3c88f3
+[ERROR] No S3 URL found for 68028dd01beaa501ec3c88f3
+[ERROR] Could not find S3 URL for resume 68028dd01beaa501ec3c88f3
+2026-08-18 22:01:08,191 - ERROR - [DOWNLOAD] No S3 URL found for 68028dd01beaa501ec3c88f3
+
+[3640/9584] Downloading resume 3640/9584...
+[DOWNLOAD] Processing resume ID: 68028d7fc0b10f537b259673
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68028d7fc0b10f537b259673/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 68041a1824d5102fd25893b3
+[BULLETPROOF] Attempt 1/5 to download 68041a1824d5102fd25893b3
+2026-08-18 22:01:18,170 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 68041a1824d5102fd25893b3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68041a1824d5102fd25893b3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220119Z)
+2026-08-18 22:01:19,305 - INFO - [EXTRACT] Fresh S3 URL for 68028d7fc0b10f537b259673 (timestamp: 20260818T220119Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/StephenL...
+[STEP 3] Writing file: StephenLongResume_Uh6EEE_ItvbSB.pdf
+[OK] Downloaded: StephenLongResume_Uh6EEE_ItvbSB.pdf (205,933 bytes)
+2026-08-18 22:01:23,976 - INFO - [DOWNLOAD] Success: StephenLongResume_Uh6EEE_ItvbSB.pdf (205933 bytes) from S3
+2026-08-18 22:01:23,979 - INFO - [RESUME-SKIP] Marked 68028d7fc0b10f537b259673 as downloaded
+2026-08-18 22:01:23,982 - INFO - [S3-RECOVERY] Stored S3 URL for 68028d7fc0b10f537b259673
+
+[3641/9584] Downloading resume 3641/9584...
+[DOWNLOAD] Processing resume ID: 68028bee0cfb6d58792fb844
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68028bee0cfb6d58792fb844/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220129Z)
+2026-08-18 22:01:29,340 - INFO - [EXTRACT] Fresh S3 URL for 68041a1824d5102fd25893b3 (timestamp: 20260818T220129Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Hima_OIC...
+[STEP 3] Writing file: Hima_OIC_VBCS_LatestProfile_DuSPwZ_P4jU0p.docx
+[OK] Downloaded: Hima_OIC_VBCS_LatestProfile_DuSPwZ_P4jU0p.docx (132,937 bytes)
+2026-08-18 22:01:32,719 - INFO - [DOWNLOAD] Success: Hima_OIC_VBCS_LatestProfile_DuSPwZ_P4jU0p.docx (132937 bytes) from S3
+2026-08-18 22:01:32,722 - INFO - [RESUME-SKIP] Marked 68041a1824d5102fd25893b3 as downloaded
+2026-08-18 22:01:32,725 - INFO - [S3-RECOVERY] Stored S3 URL for 68041a1824d5102fd25893b3
+[BULLETPROOF] ✓ Downloaded 68041a1824d5102fd25893b3 on attempt 1
+2026-08-18 22:01:32,725 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 68041a1824d5102fd25893b3 (Total: 275)
+2026-08-18 22:01:32,727 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 68041a1824d5102fd25893b3
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220137Z)
+2026-08-18 22:01:37,018 - INFO - [EXTRACT] Fresh S3 URL for 68028bee0cfb6d58792fb844 (timestamp: 20260818T220137Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Vedant_M...
+[STEP 3] Writing file: Vedant_Mohurley_Business_Analyst_Resume_NVMmiK_tw3FOZ.pdf
+[OK] Downloaded: Vedant_Mohurley_Business_Analyst_Resume_NVMmiK_tw3FOZ.pdf (229,785 bytes)
+2026-08-18 22:01:38,661 - INFO - [DOWNLOAD] Success: Vedant_Mohurley_Business_Analyst_Resume_NVMmiK_tw3FOZ.pdf (229785 bytes) from S3
+2026-08-18 22:01:38,664 - INFO - [RESUME-SKIP] Marked 68028bee0cfb6d58792fb844 as downloaded
+2026-08-18 22:01:38,667 - INFO - [S3-RECOVERY] Stored S3 URL for 68028bee0cfb6d58792fb844
+
+[3642/9584] Downloading resume 3642/9584...
+[DOWNLOAD] Processing resume ID: 68028b5641bbc553354c5e63
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68028b5641bbc553354c5e63/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 680416102630c932b53818e3
+[BULLETPROOF] Attempt 1/5 to download 680416102630c932b53818e3
+2026-08-18 22:01:42,728 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 680416102630c932b53818e3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680416102630c932b53818e3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220150Z)
+2026-08-18 22:01:49,716 - INFO - [EXTRACT] Fresh S3 URL for 68028b5641bbc553354c5e63 (timestamp: 20260818T220150Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Ajay_Shu...
+[STEP 3] Writing file: Ajay_Shugan_Sadagopan_DevOps_Engineer_XSyP7T_BSufwd.pdf
+[OK] Downloaded: Ajay_Shugan_Sadagopan_DevOps_Engineer_XSyP7T_BSufwd.pdf (133,676 bytes)
+2026-08-18 22:01:52,793 - INFO - [DOWNLOAD] Success: Ajay_Shugan_Sadagopan_DevOps_Engineer_XSyP7T_BSufwd.pdf (133676 bytes) from S3
+2026-08-18 22:01:52,796 - INFO - [RESUME-SKIP] Marked 68028b5641bbc553354c5e63 as downloaded
+2026-08-18 22:01:52,798 - INFO - [S3-RECOVERY] Stored S3 URL for 68028b5641bbc553354c5e63
+
+[3643/9584] Downloading resume 3643/9584...
+[DOWNLOAD] Processing resume ID: 68028a690aa86e17ab41ea92
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68028a690aa86e17ab41ea92/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220158Z)
+2026-08-18 22:01:57,476 - INFO - [EXTRACT] Fresh S3 URL for 680416102630c932b53818e3 (timestamp: 20260818T220158Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Swathi_S...
+2026-08-18 22:01:58,560 - ERROR - [ERROR] Download failed for 680416102630c932b53818e3: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)
+2026-08-18 22:01:58,590 - INFO - [BULLETPROOF] No S3 URL found for 680416102630c932b53818e3 - skipping retries
+2026-08-18 22:01:58,590 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 680416102630c932b53818e3 after all retries
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220205Z)
+2026-08-18 22:02:05,180 - INFO - [EXTRACT] Fresh S3 URL for 68028a690aa86e17ab41ea92 (timestamp: 20260818T220205Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Vandana_...
+[STEP 3] Writing file: Vandana_CV_Ll0YrQ_3nPnIR.pdf
+[PARALLEL-DOWNLOAD] Downloading: 680407fef4f5d62dc8471465
+[BULLETPROOF] Attempt 1/5 to download 680407fef4f5d62dc8471465
+2026-08-18 22:02:08,590 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 680407fef4f5d62dc8471465
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680407fef4f5d62dc8471465/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Downloaded: Vandana_CV_Ll0YrQ_3nPnIR.pdf (788,702 bytes)
+2026-08-18 22:02:09,193 - INFO - [DOWNLOAD] Success: Vandana_CV_Ll0YrQ_3nPnIR.pdf (788702 bytes) from S3
+2026-08-18 22:02:09,195 - INFO - [RESUME-SKIP] Marked 68028a690aa86e17ab41ea92 as downloaded
+2026-08-18 22:02:09,197 - INFO - [S3-RECOVERY] Stored S3 URL for 68028a690aa86e17ab41ea92
+
+[3644/9584] Downloading resume 3644/9584...
+[DOWNLOAD] Processing resume ID: 680288ea3d13ae764136f9a3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680288ea3d13ae764136f9a3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220220Z)
+2026-08-18 22:02:20,234 - INFO - [EXTRACT] Fresh S3 URL for 680407fef4f5d62dc8471465 (timestamp: 20260818T220220Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Hassam_s...
+[STEP 3] Writing file: Hassam_s_Resume_gkNYST_IN5VXE.pdf
+[OK] Downloaded: Hassam_s_Resume_gkNYST_IN5VXE.pdf (63,460 bytes)
+2026-08-18 22:02:22,797 - INFO - [DOWNLOAD] Success: Hassam_s_Resume_gkNYST_IN5VXE.pdf (63460 bytes) from S3
+2026-08-18 22:02:22,799 - INFO - [RESUME-SKIP] Marked 680407fef4f5d62dc8471465 as downloaded
+2026-08-18 22:02:22,802 - INFO - [S3-RECOVERY] Stored S3 URL for 680407fef4f5d62dc8471465
+[BULLETPROOF] ✓ Downloaded 680407fef4f5d62dc8471465 on attempt 1
+2026-08-18 22:02:22,802 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 680407fef4f5d62dc8471465 (Total: 276)
+2026-08-18 22:02:22,804 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 680407fef4f5d62dc8471465
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220228Z)
+2026-08-18 22:02:27,965 - INFO - [EXTRACT] Fresh S3 URL for 680288ea3d13ae764136f9a3 (timestamp: 20260818T220228Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Chaitany...
+[STEP 3] Writing file: Chaitanya_Vemula_Vtjctp_WwuQfy.pdf
+[OK] Downloaded: Chaitanya_Vemula_Vtjctp_WwuQfy.pdf (230,813 bytes)
+2026-08-18 22:02:31,092 - INFO - [DOWNLOAD] Success: Chaitanya_Vemula_Vtjctp_WwuQfy.pdf (230813 bytes) from S3
+2026-08-18 22:02:31,094 - INFO - [RESUME-SKIP] Marked 680288ea3d13ae764136f9a3 as downloaded
+2026-08-18 22:02:31,097 - INFO - [S3-RECOVERY] Stored S3 URL for 680288ea3d13ae764136f9a3
+
+[3645/9584] Downloading resume 3645/9584...
+[DOWNLOAD] Processing resume ID: 680288e1af757f552a772576
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680288e1af757f552a772576/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6803fe4b01aa734ef63d3e43
+[BULLETPROOF] Attempt 1/5 to download 6803fe4b01aa734ef63d3e43
+2026-08-18 22:02:32,806 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6803fe4b01aa734ef63d3e43
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6803fe4b01aa734ef63d3e43/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220242Z)
+2026-08-18 22:02:42,122 - INFO - [EXTRACT] Fresh S3 URL for 680288e1af757f552a772576 (timestamp: 20260818T220242Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/zane_raz...
+[STEP 3] Writing file: zane_raza_EZQCYB_lk6Hpb.pdf
+[OK] Downloaded: zane_raza_EZQCYB_lk6Hpb.pdf (192,104 bytes)
+2026-08-18 22:02:45,621 - INFO - [DOWNLOAD] Success: zane_raza_EZQCYB_lk6Hpb.pdf (192104 bytes) from S3
+2026-08-18 22:02:45,623 - INFO - [RESUME-SKIP] Marked 680288e1af757f552a772576 as downloaded
+2026-08-18 22:02:45,625 - INFO - [S3-RECOVERY] Stored S3 URL for 680288e1af757f552a772576
+
+[3646/9584] Downloading resume 3646/9584...
+[DOWNLOAD] Processing resume ID: 680288b434dfbb322f7e0d13
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680288b434dfbb322f7e0d13/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220250Z)
+2026-08-18 22:02:49,827 - INFO - [EXTRACT] Fresh S3 URL for 6803fe4b01aa734ef63d3e43 (timestamp: 20260818T220250Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Nabin_Kh...
+[STEP 3] Writing file: Nabin_Khanal_resume_mfyrri_F7CwvW.pdf
+[OK] Downloaded: Nabin_Khanal_resume_mfyrri_F7CwvW.pdf (95,369 bytes)
+2026-08-18 22:02:51,262 - INFO - [DOWNLOAD] Success: Nabin_Khanal_resume_mfyrri_F7CwvW.pdf (95369 bytes) from S3
+2026-08-18 22:02:51,265 - INFO - [RESUME-SKIP] Marked 6803fe4b01aa734ef63d3e43 as downloaded
+2026-08-18 22:02:51,268 - INFO - [S3-RECOVERY] Stored S3 URL for 6803fe4b01aa734ef63d3e43
+[BULLETPROOF] ✓ Downloaded 6803fe4b01aa734ef63d3e43 on attempt 1
+2026-08-18 22:02:51,269 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6803fe4b01aa734ef63d3e43 (Total: 277)
+2026-08-18 22:02:51,271 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6803fe4b01aa734ef63d3e43
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220258Z)
+2026-08-18 22:02:57,674 - INFO - [EXTRACT] Fresh S3 URL for 680288b434dfbb322f7e0d13 (timestamp: 20260818T220258Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Santiago...
+[STEP 3] Writing file: SantiagoMachado_Zej5tl_I9rAPE.pdf
+[OK] Downloaded: SantiagoMachado_Zej5tl_I9rAPE.pdf (125,687 bytes)
+2026-08-18 22:03:00,780 - INFO - [DOWNLOAD] Success: SantiagoMachado_Zej5tl_I9rAPE.pdf (125687 bytes) from S3
+2026-08-18 22:03:00,783 - INFO - [RESUME-SKIP] Marked 680288b434dfbb322f7e0d13 as downloaded
+2026-08-18 22:03:00,784 - INFO - [S3-RECOVERY] Stored S3 URL for 680288b434dfbb322f7e0d13
+[PARALLEL-DOWNLOAD] Downloading: 6803fcb91e6e5f60a8426f32
+[BULLETPROOF] Attempt 1/5 to download 6803fcb91e6e5f60a8426f32
+2026-08-18 22:03:01,271 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6803fcb91e6e5f60a8426f32
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6803fcb91e6e5f60a8426f32/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+
+[3647/9584] Downloading resume 3647/9584...
+[DOWNLOAD] Processing resume ID: 6802867b24f86e689b1df4e3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802867b24f86e689b1df4e3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220311Z)
+2026-08-18 22:03:11,430 - INFO - [EXTRACT] Fresh S3 URL for 6803fcb91e6e5f60a8426f32 (timestamp: 20260818T220311Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Sri_12_F...
+[STEP 3] Writing file: Sri_12_FSD_AI_i7wOXy_os8fsb.docx
+[OK] Downloaded: Sri_12_FSD_AI_i7wOXy_os8fsb.docx (49,625 bytes)
+2026-08-18 22:03:13,998 - INFO - [DOWNLOAD] Success: Sri_12_FSD_AI_i7wOXy_os8fsb.docx (49625 bytes) from S3
+2026-08-18 22:03:14,000 - INFO - [RESUME-SKIP] Marked 6803fcb91e6e5f60a8426f32 as downloaded
+2026-08-18 22:03:14,003 - INFO - [S3-RECOVERY] Stored S3 URL for 6803fcb91e6e5f60a8426f32
+[BULLETPROOF] ✓ Downloaded 6803fcb91e6e5f60a8426f32 on attempt 1
+2026-08-18 22:03:14,003 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6803fcb91e6e5f60a8426f32 (Total: 278)
+2026-08-18 22:03:14,006 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6803fcb91e6e5f60a8426f32
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220319Z)
+2026-08-18 22:03:19,110 - INFO - [EXTRACT] Fresh S3 URL for 6802867b24f86e689b1df4e3 (timestamp: 20260818T220319Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/durga_pr...
+[STEP 3] Writing file: durga_prasad_genAI_hz91f4_03XgKA.pdf
+[OK] Downloaded: durga_prasad_genAI_hz91f4_03XgKA.pdf (156,443 bytes)
+2026-08-18 22:03:22,102 - INFO - [DOWNLOAD] Success: durga_prasad_genAI_hz91f4_03XgKA.pdf (156443 bytes) from S3
+2026-08-18 22:03:22,105 - INFO - [RESUME-SKIP] Marked 6802867b24f86e689b1df4e3 as downloaded
+2026-08-18 22:03:22,107 - INFO - [S3-RECOVERY] Stored S3 URL for 6802867b24f86e689b1df4e3
+
+[3648/9584] Downloading resume 3648/9584...
+[DOWNLOAD] Processing resume ID: 680284daad1d292cc60b3aa3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680284daad1d292cc60b3aa3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6803fc7ce7245a120438ee07
+[BULLETPROOF] Attempt 1/5 to download 6803fc7ce7245a120438ee07
+2026-08-18 22:03:24,007 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6803fc7ce7245a120438ee07
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6803fc7ce7245a120438ee07/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220333Z)
+2026-08-18 22:03:33,241 - INFO - [EXTRACT] Fresh S3 URL for 680284daad1d292cc60b3aa3 (timestamp: 20260818T220333Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Tharun_K...
+[STEP 3] Writing file: Tharun_Kumar_B_Full_Stack_Java_Developer_y6PfU6_URkoAv.docx
+[OK] Downloaded: Tharun_Kumar_B_Full_Stack_Java_Developer_y6PfU6_URkoAv.docx (41,956 bytes)
+2026-08-18 22:03:36,958 - INFO - [DOWNLOAD] Success: Tharun_Kumar_B_Full_Stack_Java_Developer_y6PfU6_URkoAv.docx (41956 bytes) from S3
+2026-08-18 22:03:36,960 - INFO - [RESUME-SKIP] Marked 680284daad1d292cc60b3aa3 as downloaded
+2026-08-18 22:03:36,963 - INFO - [S3-RECOVERY] Stored S3 URL for 680284daad1d292cc60b3aa3
+
+[3649/9584] Downloading resume 3649/9584...
+[DOWNLOAD] Processing resume ID: 680284c74f1aaf3e3e614744
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680284c74f1aaf3e3e614744/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220341Z)
+2026-08-18 22:03:40,854 - INFO - [EXTRACT] Fresh S3 URL for 6803fc7ce7245a120438ee07 (timestamp: 20260818T220341Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Technica...
+[STEP 3] Writing file: Technical_Architect_API_OWZupB_v5stsN.pdf
+[OK] Downloaded: Technical_Architect_API_OWZupB_v5stsN.pdf (224,122 bytes)
+2026-08-18 22:03:42,888 - INFO - [DOWNLOAD] Success: Technical_Architect_API_OWZupB_v5stsN.pdf (224122 bytes) from S3
+2026-08-18 22:03:42,890 - INFO - [RESUME-SKIP] Marked 6803fc7ce7245a120438ee07 as downloaded
+2026-08-18 22:03:42,892 - INFO - [S3-RECOVERY] Stored S3 URL for 6803fc7ce7245a120438ee07
+[BULLETPROOF] ✓ Downloaded 6803fc7ce7245a120438ee07 on attempt 1
+2026-08-18 22:03:42,893 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6803fc7ce7245a120438ee07 (Total: 279)
+2026-08-18 22:03:42,896 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6803fc7ce7245a120438ee07
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220349Z)
+2026-08-18 22:03:48,602 - INFO - [EXTRACT] Fresh S3 URL for 680284c74f1aaf3e3e614744 (timestamp: 20260818T220349Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Prasad_P...
+[PARALLEL-DOWNLOAD] Downloading: 6803ec4e12ed62103936d315
+[BULLETPROOF] Attempt 1/5 to download 6803ec4e12ed62103936d315
+2026-08-18 22:03:52,897 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6803ec4e12ed62103936d315
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6803ec4e12ed62103936d315/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[STEP 3] Writing file: Prasad_Pandare_Resume_8AOjd4_YN3ZXi.pdf
+[OK] Downloaded: Prasad_Pandare_Resume_8AOjd4_YN3ZXi.pdf (218,605 bytes)
+2026-08-18 22:03:58,536 - INFO - [DOWNLOAD] Success: Prasad_Pandare_Resume_8AOjd4_YN3ZXi.pdf (218605 bytes) from S3
+2026-08-18 22:03:58,537 - INFO - [RESUME-SKIP] Marked 680284c74f1aaf3e3e614744 as downloaded
+2026-08-18 22:03:58,538 - INFO - [S3-RECOVERY] Stored S3 URL for 680284c74f1aaf3e3e614744
+
+[3650/9584] Downloading resume 3650/9584...
+[DOWNLOAD] Processing resume ID: 680284923bfdb32d7656fb83
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680284923bfdb32d7656fb83/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220403Z)
+2026-08-18 22:04:03,039 - INFO - [EXTRACT] Fresh S3 URL for 6803ec4e12ed62103936d315 (timestamp: 20260818T220403Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Casey_Sh...
+2026-08-18 22:04:04,261 - ERROR - [ERROR] Download failed for 6803ec4e12ed62103936d315: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)
+2026-08-18 22:04:04,292 - INFO - [BULLETPROOF] No S3 URL found for 6803ec4e12ed62103936d315 - skipping retries
+2026-08-18 22:04:04,293 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6803ec4e12ed62103936d315 after all retries
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220411Z)
+2026-08-18 22:04:10,708 - INFO - [EXTRACT] Fresh S3 URL for 680284923bfdb32d7656fb83 (timestamp: 20260818T220411Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-28/Applicat...
+[STEP 3] Writing file: Application_support_engineer_chidvinesh_vnHRRw_TPbbni.docx
+[OK] Downloaded: Application_support_engineer_chidvinesh_vnHRRw_TPbbni.docx (30,347 bytes)
+2026-08-18 22:04:13,302 - INFO - [DOWNLOAD] Success: Application_support_engineer_chidvinesh_vnHRRw_TPbbni.docx (30347 bytes) from S3
+2026-08-18 22:04:13,305 - INFO - [RESUME-SKIP] Marked 680284923bfdb32d7656fb83 as downloaded
+2026-08-18 22:04:13,308 - INFO - [S3-RECOVERY] Stored S3 URL for 680284923bfdb32d7656fb83
+[PARALLEL-DOWNLOAD] Downloading: 6803a2d7d851113e3f1fa8f3
+[BULLETPROOF] Attempt 1/5 to download 6803a2d7d851113e3f1fa8f3
+2026-08-18 22:04:14,293 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6803a2d7d851113e3f1fa8f3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6803a2d7d851113e3f1fa8f3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+
+[3651/9584] Downloading resume 3651/9584...
+[DOWNLOAD] Processing resume ID: 680283d168d6bb33d073b3f4
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680283d168d6bb33d073b3f4/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220425Z)
+2026-08-18 22:04:24,446 - INFO - [EXTRACT] Fresh S3 URL for 6803a2d7d851113e3f1fa8f3 (timestamp: 20260818T220425Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/ALABKA_R...
+[STEP 3] Writing file: ALABKA_RESUME_2025_9WwY4F_R96RHe.pdf
+[OK] Downloaded: ALABKA_RESUME_2025_9WwY4F_R96RHe.pdf (198,913 bytes)
+2026-08-18 22:04:28,440 - INFO - [DOWNLOAD] Success: ALABKA_RESUME_2025_9WwY4F_R96RHe.pdf (198913 bytes) from S3
+2026-08-18 22:04:28,443 - INFO - [RESUME-SKIP] Marked 6803a2d7d851113e3f1fa8f3 as downloaded
+2026-08-18 22:04:28,445 - INFO - [S3-RECOVERY] Stored S3 URL for 6803a2d7d851113e3f1fa8f3
+[BULLETPROOF] ✓ Downloaded 6803a2d7d851113e3f1fa8f3 on attempt 1
+2026-08-18 22:04:28,446 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6803a2d7d851113e3f1fa8f3 (Total: 280)
+2026-08-18 22:04:28,448 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6803a2d7d851113e3f1fa8f3
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220432Z)
+2026-08-18 22:04:32,025 - INFO - [EXTRACT] Fresh S3 URL for 680283d168d6bb33d073b3f4 (timestamp: 20260818T220432Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Kavya_Ma...
+[STEP 3] Writing file: Kavya_Madhuri_Chittipalli_1_1__JoQzqz_44s0SM.pdf
+[OK] Downloaded: Kavya_Madhuri_Chittipalli_1_1__JoQzqz_44s0SM.pdf (130,886 bytes)
+2026-08-18 22:04:33,436 - INFO - [DOWNLOAD] Success: Kavya_Madhuri_Chittipalli_1_1__JoQzqz_44s0SM.pdf (130886 bytes) from S3
+2026-08-18 22:04:33,439 - INFO - [RESUME-SKIP] Marked 680283d168d6bb33d073b3f4 as downloaded
+2026-08-18 22:04:33,442 - INFO - [S3-RECOVERY] Stored S3 URL for 680283d168d6bb33d073b3f4
+
+[3652/9584] Downloading resume 3652/9584...
+[DOWNLOAD] Processing resume ID: 68028368cf29791fee79bcb5
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68028368cf29791fee79bcb5/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 68039e6af09ff82a70110f24
+[BULLETPROOF] Attempt 1/5 to download 68039e6af09ff82a70110f24
+2026-08-18 22:04:38,449 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 68039e6af09ff82a70110f24
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68039e6af09ff82a70110f24/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220445Z)
+2026-08-18 22:04:44,481 - INFO - [EXTRACT] Fresh S3 URL for 68028368cf29791fee79bcb5 (timestamp: 20260818T220445Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/NehaChau...
+[STEP 3] Writing file: NehaChauhan_ProductOwner_a0MlJh_hYQ1yh.pdf
+[OK] Downloaded: NehaChauhan_ProductOwner_a0MlJh_hYQ1yh.pdf (259,614 bytes)
+2026-08-18 22:04:48,549 - INFO - [DOWNLOAD] Success: NehaChauhan_ProductOwner_a0MlJh_hYQ1yh.pdf (259614 bytes) from S3
+2026-08-18 22:04:48,551 - INFO - [RESUME-SKIP] Marked 68028368cf29791fee79bcb5 as downloaded
+2026-08-18 22:04:48,554 - INFO - [S3-RECOVERY] Stored S3 URL for 68028368cf29791fee79bcb5
+
+[3653/9584] Downloading resume 3653/9584...
+[DOWNLOAD] Processing resume ID: 6802826e93396861eb2de173
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802826e93396861eb2de173/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220452Z)
+2026-08-18 22:04:52,306 - INFO - [EXTRACT] Fresh S3 URL for 68039e6af09ff82a70110f24 (timestamp: 20260818T220452Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Final_Fa...
+[STEP 3] Writing file: Final_Faith_Dziedzic_Resume_nonfed_sj5OBM_YdcwH7.docx
+[OK] Downloaded: Final_Faith_Dziedzic_Resume_nonfed_sj5OBM_YdcwH7.docx (577,710 bytes)
+2026-08-18 22:04:54,843 - INFO - [DOWNLOAD] Success: Final_Faith_Dziedzic_Resume_nonfed_sj5OBM_YdcwH7.docx (577710 bytes) from S3
+2026-08-18 22:04:54,847 - INFO - [RESUME-SKIP] Marked 68039e6af09ff82a70110f24 as downloaded
+2026-08-18 22:04:54,849 - INFO - [S3-RECOVERY] Stored S3 URL for 68039e6af09ff82a70110f24
+[BULLETPROOF] ✓ Downloaded 68039e6af09ff82a70110f24 on attempt 1
+2026-08-18 22:04:54,850 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 68039e6af09ff82a70110f24 (Total: 281)
+2026-08-18 22:04:54,852 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 68039e6af09ff82a70110f24
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220500Z)
+2026-08-18 22:05:00,307 - INFO - [EXTRACT] Fresh S3 URL for 6802826e93396861eb2de173 (timestamp: 20260818T220500Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Sana_May...
+[STEP 3] Writing file: Sana_Mays_m8qQlo_mtOwsk.docx
+[OK] Downloaded: Sana_Mays_m8qQlo_mtOwsk.docx (24,418 bytes)
+2026-08-18 22:05:04,095 - INFO - [DOWNLOAD] Success: Sana_Mays_m8qQlo_mtOwsk.docx (24418 bytes) from S3
+2026-08-18 22:05:04,098 - INFO - [RESUME-SKIP] Marked 6802826e93396861eb2de173 as downloaded
+2026-08-18 22:05:04,101 - INFO - [S3-RECOVERY] Stored S3 URL for 6802826e93396861eb2de173
+[PARALLEL-DOWNLOAD] Downloading: 680372a22ca44f12cf349974
+[BULLETPROOF] Attempt 1/5 to download 680372a22ca44f12cf349974
+2026-08-18 22:05:04,853 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 680372a22ca44f12cf349974
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680372a22ca44f12cf349974/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+
+[3654/9584] Downloading resume 3654/9584...
+[DOWNLOAD] Processing resume ID: 68027f9a96bef119776fa6d4
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027f9a96bef119776fa6d4/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220515Z)
+2026-08-18 22:05:14,907 - INFO - [EXTRACT] Fresh S3 URL for 680372a22ca44f12cf349974 (timestamp: 20260818T220515Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/TravisDa...
+[STEP 3] Writing file: TravisDaltonResume_FullStack_Ob4NWw_cFnGAK.pdf
+[OK] Downloaded: TravisDaltonResume_FullStack_Ob4NWw_cFnGAK.pdf (122,416 bytes)
+2026-08-18 22:05:20,493 - INFO - [DOWNLOAD] Success: TravisDaltonResume_FullStack_Ob4NWw_cFnGAK.pdf (122416 bytes) from S3
+2026-08-18 22:05:20,494 - INFO - [RESUME-SKIP] Marked 680372a22ca44f12cf349974 as downloaded
+2026-08-18 22:05:20,495 - INFO - [S3-RECOVERY] Stored S3 URL for 680372a22ca44f12cf349974
+[BULLETPROOF] ✓ Downloaded 680372a22ca44f12cf349974 on attempt 1
+2026-08-18 22:05:20,496 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 680372a22ca44f12cf349974 (Total: 282)
+2026-08-18 22:05:20,497 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 680372a22ca44f12cf349974
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220523Z)
+2026-08-18 22:05:23,302 - INFO - [EXTRACT] Fresh S3 URL for 68027f9a96bef119776fa6d4 (timestamp: 20260818T220523Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Bhavani_...
+2026-08-18 22:05:24,908 - ERROR - [ERROR] Download failed for 68027f9a96bef119776fa6d4: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[RETRY] Attempt 2/2 for resume 3654...
+[DOWNLOAD] Processing resume ID: 68027f9a96bef119776fa6d4
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027f9a96bef119776fa6d4/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 68068909c27f491838190104
+[BULLETPROOF] Attempt 1/5 to download 68068909c27f491838190104
+2026-08-18 22:05:30,499 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 68068909c27f491838190104
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68068909c27f491838190104/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220538Z)
+2026-08-18 22:05:37,925 - INFO - [EXTRACT] Fresh S3 URL for 68027f9a96bef119776fa6d4 (timestamp: 20260818T220538Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Bhavani_...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220541Z)
+2026-08-18 22:05:40,627 - INFO - [EXTRACT] Fresh S3 URL for 68068909c27f491838190104 (timestamp: 20260818T220541Z)
+[STEP 3] Writing file: Bhavani_Kasthuri_2__vmoPul_Cv93jo.pdf
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-21/Ramesh_S...
+[OK] Downloaded: Bhavani_Kasthuri_2__vmoPul_Cv93jo.pdf (114,226 bytes)
+2026-08-18 22:05:41,954 - INFO - [DOWNLOAD] Success: Bhavani_Kasthuri_2__vmoPul_Cv93jo.pdf (114226 bytes) from S3
+2026-08-18 22:05:41,955 - INFO - [RESUME-SKIP] Marked 68027f9a96bef119776fa6d4 as downloaded
+2026-08-18 22:05:41,956 - INFO - [S3-RECOVERY] Stored S3 URL for 68027f9a96bef119776fa6d4
+
+[3655/9584] Downloading resume 3655/9584...
+[DOWNLOAD] Processing resume ID: 68027f936791a14862365fa3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027f936791a14862365fa3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[STEP 3] Writing file: Ramesh_Saraswathi_Resume_svpdS3_tjaUzo.docx
+[OK] Downloaded: Ramesh_Saraswathi_Resume_svpdS3_tjaUzo.docx (30,272 bytes)
+2026-08-18 22:05:43,496 - INFO - [DOWNLOAD] Success: Ramesh_Saraswathi_Resume_svpdS3_tjaUzo.docx (30272 bytes) from S3
+2026-08-18 22:05:43,498 - INFO - [RESUME-SKIP] Marked 68068909c27f491838190104 as downloaded
+2026-08-18 22:05:43,500 - INFO - [S3-RECOVERY] Stored S3 URL for 68068909c27f491838190104
+[BULLETPROOF] ✓ Downloaded 68068909c27f491838190104 on attempt 1
+2026-08-18 22:05:43,500 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 68068909c27f491838190104 (Total: 283)
+2026-08-18 22:05:43,502 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 68068909c27f491838190104
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220553Z)
+2026-08-18 22:05:53,023 - INFO - [EXTRACT] Fresh S3 URL for 68027f936791a14862365fa3 (timestamp: 20260818T220553Z)
+[PARALLEL-DOWNLOAD] Downloading: 68067fac8bb657527425ef23
+[BULLETPROOF] Attempt 1/5 to download 68067fac8bb657527425ef23
+2026-08-18 22:05:53,505 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 68067fac8bb657527425ef23
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68067fac8bb657527425ef23/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-28/Bhanu_Ku...
+[STEP 3] Writing file: Bhanu_Kumar_Balla_Resume_ciGrOT_nPH7Yh.docx
+[OK] Downloaded: Bhanu_Kumar_Balla_Resume_ciGrOT_nPH7Yh.docx (32,482 bytes)
+2026-08-18 22:05:56,085 - INFO - [DOWNLOAD] Success: Bhanu_Kumar_Balla_Resume_ciGrOT_nPH7Yh.docx (32482 bytes) from S3
+2026-08-18 22:05:56,088 - INFO - [RESUME-SKIP] Marked 68027f936791a14862365fa3 as downloaded
+2026-08-18 22:05:56,091 - INFO - [S3-RECOVERY] Stored S3 URL for 68027f936791a14862365fa3
+
+[3656/9584] Downloading resume 3656/9584...
+[DOWNLOAD] Processing resume ID: 68027f7f0dd6ac401f785486
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027f7f0dd6ac401f785486/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220604Z)
+2026-08-18 22:06:03,667 - INFO - [EXTRACT] Fresh S3 URL for 68067fac8bb657527425ef23 (timestamp: 20260818T220604Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-21/Maqbool_...
+[STEP 3] Writing file: Maqbool_NET_full_stack_7MZVCh_JZSqUd.docx
+[OK] Downloaded: Maqbool_NET_full_stack_7MZVCh_JZSqUd.docx (34,626 bytes)
+2026-08-18 22:06:07,934 - INFO - [DOWNLOAD] Success: Maqbool_NET_full_stack_7MZVCh_JZSqUd.docx (34626 bytes) from S3
+2026-08-18 22:06:07,936 - INFO - [RESUME-SKIP] Marked 68067fac8bb657527425ef23 as downloaded
+2026-08-18 22:06:07,938 - INFO - [S3-RECOVERY] Stored S3 URL for 68067fac8bb657527425ef23
+[BULLETPROOF] ✓ Downloaded 68067fac8bb657527425ef23 on attempt 1
+2026-08-18 22:06:07,939 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 68067fac8bb657527425ef23 (Total: 284)
+2026-08-18 22:06:07,941 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 68067fac8bb657527425ef23
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220611Z)
+2026-08-18 22:06:11,305 - INFO - [EXTRACT] Fresh S3 URL for 68027f7f0dd6ac401f785486 (timestamp: 20260818T220611Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Varshith...
+[STEP 3] Writing file: Varshitha_Sr_DataEngineer_NNqJmi_tJMXdS.docx
+[OK] Downloaded: Varshitha_Sr_DataEngineer_NNqJmi_tJMXdS.docx (70,929 bytes)
+2026-08-18 22:06:12,898 - INFO - [DOWNLOAD] Success: Varshitha_Sr_DataEngineer_NNqJmi_tJMXdS.docx (70929 bytes) from S3
+2026-08-18 22:06:12,901 - INFO - [RESUME-SKIP] Marked 68027f7f0dd6ac401f785486 as downloaded
+2026-08-18 22:06:12,903 - INFO - [S3-RECOVERY] Stored S3 URL for 68027f7f0dd6ac401f785486
+
+[3657/9584] Downloading resume 3657/9584...
+[DOWNLOAD] Processing resume ID: 68027edcfde2ba4e95303c13
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027edcfde2ba4e95303c13/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 68036305e53cb13f2d133033
+[BULLETPROOF] Attempt 1/5 to download 68036305e53cb13f2d133033
+2026-08-18 22:06:17,942 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 68036305e53cb13f2d133033
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68036305e53cb13f2d133033/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220624Z)
+2026-08-18 22:06:24,063 - INFO - [EXTRACT] Fresh S3 URL for 68027edcfde2ba4e95303c13 (timestamp: 20260818T220624Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Vineeth_...
+[STEP 3] Writing file: Vineeth_Maroodi_Resume_odircl_KevNpw.pdf
+[OK] Downloaded: Vineeth_Maroodi_Resume_odircl_KevNpw.pdf (153,153 bytes)
+2026-08-18 22:06:27,725 - INFO - [DOWNLOAD] Success: Vineeth_Maroodi_Resume_odircl_KevNpw.pdf (153153 bytes) from S3
+2026-08-18 22:06:27,729 - INFO - [RESUME-SKIP] Marked 68027edcfde2ba4e95303c13 as downloaded
+2026-08-18 22:06:27,731 - INFO - [S3-RECOVERY] Stored S3 URL for 68027edcfde2ba4e95303c13
+
+[3658/9584] Downloading resume 3658/9584...
+[DOWNLOAD] Processing resume ID: 68027e8d3f3b397ea67c6ba3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027e8d3f3b397ea67c6ba3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220632Z)
+2026-08-18 22:06:31,722 - INFO - [EXTRACT] Fresh S3 URL for 68036305e53cb13f2d133033 (timestamp: 20260818T220632Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-28/Neha_San...
+2026-08-18 22:06:34,665 - ERROR - [ERROR] Download failed for 68036305e53cb13f2d133033: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)
+2026-08-18 22:06:34,684 - INFO - [BULLETPROOF] No S3 URL found for 68036305e53cb13f2d133033 - skipping retries
+2026-08-18 22:06:34,684 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 68036305e53cb13f2d133033 after all retries
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220640Z)
+2026-08-18 22:06:39,401 - INFO - [EXTRACT] Fresh S3 URL for 68027e8d3f3b397ea67c6ba3 (timestamp: 20260818T220640Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Nikitha_...
+[STEP 3] Writing file: Nikitha_Samala_BA_Resume_bXEkL6_zRNbJZ.pdf
+[OK] Downloaded: Nikitha_Samala_BA_Resume_bXEkL6_zRNbJZ.pdf (475,486 bytes)
+2026-08-18 22:06:43,549 - INFO - [DOWNLOAD] Success: Nikitha_Samala_BA_Resume_bXEkL6_zRNbJZ.pdf (475486 bytes) from S3
+2026-08-18 22:06:43,551 - INFO - [RESUME-SKIP] Marked 68027e8d3f3b397ea67c6ba3 as downloaded
+2026-08-18 22:06:43,554 - INFO - [S3-RECOVERY] Stored S3 URL for 68027e8d3f3b397ea67c6ba3
+
+[3659/9584] Downloading resume 3659/9584...
+[DOWNLOAD] Processing resume ID: 68027d03f5b12207f90e906a
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027d03f5b12207f90e906a/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 680344ac74b935166525d683
+[BULLETPROOF] Attempt 1/5 to download 680344ac74b935166525d683
+2026-08-18 22:06:44,686 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 680344ac74b935166525d683
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680344ac74b935166525d683/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220655Z)
+2026-08-18 22:06:54,743 - INFO - [EXTRACT] Fresh S3 URL for 680344ac74b935166525d683 (timestamp: 20260818T220655Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Muhammad...
+[STEP 3] Writing file: Muhammad_Saad_CV_ZU2l72_TpsTqn.pdf
+[OK] Downloaded: Muhammad_Saad_CV_ZU2l72_TpsTqn.pdf (235,601 bytes)
+2026-08-18 22:06:58,290 - INFO - [DOWNLOAD] Success: Muhammad_Saad_CV_ZU2l72_TpsTqn.pdf (235601 bytes) from S3
+2026-08-18 22:06:58,292 - INFO - [RESUME-SKIP] Marked 680344ac74b935166525d683 as downloaded
+2026-08-18 22:06:58,294 - INFO - [S3-RECOVERY] Stored S3 URL for 680344ac74b935166525d683
+[BULLETPROOF] ✓ Downloaded 680344ac74b935166525d683 on attempt 1
+2026-08-18 22:06:58,295 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 680344ac74b935166525d683 (Total: 285)
+2026-08-18 22:06:58,296 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 680344ac74b935166525d683
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220703Z)
+2026-08-18 22:07:02,648 - INFO - [EXTRACT] Fresh S3 URL for 68027d03f5b12207f90e906a (timestamp: 20260818T220703Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Resume_D...
+[STEP 3] Writing file: Resume_Deepak_Pandey_oF7DpP_69d8at.pdf
+[OK] Downloaded: Resume_Deepak_Pandey_oF7DpP_69d8at.pdf (306,286 bytes)
+2026-08-18 22:07:04,408 - INFO - [DOWNLOAD] Success: Resume_Deepak_Pandey_oF7DpP_69d8at.pdf (306286 bytes) from S3
+2026-08-18 22:07:04,410 - INFO - [RESUME-SKIP] Marked 68027d03f5b12207f90e906a as downloaded
+2026-08-18 22:07:04,412 - INFO - [S3-RECOVERY] Stored S3 URL for 68027d03f5b12207f90e906a
+
+[3660/9584] Downloading resume 3660/9584...
+[DOWNLOAD] Processing resume ID: 68027c53585664416c5a3af4
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027c53585664416c5a3af4/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 68032810af483920dd7e0fe3
+[BULLETPROOF] Attempt 1/5 to download 68032810af483920dd7e0fe3
+2026-08-18 22:07:08,299 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 68032810af483920dd7e0fe3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68032810af483920dd7e0fe3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220716Z)
+2026-08-18 22:07:15,448 - INFO - [EXTRACT] Fresh S3 URL for 68027c53585664416c5a3af4 (timestamp: 20260818T220716Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-28/Karthik_...
+[STEP 3] Writing file: Karthik_Resume_2__3uxhbO_oqHV2D.docx
+[OK] Downloaded: Karthik_Resume_2__3uxhbO_oqHV2D.docx (57,633 bytes)
+2026-08-18 22:07:18,417 - INFO - [DOWNLOAD] Success: Karthik_Resume_2__3uxhbO_oqHV2D.docx (57633 bytes) from S3
+2026-08-18 22:07:18,419 - INFO - [RESUME-SKIP] Marked 68027c53585664416c5a3af4 as downloaded
+2026-08-18 22:07:18,421 - INFO - [S3-RECOVERY] Stored S3 URL for 68027c53585664416c5a3af4
+
+[3661/9584] Downloading resume 3661/9584...
+[DOWNLOAD] Processing resume ID: 68027c43822c5339f801e243
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027c43822c5339f801e243/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220723Z)
+2026-08-18 22:07:23,229 - INFO - [EXTRACT] Fresh S3 URL for 68032810af483920dd7e0fe3 (timestamp: 20260818T220723Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-19/Zoey_Liu...
+2026-08-18 22:07:24,558 - ERROR - [ERROR] Download failed for 68032810af483920dd7e0fe3: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)
+2026-08-18 22:07:24,576 - INFO - [BULLETPROOF] No S3 URL found for 68032810af483920dd7e0fe3 - skipping retries
+2026-08-18 22:07:24,577 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 68032810af483920dd7e0fe3 after all retries
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220731Z)
+2026-08-18 22:07:30,856 - INFO - [EXTRACT] Fresh S3 URL for 68027c43822c5339f801e243 (timestamp: 20260818T220731Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/sree_sah...
+[STEP 3] Writing file: sree_sahithi_Resume_2ZZPu3_pInGx8.pdf
+[OK] Downloaded: sree_sahithi_Resume_2ZZPu3_pInGx8.pdf (205,612 bytes)
+2026-08-18 22:07:34,181 - INFO - [DOWNLOAD] Success: sree_sahithi_Resume_2ZZPu3_pInGx8.pdf (205612 bytes) from S3
+2026-08-18 22:07:34,183 - INFO - [RESUME-SKIP] Marked 68027c43822c5339f801e243 as downloaded
+2026-08-18 22:07:34,184 - INFO - [S3-RECOVERY] Stored S3 URL for 68027c43822c5339f801e243
+[PARALLEL-DOWNLOAD] Downloading: 68031f1530f6693214214ab4
+[BULLETPROOF] Attempt 1/5 to download 68031f1530f6693214214ab4
+2026-08-18 22:07:34,577 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 68031f1530f6693214214ab4
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68031f1530f6693214214ab4/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+
+[3662/9584] Downloading resume 3662/9584...
+[DOWNLOAD] Processing resume ID: 68027a4eced56239090ccb24
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027a4eced56239090ccb24/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220745Z)
+2026-08-18 22:07:44,629 - INFO - [EXTRACT] Fresh S3 URL for 68031f1530f6693214214ab4 (timestamp: 20260818T220745Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Prakash_...
+[STEP 3] Writing file: Prakash_Limbachia_naH6WT_UsT3pP.pdf
+[OK] Downloaded: Prakash_Limbachia_naH6WT_UsT3pP.pdf (161,887 bytes)
+2026-08-18 22:07:47,817 - INFO - [DOWNLOAD] Success: Prakash_Limbachia_naH6WT_UsT3pP.pdf (161887 bytes) from S3
+2026-08-18 22:07:47,819 - INFO - [RESUME-SKIP] Marked 68031f1530f6693214214ab4 as downloaded
+2026-08-18 22:07:47,821 - INFO - [S3-RECOVERY] Stored S3 URL for 68031f1530f6693214214ab4
+[BULLETPROOF] ✓ Downloaded 68031f1530f6693214214ab4 on attempt 1
+2026-08-18 22:07:47,822 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 68031f1530f6693214214ab4 (Total: 286)
+2026-08-18 22:07:47,824 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 68031f1530f6693214214ab4
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220752Z)
+2026-08-18 22:07:52,209 - INFO - [EXTRACT] Fresh S3 URL for 68027a4eced56239090ccb24 (timestamp: 20260818T220752Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Avinash_...
+2026-08-18 22:07:53,438 - ERROR - [ERROR] Download failed for 68027a4eced56239090ccb24: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[RETRY] Attempt 2/2 for resume 3662...
+[DOWNLOAD] Processing resume ID: 68027a4eced56239090ccb24
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027a4eced56239090ccb24/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 680304166256ed282d059623
+[BULLETPROOF] Attempt 1/5 to download 680304166256ed282d059623
+2026-08-18 22:07:57,825 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 680304166256ed282d059623
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680304166256ed282d059623/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220807Z)
+2026-08-18 22:08:06,544 - INFO - [EXTRACT] Fresh S3 URL for 68027a4eced56239090ccb24 (timestamp: 20260818T220807Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Avinash_...
+[STEP 3] Writing file: Avinash_SNow_ziobol_sGtKRe.pdf
+[OK] Downloaded: Avinash_SNow_ziobol_sGtKRe.pdf (209,465 bytes)
+2026-08-18 22:08:10,916 - INFO - [DOWNLOAD] Success: Avinash_SNow_ziobol_sGtKRe.pdf (209465 bytes) from S3
+2026-08-18 22:08:10,919 - INFO - [RESUME-SKIP] Marked 68027a4eced56239090ccb24 as downloaded
+2026-08-18 22:08:10,921 - INFO - [S3-RECOVERY] Stored S3 URL for 68027a4eced56239090ccb24
+
+[3663/9584] Downloading resume 3663/9584...
+[DOWNLOAD] Processing resume ID: 68027a241bf6ff26ad5f8933
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027a241bf6ff26ad5f8933/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220814Z)
+2026-08-18 22:08:14,121 - INFO - [EXTRACT] Fresh S3 URL for 680304166256ed282d059623 (timestamp: 20260818T220814Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/DZ_2025_...
+[STEP 3] Writing file: DZ_2025_4_resume_hdUHGY_GxSjcw.pdf
+[OK] Downloaded: DZ_2025_4_resume_hdUHGY_GxSjcw.pdf (84,023 bytes)
+2026-08-18 22:08:15,570 - INFO - [DOWNLOAD] Success: DZ_2025_4_resume_hdUHGY_GxSjcw.pdf (84023 bytes) from S3
+2026-08-18 22:08:15,572 - INFO - [RESUME-SKIP] Marked 680304166256ed282d059623 as downloaded
+2026-08-18 22:08:15,574 - INFO - [S3-RECOVERY] Stored S3 URL for 680304166256ed282d059623
+[BULLETPROOF] ✓ Downloaded 680304166256ed282d059623 on attempt 1
+2026-08-18 22:08:15,575 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 680304166256ed282d059623 (Total: 287)
+2026-08-18 22:08:15,577 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 680304166256ed282d059623
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220822Z)
+2026-08-18 22:08:22,043 - INFO - [EXTRACT] Fresh S3 URL for 68027a241bf6ff26ad5f8933 (timestamp: 20260818T220822Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Swetha_P...
+[STEP 3] Writing file: Swetha_Profile_net_full_stack_developer_10_years__RDXFzG_ZUiWWe.docx
+[OK] Downloaded: Swetha_Profile_net_full_stack_developer_10_years__RDXFzG_ZUiWWe.docx (26,120 bytes)
+2026-08-18 22:08:25,074 - INFO - [DOWNLOAD] Success: Swetha_Profile_net_full_stack_developer_10_years__RDXFzG_ZUiWWe.docx (26120 bytes) from S3
+2026-08-18 22:08:25,172 - INFO - [RESUME-SKIP] Marked 68027a241bf6ff26ad5f8933 as downloaded
+2026-08-18 22:08:25,173 - INFO - [S3-RECOVERY] Stored S3 URL for 68027a241bf6ff26ad5f8933
+[PARALLEL-DOWNLOAD] Downloading: 6802c51e2ae2d70e92788494
+[BULLETPROOF] Attempt 1/5 to download 6802c51e2ae2d70e92788494
+2026-08-18 22:08:25,578 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802c51e2ae2d70e92788494
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802c51e2ae2d70e92788494/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+
+[3664/9584] Downloading resume 3664/9584...
+[DOWNLOAD] Processing resume ID: 68027a089b874838e40357e2
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027a089b874838e40357e2/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220836Z)
+2026-08-18 22:08:35,538 - INFO - [EXTRACT] Fresh S3 URL for 6802c51e2ae2d70e92788494 (timestamp: 20260818T220836Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/David_Th...
+[STEP 3] Writing file: David_Thomas_Resume_2025_4JJwZm_oMFgxU.pdf
+[OK] Downloaded: David_Thomas_Resume_2025_4JJwZm_oMFgxU.pdf (245,677 bytes)
+2026-08-18 22:08:39,115 - INFO - [DOWNLOAD] Success: David_Thomas_Resume_2025_4JJwZm_oMFgxU.pdf (245677 bytes) from S3
+2026-08-18 22:08:39,116 - INFO - [RESUME-SKIP] Marked 6802c51e2ae2d70e92788494 as downloaded
+2026-08-18 22:08:39,118 - INFO - [S3-RECOVERY] Stored S3 URL for 6802c51e2ae2d70e92788494
+[BULLETPROOF] ✓ Downloaded 6802c51e2ae2d70e92788494 on attempt 1
+2026-08-18 22:08:39,118 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802c51e2ae2d70e92788494 (Total: 288)
+2026-08-18 22:08:39,119 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802c51e2ae2d70e92788494
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220843Z)
+2026-08-18 22:08:43,167 - INFO - [EXTRACT] Fresh S3 URL for 68027a089b874838e40357e2 (timestamp: 20260818T220843Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Resume_P...
+[STEP 3] Writing file: Resume_Pavan_JCOnki_4o8ZLZ.docx
+[OK] Downloaded: Resume_Pavan_JCOnki_4o8ZLZ.docx (74,650 bytes)
+2026-08-18 22:08:44,586 - INFO - [DOWNLOAD] Success: Resume_Pavan_JCOnki_4o8ZLZ.docx (74650 bytes) from S3
+2026-08-18 22:08:44,588 - INFO - [RESUME-SKIP] Marked 68027a089b874838e40357e2 as downloaded
+2026-08-18 22:08:44,589 - INFO - [S3-RECOVERY] Stored S3 URL for 68027a089b874838e40357e2
+
+[3665/9584] Downloading resume 3665/9584...
+[DOWNLOAD] Processing resume ID: 680277faab193a08751e8cc3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680277faab193a08751e8cc3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802c46257ef05613f0ffec3
+[BULLETPROOF] Attempt 1/5 to download 6802c46257ef05613f0ffec3
+2026-08-18 22:08:49,120 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802c46257ef05613f0ffec3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802c46257ef05613f0ffec3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220856Z)
+2026-08-18 22:08:55,699 - INFO - [EXTRACT] Fresh S3 URL for 680277faab193a08751e8cc3 (timestamp: 20260818T220856Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-22/HemaSri_...
+[STEP 3] Writing file: HemaSri_Sr_Java_Full_Stack_Developer_GiDptW_mD11iI.docx
+[OK] Downloaded: HemaSri_Sr_Java_Full_Stack_Developer_GiDptW_mD11iI.docx (33,638 bytes)
+2026-08-18 22:08:58,667 - INFO - [DOWNLOAD] Success: HemaSri_Sr_Java_Full_Stack_Developer_GiDptW_mD11iI.docx (33638 bytes) from S3
+2026-08-18 22:08:58,671 - INFO - [RESUME-SKIP] Marked 680277faab193a08751e8cc3 as downloaded
+2026-08-18 22:08:58,673 - INFO - [S3-RECOVERY] Stored S3 URL for 680277faab193a08751e8cc3
+
+[3666/9584] Downloading resume 3666/9584...
+[DOWNLOAD] Processing resume ID: 68027756ce7d5c7b432f1e99
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027756ce7d5c7b432f1e99/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220904Z)
+2026-08-18 22:09:03,377 - INFO - [EXTRACT] Fresh S3 URL for 6802c46257ef05613f0ffec3 (timestamp: 20260818T220904Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Rohan_Pa...
+2026-08-18 22:09:04,600 - ERROR - [ERROR] Download failed for 6802c46257ef05613f0ffec3: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)
+2026-08-18 22:09:04,631 - INFO - [BULLETPROOF] No S3 URL found for 6802c46257ef05613f0ffec3 - skipping retries
+2026-08-18 22:09:04,632 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6802c46257ef05613f0ffec3 after all retries
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220911Z)
+2026-08-18 22:09:11,087 - INFO - [EXTRACT] Fresh S3 URL for 68027756ce7d5c7b432f1e99 (timestamp: 20260818T220911Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Abhinaya...
+[STEP 3] Writing file: AbhinayaB_JGi2V9_IKcfpY.pdf
+[PARALLEL-DOWNLOAD] Downloading: 6802c0ac27bf55267c739d66
+[BULLETPROOF] Attempt 1/5 to download 6802c0ac27bf55267c739d66
+2026-08-18 22:09:14,633 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802c0ac27bf55267c739d66
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802c0ac27bf55267c739d66/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Downloaded: AbhinayaB_JGi2V9_IKcfpY.pdf (177,825 bytes)
+2026-08-18 22:09:15,173 - INFO - [DOWNLOAD] Success: AbhinayaB_JGi2V9_IKcfpY.pdf (177825 bytes) from S3
+2026-08-18 22:09:15,176 - INFO - [RESUME-SKIP] Marked 68027756ce7d5c7b432f1e99 as downloaded
+2026-08-18 22:09:15,181 - INFO - [S3-RECOVERY] Stored S3 URL for 68027756ce7d5c7b432f1e99
+
+[3667/9584] Downloading resume 3667/9584...
+[DOWNLOAD] Processing resume ID: 680273ca9105a015d21c19c3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680273ca9105a015d21c19c3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220925Z)
+2026-08-18 22:09:24,718 - INFO - [EXTRACT] Fresh S3 URL for 6802c0ac27bf55267c739d66 (timestamp: 20260818T220925Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Sudheer_...
+[STEP 3] Writing file: Sudheer_Resume_kTF80p_Awr8H4.pdf
+[OK] Downloaded: Sudheer_Resume_kTF80p_Awr8H4.pdf (718,945 bytes)
+2026-08-18 22:09:28,823 - INFO - [DOWNLOAD] Success: Sudheer_Resume_kTF80p_Awr8H4.pdf (718945 bytes) from S3
+2026-08-18 22:09:28,824 - INFO - [RESUME-SKIP] Marked 6802c0ac27bf55267c739d66 as downloaded
+2026-08-18 22:09:28,826 - INFO - [S3-RECOVERY] Stored S3 URL for 6802c0ac27bf55267c739d66
+[BULLETPROOF] ✓ Downloaded 6802c0ac27bf55267c739d66 on attempt 1
+2026-08-18 22:09:28,826 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802c0ac27bf55267c739d66 (Total: 289)
+2026-08-18 22:09:28,828 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802c0ac27bf55267c739d66
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220933Z)
+2026-08-18 22:09:32,528 - INFO - [EXTRACT] Fresh S3 URL for 680273ca9105a015d21c19c3 (timestamp: 20260818T220933Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-25/Resume_A...
+[STEP 3] Writing file: Resume_Ayesha_mw5hQw_LvkSQo.pdf
+[OK] Downloaded: Resume_Ayesha_mw5hQw_LvkSQo.pdf (477,231 bytes)
+2026-08-18 22:09:34,029 - INFO - [DOWNLOAD] Success: Resume_Ayesha_mw5hQw_LvkSQo.pdf (477231 bytes) from S3
+2026-08-18 22:09:34,031 - INFO - [RESUME-SKIP] Marked 680273ca9105a015d21c19c3 as downloaded
+2026-08-18 22:09:34,032 - INFO - [S3-RECOVERY] Stored S3 URL for 680273ca9105a015d21c19c3
+
+[3668/9584] Downloading resume 3668/9584...
+[DOWNLOAD] Processing resume ID: 68027297de81d664f87cdb33
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68027297de81d664f87cdb33/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802c05c95fe9c2a1a2cb5b5
+[BULLETPROOF] Attempt 1/5 to download 6802c05c95fe9c2a1a2cb5b5
+2026-08-18 22:09:38,829 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802c05c95fe9c2a1a2cb5b5
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802c05c95fe9c2a1a2cb5b5/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220945Z)
+2026-08-18 22:09:45,153 - INFO - [EXTRACT] Fresh S3 URL for 68027297de81d664f87cdb33 (timestamp: 20260818T220945Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Pavani_d...
+[STEP 3] Writing file: Pavani_data_engineer_VP7Urs_KnKdxN.docx
+[OK] Downloaded: Pavani_data_engineer_VP7Urs_KnKdxN.docx (27,392 bytes)
+2026-08-18 22:09:48,224 - INFO - [DOWNLOAD] Success: Pavani_data_engineer_VP7Urs_KnKdxN.docx (27392 bytes) from S3
+2026-08-18 22:09:48,227 - INFO - [RESUME-SKIP] Marked 68027297de81d664f87cdb33 as downloaded
+2026-08-18 22:09:48,229 - INFO - [S3-RECOVERY] Stored S3 URL for 68027297de81d664f87cdb33
+
+[3669/9584] Downloading resume 3669/9584...
+[DOWNLOAD] Processing resume ID: 6802718d93649612bd6ab373
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802718d93649612bd6ab373/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T220953Z)
+2026-08-18 22:09:52,838 - INFO - [EXTRACT] Fresh S3 URL for 6802c05c95fe9c2a1a2cb5b5 (timestamp: 20260818T220953Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Evan_Cho...
+2026-08-18 22:09:53,927 - ERROR - [ERROR] Download failed for 6802c05c95fe9c2a1a2cb5b5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)
+2026-08-18 22:09:53,955 - INFO - [BULLETPROOF] No S3 URL found for 6802c05c95fe9c2a1a2cb5b5 - skipping retries
+2026-08-18 22:09:53,955 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6802c05c95fe9c2a1a2cb5b5 after all retries
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221001Z)
+2026-08-18 22:10:00,582 - INFO - [EXTRACT] Fresh S3 URL for 6802718d93649612bd6ab373 (timestamp: 20260818T221001Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-21/Divya_Re...
+[STEP 3] Writing file: Divya_Resume_Bz7mmN_2rE9xx.pdf
+[PARALLEL-DOWNLOAD] Downloading: 6802b896eab1240245018363
+[BULLETPROOF] Attempt 1/5 to download 6802b896eab1240245018363
+2026-08-18 22:10:03,956 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802b896eab1240245018363
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802b896eab1240245018363/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Downloaded: Divya_Resume_Bz7mmN_2rE9xx.pdf (956,154 bytes)
+2026-08-18 22:10:05,132 - INFO - [DOWNLOAD] Success: Divya_Resume_Bz7mmN_2rE9xx.pdf (956154 bytes) from S3
+2026-08-18 22:10:05,134 - INFO - [RESUME-SKIP] Marked 6802718d93649612bd6ab373 as downloaded
+2026-08-18 22:10:05,135 - INFO - [S3-RECOVERY] Stored S3 URL for 6802718d93649612bd6ab373
+
+[3670/9584] Downloading resume 3670/9584...
+[DOWNLOAD] Processing resume ID: 6802703fb930e90900014963
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802703fb930e90900014963/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221014Z)
+2026-08-18 22:10:13,930 - INFO - [EXTRACT] Fresh S3 URL for 6802b896eab1240245018363 (timestamp: 20260818T221014Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Chidanan...
+[STEP 3] Writing file: Chidananda_Reddy_Madala_Profile_VSKQPz_fDNSzj.pdf
+[OK] Downloaded: Chidananda_Reddy_Madala_Profile_VSKQPz_fDNSzj.pdf (401,448 bytes)
+2026-08-18 22:10:17,262 - INFO - [DOWNLOAD] Success: Chidananda_Reddy_Madala_Profile_VSKQPz_fDNSzj.pdf (401448 bytes) from S3
+2026-08-18 22:10:17,265 - INFO - [RESUME-SKIP] Marked 6802b896eab1240245018363 as downloaded
+2026-08-18 22:10:17,267 - INFO - [S3-RECOVERY] Stored S3 URL for 6802b896eab1240245018363
+[BULLETPROOF] ✓ Downloaded 6802b896eab1240245018363 on attempt 1
+2026-08-18 22:10:17,269 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802b896eab1240245018363 (Total: 290)
+2026-08-18 22:10:17,271 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802b896eab1240245018363
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221022Z)
+2026-08-18 22:10:21,713 - INFO - [EXTRACT] Fresh S3 URL for 6802703fb930e90900014963 (timestamp: 20260818T221022Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Shiva_Re...
+[STEP 3] Writing file: Shiva_Reddy_Kota_DevOps_Engineer_osyMx4_CJEF7b.pdf
+[OK] Downloaded: Shiva_Reddy_Kota_DevOps_Engineer_osyMx4_CJEF7b.pdf (109,347 bytes)
+2026-08-18 22:10:23,156 - INFO - [DOWNLOAD] Success: Shiva_Reddy_Kota_DevOps_Engineer_osyMx4_CJEF7b.pdf (109347 bytes) from S3
+2026-08-18 22:10:23,157 - INFO - [RESUME-SKIP] Marked 6802703fb930e90900014963 as downloaded
+2026-08-18 22:10:23,159 - INFO - [S3-RECOVERY] Stored S3 URL for 6802703fb930e90900014963
+
+[3671/9584] Downloading resume 3671/9584...
+[DOWNLOAD] Processing resume ID: 68026d36ef36261fd84d94f3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68026d36ef36261fd84d94f3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802b74c4cf2d3735b2cdff8
+[BULLETPROOF] Attempt 1/5 to download 6802b74c4cf2d3735b2cdff8
+2026-08-18 22:10:27,272 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802b74c4cf2d3735b2cdff8
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802b74c4cf2d3735b2cdff8/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221034Z)
+2026-08-18 22:10:34,656 - INFO - [EXTRACT] Fresh S3 URL for 68026d36ef36261fd84d94f3 (timestamp: 20260818T221034Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Shivam_R...
+[STEP 3] Writing file: Shivam_Resume_ygR1FM_ORt74k.pdf
+[OK] Downloaded: Shivam_Resume_ygR1FM_ORt74k.pdf (163,641 bytes)
+2026-08-18 22:10:38,017 - INFO - [DOWNLOAD] Success: Shivam_Resume_ygR1FM_ORt74k.pdf (163641 bytes) from S3
+2026-08-18 22:10:38,019 - INFO - [RESUME-SKIP] Marked 68026d36ef36261fd84d94f3 as downloaded
+2026-08-18 22:10:38,020 - INFO - [S3-RECOVERY] Stored S3 URL for 68026d36ef36261fd84d94f3
+
+[3672/9584] Downloading resume 3672/9584...
+[DOWNLOAD] Processing resume ID: 68026bb8e8c42e5aa001cf23
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68026bb8e8c42e5aa001cf23/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221042Z)
+2026-08-18 22:10:41,914 - INFO - [EXTRACT] Fresh S3 URL for 6802b74c4cf2d3735b2cdff8 (timestamp: 20260818T221042Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Lawrence...
+[STEP 3] Writing file: Lawrence_Abhinav_Gunkonda_BA__fkfz9I_y8Y25O.pdf
+[OK] Downloaded: Lawrence_Abhinav_Gunkonda_BA__fkfz9I_y8Y25O.pdf (142,139 bytes)
+2026-08-18 22:10:43,620 - INFO - [DOWNLOAD] Success: Lawrence_Abhinav_Gunkonda_BA__fkfz9I_y8Y25O.pdf (142139 bytes) from S3
+2026-08-18 22:10:43,623 - INFO - [RESUME-SKIP] Marked 6802b74c4cf2d3735b2cdff8 as downloaded
+2026-08-18 22:10:43,627 - INFO - [S3-RECOVERY] Stored S3 URL for 6802b74c4cf2d3735b2cdff8
+[BULLETPROOF] ✓ Downloaded 6802b74c4cf2d3735b2cdff8 on attempt 1
+2026-08-18 22:10:43,627 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802b74c4cf2d3735b2cdff8 (Total: 291)
+2026-08-18 22:10:43,630 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802b74c4cf2d3735b2cdff8
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221049Z)
+2026-08-18 22:10:49,160 - INFO - [EXTRACT] Fresh S3 URL for 68026bb8e8c42e5aa001cf23 (timestamp: 20260818T221049Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Deepa_te...
+[STEP 3] Writing file: Deepa_techwriter_testing_6SsKZ7_VoKwQO.docx
+[OK] Downloaded: Deepa_techwriter_testing_6SsKZ7_VoKwQO.docx (19,373 bytes)
+2026-08-18 22:10:52,942 - INFO - [DOWNLOAD] Success: Deepa_techwriter_testing_6SsKZ7_VoKwQO.docx (19373 bytes) from S3
+2026-08-18 22:10:52,945 - INFO - [RESUME-SKIP] Marked 68026bb8e8c42e5aa001cf23 as downloaded
+2026-08-18 22:10:52,947 - INFO - [S3-RECOVERY] Stored S3 URL for 68026bb8e8c42e5aa001cf23
+[PARALLEL-DOWNLOAD] Downloading: 6802b4f598a1e850fe3227d3
+[BULLETPROOF] Attempt 1/5 to download 6802b4f598a1e850fe3227d3
+2026-08-18 22:10:53,631 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802b4f598a1e850fe3227d3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802b4f598a1e850fe3227d3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+
+[3673/9584] Downloading resume 3673/9584...
+[DOWNLOAD] Processing resume ID: 68026b3b1d06e273f47bd2e3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68026b3b1d06e273f47bd2e3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221104Z)
+2026-08-18 22:11:03,682 - INFO - [EXTRACT] Fresh S3 URL for 6802b4f598a1e850fe3227d3 (timestamp: 20260818T221104Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Anji_Red...
+[STEP 3] Writing file: Anji_Reddy_Resume_Oracle_EPM_Sr_Lead_qHq1Bb_vSaKq2.doc
+[OK] Downloaded: Anji_Reddy_Resume_Oracle_EPM_Sr_Lead_qHq1Bb_vSaKq2.doc (161,280 bytes)
+2026-08-18 22:11:08,538 - INFO - [DOWNLOAD] Success: Anji_Reddy_Resume_Oracle_EPM_Sr_Lead_qHq1Bb_vSaKq2.doc (161280 bytes) from S3
+2026-08-18 22:11:08,540 - INFO - [RESUME-SKIP] Marked 6802b4f598a1e850fe3227d3 as downloaded
+2026-08-18 22:11:08,543 - INFO - [S3-RECOVERY] Stored S3 URL for 6802b4f598a1e850fe3227d3
+[BULLETPROOF] ✓ Downloaded 6802b4f598a1e850fe3227d3 on attempt 1
+2026-08-18 22:11:08,544 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802b4f598a1e850fe3227d3 (Total: 292)
+2026-08-18 22:11:08,547 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802b4f598a1e850fe3227d3
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221111Z)
+2026-08-18 22:11:11,211 - INFO - [EXTRACT] Fresh S3 URL for 68026b3b1d06e273f47bd2e3 (timestamp: 20260818T221111Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Resume_B...
+[STEP 3] Writing file: Resume_Binu_Singh_4Xd6Dq_pg5RbB.pdf
+[OK] Downloaded: Resume_Binu_Singh_4Xd6Dq_pg5RbB.pdf (556,222 bytes)
+2026-08-18 22:11:13,831 - INFO - [DOWNLOAD] Success: Resume_Binu_Singh_4Xd6Dq_pg5RbB.pdf (556222 bytes) from S3
+2026-08-18 22:11:13,833 - INFO - [RESUME-SKIP] Marked 68026b3b1d06e273f47bd2e3 as downloaded
+2026-08-18 22:11:13,834 - INFO - [S3-RECOVERY] Stored S3 URL for 68026b3b1d06e273f47bd2e3
+
+[3674/9584] Downloading resume 3674/9584...
+[DOWNLOAD] Processing resume ID: 68026ab85c92d67dbc068b56
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68026ab85c92d67dbc068b56/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802b4e7b5547b316727f865
+[BULLETPROOF] Attempt 1/5 to download 6802b4e7b5547b316727f865
+2026-08-18 22:11:18,548 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802b4e7b5547b316727f865
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802b4e7b5547b316727f865/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221125Z)
+2026-08-18 22:11:24,993 - INFO - [EXTRACT] Fresh S3 URL for 68026ab85c92d67dbc068b56 (timestamp: 20260818T221125Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Bhavanaw...
+[STEP 3] Writing file: Bhavanawagh_Resume_Full_time_SCr1tt_gUkZFm.docx
+[OK] Downloaded: Bhavanawagh_Resume_Full_time_SCr1tt_gUkZFm.docx (36,316 bytes)
+2026-08-18 22:11:28,164 - INFO - [DOWNLOAD] Success: Bhavanawagh_Resume_Full_time_SCr1tt_gUkZFm.docx (36316 bytes) from S3
+2026-08-18 22:11:28,167 - INFO - [RESUME-SKIP] Marked 68026ab85c92d67dbc068b56 as downloaded
+2026-08-18 22:11:28,169 - INFO - [S3-RECOVERY] Stored S3 URL for 68026ab85c92d67dbc068b56
+
+[3675/9584] Downloading resume 3675/9584...
+[DOWNLOAD] Processing resume ID: 680269d08019af3e1b584093
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680269d08019af3e1b584093/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221133Z)
+2026-08-18 22:11:32,650 - INFO - [EXTRACT] Fresh S3 URL for 6802b4e7b5547b316727f865 (timestamp: 20260818T221133Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Sameer_s...
+2026-08-18 22:11:33,897 - ERROR - [ERROR] Download failed for 6802b4e7b5547b316727f865: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)
+2026-08-18 22:11:33,927 - INFO - [BULLETPROOF] No S3 URL found for 6802b4e7b5547b316727f865 - skipping retries
+2026-08-18 22:11:33,928 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6802b4e7b5547b316727f865 after all retries
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221141Z)
+2026-08-18 22:11:40,406 - INFO - [EXTRACT] Fresh S3 URL for 680269d08019af3e1b584093 (timestamp: 20260818T221141Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-25/Vaibhav_...
+[STEP 3] Writing file: Vaibhav_Sharma_Machine_Learning_Engineer_79NBsB_XD4dP3.pdf
+[PARALLEL-DOWNLOAD] Downloading: 6802b239bd3bfe740d4a6a02
+[BULLETPROOF] Attempt 1/5 to download 6802b239bd3bfe740d4a6a02
+2026-08-18 22:11:43,928 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802b239bd3bfe740d4a6a02
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802b239bd3bfe740d4a6a02/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Downloaded: Vaibhav_Sharma_Machine_Learning_Engineer_79NBsB_XD4dP3.pdf (304,183 bytes)
+2026-08-18 22:11:44,458 - INFO - [DOWNLOAD] Success: Vaibhav_Sharma_Machine_Learning_Engineer_79NBsB_XD4dP3.pdf (304183 bytes) from S3
+2026-08-18 22:11:44,460 - INFO - [RESUME-SKIP] Marked 680269d08019af3e1b584093 as downloaded
+2026-08-18 22:11:44,462 - INFO - [S3-RECOVERY] Stored S3 URL for 680269d08019af3e1b584093
+
+[3676/9584] Downloading resume 3676/9584...
+[DOWNLOAD] Processing resume ID: 6802681f2d5cdf514046ff43
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802681f2d5cdf514046ff43/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221154Z)
+2026-08-18 22:11:54,084 - INFO - [EXTRACT] Fresh S3 URL for 6802b239bd3bfe740d4a6a02 (timestamp: 20260818T221154Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Angela_M...
+[STEP 3] Writing file: Angela_McMurtry_Resume_2_25_2025_GBkGos_OEumcK.pdf
+[OK] Downloaded: Angela_McMurtry_Resume_2_25_2025_GBkGos_OEumcK.pdf (210,120 bytes)
+2026-08-18 22:11:57,555 - INFO - [DOWNLOAD] Success: Angela_McMurtry_Resume_2_25_2025_GBkGos_OEumcK.pdf (210120 bytes) from S3
+2026-08-18 22:11:57,558 - INFO - [RESUME-SKIP] Marked 6802b239bd3bfe740d4a6a02 as downloaded
+2026-08-18 22:11:57,560 - INFO - [S3-RECOVERY] Stored S3 URL for 6802b239bd3bfe740d4a6a02
+[BULLETPROOF] ✓ Downloaded 6802b239bd3bfe740d4a6a02 on attempt 1
+2026-08-18 22:11:57,561 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802b239bd3bfe740d4a6a02 (Total: 293)
+2026-08-18 22:11:57,563 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802b239bd3bfe740d4a6a02
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221202Z)
+2026-08-18 22:12:01,856 - INFO - [EXTRACT] Fresh S3 URL for 6802681f2d5cdf514046ff43 (timestamp: 20260818T221202Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-29/Praneeth...
+[STEP 3] Writing file: Praneeth_K_FSD_AWS_uNYTCu_DswsKa.docx
+[OK] Downloaded: Praneeth_K_FSD_AWS_uNYTCu_DswsKa.docx (32,127 bytes)
+2026-08-18 22:12:03,394 - INFO - [DOWNLOAD] Success: Praneeth_K_FSD_AWS_uNYTCu_DswsKa.docx (32127 bytes) from S3
+2026-08-18 22:12:03,395 - INFO - [RESUME-SKIP] Marked 6802681f2d5cdf514046ff43 as downloaded
+2026-08-18 22:12:03,397 - INFO - [S3-RECOVERY] Stored S3 URL for 6802681f2d5cdf514046ff43
+
+[3677/9584] Downloading resume 3677/9584...
+[DOWNLOAD] Processing resume ID: 6802673fc37f3b3a9039a4f3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802673fc37f3b3a9039a4f3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802ae3d5cdd9456504d6953
+[BULLETPROOF] Attempt 1/5 to download 6802ae3d5cdd9456504d6953
+2026-08-18 22:12:07,564 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802ae3d5cdd9456504d6953
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802ae3d5cdd9456504d6953/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221215Z)
+2026-08-18 22:12:14,452 - INFO - [EXTRACT] Fresh S3 URL for 6802673fc37f3b3a9039a4f3 (timestamp: 20260818T221215Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/KasapuDi...
+[STEP 3] Writing file: KasapuDivyatej_Resume_84oqqw_NObpqI.pdf
+[OK] Downloaded: KasapuDivyatej_Resume_84oqqw_NObpqI.pdf (172,683 bytes)
+2026-08-18 22:12:18,368 - INFO - [DOWNLOAD] Success: KasapuDivyatej_Resume_84oqqw_NObpqI.pdf (172683 bytes) from S3
+2026-08-18 22:12:18,370 - INFO - [RESUME-SKIP] Marked 6802673fc37f3b3a9039a4f3 as downloaded
+2026-08-18 22:12:18,372 - INFO - [S3-RECOVERY] Stored S3 URL for 6802673fc37f3b3a9039a4f3
+
+[3678/9584] Downloading resume 3678/9584...
+[DOWNLOAD] Processing resume ID: 68026681a6c3ae3d3b0aa014
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68026681a6c3ae3d3b0aa014/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221222Z)
+2026-08-18 22:12:22,545 - INFO - [EXTRACT] Fresh S3 URL for 6802ae3d5cdd9456504d6953 (timestamp: 20260818T221222Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Roshini_...
+[STEP 3] Writing file: Roshini_Abbadi_Resume_jpXrir_gvcjTC.pdf
+[OK] Downloaded: Roshini_Abbadi_Resume_jpXrir_gvcjTC.pdf (404,263 bytes)
+2026-08-18 22:12:24,206 - INFO - [DOWNLOAD] Success: Roshini_Abbadi_Resume_jpXrir_gvcjTC.pdf (404263 bytes) from S3
+2026-08-18 22:12:24,208 - INFO - [RESUME-SKIP] Marked 6802ae3d5cdd9456504d6953 as downloaded
+2026-08-18 22:12:24,210 - INFO - [S3-RECOVERY] Stored S3 URL for 6802ae3d5cdd9456504d6953
+[BULLETPROOF] ✓ Downloaded 6802ae3d5cdd9456504d6953 on attempt 1
+2026-08-18 22:12:24,211 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802ae3d5cdd9456504d6953 (Total: 294)
+2026-08-18 22:12:24,212 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802ae3d5cdd9456504d6953
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221230Z)
+2026-08-18 22:12:29,915 - INFO - [EXTRACT] Fresh S3 URL for 68026681a6c3ae3d3b0aa014 (timestamp: 20260818T221230Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-21/Swapnith...
+[STEP 3] Writing file: Swapnith_Data_Engineer_50zdj9_IBPVLd.docx
+[OK] Downloaded: Swapnith_Data_Engineer_50zdj9_IBPVLd.docx (210,053 bytes)
+2026-08-18 22:12:34,118 - INFO - [DOWNLOAD] Success: Swapnith_Data_Engineer_50zdj9_IBPVLd.docx (210053 bytes) from S3
+2026-08-18 22:12:34,121 - INFO - [RESUME-SKIP] Marked 68026681a6c3ae3d3b0aa014 as downloaded
+2026-08-18 22:12:34,124 - INFO - [S3-RECOVERY] Stored S3 URL for 68026681a6c3ae3d3b0aa014
+[PARALLEL-DOWNLOAD] Downloading: 6806684d4129bd3a6f7f1394
+[BULLETPROOF] Attempt 1/5 to download 6806684d4129bd3a6f7f1394
+2026-08-18 22:12:34,214 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6806684d4129bd3a6f7f1394
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6806684d4129bd3a6f7f1394/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+
+[3679/9584] Downloading resume 3679/9584...
+[DOWNLOAD] Processing resume ID: 68026638654c7c4598339c13
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68026638654c7c4598339c13/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+2026-08-18 22:12:44,590 - WARNING - [EXTRACT] No S3 URL found (fresh or stored) for 6806684d4129bd3a6f7f1394
+[ERROR] No S3 URL found for 6806684d4129bd3a6f7f1394
+[ERROR] Could not find S3 URL for resume 6806684d4129bd3a6f7f1394
+2026-08-18 22:12:44,590 - ERROR - [DOWNLOAD] No S3 URL found for 6806684d4129bd3a6f7f1394
+[BULLETPROOF] ✓ Skipping retries - Resume has no S3 URL (no file)
+2026-08-18 22:12:44,617 - INFO - [BULLETPROOF] No S3 URL found for 6806684d4129bd3a6f7f1394 - skipping retries
+2026-08-18 22:12:44,617 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 6806684d4129bd3a6f7f1394 after all retries
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221252Z)
+2026-08-18 22:12:51,931 - INFO - [EXTRACT] Fresh S3 URL for 68026638654c7c4598339c13 (timestamp: 20260818T221252Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Sushmith...
+[PARALLEL-DOWNLOAD] Downloading: 68064aaf7a80e15cd95b6f15
+[BULLETPROOF] Attempt 1/5 to download 68064aaf7a80e15cd95b6f15
+2026-08-18 22:12:54,618 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 68064aaf7a80e15cd95b6f15
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68064aaf7a80e15cd95b6f15/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[STEP 3] Writing file: SushmithaResume_mtZvkk_b4ANu4.docx
+[OK] Downloaded: SushmithaResume_mtZvkk_b4ANu4.docx (48,488 bytes)
+2026-08-18 22:12:57,660 - INFO - [DOWNLOAD] Success: SushmithaResume_mtZvkk_b4ANu4.docx (48488 bytes) from S3
+2026-08-18 22:12:57,661 - INFO - [RESUME-SKIP] Marked 68026638654c7c4598339c13 as downloaded
+2026-08-18 22:12:57,663 - INFO - [S3-RECOVERY] Stored S3 URL for 68026638654c7c4598339c13
+
+[3680/9584] Downloading resume 3680/9584...
+[DOWNLOAD] Processing resume ID: 680263a4cd640000183ac703
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680263a4cd640000183ac703/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221305Z)
+2026-08-18 22:13:04,656 - INFO - [EXTRACT] Fresh S3 URL for 68064aaf7a80e15cd95b6f15 (timestamp: 20260818T221305Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-21/NURDAN_S...
+[STEP 3] Writing file: NURDAN_SABAN_RESUME_qs3mGC_CvrISq.pdf
+[OK] Downloaded: NURDAN_SABAN_RESUME_qs3mGC_CvrISq.pdf (210,883 bytes)
+2026-08-18 22:13:08,313 - INFO - [DOWNLOAD] Success: NURDAN_SABAN_RESUME_qs3mGC_CvrISq.pdf (210883 bytes) from S3
+2026-08-18 22:13:08,314 - INFO - [RESUME-SKIP] Marked 68064aaf7a80e15cd95b6f15 as downloaded
+2026-08-18 22:13:08,315 - INFO - [S3-RECOVERY] Stored S3 URL for 68064aaf7a80e15cd95b6f15
+[BULLETPROOF] ✓ Downloaded 68064aaf7a80e15cd95b6f15 on attempt 1
+2026-08-18 22:13:08,315 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 68064aaf7a80e15cd95b6f15 (Total: 295)
+2026-08-18 22:13:08,316 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 68064aaf7a80e15cd95b6f15
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221313Z)
+2026-08-18 22:13:12,512 - INFO - [EXTRACT] Fresh S3 URL for 680263a4cd640000183ac703 (timestamp: 20260818T221313Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-24/Tharun_G...
+[STEP 3] Writing file: Tharun_Gowd_Developer_ijPgyw_PRi0pf.docx
+[OK] Downloaded: Tharun_Gowd_Developer_ijPgyw_PRi0pf.docx (61,781 bytes)
+2026-08-18 22:13:13,861 - INFO - [DOWNLOAD] Success: Tharun_Gowd_Developer_ijPgyw_PRi0pf.docx (61781 bytes) from S3
+2026-08-18 22:13:13,863 - INFO - [RESUME-SKIP] Marked 680263a4cd640000183ac703 as downloaded
+2026-08-18 22:13:13,864 - INFO - [S3-RECOVERY] Stored S3 URL for 680263a4cd640000183ac703
+
+[3681/9584] Downloading resume 3681/9584...
+[DOWNLOAD] Processing resume ID: 6802639af5c28205bc2826a3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802639af5c28205bc2826a3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6805547e4149fe1b4e02dbc3
+[BULLETPROOF] Attempt 1/5 to download 6805547e4149fe1b4e02dbc3
+2026-08-18 22:13:18,317 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6805547e4149fe1b4e02dbc3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6805547e4149fe1b4e02dbc3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221325Z)
+2026-08-18 22:13:24,903 - INFO - [EXTRACT] Fresh S3 URL for 6802639af5c28205bc2826a3 (timestamp: 20260818T221325Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Sri_Chow...
+[STEP 3] Writing file: Sri_Chowdary_Resume_DYGJ9h_cnDVs0.pdf
+[OK] Downloaded: Sri_Chowdary_Resume_DYGJ9h_cnDVs0.pdf (383,373 bytes)
+2026-08-18 22:13:29,642 - INFO - [DOWNLOAD] Success: Sri_Chowdary_Resume_DYGJ9h_cnDVs0.pdf (383373 bytes) from S3
+2026-08-18 22:13:29,645 - INFO - [RESUME-SKIP] Marked 6802639af5c28205bc2826a3 as downloaded
+2026-08-18 22:13:29,647 - INFO - [S3-RECOVERY] Stored S3 URL for 6802639af5c28205bc2826a3
+
+[3682/9584] Downloading resume 3682/9584...
+[DOWNLOAD] Processing resume ID: 6802636c924688740f493583
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802636c924688740f493583/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221333Z)
+2026-08-18 22:13:32,666 - INFO - [EXTRACT] Fresh S3 URL for 6805547e4149fe1b4e02dbc3 (timestamp: 20260818T221333Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-20/SaiPraka...
+[STEP 3] Writing file: SaiPrakashResume_luyufX_sfocCW.docx
+[OK] Downloaded: SaiPrakashResume_luyufX_sfocCW.docx (25,330 bytes)
+2026-08-18 22:13:34,021 - INFO - [DOWNLOAD] Success: SaiPrakashResume_luyufX_sfocCW.docx (25330 bytes) from S3
+2026-08-18 22:13:34,023 - INFO - [RESUME-SKIP] Marked 6805547e4149fe1b4e02dbc3 as downloaded
+2026-08-18 22:13:34,025 - INFO - [S3-RECOVERY] Stored S3 URL for 6805547e4149fe1b4e02dbc3
+[BULLETPROOF] ✓ Downloaded 6805547e4149fe1b4e02dbc3 on attempt 1
+2026-08-18 22:13:34,026 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6805547e4149fe1b4e02dbc3 (Total: 296)
+2026-08-18 22:13:34,028 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6805547e4149fe1b4e02dbc3
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221341Z)
+2026-08-18 22:13:40,696 - INFO - [EXTRACT] Fresh S3 URL for 6802636c924688740f493583 (timestamp: 20260818T221341Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Bhavana_...
+[STEP 3] Writing file: Bhavana_Shada_6Niecn_sP3hcB.pdf
+[PARALLEL-DOWNLOAD] Downloading: 6802ad62e7241b744031eb23
+[BULLETPROOF] Attempt 1/5 to download 6802ad62e7241b744031eb23
+2026-08-18 22:13:44,029 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802ad62e7241b744031eb23
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802ad62e7241b744031eb23/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Downloaded: Bhavana_Shada_6Niecn_sP3hcB.pdf (142,022 bytes)
+2026-08-18 22:13:44,114 - INFO - [DOWNLOAD] Success: Bhavana_Shada_6Niecn_sP3hcB.pdf (142022 bytes) from S3
+2026-08-18 22:13:44,117 - INFO - [RESUME-SKIP] Marked 6802636c924688740f493583 as downloaded
+2026-08-18 22:13:44,119 - INFO - [S3-RECOVERY] Stored S3 URL for 6802636c924688740f493583
+
+[3683/9584] Downloading resume 3683/9584...
+[DOWNLOAD] Processing resume ID: 680262bab0a4b7690456a7f7
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680262bab0a4b7690456a7f7/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221354Z)
+2026-08-18 22:13:54,195 - INFO - [EXTRACT] Fresh S3 URL for 6802ad62e7241b744031eb23 (timestamp: 20260818T221354Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Michael_...
+[STEP 3] Writing file: Michael_Gholian_dJCqL7_RQeCRO.pdf
+[OK] Downloaded: Michael_Gholian_dJCqL7_RQeCRO.pdf (87,973 bytes)
+2026-08-18 22:13:58,691 - INFO - [DOWNLOAD] Success: Michael_Gholian_dJCqL7_RQeCRO.pdf (87973 bytes) from S3
+2026-08-18 22:13:58,694 - INFO - [RESUME-SKIP] Marked 6802ad62e7241b744031eb23 as downloaded
+2026-08-18 22:13:58,696 - INFO - [S3-RECOVERY] Stored S3 URL for 6802ad62e7241b744031eb23
+[BULLETPROOF] ✓ Downloaded 6802ad62e7241b744031eb23 on attempt 1
+2026-08-18 22:13:58,697 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802ad62e7241b744031eb23 (Total: 297)
+2026-08-18 22:13:58,698 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802ad62e7241b744031eb23
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221402Z)
+2026-08-18 22:14:01,813 - INFO - [EXTRACT] Fresh S3 URL for 680262bab0a4b7690456a7f7 (timestamp: 20260818T221402Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/HariKTan...
+[STEP 3] Writing file: HariKTankala_AWS_Java_Fullstack_k34VUf_i4e4Dc.docx
+[OK] Downloaded: HariKTankala_AWS_Java_Fullstack_k34VUf_i4e4Dc.docx (60,693 bytes)
+2026-08-18 22:14:03,267 - INFO - [DOWNLOAD] Success: HariKTankala_AWS_Java_Fullstack_k34VUf_i4e4Dc.docx (60693 bytes) from S3
+2026-08-18 22:14:03,269 - INFO - [RESUME-SKIP] Marked 680262bab0a4b7690456a7f7 as downloaded
+2026-08-18 22:14:03,271 - INFO - [S3-RECOVERY] Stored S3 URL for 680262bab0a4b7690456a7f7
+
+[3684/9584] Downloading resume 3684/9584...
+[DOWNLOAD] Processing resume ID: 68025fa852df5a47b9427533
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68025fa852df5a47b9427533/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802aab58f61df70f61f2525
+[BULLETPROOF] Attempt 1/5 to download 6802aab58f61df70f61f2525
+2026-08-18 22:14:08,700 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802aab58f61df70f61f2525
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802aab58f61df70f61f2525/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221415Z)
+2026-08-18 22:14:14,567 - INFO - [EXTRACT] Fresh S3 URL for 68025fa852df5a47b9427533 (timestamp: 20260818T221415Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Raja_Kan...
+[STEP 3] Writing file: Raja_Kandagatla__uwHA3H_XMJ7j7.pdf
+[OK] Downloaded: Raja_Kandagatla__uwHA3H_XMJ7j7.pdf (215,682 bytes)
+2026-08-18 22:14:20,411 - INFO - [DOWNLOAD] Success: Raja_Kandagatla__uwHA3H_XMJ7j7.pdf (215682 bytes) from S3
+2026-08-18 22:14:20,414 - INFO - [RESUME-SKIP] Marked 68025fa852df5a47b9427533 as downloaded
+2026-08-18 22:14:20,416 - INFO - [S3-RECOVERY] Stored S3 URL for 68025fa852df5a47b9427533
+
+[3685/9584] Downloading resume 3685/9584...
+[DOWNLOAD] Processing resume ID: 68025e514ffdf517563d6233
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68025e514ffdf517563d6233/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221422Z)
+2026-08-18 22:14:22,157 - INFO - [EXTRACT] Fresh S3 URL for 6802aab58f61df70f61f2525 (timestamp: 20260818T221422Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/UpenRedd...
+[STEP 3] Writing file: UpenReddy_SfDev_1_FXxB5E_ogdkQy.docx
+[OK] Downloaded: UpenReddy_SfDev_1_FXxB5E_ogdkQy.docx (80,277 bytes)
+2026-08-18 22:14:23,694 - INFO - [DOWNLOAD] Success: UpenReddy_SfDev_1_FXxB5E_ogdkQy.docx (80277 bytes) from S3
+2026-08-18 22:14:23,696 - INFO - [RESUME-SKIP] Marked 6802aab58f61df70f61f2525 as downloaded
+2026-08-18 22:14:23,698 - INFO - [S3-RECOVERY] Stored S3 URL for 6802aab58f61df70f61f2525
+[BULLETPROOF] ✓ Downloaded 6802aab58f61df70f61f2525 on attempt 1
+2026-08-18 22:14:23,699 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802aab58f61df70f61f2525 (Total: 298)
+2026-08-18 22:14:23,700 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802aab58f61df70f61f2525
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221432Z)
+2026-08-18 22:14:31,567 - INFO - [EXTRACT] Fresh S3 URL for 68025e514ffdf517563d6233 (timestamp: 20260818T221432Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Siranjiv...
+[PARALLEL-DOWNLOAD] Downloading: 6802aa0b5b3df7626178a7a3
+[BULLETPROOF] Attempt 1/5 to download 6802aa0b5b3df7626178a7a3
+2026-08-18 22:14:33,701 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802aa0b5b3df7626178a7a3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802aa0b5b3df7626178a7a3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[STEP 3] Writing file: Siranjivi_Chinnaiyan_Resume_kAqURv_hGRmyR.pdf
+[OK] Downloaded: Siranjivi_Chinnaiyan_Resume_kAqURv_hGRmyR.pdf (159,103 bytes)
+2026-08-18 22:14:34,855 - INFO - [DOWNLOAD] Success: Siranjivi_Chinnaiyan_Resume_kAqURv_hGRmyR.pdf (159103 bytes) from S3
+2026-08-18 22:14:34,860 - INFO - [RESUME-SKIP] Marked 68025e514ffdf517563d6233 as downloaded
+2026-08-18 22:14:34,863 - INFO - [S3-RECOVERY] Stored S3 URL for 68025e514ffdf517563d6233
+
+[3686/9584] Downloading resume 3686/9584...
+[DOWNLOAD] Processing resume ID: 68025e193d939052335b88e3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68025e193d939052335b88e3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221444Z)
+2026-08-18 22:14:43,760 - INFO - [EXTRACT] Fresh S3 URL for 6802aa0b5b3df7626178a7a3 (timestamp: 20260818T221444Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Senior_S...
+[STEP 3] Writing file: Senior_Software_Engineer_xMSFT_beys62_2e5xiJ.pdf
+[OK] Downloaded: Senior_Software_Engineer_xMSFT_beys62_2e5xiJ.pdf (152,999 bytes)
+2026-08-18 22:14:47,153 - INFO - [DOWNLOAD] Success: Senior_Software_Engineer_xMSFT_beys62_2e5xiJ.pdf (152999 bytes) from S3
+2026-08-18 22:14:47,155 - INFO - [RESUME-SKIP] Marked 6802aa0b5b3df7626178a7a3 as downloaded
+2026-08-18 22:14:47,157 - INFO - [S3-RECOVERY] Stored S3 URL for 6802aa0b5b3df7626178a7a3
+[BULLETPROOF] ✓ Downloaded 6802aa0b5b3df7626178a7a3 on attempt 1
+2026-08-18 22:14:47,158 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802aa0b5b3df7626178a7a3 (Total: 299)
+2026-08-18 22:14:47,160 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802aa0b5b3df7626178a7a3
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221452Z)
+2026-08-18 22:14:51,637 - INFO - [EXTRACT] Fresh S3 URL for 68025e193d939052335b88e3 (timestamp: 20260818T221452Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Vignesh_...
+2026-08-18 22:14:52,861 - ERROR - [ERROR] Download failed for 68025e193d939052335b88e3: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[ERROR] Download failed: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[RETRY] Attempt 2/2 for resume 3686...
+[DOWNLOAD] Processing resume ID: 68025e193d939052335b88e3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68025e193d939052335b88e3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802a6fd1e692c2699052e93
+[BULLETPROOF] Attempt 1/5 to download 6802a6fd1e692c2699052e93
+2026-08-18 22:14:57,162 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802a6fd1e692c2699052e93
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802a6fd1e692c2699052e93/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221506Z)
+2026-08-18 22:15:05,971 - INFO - [EXTRACT] Fresh S3 URL for 68025e193d939052335b88e3 (timestamp: 20260818T221506Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Vignesh_...
+[STEP 3] Writing file: Vignesh_Data_EN_cdZyFK_jntaV4.docx
+[OK] Downloaded: Vignesh_Data_EN_cdZyFK_jntaV4.docx (122,358 bytes)
+2026-08-18 22:15:09,247 - INFO - [DOWNLOAD] Success: Vignesh_Data_EN_cdZyFK_jntaV4.docx (122358 bytes) from S3
+2026-08-18 22:15:09,248 - INFO - [RESUME-SKIP] Marked 68025e193d939052335b88e3 as downloaded
+2026-08-18 22:15:09,250 - INFO - [S3-RECOVERY] Stored S3 URL for 68025e193d939052335b88e3
+
+[3687/9584] Downloading resume 3687/9584...
+[DOWNLOAD] Processing resume ID: 68025d489fd43d7cc30220a3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68025d489fd43d7cc30220a3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221514Z)
+2026-08-18 22:15:13,605 - INFO - [EXTRACT] Fresh S3 URL for 6802a6fd1e692c2699052e93 (timestamp: 20260818T221514Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/ASWIN_DE...
+[STEP 3] Writing file: ASWIN_DE_uBl66W_8ALoBB.pdf
+[OK] Downloaded: ASWIN_DE_uBl66W_8ALoBB.pdf (170,128 bytes)
+2026-08-18 22:15:15,291 - INFO - [DOWNLOAD] Success: ASWIN_DE_uBl66W_8ALoBB.pdf (170128 bytes) from S3
+2026-08-18 22:15:15,294 - INFO - [RESUME-SKIP] Marked 6802a6fd1e692c2699052e93 as downloaded
+2026-08-18 22:15:15,296 - INFO - [S3-RECOVERY] Stored S3 URL for 6802a6fd1e692c2699052e93
+[BULLETPROOF] ✓ Downloaded 6802a6fd1e692c2699052e93 on attempt 1
+2026-08-18 22:15:15,297 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802a6fd1e692c2699052e93 (Total: 300)
+2026-08-18 22:15:15,299 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802a6fd1e692c2699052e93
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221521Z)
+2026-08-18 22:15:21,333 - INFO - [EXTRACT] Fresh S3 URL for 68025d489fd43d7cc30220a3 (timestamp: 20260818T221521Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Helgren_...
+[STEP 3] Writing file: Helgren_May_2024_eEGkr6_PhlIMF.pdf
+[OK] Downloaded: Helgren_May_2024_eEGkr6_PhlIMF.pdf (74,931 bytes)
+2026-08-18 22:15:24,507 - INFO - [DOWNLOAD] Success: Helgren_May_2024_eEGkr6_PhlIMF.pdf (74931 bytes) from S3
+2026-08-18 22:15:24,510 - INFO - [RESUME-SKIP] Marked 68025d489fd43d7cc30220a3 as downloaded
+2026-08-18 22:15:24,512 - INFO - [S3-RECOVERY] Stored S3 URL for 68025d489fd43d7cc30220a3
+[PARALLEL-DOWNLOAD] Downloading: 6802a6f9d5c6ba796a305196
+[BULLETPROOF] Attempt 1/5 to download 6802a6f9d5c6ba796a305196
+2026-08-18 22:15:25,300 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802a6f9d5c6ba796a305196
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802a6f9d5c6ba796a305196/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+
+[3688/9584] Downloading resume 3688/9584...
+[DOWNLOAD] Processing resume ID: 68025a1a01ed03663a1f1926
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/68025a1a01ed03663a1f1926/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221535Z)
+2026-08-18 22:15:35,298 - INFO - [EXTRACT] Fresh S3 URL for 6802a6f9d5c6ba796a305196 (timestamp: 20260818T221535Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Janhvi_R...
+[STEP 3] Writing file: Janhvi_Ratrey_UI_UX_Designer_Resume_Updated_y0xDPd_fHtZb5.pdf
+[OK] Downloaded: Janhvi_Ratrey_UI_UX_Designer_Resume_Updated_y0xDPd_fHtZb5.pdf (255,754 bytes)
+2026-08-18 22:15:38,956 - INFO - [DOWNLOAD] Success: Janhvi_Ratrey_UI_UX_Designer_Resume_Updated_y0xDPd_fHtZb5.pdf (255754 bytes) from S3
+2026-08-18 22:15:38,958 - INFO - [RESUME-SKIP] Marked 6802a6f9d5c6ba796a305196 as downloaded
+2026-08-18 22:15:38,960 - INFO - [S3-RECOVERY] Stored S3 URL for 6802a6f9d5c6ba796a305196
+[BULLETPROOF] ✓ Downloaded 6802a6f9d5c6ba796a305196 on attempt 1
+2026-08-18 22:15:38,961 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802a6f9d5c6ba796a305196 (Total: 301)
+2026-08-18 22:15:38,963 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802a6f9d5c6ba796a305196
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221543Z)
+2026-08-18 22:15:43,042 - INFO - [EXTRACT] Fresh S3 URL for 68025a1a01ed03663a1f1926 (timestamp: 20260818T221543Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-25/Venkata_...
+[STEP 3] Writing file: Venkata_Reddy_Data_Engineer_Resume_7irclW_ne1Vqd.pdf
+[OK] Downloaded: Venkata_Reddy_Data_Engineer_Resume_7irclW_ne1Vqd.pdf (130,987 bytes)
+2026-08-18 22:15:44,412 - INFO - [DOWNLOAD] Success: Venkata_Reddy_Data_Engineer_Resume_7irclW_ne1Vqd.pdf (130987 bytes) from S3
+2026-08-18 22:15:44,415 - INFO - [RESUME-SKIP] Marked 68025a1a01ed03663a1f1926 as downloaded
+2026-08-18 22:15:44,417 - INFO - [S3-RECOVERY] Stored S3 URL for 68025a1a01ed03663a1f1926
+
+[3689/9584] Downloading resume 3689/9584...
+[DOWNLOAD] Processing resume ID: 680258816130584b3461be73
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680258816130584b3461be73/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802a6df52d13f1a48568dd7
+[BULLETPROOF] Attempt 1/5 to download 6802a6df52d13f1a48568dd7
+2026-08-18 22:15:48,964 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802a6df52d13f1a48568dd7
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802a6df52d13f1a48568dd7/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221556Z)
+2026-08-18 22:15:55,405 - INFO - [EXTRACT] Fresh S3 URL for 680258816130584b3461be73 (timestamp: 20260818T221556Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-30/Divya_B_...
+[STEP 3] Writing file: Divya_B_Resume_ReWSyq_xRJkjk.docx
+[OK] Downloaded: Divya_B_Resume_ReWSyq_xRJkjk.docx (46,007 bytes)
+2026-08-18 22:15:58,277 - INFO - [DOWNLOAD] Success: Divya_B_Resume_ReWSyq_xRJkjk.docx (46007 bytes) from S3
+2026-08-18 22:15:58,279 - INFO - [RESUME-SKIP] Marked 680258816130584b3461be73 as downloaded
+2026-08-18 22:15:58,281 - INFO - [S3-RECOVERY] Stored S3 URL for 680258816130584b3461be73
+
+[3690/9584] Downloading resume 3690/9584...
+[DOWNLOAD] Processing resume ID: 680257b2d8e13324333a82a5
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680257b2d8e13324333a82a5/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221603Z)
+2026-08-18 22:16:03,107 - INFO - [EXTRACT] Fresh S3 URL for 6802a6df52d13f1a48568dd7 (timestamp: 20260818T221603Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Pawan_Ne...
+[STEP 3] Writing file: Pawan_Net_T9DfBM_kW0ygR.docx
+[OK] Downloaded: Pawan_Net_T9DfBM_kW0ygR.docx (27,520 bytes)
+2026-08-18 22:16:06,016 - INFO - [DOWNLOAD] Success: Pawan_Net_T9DfBM_kW0ygR.docx (27520 bytes) from S3
+2026-08-18 22:16:06,018 - INFO - [RESUME-SKIP] Marked 6802a6df52d13f1a48568dd7 as downloaded
+2026-08-18 22:16:06,021 - INFO - [S3-RECOVERY] Stored S3 URL for 6802a6df52d13f1a48568dd7
+[BULLETPROOF] ✓ Downloaded 6802a6df52d13f1a48568dd7 on attempt 1
+2026-08-18 22:16:06,021 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802a6df52d13f1a48568dd7 (Total: 302)
+2026-08-18 22:16:06,023 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802a6df52d13f1a48568dd7
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221611Z)
+2026-08-18 22:16:10,919 - INFO - [EXTRACT] Fresh S3 URL for 680257b2d8e13324333a82a5 (timestamp: 20260818T221611Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-25/Joshua_J...
+[STEP 3] Writing file: Joshua_J_Sr_Network_Engineer_BCweeN_99QRCM.docx
+[OK] Downloaded: Joshua_J_Sr_Network_Engineer_BCweeN_99QRCM.docx (52,149 bytes)
+2026-08-18 22:16:14,079 - INFO - [DOWNLOAD] Success: Joshua_J_Sr_Network_Engineer_BCweeN_99QRCM.docx (52149 bytes) from S3
+2026-08-18 22:16:14,083 - INFO - [RESUME-SKIP] Marked 680257b2d8e13324333a82a5 as downloaded
+2026-08-18 22:16:14,085 - INFO - [S3-RECOVERY] Stored S3 URL for 680257b2d8e13324333a82a5
+
+[3691/9584] Downloading resume 3691/9584...
+[DOWNLOAD] Processing resume ID: 680256df1df99f53da3194b4
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680256df1df99f53da3194b4/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802a5b93f8eb24b3f606d63
+[BULLETPROOF] Attempt 1/5 to download 6802a5b93f8eb24b3f606d63
+2026-08-18 22:16:16,068 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802a5b93f8eb24b3f606d63
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802a5b93f8eb24b3f606d63/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221625Z)
+2026-08-18 22:16:25,228 - INFO - [EXTRACT] Fresh S3 URL for 680256df1df99f53da3194b4 (timestamp: 20260818T221625Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Venu_Azu...
+[STEP 3] Writing file: Venu_Azure_SQL_DBA_cByZqT_l7lr8H.docx
+[OK] Downloaded: Venu_Azure_SQL_DBA_cByZqT_l7lr8H.docx (64,987 bytes)
+2026-08-18 22:16:28,308 - INFO - [DOWNLOAD] Success: Venu_Azure_SQL_DBA_cByZqT_l7lr8H.docx (64987 bytes) from S3
+2026-08-18 22:16:28,312 - INFO - [RESUME-SKIP] Marked 680256df1df99f53da3194b4 as downloaded
+2026-08-18 22:16:28,315 - INFO - [S3-RECOVERY] Stored S3 URL for 680256df1df99f53da3194b4
+
+[3692/9584] Downloading resume 3692/9584...
+[DOWNLOAD] Processing resume ID: 6802539a0678ea582d7ba414
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802539a0678ea582d7ba414/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221633Z)
+2026-08-18 22:16:33,111 - INFO - [EXTRACT] Fresh S3 URL for 6802a5b93f8eb24b3f606d63 (timestamp: 20260818T221633Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Laxman_H...
+[STEP 3] Writing file: Laxman_HCM_TechnoFunctional_Consultant_c7b6KT_WrIizJ.docx
+[OK] Downloaded: Laxman_HCM_TechnoFunctional_Consultant_c7b6KT_WrIizJ.docx (673,630 bytes)
+2026-08-18 22:16:37,056 - INFO - [DOWNLOAD] Success: Laxman_HCM_TechnoFunctional_Consultant_c7b6KT_WrIizJ.docx (673630 bytes) from S3
+2026-08-18 22:16:37,057 - INFO - [RESUME-SKIP] Marked 6802a5b93f8eb24b3f606d63 as downloaded
+2026-08-18 22:16:37,059 - INFO - [S3-RECOVERY] Stored S3 URL for 6802a5b93f8eb24b3f606d63
+[BULLETPROOF] ✓ Downloaded 6802a5b93f8eb24b3f606d63 on attempt 1
+2026-08-18 22:16:37,059 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802a5b93f8eb24b3f606d63 (Total: 303)
+2026-08-18 22:16:37,060 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802a5b93f8eb24b3f606d63
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221641Z)
+2026-08-18 22:16:40,738 - INFO - [EXTRACT] Fresh S3 URL for 6802539a0678ea582d7ba414 (timestamp: 20260818T221641Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Yamini_S...
+[STEP 3] Writing file: Yamini_Sadhana_GIS_jDexXZ_u1fYz8.docx
+[OK] Downloaded: Yamini_Sadhana_GIS_jDexXZ_u1fYz8.docx (26,592 bytes)
+2026-08-18 22:16:42,078 - INFO - [DOWNLOAD] Success: Yamini_Sadhana_GIS_jDexXZ_u1fYz8.docx (26592 bytes) from S3
+2026-08-18 22:16:42,082 - INFO - [RESUME-SKIP] Marked 6802539a0678ea582d7ba414 as downloaded
+2026-08-18 22:16:42,086 - INFO - [S3-RECOVERY] Stored S3 URL for 6802539a0678ea582d7ba414
+
+[3693/9584] Downloading resume 3693/9584...
+[DOWNLOAD] Processing resume ID: 6802425a09df583a1e448dd3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802425a09df583a1e448dd3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[PARALLEL-DOWNLOAD] Downloading: 6802a323dd66c81509370ab3
+[BULLETPROOF] Attempt 1/5 to download 6802a323dd66c81509370ab3
+2026-08-18 22:16:47,061 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802a323dd66c81509370ab3
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802a323dd66c81509370ab3/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221653Z)
+2026-08-18 22:16:53,116 - INFO - [EXTRACT] Fresh S3 URL for 6802425a09df583a1e448dd3 (timestamp: 20260818T221653Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Ravi_Cha...
+[STEP 3] Writing file: Ravi_Chandran_Resume_sbTyAu_2sT1wD.pdf
+[OK] Downloaded: Ravi_Chandran_Resume_sbTyAu_2sT1wD.pdf (329,997 bytes)
+2026-08-18 22:16:56,850 - INFO - [DOWNLOAD] Success: Ravi_Chandran_Resume_sbTyAu_2sT1wD.pdf (329997 bytes) from S3
+2026-08-18 22:16:56,852 - INFO - [RESUME-SKIP] Marked 6802425a09df583a1e448dd3 as downloaded
+2026-08-18 22:16:56,855 - INFO - [S3-RECOVERY] Stored S3 URL for 6802425a09df583a1e448dd3
+
+[3694/9584] Downloading resume 3694/9584...
+[DOWNLOAD] Processing resume ID: 680232fd712f7d6eaa4205e7
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/680232fd712f7d6eaa4205e7/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221701Z)
+2026-08-18 22:17:00,876 - INFO - [EXTRACT] Fresh S3 URL for 6802a323dd66c81509370ab3 (timestamp: 20260818T221701Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/Naveen_J...
+[STEP 3] Writing file: Naveen_Java_Profile_1__VXov30_QJc2Ef.doc
+[OK] Downloaded: Naveen_Java_Profile_1__VXov30_QJc2Ef.doc (94,208 bytes)
+2026-08-18 22:17:02,238 - INFO - [DOWNLOAD] Success: Naveen_Java_Profile_1__VXov30_QJc2Ef.doc (94208 bytes) from S3
+2026-08-18 22:17:02,238 - INFO - [RESUME-SKIP] Marked 6802a323dd66c81509370ab3 as downloaded
+2026-08-18 22:17:02,239 - INFO - [S3-RECOVERY] Stored S3 URL for 6802a323dd66c81509370ab3
+[BULLETPROOF] ✓ Downloaded 6802a323dd66c81509370ab3 on attempt 1
+2026-08-18 22:17:02,239 - INFO - [BULLETPROOF] Success on attempt 1
+[PARALLEL-DOWNLOAD] ✓ Downloaded: 6802a323dd66c81509370ab3 (Total: 304)
+2026-08-18 22:17:02,240 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 6802a323dd66c81509370ab3
+[OK] Fresh S3 URL extracted (Timestamp: 20260818T221709Z)
+2026-08-18 22:17:08,772 - INFO - [EXTRACT] Fresh S3 URL for 680232fd712f7d6eaa4205e7 (timestamp: 20260818T221709Z)
+[STEP 2] Downloading from S3: https://tekjobs-resumes.s3.amazonaws.com/2025-04-18/devOps_R...
+[STEP 3] Writing file: devOps_ROHITH_DP6gd9_zA0R2c.pdf
+[PARALLEL-DOWNLOAD] Downloading: 6802a2edd23847358a401844
+[BULLETPROOF] Attempt 1/5 to download 6802a2edd23847358a401844
+2026-08-18 22:17:12,240 - INFO - [BULLETPROOF] Attempt 1/5
+[DOWNLOAD] Processing resume ID: 6802a2edd23847358a401844
+[STEP 1] Fetching resume detail page...
+[EXTRACT] Fetching detail page for fresh S3 URL: https://www.tekjobs.net/employer/searchResume/resume/6802a2edd23847358a401844/
+[EXTRACT] Waiting 2 seconds for page to fully load...
+[OK] Downloaded: devOps_ROHITH_DP6gd9_zA0R2c.pdf (269,996 bytes)
+2026-08-18 22:17:12,263 - INFO - [DOWNLOAD] Success: devOps_ROHITH_DP6gd9_zA0R2c.pdf (269996 bytes) from S3
+2026-08-18 22:17:12,265 - INFO - [RESUME-SKIP] Marked 680232fd712f7d6eaa4205e7 as downloaded
+2026-08-18 22:17:12,267 - INFO - [S3-RECOVERY] Stored S3 URL for 680232fd712f7d6eaa4205e7
