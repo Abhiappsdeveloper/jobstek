@@ -1,0 +1,8 @@
+Error Tracking Log
+Generated: 2026-08-18 16:53:45
+================================================================================
+
+[2026-08-18 16:54:02] S3_URL_NOT_FOUND
+              Resume ID: 6983ac22806bdffbd70ccb0b
+              Error: Could not extract S3 URL from detail page
+
