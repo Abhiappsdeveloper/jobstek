@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>Client Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://dmy3k15oydnnz.cloudfront.net/assets/images/favicon.svg" rel="shortcut icon" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<link href="https://dmy3k15oydnnz.cloudfront.net/admin_assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- Custom Theme files -->
+<link href="https://dmy3k15oydnnz.cloudfront.net/admin_assets/css/admin_style.css" rel="stylesheet" type="text/css" media="all"/>
+<!--js-->
+<script src="https://dmy3k15oydnnz.cloudfront.net/admin_assets/js/jquery-2.1.1.min.js"></script> 
+<!--icons-css-->
+<link href="https://dmy3k15oydnnz.cloudfront.net/admin_assets/css/font-awesome.css" rel="stylesheet"> 
+<!--Google Fonts-->
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+<!--static chart-->
+</head>
+<body><div class="login-page" style="background:linear-gradient(0deg, rgb(255 255 255) 0%, rgb(176 182 252) 100%);">
+<div class="login-main">  	
+    <div class="login-block" style="background: linear-gradient(302deg, rgba(8,9,56,1) 0%, rgba(152,48,137,1) 0%, rgba(10,0,126,0.9054972330729166) 100%);">
+				<div class="colr text-center">
+				<img class="img-fluid" src="https://dmy3k15oydnnz.cloudfront.net/assets/images/logo-light.svg" alt="logo"></br></br>
+				<h1>CLIENT LOGIN</h1></br></br>
+				</div>
+				<form id="loginForm" autocomplete="off" method="POST">
+					<input type="text" name="email" placeholder="Email" required="">
+					<input type="password" name="password" class="lock" placeholder="Password">
+					<div class="forgot-top-grids">
+						<div class="forgot-grid">
+							<ul>
+								<li>
+									<input type="checkbox" id="brand1" value="">
+									<label for="brand1"><span></span>Remember me</label>
+								</li>
+							</ul>
+						</div>
+						<div class="forgot">
+							<a href="https://www.tekjobs.net/welcome/forgotPassword">Forgot password?</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<input type="submit" name="Sign In" value="Login"><br>
+					<span id="err_login" style="color: red"></span>
+				</form>
+				<h5><a href="https://www.tekjobs.net/signup">Signup</a></h5>
+				<h5><a href="https://www.tekjobs.net/">Go Back to Home</a></h5>
+			</div>
+      </div>
+</div>
+<!--inner block end here-->
+<!--//scrolling js-->
+<script src="https://dmy3k15oydnnz.cloudfront.net/admin_assets/js/bootstrap.js"> </script>
+<!-- mother grid end here-->
+</body>
+</html>
+
+<script type="text/javascript">
+	$("#loginForm").on('submit', function() {
+		// console.log('submit');
+		let formData = $("#loginForm").serialize();
+		// console.log(formData);
+		$.ajax({
+			url: "https://www.tekjobs.net/welcome/loginSubmit",
+			type: "POST",
+			data: formData,
+			success: function(data) {
+				console.log(data);
+				let jsonData = JSON.parse(data);
+				if(jsonData.hasOwnProperty('isloggedIn') && jsonData.hasOwnProperty('redirectionURL')) {
+					window.location.replace(jsonData.redirectionURL);
+				} else if(jsonData.hasOwnProperty('success') && jsonData.hasOwnProperty('redirectionURL')) {
+					$("#err_login").html('Successfully Logged In');
+					setTimeout(()=> {
+						window.location.replace(jsonData.redirectionURL);
+					}, 2000);
+				} else if (jsonData.hasOwnProperty('error')) {
+					$("#err_login").html(jsonData.error);
+				} else {
+					$("#err_login").html('Something went wrong');
+					setTimeout(()=> {
+						window.location.reload();
+					}, 2000);
+				}
+			}
+		});
+		return false;
+	})
+</script>

@@ -4,10 +4,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResumeMonitorController;
 use App\Http\Controllers\HistoricalDataController;
 use App\Http\Controllers\StatusCheckerController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Client Login Routes
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
+Route::get('/dashboard', [AuthController::class, 'dashboard'])->middleware('auth')->name('login.dashboard');
+Route::post('/logout', [AuthController::class, 'logout'])->name('login.logout');
 
 // Resume Monitor Routes
 Route::get('/monitor', [ResumeMonitorController::class, 'login'])->name('monitor.login.show');

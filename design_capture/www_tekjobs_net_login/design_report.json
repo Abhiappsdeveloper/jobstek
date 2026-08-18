@@ -1,0 +1,138 @@
+{
+  "source_url": "https://www.tekjobs.net/login",
+  "title": "Client Login",
+  "meta_description": "",
+  "top_colors": [
+    [
+      "#fff",
+      173
+    ],
+    [
+      "rgba(255, 255, 255, .15)",
+      45
+    ],
+    [
+      "#337ab7",
+      41
+    ],
+    [
+      "#000",
+      35
+    ],
+    [
+      "#46699d",
+      34
+    ],
+    [
+      "rgba(0,0,0,0.15)",
+      32
+    ],
+    [
+      "#ddd",
+      30
+    ],
+    [
+      "#777",
+      23
+    ],
+    [
+      "#fc8213",
+      22
+    ],
+    [
+      "#333",
+      19
+    ],
+    [
+      "#ccc",
+      15
+    ],
+    [
+      "rgba(255, 255, 255, 0.15)",
+      15
+    ],
+    [
+      "#999",
+      14
+    ],
+    [
+      "#eee",
+      14
+    ],
+    [
+      "#3c763d",
+      14
+    ]
+  ],
+  "font_families": [
+    "'Poppins', sans-serif",
+    "'Poppins'",
+    "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+    "'Glyphicons Halflings'",
+    "inherit",
+    "sans-serif",
+    "monospace, monospace",
+    "Menlo, Monaco, Consolas, \"Courier New\", monospace",
+    "serif",
+    "'FontAwesome'"
+  ],
+  "layout": {
+    "headings": {
+      "h1": 1,
+      "h2": 0,
+      "h3": 0,
+      "h4": 0,
+      "h5": 2,
+      "h6": 0
+    },
+    "forms": 1,
+    "inputs": 4,
+    "buttons": 1,
+    "images": 1,
+    "links": 3,
+    "nav_elements": 0,
+    "sections": 8,
+    "form_details": [
+      {
+        "action": "",
+        "method": "POST",
+        "fields": [
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email",
+            "placeholder": "Email",
+            "id": ""
+          },
+          {
+            "tag": "input",
+            "type": "password",
+            "name": "password",
+            "placeholder": "Password",
+            "id": ""
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "",
+            "placeholder": "",
+            "id": "brand1"
+          },
+          {
+            "tag": "input",
+            "type": "submit",
+            "name": "Sign In",
+            "placeholder": "",
+            "id": ""
+          }
+        ]
+      }
+    ]
+  },
+  "asset_counts": {
+    "css_files": 4,
+    "js_files": 2,
+    "images": 2,
+    "fonts": 16
+  }
+}
