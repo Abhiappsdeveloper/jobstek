@@ -11753,3 +11753,20 @@
 2026-08-19 00:21:18,443 - ERROR - [ERROR] Download failed for 680115abbad75c590d344793: HTTPSConnectionPool(host='tekjobs-resumes.s3.amazonaws.com', port=443): Max retries exceeded with url: /2025-04-30/Sai_Eswar_Resume_fWRTf2_oTSFvw.docx?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXMAXJLALZMBWNPEX%2F20260818%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260818T224558Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=9074238ce88b65916a5a679380e3364abe605fa75275523706e199a281aa1912 (Caused by NameResolutionError("HTTPSConnection(host='tekjobs-resumes.s3.amazonaws.com', port=443): Failed to resolve 'tekjobs-resumes.s3.amazonaws.com' ([Errno 11001] getaddrinfo failed)"))
 2026-08-19 00:21:18,678 - INFO - [BULLETPROOF] No S3 URL found for 680115abbad75c590d344793 - skipping retries
 2026-08-19 00:21:18,679 - WARNING - [PARALLEL-DOWNLOAD] Failed to download 680115abbad75c590d344793 after all retries
+2026-08-19 00:21:28,680 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-19 00:21:31,649 - INFO - [EXTRACT] Fresh S3 URL for 67ffcd6af2e874658e0d9543 (timestamp: 20260819T002132Z)
+2026-08-19 00:21:34,336 - INFO - [DOWNLOAD] Success: Sriram_Business_Intelligence_Analyst_UWW1CF_BdMliO.docx (24231 bytes) from S3
+2026-08-19 00:21:34,338 - INFO - [RESUME-SKIP] Marked 67ffcd6af2e874658e0d9543 as downloaded
+2026-08-19 00:21:34,341 - INFO - [S3-RECOVERY] Stored S3 URL for 67ffcd6af2e874658e0d9543
+2026-08-19 00:21:39,946 - INFO - [EXTRACT] Fresh S3 URL for 680114e19bbdef10b03df634 (timestamp: 20260819T002140Z)
+2026-08-19 00:21:42,460 - INFO - [DOWNLOAD] Success: Chitti_Resume_Updated_2__l8L30G_sn9UPm.docx (33155 bytes) from S3
+2026-08-19 00:21:42,460 - INFO - [RESUME-SKIP] Marked 680114e19bbdef10b03df634 as downloaded
+2026-08-19 00:21:42,461 - INFO - [S3-RECOVERY] Stored S3 URL for 680114e19bbdef10b03df634
+2026-08-19 00:21:42,461 - INFO - [BULLETPROOF] Success on attempt 1
+2026-08-19 00:21:42,461 - INFO - [PARALLEL-DOWNLOAD] Successfully downloaded 680114e19bbdef10b03df634
+2026-08-19 00:21:45,316 - INFO - [EXTRACT] Fresh S3 URL for 67ffcc7f76e25c693c4cf8e3 (timestamp: 20260819T002146Z)
+2026-08-19 00:21:46,656 - INFO - [DOWNLOAD] Success: Gowtham_Salesforce_1__owC7S2_FVaJIR.docx (25476 bytes) from S3
+2026-08-19 00:21:46,660 - INFO - [RESUME-SKIP] Marked 67ffcc7f76e25c693c4cf8e3 as downloaded
+2026-08-19 00:21:46,664 - INFO - [S3-RECOVERY] Stored S3 URL for 67ffcc7f76e25c693c4cf8e3
+2026-08-19 00:21:52,463 - INFO - [BULLETPROOF] Attempt 1/5
+2026-08-19 00:21:57,604 - INFO - [EXTRACT] Fresh S3 URL for 67ffcb5ac7e4ef604d23dd73 (timestamp: 20260819T002158Z)
