@@ -2134,3 +2134,35 @@ Generated: 2026-08-18 23:48:26
               Resume ID: 680152e380dfc77b762e09a3
               Error: Could not extract S3 URL from detail page
 
+[2026-08-19 05:04:15] DOWNLOAD_EXCEPTION
+              Resume ID: 68012807b3472c377210fd32
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 05:04:44] DOWNLOAD_EXCEPTION
+              Resume ID: 67ffd338fcb0927e660c3153
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 05:07:23] DOWNLOAD_EXCEPTION
+              Resume ID: 67ffd1a4cff6c115e13ac7d2
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 05:08:09] DOWNLOAD_EXCEPTION
+              Resume ID: 67ffd0635dfb7068cd5eaab3
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 05:10:00] DOWNLOAD_EXCEPTION
+              Resume ID: 680118260e293e00ee6e8295
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 05:10:51] DOWNLOAD_EXCEPTION
+              Resume ID: 68011678a40c330d556ee784
+              Error: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+[2026-08-19 05:51:16] S3_URL_NOT_FOUND
+              Resume ID: 67ffcd6af2e874658e0d9543
+              Error: Could not extract S3 URL from detail page
+
+[2026-08-19 05:51:18] DOWNLOAD_EXCEPTION
+              Resume ID: 680115abbad75c590d344793
+              Error: ConnectionError: HTTPSConnectionPool(host='tekjobs-resumes.s3.amazonaws.com', port=443): Max retries exceeded with url: /2025-04-30/Sai_Eswar_Resume_fWRTf2_oTSFvw.docx?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXMAXJLALZMBWNPEX%2F20260818%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260818T224558Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=9074238ce88b65916a5a679380e3364abe605fa75275523706e199a281aa1912 (Caused by NameResolutionError("HTTPSConnection(host='tekjobs-resumes.s3.amazonaws.com', port=443): Failed to resolve 'tekjobs-resumes.s3.amazonaws.com' ([Errno 11001] getaddrinfo failed)"))
+
